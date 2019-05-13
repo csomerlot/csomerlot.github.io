@@ -6,3 +6,5 @@
 reveal.js
 oldSite
 tmp_mako_*
+*.bak
+*.lib
