@@ -5,3 +5,4 @@
 *.html
 reveal.js
 oldSite
+tmp_mako_*
