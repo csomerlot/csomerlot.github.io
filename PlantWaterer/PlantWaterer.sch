@@ -1,0 +1,140 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:special
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:TRINKET33V
+EELAYER 27 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date "27 jun 2014"
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L TRINKET33V IC1
+U 1 1 53AD6D8F
+P 4350 3250
+F 0 "IC1" H 4350 3150 50  0000 C CNN
+F 1 "TRINKET" H 4350 3350 50  0000 C CNN
+F 2 "MODULE" H 4350 3250 50  0001 C CNN
+F 3 "DOCUMENTATION" H 4350 3250 50  0001 C CNN
+	1    4350 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L +12V #PWR?
+U 1 1 53AD6DAF
+P 3600 2750
+F 0 "#PWR?" H 3600 2700 20  0001 C CNN
+F 1 "+12V" H 3600 2850 30  0000 C CNN
+F 2 "" H 3600 2750 60  0000 C CNN
+F 3 "" H 3600 2750 60  0000 C CNN
+	1    3600 2750
+	1    0    0    -1  
+$EndComp
+Connection ~ 3600 3050
+$Comp
+L IRF540N Q1
+U 1 1 53AD6F5D
+P 6050 3200
+F 0 "Q1" H 6050 3052 40  0000 R CNN
+F 1 "IRF540N" H 6050 3349 40  0000 R CNN
+F 2 "TO220" H 5871 3301 29  0000 C CNN
+F 3 "~" H 6050 3200 60  0000 C CNN
+	1    6050 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 53AD6F78
+P 6150 4200
+F 0 "#PWR?" H 6150 4200 30  0001 C CNN
+F 1 "GND" H 6150 4130 30  0001 C CNN
+F 2 "" H 6150 4200 60  0000 C CNN
+F 3 "" H 6150 4200 60  0000 C CNN
+	1    6150 4200
+	1    0    0    -1  
+$EndComp
+$Comp
+L VCC To~Load
+U 1 1 53AD6FBF
+P 6150 2750
+F 0 "To Load" H 6150 2850 30  0001 C CNN
+F 1 "VCC" H 6150 2850 30  0000 C CNN
+F 2 "" H 6150 2750 60  0000 C CNN
+F 3 "" H 6150 2750 60  0000 C CNN
+	1    6150 2750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6150 2750 6150 3000
+$Comp
+L POT RV1
+U 1 1 53AD6FFB
+P 5450 3750
+F 0 "RV1" H 5450 3650 50  0000 C CNN
+F 1 "10K" H 5450 3750 50  0000 C CNN
+F 2 "~" H 5450 3750 60  0000 C CNN
+F 3 "~" H 5450 3750 60  0000 C CNN
+	1    5450 3750
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	5100 3450 5100 3750
+Wire Wire Line
+	5100 3750 5300 3750
+Wire Wire Line
+	5100 3350 5450 3350
+Wire Wire Line
+	5450 3350 5450 3500
+Wire Wire Line
+	5100 3250 5850 3250
+Wire Wire Line
+	6150 3400 6150 4200
+Wire Wire Line
+	3400 4000 6150 4000
+Connection ~ 6150 4000
+Text GLabel 6100 2700 0    60   Input ~ 0
+To Load negative
+Wire Wire Line
+	3600 3050 3600 2750
+Wire Wire Line
+	3400 4000 3400 3150
+Wire Wire Line
+	3400 3150 3600 3150
+Connection ~ 5450 4000
+$EndSCHEMATC
