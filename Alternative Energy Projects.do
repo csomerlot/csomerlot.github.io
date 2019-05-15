@@ -38,6 +38,8 @@ o retrofit the old silo for
   o "Performance calculations": "http://www.bekkoame.ne.jp/~khirata/academic/simple/simplee.htm"
   o "Wikipedia entry": "https://en.wikipedia.org/wiki/Stirling_engine"
 
+FIGURE: [HappyHippieLifestyle/stirling, width=250 frac=0.9] Linkages. label{fig:stirling}
+
 ======= Hydrogen Generator =======
 o Electrolysis of water
 o Use deeply submerged tanks to collect the gas, to minimize compression

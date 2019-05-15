@@ -1,3 +1,4 @@
+
 TITLE: Boat Projects
 TOC: on
 
@@ -49,7 +50,10 @@ o Materials
         o best to get green, for cost and bendibility
 o Wood steamer
                                                                     
-                                                                    
+FIGURE: [Boats/SOFkayak, width=900 frac=0.9] Skin on frame kayak. label{fig:sof}
+
+FIGURE: [Boats/WoodSteamer, width=700 frac=0.9] Wood steamer. label{fig:steamer}
+
 ======= Ultralight Trimaran Plans =======
 o Can be built in field with minimum of tools, in emergency
     o Skin on Frame?
@@ -201,3 +205,8 @@ o Attempts at Identification
     o Parts
     o Hobie Inspiration
 o Pictures
+
+FIGURE: [Boats/Cat, width=400 frac=0.9] The Cal Cat in all its glory. label{fig:calcat}
+
+FIGURE: [Boats/MastStep, width=400 frac=0.9] Replacement Mast step. label{fig:maststep}
+
