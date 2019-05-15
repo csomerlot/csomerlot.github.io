@@ -346,3 +346,155 @@ __Notes:__
 * http://cma.soton.ac.uk/research/black-sea-map/
 
 !split
+======= Arduino Wind Instrument =======
+__Description:__ an inexpensive and simple electronic wind instrument to learn digital music programming
+ 
+__User Story:__ Real instruments are expensive, and you can only learn to play music...
+ 
+__Feature Set:__
+o Breath and bite sensors
+o Sax fingering
+o Wireless midi port
+o FOSS full synth with effects
+
+
+__Phasing:__
+* Pick up an Akai EWI
+* Pick up the Zynthian kit parts
+ 
+__BOM:__
+* https://www.hifiberry.com/products/dacplus/
+* https://www.adafruit.com/product/1601
+* https://us.seeedstudio.com/5-inch-800x480-Capacitive-TouchScreen-p-2923.html?utm_source=Bazaar+%EF%BC%88%E7%94%B5%E5%95%86%EF%BC%89&utm_campaign=9162fdf13c-September+campaign+%E2%80%94%E2%80%94+1%24_9.21_Japanese_COPY_01&utm_medium=email&utm_term=0_4b071a49e3-9162fdf13c-49714817&ct=t()&mc_cid=9162fdf13c&mc_eid=3012c69022
+ 
+__Notes:__
+* https://hackaday.com/2014/09/18/a-diy-midi-wind-controller/
+* https://gonzos.net/projects/ewi-pi/
+* http://zynthian.org/
+
+!split
+======= Pool Octobot =======
+__Description:__ a multi-armed, multi-sensored robot for cleaning pools
+
+
+__User Story:__ Cleaning pools involves scrubbing algal growth from surfaces, and sucking up debris. What better format of robot to do this but something with 8 arms, a beak mouth, and a bag to hold debris? 
+
+
+__Feature Set:__
+o Color sensors for detecting growth, brushes for removing
+o Tactile sensors for objects and climbing, suction and/or jets for locomotion
+o Self-charging at remote dry dock
+o Expandable debris bag
+o Skin color changing - for fun. And camoflage
+
+
+__Phasing:__
+* Research sensors
+
+!split
+======= Lightning Catcher =======
+__Description:__ Rocket-based micro-wire launch system to direct a lightning strike to a specific location
+
+
+__User Story:__ Lightning is one of the most powerful forces of nature, and I want to catch it. Plus, it could be a great learning opportunity.
+
+
+__Feature Set:__
+o Fully enclosed silo system
+o Internet or phone activated
+o Hi-speed photography?
+o 2000m altitude
+
+
+__Phasing:__
+* Research where/how this has been done before
+* Find a wide-open enough area that someone will allow this to happen in
+* Build launch system in test silo
+* Test launch
+* Install silo
+* Track weather
+
+!split
+
+======= Home Internet Gateway =======
+__Description:__ Cable modem, IoT gateway, wifi router, and firewall device. 
+
+
+__User Story:__ I just want the internet to work. I also want to protect my family and house, integrate with Domotics and IoT, and give the internet company their crap hardware back. Maybe I can even eventually dump the internet company completely for community-based wifi or a free-space optical link.
+
+
+__Feature Set:__
+o Parental Filtering and logging
+o Directional Wifi
+o Performance Dashboard
+o Outernet Integration
+o PoE
+
+!split 
+======= Scarecrow Targeting System =======
+__Description:__ a camera-based object tracking software system
+
+
+__User Story:__ In the suburban warfare environment, its our ability to grow food versus mother nature's ability to provide - gardens versus wildlife - me versus the creatures - fencing versus projectile-based discouragement. I want to defend my many hours of invested effort from the random and sneaky browsing of deer and dog. 
+
+
+__Feature Set:__
+o Intelligent and real-time image tracking during day or night, based on sample images
+o Housed in a scarecrow, with duplicate, stereo single-lens object trackers
+o Detection alarms - audible, visible, and internet
+o Directional actuator for firing projectiles, spray, flame, etc at the real-time coordinate of target
+o 90% accurate against false-falses, 75% accurate against false-positives
+o Video recording with target boxing
+o Web-served catalog of recordings
+o 130-degree FOV, 90-degree firing field
+o Time-lapse photography built-in
+
+
+__Phasing:__
+* Software build of single-lens object tracker
+* Hardware build of multiple trackers
+* Build out of housing and alarms
+* UAT
+* Build out of targeting and firing
+
+
+__BOM:__
+* RPi3 w/ Camera x 4
+
+!split
+======= Invasive Species Patroller =======
+__Description:__ An outdoor version of a roomba-like crawler than can identify and deal with a targeted invasive species
+
+!split
+
+
+__Description:__ Simple SCADA to drive drip irrigation.
+
+
+__User Story:__ We leave the house for extended periods during hot dry weather and know that we won't lose plants. When we harvest, we can turn off drippers by plant. Plumbing and electrical are unobtrusive and dependable. Water is conserved as much as possible. We can use rain water if desired.
+
+
+__Feature Set:__
+o Main line valves actuated by internet-connected IoT switch, on schedule with manual overrides. 
+o Flow meter used to activate alarm of valve failure and fine-tune water usage.
+o Rain, soil moisture, and localized temperature sensor pack to fine-tune water usage. Battery-powered and internet-connected for minimal wiring.
+o Gang valving and individual drippers in garden for easy access and fine control.
+o Main line plumbing hidden and removable for storage, freeze protection, repair, and protection.
+
+
+__Phasing:__
+* indoor plumbing to hose cock
+*  IoT switch, meter, and main line valve
+*  buried main line and gang valving
+*  meteorological sensor pack
+*  cistern with submersible pump
+
+
+__BOM:__ 
+o https://www.adafruit.com/product/997
+o https://www.adafruit.com/product/3010
+o https://www.adafruit.com/product/1298
+o https://www.adafruit.com/product/828
+
+FIGURE: [HappyHippieLifestyle/plumbing, width=900 frac=0.9] Plumbing Schematic. label{fig:plumbing}
+
