@@ -16,4 +16,4 @@ REM doconce format html "Wool Milling.do" --cite_doconce --html_style=%style%
 doconce format html "Apiary.do" --cite_doconce --html_style=%style%
 doconce split_html  "Apiary.html"
 
-start index_%style%.html
+REM start index_%style%.html
