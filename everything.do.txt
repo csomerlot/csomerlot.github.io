@@ -1,0 +1,25 @@
+TITLE: Chris Somerlot's Projects List
+AUTHOR: Chris Somerlot
+TOC: off
+
+I have a lot of ideas, and getting them jotted down helps me focus on other things. That, and I love to innovate and engineer anything I can.
+
+!split
+
+# #include "Apiary.do.txt"
+
+# #include "ThistleRidgeFarmProjects.do.txt"
+
+# #include "ShootingProjects.do.txt"
+
+# #include "RoboticsProjects.do.txt"
+
+# #include "PythonProgrammingProjects.do.txt"
+
+# #include "HappyHippieLifestyleProjects.do.txt"
+
+# #include "ComputerProjects.do.txt"
+
+# #include "BoatProjects.do.txt"
+
+# #include "AlternativeEnergyProjects.do.txt"
