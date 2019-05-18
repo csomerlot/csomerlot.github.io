@@ -8,3 +8,4 @@ oldSite
 tmp_mako_*
 *.bak
 *.lib
+tmp_*
