@@ -7,7 +7,8 @@ doconce format html "AlternativeEnergyProjects.do.txt" --cite_doconce --html_sty
 doconce format html "BoatProjects.do.txt" --cite_doconce --html_style=%style%
 doconce format html "ComputerProjects.do.txt" --cite_doconce --html_style=%style%
 doconce format html "HappyHippieLifestyleProjects.do.txt" --cite_doconce --html_style=%style%
-doconce format html "PythonProgrammingProjects.do.txt" --cite_doconce --html_style=%style%
+doconce format html "BusinessIdeas.do.txt" --cite_doconce --html_style=%style%
+doconce split_html  "BusinessIdeas.html"
 doconce format html "RoboticsProjects.do.txt" --cite_doconce --html_style=%style%
 doconce split_html  "RoboticsProjects.html"
 doconce format html "ShootingProjects.do.txt" --cite_doconce --html_style=%style%

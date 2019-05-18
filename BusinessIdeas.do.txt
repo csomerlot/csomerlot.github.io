@@ -5,6 +5,7 @@ o Minimize startup costs
 o Find a woman to own the business
 o Use local gov't IT business incentives
 o Avoid brick and mortar type of business
+!split
 ======= POS =======
 o Business model basics
     o Inexpensive POS systems for small businesses
@@ -368,3 +369,4 @@ o secret to success
     o lots of inventory!
 
 FIGURE: [./Farm/HopsHanger, width=600 frac=0.8] Hops Hanger. label{fig:hops}
+
