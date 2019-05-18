@@ -17,44 +17,6 @@ o tap fittings into pipe walls for filter inlet/outlet
 o Injection port on pump effluent for feeding and air bubbles
 o Integral water heater
 o Stored on top of tank to prevent leaks
-======= Nightingale Mills Microbrews, Ciders, Wines and Mead =======
-o Pitch
-o with barley, hops, honey and apples organically grown in rich CNY soils, using water from the pristine headwaters of Otisco lake, brewed under the power of Nine Mile Creek, and aged to perfection, comes local ales, ciders, fruit wines and meades of world-class quality.
-o grow hops up silo
-o Need a trellis system for easy harvesting
-o Need a platform on top
-    o Wood beam platform
-o grow barley in 20 x 40 plot
-o build homemade dryers
-o Organic Honey
-o signature recipes
-o Bitter Ale
-o Stout Ale
-o Belgian White Ale
-o Cherry Wine
-o Blackberry Wine
-o Honey Crisp Wine
-o Hard Cider
-o Sweet Mead
-o Value added products
-o cheeses, sodas, art, and barrels
-o use old mill building for brewing?
-o can use micro-turbine for hydrpower?
-o bring water back from bucktail falls
-o get organic apples from McLusky's, Elderberry pond?
-o Liquor licenses
-o Forms
-o Fees
-    o Wholesale
-        o $900/yr microbrewery, $500/yr NYS farm winery, $600/yr ciders
-    o Retail
-        o $1000/yr for all
-    o Lawyer
-o need business plan
-o secret to success
-    o lots of inventory!
-
-FIGURE: [./Farm/HopsHanger, width=600 frac=0.8] Hops Hanger. label{fig:hops}
 
 ======= North Woods Cottage =======
 o idea came from discussions during New Year's get togethers (JoAnna calls it a commune

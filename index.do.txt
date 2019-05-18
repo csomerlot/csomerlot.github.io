@@ -10,7 +10,7 @@ Here's the working list:
 * "Thistle Ridge Farm Projects": "ThistleRidgeFarmProjects.html"
 * "Shooting Projects": "ShootingProjects.html"
 * "Robotics Projects": "RoboticsProjects.html"
-* "Python Programming Projects": "PythonProgrammingProjects.html"
+* "Business Ideas": "BusinessIdeas.html"
 * "Happy Hippie Lifestyle Projects": "HappyHippieLifestyleProjects.html"
 * "Computer Projects": "ComputerProjects.html"
 * "Boat Projects": "BoatProjects.html"
