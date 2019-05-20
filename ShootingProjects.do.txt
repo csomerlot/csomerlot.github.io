@@ -2,12 +2,11 @@ TITLE: Shooting Projects
 TOC: on
 
 ======= F-class 1000+yarder =======
-o Action
-    o Remington 700
-    o Custom
+o Base
+	o "Howa 1500": "https://www.thetruthaboutguns.com/2017/11/chris-heuss/howa-1500-gun-review/"
 o barrel
     o rebarrel from Hart (includes the action work)
-    o .308 Winchester (or .338 Lupua?)
+    o .308 Winchester
     o 30" to develop max velocity
     o Contour to make barrel same diameter as muzzle brake, flute if necessary to keep weight at 18#
 o optics
@@ -46,16 +45,12 @@ o ballistics calcs
         o Brunton Sherpa
         o Kestrel 2500 (USB capable)
 o phasing
-    o I
-        o Get ahold of a remington action ($250) and scope ($125) and mount ($25)
-    o II
-        o make stock ($50)
-    o III
-        o get muzzle break ($200), trigger ($50), recoil pad ($25), and bipod ($75)
-    o IV
-        o send action and stock to Hart for rebarrel, bedding, and muzzle break install ($750)
+    o Get ahold of base unit and scope (done)
+    o make stock ($50)
+    o get muzzle break ($200), trigger ($50), recoil pad ($25), and bipod ($75)
+    o send action and stock to Hart for rebarrel, bedding, and muzzle break install ($750)
 o references
-    o wow
+    o "CheyTac": "https://en.wikipedia.org/wiki/CheyTac_Intervention"
 ======= Handmade Recurve Bow =======
 o Specs
     o laminated hardwood

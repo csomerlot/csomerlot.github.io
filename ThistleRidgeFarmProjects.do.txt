@@ -1,8 +1,6 @@
 TITLE: Thistle Ridge Farm Projects
 TOC: on
 
-======= "My Apiary": "Apiary.html" =======
-
 ======= Animals =======
 o Sheep
     o Romneys have great fleece, low-maintenance feet
@@ -22,7 +20,7 @@ o Fencing
     o Portable electric mesh for pasture management
     o Cut locust from backyard for posts
         o Cut in may-june when sap is running, so they can be debarked easily
-"Pasture Map": "./Farm/Pasture.kml"
+o "Pasture Map": "./Farm/Pasture.kml"
 
 ======= Rain Water Cistern =======
 o Provides irrigation water to gardens
@@ -95,14 +93,17 @@ o options
             o Farmall H, B, C, cub
             o Case V or VC
             o Allis Chalmers WD
-    o Build one
-        o cost
-            o $3K
-======= Projects to add =======
-o Wine making
-o lowimpactliving spreadsheet
+    o "Build one": "https://www.cadplans.com/cadtrac.html"
+        o cost ~ $3K
+        
+======= Composting =======
 
 FIGURE: [./Farm/CompostPanel, width=600 frac=0.8] Composting Bin. label{fig:composting}
+
+======= Chicken Tractor =======
+o Wheels for moving with tractor
+o lightweight run
+o light-sensitive door
 
 FIGURE: [./Farm/ChickenCoop, width=600 frac=0.8] Chicken Coop. label{fig:coop}
 
@@ -151,8 +152,8 @@ o Equipment
 o Cheesemaking
     o References
         o Cheese Chronicles - Liz Thorpe
-            o Jasper Hill Farm, Greensboro VT
-            o Lively Run Goat Dairy, Interlaken NY
+        o Jasper Hill Farm, Greensboro VT
+        o Lively Run Goat Dairy, Interlaken NY
     o Raw Milk Sources
     o Mozzarella
     o Queso Blanco
@@ -179,23 +180,8 @@ o Maple Sugaring
             o Tapped 3 northern trees
     o References
         o Equipment supplier
-o Gardening records
+o "Gardening records": "https://docs.google.com/spreadsheets/d/189Td1nhGW3Vrj0CtqKAWVy8kJlys1NEx5la_6wacGrw/edit?usp=sharing"
 
-### just hire a plow, man.
-# ======= Plow Truck for the Driveway from Hell =======
-# o Needs to be
-    # o Heavy duty (351/350 or >)
-    # o American, for cheap parts
-    # o 4x4
-# o Needs to have
-    # o Limited slip or differential lockers
-    # o Wheel Chains
-    # o Tow Chains
-    # o Power winch
-    # o Hitch
-    # o 8ft plow
-    # o 2" Lift kit
-    # o Wider, taller, snow tires
     
 !split
 ======= Yarn Farm =======
@@ -297,3 +283,11 @@ o weave with singles
 o sectional warping
 
 FIGURE: [./Fiber/PICT2608_T, width=300 frac=0.8] label{fig:weave}
+
+!split
+
+======= My Apiary =======
+./Apiary.html
+
+## #include "Apiary.do.txt"
+

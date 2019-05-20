@@ -8,10 +8,11 @@ I have a lot of ideas, and getting them jotted down helps me focus on other thin
 Here's the working list:
 
 * "Thistle Ridge Farm Projects": "ThistleRidgeFarmProjects.html"
-* "Shooting Projects": "ShootingProjects.html"
+* "Happy Hippie Lifestyle Projects": "HappyHippieLifestyleProjects.html"
+* "Alternative Energy Projects": "AlternativeEnergyProjects.html"
+* "Boat Projects": "BoatProjects.html"
+* "Computer Projects": "ComputerProjects.html"
 * "Robotics Projects": "RoboticsProjects.html"
 * "Business Ideas": "BusinessIdeas.html"
-* "Happy Hippie Lifestyle Projects": "HappyHippieLifestyleProjects.html"
-* "Computer Projects": "ComputerProjects.html"
-* "Boat Projects": "BoatProjects.html"
-* "Alternative Energy Projects": "AlternativeEnergyProjects.html"
+* "Shooting Projects": "ShootingProjects.html"
+

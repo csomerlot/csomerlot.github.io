@@ -258,3 +258,4 @@ o Bench Screws for vises (shoulder vise too)
 o CNC router attachment?
 
 FIGURE: [./HappyHippieLifestyle/workbench, width=900 frac=0.8] label{fig:workbench}
+
