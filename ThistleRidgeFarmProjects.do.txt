@@ -287,7 +287,7 @@ FIGURE: [./Fiber/PICT2608_T, width=300 frac=0.8] label{fig:weave}
 !split
 
 ======= My Apiary =======
-./Apiary.html
+URL "./Apiary.html"
 
 ## #include "Apiary.do.txt"
 
