@@ -3,7 +3,7 @@ TOC: on
 
 ======= F-class 1000+yarder =======
 o Base
-	o "Howa 1500": "https://www.thetruthaboutguns.com/2017/11/chris-heuss/howa-1500-gun-review/"
+    o "Howa 1500": "https://www.thetruthaboutguns.com/2017/11/chris-heuss/howa-1500-gun-review/"
 o barrel
     o rebarrel from Hart (includes the action work)
     o .308 Winchester
