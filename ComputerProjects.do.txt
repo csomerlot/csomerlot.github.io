@@ -92,7 +92,11 @@ o A gui-based designer for weaving
 o Basic ballistics calc to support F-Class gun (drop and windage)
 o Based on computed and measured ballistic performance
 o Integrate with GPS, mapping, online weather stations, USB weather station
-======= Rewards Program Calculator =======
+
+======= Retail support tools =======
+===== Scheduler =====
+o Rule-based genetic algorithm optimizer
+===== Rewards Program Calculator =====
 o Description
     o This application was developed to track customer spending, in order to determine eligibility for rewards certificates. It relies on data exported from the POS system, and does not in any way touch any databases.
 o Usage
@@ -102,4 +106,5 @@ o Usage
         o This application reads in an excel spreadsheet that was exported from the EaglePOS system, which must include sales YTD for each customer, as well as mailing info. If the application can't find the necessary data, it should let you know.
     o Output
         o This is the secret part, and will be filled in later.
-"Download": "./Programming/setup.exe"
+o "Download installer": "./Programming/setup.exe"
+

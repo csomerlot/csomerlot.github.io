@@ -58,14 +58,12 @@ __Logic:__
 ======= Micro Hydroponics =======
 __Description:__ Small air pump-based flood irrigation system for office plants
 
-
 __User Story:__ Offices are great places for plants, with ample windows and beneficial effects for workers. But, regular watering can be an issue.
-
 
 __Feature Set:__
  o Flood-based system of irrigation with emergency overflow
     o Air pump inflates bladder, raises solution level, opens ARV to deflate and drop level
-    o 27o5" max head = 1 PSI
+    o 27.5" max head = 1 PSI
  o Planting cells to allow co-planting but easy replacement/management
     o Pre-made rock wool blocks available locally
  o 14 day hands-off and quiet operation
@@ -78,11 +76,10 @@ __Feature Set:__
  o Attractive as office decor
  o Multiple high-power switched outlets for lamps, heaters, etco
 
-
 __Phasing:__
  o Build air pump and ARV mechanicals
- o mount solenoid to end of gang valve
- o build solenoid and feather power supply and switched outlets
+    o mount solenoid to end of gang valve
+    o build solenoid and feather power supply and switched outlets
  o add input sensors
  o Build DB /datastore for BI integration
  o Build script and controller on Feather
@@ -102,11 +99,10 @@ __Phasing:__
  o Open-top cabinet on casters to hold everything and make pretty
 
 __BOM:__
-* https://www.adafruit.com/product/3061
-* https://www.adafruit.com/product/1786
-* https://www.adafruit.com/product/413
+* "Adafruit Feather M0 WiFi with uFL - ATSAMD21 + ATWINC1500": "https://www.adafruit.com/product/3061"
+* "12in Chemical eTape Liquid Level Sensor": "https://www.adafruit.com/product/1786"
+* "Large push-pull solenoid": "https://www.adafruit.com/product/413"
 * https://www.sunsethydro.com/collections/growing-media/products/grodan-delta-hugo-6in-block-6in-x-6in-x-6in-w-hole-individual-single-blocks
-
 
 __Notes:__
 * Adafruit.io for dashboard and data warehousing?

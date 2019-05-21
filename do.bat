@@ -17,6 +17,6 @@ doconce split_html  "ThistleRidgeFarmProjects.html"
 doconce format html "Apiary.do.txt" --cite_doconce --html_style=%style%
 doconce split_html  "Apiary.html"
 
-doconce format html "everything.do.txt" --cite_doconce --html_style=%style%
+REM doconce format pdflatex "everything.do.txt" --latex_font=palatino --latex_admon=yellowicon '--latex_admon_color=yellow!5' --latex_fancy_header --latex_code_style=pyg --latex_section_headings=blue --latex_colored_table_rows=blue
+REM pdflatex -shell-escape "everything.p.tex"
 
-REM start index_%style%.html
