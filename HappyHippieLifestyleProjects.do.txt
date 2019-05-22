@@ -150,7 +150,7 @@ o gravel= ?
 o References
 o Jon's natural construction book
 
-FIGURE: [./HappyHippieLifestyle/cottage_tn, width=300 frac=0.8] "Hay Bale House": "./HappyHippieLifestyle/cottage.png". label{fig:cottage}
+FIGURE: [./HappyHippieLifestyle/cottage, width=300 frac=0.8] "Hay Bale House": "./HappyHippieLifestyle/cottage.png". label{fig:cottage}
 
 ===== A-Frame Tiny House =====
 Same basic ideas and mechanicals as the HayBaleHome, but:
