@@ -159,7 +159,8 @@ o Simpler construction:
     o Minimal footprint: No foundation, just 4 pilings
     o "SIP": "https://www.sips.org/about/what-are-sips" for high insulation, modular construction, and no beams
 
-MOVIE: [https://www.youtube.com/watch?v=ZeePDz_ej8M&list=FLuYsTsByujq9ae0Kpy2wRYA&index=12&t=0s, width=600 frac=0.8] A-Frame. label{fig:AFrame}
+MOVIE: [https://youtu.be/ZeePDz_ej8M, width=600 frac=0.8] A-Frame. label{fig:AFrame}
+
 
 !split
 ======= Emergency Plans =======
