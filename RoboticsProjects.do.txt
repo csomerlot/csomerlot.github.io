@@ -494,6 +494,7 @@ o https://www.adafruit.com/product/828
 
 FIGURE: [HappyHippieLifestyle/plumbing, width=900 frac=0.9] Plumbing Schematic. label{fig:plumbing}
 
+!split
 ======= The Best Damn Radio System =======
 
 __Description:__ Tiny HAM radio that can be used anywhere
@@ -509,6 +510,7 @@ o Can be launched airborne via flare or rocket (and recovered) for visibility an
 o Can be used for personal messaging, way-point tacking, sharing progress
 o Provides a backup near-field communication device by integrating with a headset, antenna, and power source
 o Ruggedized
+o Cheap and small enough to carry spares
 
 #__Phasing:__
 #* 
@@ -518,10 +520,11 @@ o Ruggedized
 
 __Notes:__
 * Ruggedize by potting in epoxy with heat sinks?
+* https://www.byonics.com/tinytrak4
  
 #FIGURE: [path, width=900 frac=0.9] Something. label{fig:tag}
 
-
+#!split
 #======= Template =======
 
 #__Description:__ 
@@ -539,3 +542,4 @@ __Notes:__
 #* 
 
 #FIGURE: [path, width=900 frac=0.9] Something. label{fig:tag}
+

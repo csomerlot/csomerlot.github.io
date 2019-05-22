@@ -18,8 +18,69 @@ o Injection port on pump effluent for feeding and air bubbles
 o Integral water heater
 o Stored on top of tank to prevent leaks
 
+======= Library =======
+o My reviews
+o Borrowing
+    o Good Eating book from Mom
+    o Sacred Shroud from Father Kurgan
+    o Slow Food movement from Jon
+    o Storey goat books from Tracy
+o Lent
+    o Desert Solitaire to Jon
+    o Blue Zones to Kevin
+o Howtos
+    o Firefox series
+    o Brewmaster's Bible
+    o Skin on Frame Boatbuilding
+    
+======= Amphibious Truck =======
+o Pontoons swing from overhead down under truck by hydraulics
+o Dual hydraulic jet drives in pontoons
+o Belt-driven hydraulic pump off motor for hydraulic power
+
+======= Camping Gear =======
+o Need
+    o Modern headlamps
+    o Crocs
+o Chameleon Tent 
+    o Hammock - Bivy - all purpose tent
+    o a la Eureka Solitaire
+o "Camping yurt": "https://www.campingyurts.com/"
+
+======= Wishing Well Grill =======
+o Uses
+  o Wood grill
+  o Smoker
+  o Maple sap boiler
+    o Air-tight fit
+  o Pizza / bread oven
+  o Griddle
+    o Air-tight fit, bags of sand on top for holding heat?
+o Construction
+  o Refractory brick on inside
+  o Red brick on outside
+  o Filled 50% with sand (for luao) topped with granite or slate
+  o Air-tight door
+    o Fitting for attaching blower
+  o Electric trolley winch
+  
+======= Birdhouse Cam =======
+o Use off-the-shelf color wireless camera
+o Solar panel and latern battery for power
+o Retransmit signal via power line ethernet
+o board lens and IR leds for night vision
+o remote A/V switch or multiple input PCI card
+
+======= Workbench =======
+o Scandinavian style
+o Bench Screws for vises (shoulder vise too)
+o CNC router attachment?
+
+FIGURE: [./HappyHippieLifestyle/workbench, width=900 frac=0.8] label{fig:workbench}
+
+!split
 ======= North Woods Cottage =======
-o idea came from discussions during New Year's get togethers (JoAnna calls it a commune
+o idea came from discussions during New Year's get togethers (JoAnna calls it a commune)
 o we want a place of our own that is in a remote location (no motor access), on the water, that will give us access to the (state) woods for
     o New Year's hangout
     o skiiing
@@ -30,72 +91,77 @@ o Brantingham area seems good location for proximity, snowfall, biking and skiin
 o Easy (cheap) to own
 o ideally, is teardown/rebuild of existing structure
 o keep a low investment and carry no insurance or utility costs
-o keep the tax assessor away with blair witch stick piles, boooby traps, scary dogs, yellin', and gun fire (in that order)
+o keep the tax assessor away with blair-witch stick-piles, boooby traps, scary dogs, yellin', and gun fire (in that order)
 o Architecural style should maximize use of simple, renewable, recyclable, biodegradable materials
-===== HayBaleHome =====
-    o slab foundation
-        o concrete floor colored and grooved to look like tiles
-        o gravel substrate, but need foam for insulation?
-    o straw bale walls (excellent thermal qualities)
-    o thatched roof (excellent thermal qualities)
-    o rubble trench foundation footer (will need to go down to 5')
-    o simple floorplan for easy construction
-    o 1.5 bathrooms
-    o loft for sleeping space
-    o beds for 8
-    o glass block windows downstairs for security, cost, strength, and warmth
-    o screen doors downstairs and in loft for ventilation
-    o suspend gear (canoes, bikes, etc) from rafters
-                                                                    
-    o Mechanicals should be off-grid, minimalistic
-    o heat
-        o wood stove in center of space with a long exposed metal chimney
-    o light
-        o battery and/or oil, candles
-    o water
-        o overhead tank for pressure
-            o 30" pipe in roof apex will hold 1000 gallons (but weigh 7500#)
-        o low-power electric pump operated by solar panel
-        o hand pump in kitchen sink (also backs up electric pump)
-        o hand-augered well
-        o low-flow shower head
-    o waste
-        o composting toilets
-        o kitchen and shower grey-water system
-    o hot water
-        o propane on-demand (overhead tank is already room temp!)
-    o kitchen
-        o small propane fridge and cooking stove
-        o grilling in summer
-        o wood stove in winter
-    o electricity
-        o use a deep cycle battery and inverter, charged from solar cell
-        o really should just be used for lights, charging iPods, using speakers, etc.
-    o wine cave built into the side of a hill somewhere nearby (they can burn the house but they cain't have the booze! Keep guns and a chainsaw and some cans of food in there too)
-    o Construction phasing
-        o find and acquire property and site building
-        o construct yurt, hand pumped well, and outhouse for temporary housing
-        o build foundation and slab
-        o build walls, roof ridgepole with temp roofing
-        o put mechanicals in place
-        o roof
-        o furnish
-    o materials estimates (we have to carry everything in by canoe!)
-    o concrete= 10 yds (~400 80lb bags)
-    o rebar= 2 ton
-    o straw= ?
-    o stone= ?
-    o gravel= ?
-    o References
-    o Jon's natural construction book
 
-FIGURE: [./HappyHippieLifestyle/cottage_tn, width=200 frac=0.8] "Hay Bale House": "./HappyHippieLifestyle/cottage.png". label{fig:cottage}
+===== HayBaleHome =====
+o slab foundation
+    o concrete floor colored and grooved to look like tiles
+    o gravel substrate, but need foam for insulation?
+o straw bale walls (excellent thermal qualities)
+o thatched roof (excellent thermal qualities)
+o rubble trench foundation footer (will need to go down to 5')
+o simple floorplan for easy construction
+o 1.5 bathrooms
+o loft for sleeping space
+o beds for 8
+o glass block windows downstairs for security, cost, strength, and warmth
+o screen doors downstairs and in loft for ventilation
+o suspend gear (canoes, bikes, etc) from rafters
+o Mechanicals should be off-grid, minimalistic
+o heat
+    o wood stove in center of space with a long exposed metal chimney
+o light
+    o battery and/or oil, candles
+o water
+    o overhead tank for pressure
+        o 30" pipe in roof apex will hold 1000 gallons (but weigh 4 tons)
+    o low-power electric pump operated by solar panel
+    o hand pump in kitchen sink (also backs up electric pump)
+    o hand-augered well
+    o low-flow shower head
+o waste
+    o composting toilets
+    o kitchen and shower grey-water system
+o hot water
+    o propane on-demand (overhead tank is already room temp!)
+o kitchen
+    o small propane fridge and cooking stove
+    o grilling in summer
+    o wood stove in winter
+o electricity
+    o use a deep cycle battery and inverter, charged from solar cell
+    o really should just be used for lights, charging iPods, using speakers, etc.
+o wine cave built into the side of a hill somewhere nearby (they can burn the house but they cain't have the booze! Keep guns and a chainsaw and some cans of food in there too)
+o Construction phasing
+    o find and acquire property and site building
+    o construct yurt, hand pumped well, and outhouse for temporary housing
+    o build foundation and slab
+    o build walls, roof ridgepole with temp roofing
+    o put mechanicals in place
+    o roof
+    o furnish
+o materials estimates (we have to carry everything in by canoe!)
+o concrete= 10 yds (~400 80lb bags)
+o rebar= 2 ton
+o straw= ?
+o stone= ?
+o gravel= ?
+o References
+o Jon's natural construction book
+
+FIGURE: [./HappyHippieLifestyle/cottage_tn, width=300 frac=0.8] "Hay Bale House": "./HappyHippieLifestyle/cottage.png". label{fig:cottage}
 
 ===== A-Frame Tiny House =====
-Minimal footprint
+Same basic ideas and mechanicals as the HayBaleHome, but:
+o Smaller; sleeps only 4 but far easier to site
+o Simpler construction:
+    o Minimal footprint: No foundation, just 4 pilings
+    o "SIP": "https://www.sips.org/about/what-are-sips" for high insulation, modular construction, and no beams
 
-MOVIE: [./HappyHippieLifestyle/A_Frame.mp4, width=800 frac=0.8] A-Frame. label{fig:AFrame}
+MOVIE: [./HappyHippieLifestyle/A_Frame.mp4, width=600 frac=0.8] A-Frame. label{fig:AFrame}
 
+!split
 ======= Emergency Plans =======
 o 3 day (Evacuation)
   o 20 gallons fresh water
@@ -134,7 +200,7 @@ o 3 day (Evacuation)
     o Some water and food
     o Blanket and towels
     o Fire extinguisher
-    o $100 in Cash and Coin
+    o $300 in Cash and Coin
   o 2-way radios
   o Bleach
   o Camping gear
@@ -165,9 +231,9 @@ o 3 year (Plan a)
     o Weapons
         o Bow
         o Crossbow
-        o Sniper rifle
-        o Sawed off shotgun
-        o hunting shotgun
+        o "Sniper rifle": "./ShootingProjects.html#___sec0"
+        o Sawed-off and hunting shotguns
+            o Reload kits
     o Textiles
         o Rope machine
         o Foot powered sewing machine
@@ -201,58 +267,5 @@ o 3 year (Plan a)
   o Food
     o Seed stash
     o Can stash
-======= Library =======
-o My reviews
-o Borrowing
-    o Good Eating book from Mom
-    o Sacred Shroud from Father Kurgan
-    o Slow Food movement from Jon
-    o Storey goat books from Tracy
-o Lent
-    o Desert Solitaire to Jon
-    o Blue Zones to Kevin
-o Howtos
-    o Firefox series
-    o Brewmaster's Bible
-    o Skin on Frame Boatbuilding
-======= Amphibious Truck =======
-o Pontoons swing from overhead down under truck by hydraulics
-o Dual hydraulic jet drives in pontoons
-o Belt-driven hydraulic pump off motor for hydraulic power
-======= Camping Gear =======
-o Need
-    o Modern headlamps
-    o Crocs
-o Chameleon Tent 
-    o Hammock - Bivy - all purpose tent
-    o a la Eureka Solitaire
-o Camping yurt
-======= Wishing Well Grill =======
-o Uses
-  o Wood grill
-  o Smoker
-  o Maple sap boiler
-    o Air-tight fit
-  o Pizza / bread oven
-  o Griddle
-    o Air-tight fit, bags of sand on top for holding heat?
-o Construction
-  o Refractory brick on inside
-  o Red brick on outside
-  o Filled 50% with sand (for luao) topped with granite or slate
-  o Air-tight door
-    o Fitting for attaching blower
-  o Electric trolley winch
-======= Birdhouse Cam =======
-o Use off-the-shelf color wireless camera
-o Solar panel and latern battery for power
-o Retransmit signal via power line ethernet
-o board lens and IR leds for night vision
-o remote A/V switch or multiple input PCI card
-======= Workbench =======
-o Scandinavian style
-o Bench Screws for vises (shoulder vise too)
-o CNC router attachment?
 
-FIGURE: [./HappyHippieLifestyle/workbench, width=900 frac=0.8] label{fig:workbench}
-
+    
