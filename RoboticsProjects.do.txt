@@ -512,34 +512,27 @@ o Provides a backup near-field communication device by integrating with a headse
 o Ruggedized
 o Cheap and small enough to carry spares
 
-#__Phasing:__
-#* 
-
-#__BOM:__ 
-#o 
-
 __Notes:__
 * Ruggedize by potting in epoxy with heat sinks?
 * https://www.byonics.com/tinytrak4
- 
-#FIGURE: [path, width=900 frac=0.9] Something. label{fig:tag}
 
-#!split
-#======= Template =======
 
-#__Description:__ 
-#__User Story:__ 
-#__Feature Set:__
-#o 
+# !split
+# ======= Template =======
 
-#__Phasing:__
-#* 
+# __Description:__ 
+# __User Story:__ 
+# __Feature Set:__
+# o 
 
-#__BOM:__ 
-#o 
+# __Phasing:__
+# * 
 
-#__Notes:__
-#* 
+# __BOM:__ 
+# o 
 
-#FIGURE: [path, width=900 frac=0.9] Something. label{fig:tag}
+# __Notes:__
+# * 
+
+# FIGURE: [path, width=900 frac=0.9] Something. label{fig:tag}
 

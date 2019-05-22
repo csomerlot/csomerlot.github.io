@@ -1,3 +1,5 @@
+call %ALLUSERSPROFILE%/Anaconda3/Scripts/activate.bat
+
 set style=bootstrap_readable
 REM set style=bootstrap_blue
 doconce format html "index.do.txt" --cite_doconce --html_style=%style% --pygments_html_style=default --html_admon=bootstrap_alert --html_output=index_%style% --keep_pygments_html_bg --html_code_style=inherit --html_pre_style=inherit
