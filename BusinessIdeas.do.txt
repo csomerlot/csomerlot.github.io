@@ -377,4 +377,4 @@ o secret to success
 
 FIGURE: [./Farm/HopsHanger, width=600 frac=0.8] Hops Hanger. label{fig:hops}
 
-FIGURE: [./Farm/Barrel, width=500 frac=0.8] Barrel Geometry. label{fig:barrel}
+FIGURE: [./Farm/Barrel, width=700 frac=0.8] Barrel Geometry. label{fig:barrel}

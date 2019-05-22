@@ -53,14 +53,14 @@ o references
     o "CheyTac": "https://en.wikipedia.org/wiki/CheyTac_Intervention"
 ======= Handmade Recurve Bow =======
 o Specs
-    o laminated hardwood
     o takedown
-    o epoxy vacuum-glued
+    o PVC or laminated wood
 o References
-    o Web
+    o "Nick Tomihama's builds": "https://www.youtube.com/playlist?list=PLGRzZMpVk2Hr66k2BwTQjO2IBW9D4ptDA"
     o Books
         o The Traditional Bowyer's Bible, Volume 2
         o Traditional Bowyers of America
+        
 ======= Long distance paintball marker =======
 o Curved barrel provides backspin for stability and distance
 o Long ported barrel for sound suppression
