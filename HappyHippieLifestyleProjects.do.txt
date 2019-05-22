@@ -98,15 +98,15 @@ MOVIE: [./HappyHippieLifestyle/A_Frame.mp4, width=800 frac=0.8] A-Frame. label{f
 
 ======= Emergency Plans =======
 o 3 day (Evacuation)
-o 20 gallons fresh water
-o 25# of non-perishable food
+  o 20 gallons fresh water
+  o 25# of non-perishable food
     o diapers and powdered milk
     o Nuts, dried fruit
     o Store in 5 gallon bucket with waterproof lid
-o 40 gallons gas
-o Camoflauge tarps
-o Handgun with ammo
-o Car Kits
+  o 40 gallons gas
+  o Camoflauge tarps
+  o Handgun with ammo
+  o Car Kits
     o Tow rope w/ hooks
     o Clothes
         o Hats, mittens, socks
@@ -135,9 +135,9 @@ o Car Kits
     o Blanket and towels
     o Fire extinguisher
     o $100 in Cash and Coin
-o 2-way radios
-o Bleach
-o Camping gear
+  o 2-way radios
+  o Bleach
+  o Camping gear
     o Headlamp
     o Lighter
     o Compass
@@ -148,20 +148,20 @@ o Camping gear
     o Packs
     o Tent / Tarp
 o 3 week (Power failure)
-o Genset run from tractor
+  o Genset run from tractor
     o Refrigeration
     o Water pump
     o Electronics
     o Lights
-o Woodstove for heat - always keep 5 face cord on hand
-o Solar hot water heater
-o Canned food
-o Propane heater
-o Chainsaw
-o Crank Radio
-o Plastic sheeting
+  o Woodstove for heat - always keep 5 face cord on hand
+  o Solar hot water heater
+  o Canned food
+  o Propane heater
+  o Chainsaw
+  o Crank Radio
+  o Plastic sheeting
 o 3 year (Plan a)
-o Tools
+  o Tools
     o Weapons
         o Bow
         o Crossbow
@@ -191,14 +191,14 @@ o Tools
         o Distiller
         o Peracetic acid
         o Activated carbon
-o Medical
+  o Medical
     o Antibiotics
     o Anesthetics
     o Suture materials
-o Options
+  o Options
     o Migrate to more secluded location and take up simple farming
     o Head North, away from population centers and become marine migratory hunters
-o Food
+  o Food
     o Seed stash
     o Can stash
 ======= Library =======
@@ -221,31 +221,28 @@ o Dual hydraulic jet drives in pontoons
 o Belt-driven hydraulic pump off motor for hydraulic power
 ======= Camping Gear =======
 o Need
-    o Carabiner Pulleys for Bear bag setup
-    o Butane canisters for cooking stove
-    o Assorted smal plastic jars/bottles: 4, 8, 16 oz
-    o Stainless steel bottles for wine
-    o Replacement tent poles and stakes for 2man Kelty tent
+    o Modern headlamps
     o Crocs
 o Chameleon Tent 
     o Hammock - Bivy - all purpose tent
     o a la Eureka Solitaire
+o Camping yurt
 ======= Wishing Well Grill =======
 o Uses
-o Wood grill
-o Smoker
-o Maple sap boiler
+  o Wood grill
+  o Smoker
+  o Maple sap boiler
     o Air-tight fit
-o Pizza / bread oven
-o Griddle
+  o Pizza / bread oven
+  o Griddle
     o Air-tight fit, bags of sand on top for holding heat?
 o Construction
-o Refractory brick on inside
-o Red brick on outside
-o Filled 50% with sand (for luao) topped with granite or slate
-o Air-tight door
+  o Refractory brick on inside
+  o Red brick on outside
+  o Filled 50% with sand (for luao) topped with granite or slate
+  o Air-tight door
     o Fitting for attaching blower
-o Electric trolley winch
+  o Electric trolley winch
 ======= Birdhouse Cam =======
 o Use off-the-shelf color wireless camera
 o Solar panel and latern battery for power
