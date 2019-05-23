@@ -72,12 +72,10 @@ o What it needs to do
             o ram
 o options
     o Buying a used tractor with a front end loader
-        o cost
-            o ~8K
+        - cost: ~8K
     o Riding mower upgrade
         o Can only do about half of the things I need
-        o cost
-            o ~2K
+        - cost: ~2K
     o Fix up an antique
         o Antique tractors are easy to repair and get parts/attachments for
         o small
@@ -87,14 +85,13 @@ o options
             o can't mount on front
             o rear end loader perfect solution but not easy to find
                 o need to fabricate one
-        o cost
-            o ~2.5K (but -1K from selling rider mower)
+        o cost: ~2.5K (but -1K from selling rider mower)
         o Models
             o Farmall H, B, C, cub
             o Case V or VC
             o Allis Chalmers WD
     o "Build one": "https://www.cadplans.com/cadtrac.html"
-        o cost ~ $3K
+        - cost: ~$3K
         
 ======= Composting =======
 

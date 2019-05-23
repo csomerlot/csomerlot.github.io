@@ -96,6 +96,9 @@ o Integrate with GPS, mapping, online weather stations, USB weather station
 ======= Retail support tools =======
 ===== Scheduler =====
 o Rule-based genetic algorithm optimizer
+
+@@@CODE ./Programming/Scheduler.py
+
 ===== Rewards Program Calculator =====
 o Description
     o This application was developed to track customer spending, in order to determine eligibility for rewards certificates. It relies on data exported from the POS system, and does not in any way touch any databases.

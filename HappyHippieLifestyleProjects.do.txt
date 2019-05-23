@@ -78,6 +78,7 @@ o CNC router attachment?
 
 FIGURE: [./HappyHippieLifestyle/workbench, width=900 frac=0.8] label{fig:workbench}
 
+
 !split
 ======= North Woods Cottage =======
 o idea came from discussions during New Year's get togethers (JoAnna calls it a commune)
@@ -87,7 +88,7 @@ o we want a place of our own that is in a remote location (no motor access), on 
     o canoeing
     o biking
     o hiking
-o Brantingham area seems good location for proximity, snowfall, biking and skiing on tug hill plateau, hiking in Thendara, and general proximity to Canoe Wilderness
+o Brantingham area seems good location for proximity, snowfall, biking and skiing on tug hill plateau, hiking in Thendara, and general proximity to Canoe Wilderness. Or Cape Breton.
 o Easy (cheap) to own
 o ideally, is teardown/rebuild of existing structure
 o keep a low investment and carry no insurance or utility costs
@@ -142,13 +143,13 @@ o Construction phasing
     o roof
     o furnish
 o materials estimates (we have to carry everything in by canoe!)
-o concrete= 10 yds (~400 80lb bags)
-o rebar= 2 ton
-o straw= ?
-o stone= ?
-o gravel= ?
+    - concrete: 10 yds (~400 80lb bags)
+    - rebar: 2 ton
+    - straw: ?
+    - stone: ?
+    - gravel: ?
 o References
-o Jon's natural construction book
+    o Jon's natural construction book
 
 FIGURE: [./HappyHippieLifestyle/cottage, width=300 frac=0.8] "Hay Bale House": "./HappyHippieLifestyle/cottage.png". label{fig:cottage}
 
@@ -194,7 +195,7 @@ o 3 day (Evacuation)
         o Folding saw
         o Starting fluid
     o Communications
-        o PLB
+        o "PLB": "http://projects.somerlot.net/._RoboticsProjects016.html#___sec15"
         o Flares
         o Cell phone chargers
         o Sharpie and white plastic bags
