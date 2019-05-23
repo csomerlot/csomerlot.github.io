@@ -33,25 +33,27 @@ __BOM:__
 * "Non-intrusive current sensors": "https://tinyurl.com/y4jmsg6z"
 
 __Notes:__
-* Adafruit.io for dashboard and data warehousing?
+* "Adafruit.io": "https://io.adafruit.com/" for dashboard and short-term data warehousing
 * https://learn.adafruit.com/make-it-data-log-spreadsheet-circuit-playground
 * https://thecavepearlproject.org/
 * https://learn.adafruit.com/remote-iot-environmental-sensor/overview
 
 __Logic:__
 - Controller:
-    * Init last send time on startup
-    * Pause (vary time by event status or actively via MQTT)
-    * Read data
-    * Save data to data file
-    * If communications enabled:
-        * Send data going back to last successful time
-        * If send succeeds, save time
-    * Log everything
+    o Init last send time on startup
+    o Read data
+    o Save data to data file
+    o If communications enabled:
+        o If MQTT feed not present, establish one
+        o Send data going back to last successful time
+        o If send succeeds, save time
+    o Log everything
+    o Pause (vary time by event status or actively via MQTT)
+    o loop back to step 2
 - Host:
-    * Check for duplicated data, save new
-    * Check for alarm levels
-    * Log everything
+    o Check for duplicated data, save new
+    o Check for alarm levels
+    o Log everything
 
 __Controller Arduino Code:__
 
@@ -83,10 +85,12 @@ __Feature Set:__
 __Phasing:__
  o Build air pump and ARV mechanicals
     o mount solenoid to end of gang valve
-    o build solenoid and feather power supply and switched outlets
+    o build power supply 
+        o Air pump and 12v transformer for solenoid switched by power relay (in NMEA enclosure?)
+        o feather run via USB plug
  o add input sensors
  o Install "base controller logic": "http://projects.somerlot.net/._RoboticsProjects001.html#___sec0"
- o Build script that runs flood routine based on MQTT events
+ o Build server script that runs flood routine based on MQTT events
  o Build flood tank with rock wool planting cells
  o triple-tote system: 
     o Media tray
@@ -96,7 +100,7 @@ __Phasing:__
     o Solution tank
         o Air line running into piping header with balloons attached, 
         o Latches media tray in place to avoid flotation
-        o Thru-holes for pressure and eTape sensors
+        o Thru-holes(?) for pressure and eTape sensors
     o Overflow tank
         o Captures leaks or overflows
         o Removal with handle for general purpose use
@@ -106,7 +110,10 @@ __BOM:__
 * "Adafruit Feather M0 WiFi with uFL - ATSAMD21 + ATWINC1500": "https://www.adafruit.com/product/3061"
 * "12in Chemical eTape Liquid Level Sensor": "https://www.adafruit.com/product/1786"
 * "Large push-pull solenoid": "https://www.adafruit.com/product/413"
-* https://www.sunsethydro.com/collections/growing-media/products/grodan-delta-hugo-6in-block-6in-x-6in-x-6in-w-hole-individual-single-blocks
+* "Adafruit Power Relay FeatherWing": "https://www.adafruit.com/product/3191"
+* "Growing media": "https://www.sunsethydro.com/collections/growing-media/products/grodan-delta-hugo-6in-block-6in-x-6in-x-6in-w-hole-individual-single-blocks"
+* gang valve and silicone tubing
+* "totes": "https://www.truevalue.com/catalog/product/view/id/163441/s/storage-box-see-thru-with-fuchsia-lid-56-qt/category/7453/"
 
 __Notes:__
 * Needs some type of weighted or anchored container for replacing plants and rock wool easily
