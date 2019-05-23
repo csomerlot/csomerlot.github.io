@@ -9,50 +9,51 @@ __User Story:__
 We want to be able measure a variety of environmental conditions, without hooking up wiring. We can place a sensor indoors or outdoors just for spot checks or leave it for several weeks or add a solar power pack for permanent power. We can hook it up to a dashboard to monitor and provide alarms, or use it in more remote conditions and have it upload once wifi is available, or use a cell modem. 
 
 __Feature Set:__
- o Internet connection discovery and automatic frequent communication
- o Plenty of digital and analog inputs
- o LCD Screen and a few buttons for basic status and config
- o 2-week battery life
- o Watertight enclosure
+o Internet connection discovery and automatic frequent communication
+o Plenty of digital and analog inputs
+o LCD Screen and a few buttons for basic status and config
+o 2-week battery life
+o Watertight enclosure
 
 __Phasing:__
- o Base unit build-out and config
- o Sensor pack for indoor air quality: Temp, Humidity, CO, Smoke/particulates, Propane/VOCs
- o Sensor pack for meteorological station: Rain, sunlight, snow, Ozone, wind
- o Sensor pack for energy studies: Non-intrusive current and voltage SCADA
- o Sensor pack for stream water quality: Stream depth, turbidity, and temp
+o Base unit build-out and config
+o Sensor pack for indoor air quality: Temp, Humidity, CO, Smoke/particulates, Propane/VOCs
+o Sensor pack for meteorological station: Rain, sunlight, snow, Ozone, wind
+o Sensor pack for energy studies: Non-intrusive current and voltage SCADA
+o Sensor pack for stream water quality: Stream depth, turbidity, and temp
 
 __BOM:__
- * "Adafruit Feather M0 WiFi - ATSAMD21 + ATWINC1500": "https://www.adafruit.com/product/3010"
- * "Lithium Ion Battery Pack - 3.7V 6600mAh": "https://www.adafruit.com/product/353"
- * "Adafruit FeatherWing OLED - 128x32 OLED Add-on For Feather": "https://www.adafruit.com/product/2900"
- * "Adafruit BME680 - Temperature, Humidity, Pressure and Gas Sensor": "https://www.adafruit.com/product/3660"
- * "PM2.5 Air Quality Sensor and Breadboard Adapter Kit - PMS5003": "https://www.adafruit.com/product/3686"
- * "Adafruit MiCS5524 CO, Alcohol and VOC Gas Sensor Breakout": "https://www.adafruit.com/product/3199"
- * "Adafruit SGP30 Air Quality Sensor Breakout - VOC and eCO2": "https://www.adafruit.com/product/3709"
- * "Non-intrusive current sensors": "https://tinyurl.com/y4jmsg6z"
+* Base Unit: "Adafruit Feather M0 WiFi - ATSAMD21 + ATWINC1500": "https://www.adafruit.com/product/3010"
+* Base Unit: "Lithium Ion Battery Pack - 3.7V 6600mAh": "https://www.adafruit.com/product/353"
+* Base Unit: "Adafruit FeatherWing OLED - 128x32 OLED Add-on For Feather": "https://www.adafruit.com/product/2900"
+* "Adafruit BME680 - Temperature, Humidity, Pressure and Gas Sensor": "https://www.adafruit.com/product/3660"
+* "PM2.5 Air Quality Sensor and Breadboard Adapter Kit - PMS5003": "https://www.adafruit.com/product/3686"
+* "Adafruit MiCS5524 CO, Alcohol and VOC Gas Sensor Breakout": "https://www.adafruit.com/product/3199"
+* "Adafruit SGP30 Air Quality Sensor Breakout - VOC and eCO2": "https://www.adafruit.com/product/3709"
+* "Non-intrusive current sensors": "https://tinyurl.com/y4jmsg6z"
 
 __Notes:__
- * https://learn.adafruit.com/make-it-data-log-spreadsheet-circuit-playground
- * https://thecavepearlproject.org/
- * https://learn.adafruit.com/remote-iot-environmental-sensor/overview
+* Adafruit.io for dashboard and data warehousing?
+* https://learn.adafruit.com/make-it-data-log-spreadsheet-circuit-playground
+* https://thecavepearlproject.org/
+* https://learn.adafruit.com/remote-iot-environmental-sensor/overview
 
 __Logic:__
- - Controller:
+- Controller:
     * Init last send time on startup
     * Pause (vary time by event status or actively via MQTT)
     * Read data
-    * Save data t* data file
+    * Save data to data file
     * If communications enabled:
         * Send data going back to last successful time
         * If send succeeds, save time
     * Log everything
- - Host:
+- Host:
     * Check for duplicated data, save new
     * Check for alarm levels
     * Log everything
 
-__Arduino Code:__
+__Controller Arduino Code:__
 
 @@@CODE ./StreamDataLogger/StreamDataLogger.ino envir=cpro
 
@@ -84,8 +85,8 @@ __Phasing:__
     o mount solenoid to end of gang valve
     o build solenoid and feather power supply and switched outlets
  o add input sensors
- o Build DB /datastore for BI integration
- o Build script and controller on Feather
+ o Install "base controller logic": "http://projects.somerlot.net/._RoboticsProjects001.html#___sec0"
+ o Build script that runs flood routine based on MQTT events
  o Build flood tank with rock wool planting cells
  o triple-tote system: 
     o Media tray
@@ -108,7 +109,6 @@ __BOM:__
 * https://www.sunsethydro.com/collections/growing-media/products/grodan-delta-hugo-6in-block-6in-x-6in-x-6in-w-hole-individual-single-blocks
 
 __Notes:__
-* Adafruit.io for dashboard and data warehousing?
 * Needs some type of weighted or anchored container for replacing plants and rock wool easily
 * Flood chamber must be securely anchored against flotation
 
@@ -538,6 +538,9 @@ __Notes:__
 
 # __Notes:__
 # * 
+
+# __Code:__
+# @@@CODE ./filepath envir=Xpro
 
 # FIGURE: [path, width=900 frac=0.9] Something. label{fig:tag}
 
