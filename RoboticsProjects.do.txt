@@ -37,22 +37,25 @@ __Notes:__
  * https://thecavepearlproject.org/
  * https://learn.adafruit.com/remote-iot-environmental-sensor/overview
 
-
 __Logic:__
- o Controller:
-    o Init last send time on startup
-    o Pause (vary time by event status or actively via MQTT)
-    o Read data
-    o Save data to data file
-    o If communications enabled:
-        o Send data going back to last successful time
-        o If send succeeds, save time
-    o Log everything
- o Host:
-    o Check for duplicated data, save new
-    o Check for alarm levels
-    o Log everything
-    
+ - Controller:
+    * Init last send time on startup
+    * Pause (vary time by event status or actively via MQTT)
+    * Read data
+    * Save data t* data file
+    * If communications enabled:
+        * Send data going back to last successful time
+        * If send succeeds, save time
+    * Log everything
+ - Host:
+    * Check for duplicated data, save new
+    * Check for alarm levels
+    * Log everything
+
+__Arduino Code:__
+
+@@@CODE ./StreamDataLogger/StreamDataLogger.ino envir=cpro
+
 !split
 
 ======= Micro Hydroponics =======
@@ -109,9 +112,6 @@ __Notes:__
 * Needs some type of weighted or anchored container for replacing plants and rock wool easily
 * Flood chamber must be securely anchored against flotation
 
-__Arduino Code:__
-
-@@@CODE ./StreamDataLogger/StreamDataLogger.ino envir=cpro
 
 !split
 ======= Automotive Media System =======
