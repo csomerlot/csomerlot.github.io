@@ -22,10 +22,7 @@ doconce split_html  "ThistleRidgeFarmProjects.html"
 doconce format html "Apiary.do.txt" --cite_doconce --html_style=%style%
 doconce split_html  "Apiary.html"
 
-doconce format html "everything.do.txt"
-doconce format pdflatex "everything.do.txt" --latex_font=palatino --latex_admon=yellowicon '--latex_admon_color=yellow!5' --latex_fancy_header --latex_code_style=pyg --latex_section_headings=blue --latex_colored_table_rows=blue
-pdflatex -shell-escape "everything.p.tex"
+REM doconce format sphinx "everything.do.txt"
+REM doconce split_rst everything
+REM doconce sphinx_dir everything
 
-del tmp_*.do.txt
-del *_html_file_collection
-del *.copyright

@@ -104,9 +104,9 @@ o triple-tote system:
 o Open-top cabinet on casters to hold everything and make pretty
 
 __BOM:__
-* "Adafruit Feather M0 WiFi with uFL - ATSAMD21 + ATWINC1500": "https://www.adafruit.com/product/3061"
+* "Adafruit Huzzah ESP8266": "https://www.adafruit.com/product/2471"
 * "12in Chemical eTape Liquid Level Sensor": "https://www.adafruit.com/product/1786"
-* "Large push-pull solenoid": "https://www.adafruit.com/product/413"
+* "Mini solenoid": "https://www.adafruit.com/product/2776"
 * "Controllable Four Outlet Power Relay Module version 2": "https://www.adafruit.com/product/2935"
 * "growing media": "https://www.sunsethydro.com/collections/growing-media/products/grodan-delta-hugo-6in-block-6in-x-6in-x-6in-w-hole-individual-single-blocks"
 * "totes": "https://www.truevalue.com/catalog/product/view/id/163441/s/storage-box-see-thru-with-fuchsia-lid-56-qt/category/7453/"
