@@ -2,79 +2,68 @@ TITLE: Happy Hippie Lifestyle Projects
 TOC: on
 
 ======= Custom Fish Tank =======
-o Made from Clear PVC Pipe
-o Dimensions
-    o 12" dia by 6.5' tall
-o Welded Bottom Cap
-o Volume
-    o 35 gallons
-o Bottom pressure
-    o None
-o Cost
-    o $112/ft.
-o Needs pump filter system
-o tap fittings into pipe walls for filter inlet/outlet
-o Injection port on pump effluent for feeding and air bubbles
-o Integral water heater
-o Stored on top of tank to prevent leaks
+* Made from Clear PVC Pipe
+* Dimensions
+    * 12" dia by 6.5' tall
+* Welded Bottom Cap
+* Volume
+    * 35 gallons
+* Bottom pressure
+    * None
+* Cost
+    * $112/ft.
+* Needs pump filter system
+* tap fittings int* pipe walls for filter inlet/outlet
+* Injection port on pump effluent for feeding and air bubbles
+* Integral water heater
+* Stored on top of tank to prevent leaks
 
-======= Library =======
-o My reviews
-o Borrowing
-    o Good Eating book from Mom
-    o Sacred Shroud from Father Kurgan
-    o Slow Food movement from Jon
-    o Storey goat books from Tracy
-o Lent
-    o Desert Solitaire to Jon
-    o Blue Zones to Kevin
-o Howtos
-    o Firefox series
-    o Brewmaster's Bible
-    o Skin on Frame Boatbuilding
-    
 ======= Amphibious Truck =======
-o Pontoons swing from overhead down under truck by hydraulics
-o Dual hydraulic jet drives in pontoons
-o Belt-driven hydraulic pump off motor for hydraulic power
+* Pontoons swing from overhead down under truck by hydraulics
+* Dual hydraulic jet drives in pontoons
+* Belt-driven hydraulic pump off motor for hydraulic power
+
+======= Tree House =======
+
+FIGURE: [./HappyHippieLifestyle/BlueForest_Treehouse_Amberley_Castle_1_gallery-image, width=900 frac=0.8] label{fig:treehouse}
 
 ======= Camping Gear =======
-o Need
-    o Modern headlamps
-    o Crocs
-o Chameleon Tent 
-    o Hammock - Bivy - all purpose tent
-    o a la Eureka Solitaire
-o "Camping yurt": "https://www.campingyurts.com/"
+* Need
+    * Modern headlamps
+    * Crocs
+* Chameleon Tent 
+    * Hammock - Bivy - all purpose tent
+    * a la Eureka Solitaire
+* "Camping yurt": "https://www.campingyurts.com/"
 
 ======= Wishing Well Grill =======
-o Uses
-  o Wood grill
-  o Smoker
-  o Maple sap boiler
-    o Air-tight fit
-  o Pizza / bread oven
-  o Griddle
-    o Air-tight fit, bags of sand on top for holding heat?
-o Construction
-  o Refractory brick on inside
-  o Red brick on outside
-  o Filled 50% with sand (for luao) topped with granite or slate
-  o Air-tight door
-    o Fitting for attaching blower
-  o Electric trolley winch
+* Uses
+  * Wood grill
+  * Smoker
+  * Maple sap boiler
+    * Air-tight fit
+  * Pizza / bread oven
+  * Griddle
+    * Air-tight fit, bags of sand on top for holding heat?
+* Construction
+  * Refractory brick on inside
+  * Red brick on outside
+  * Filled 50% with sand (for luao) topped with granite or slate
+  * Air-tight door
+    * Fitting for attaching blower
+  * Electric trolley winch
   
 ======= Birdhouse Cam =======
-o Use off-the-shelf color wireless camera
-o Solar panel and latern battery for power
-o Retransmit signal via power line ethernet
-o board lens and IR leds for night vision
-o remote A/V switch or multiple input PCI card
+* Use off-the-shelf color wireless camera
+* Solar panel and latern battery for power
+* Retransmit signal via power line ethernet
+* board lens and IR leds for night vision
+* remote A/V switch or multiple input PCI card
 
 ======= Workbench =======
-o Scandinavian style
-o Bench Screws for vises (shoulder vise too)
-o CNC router attachment?
+* Scandinavian style
+* Bench Screws for vises (shoulder vise too)
+* CNC router attachment?
 
 FIGURE: [./HappyHippieLifestyle/workbench, width=900 frac=0.8] label{fig:workbench}
 
@@ -155,119 +144,120 @@ FIGURE: [./HappyHippieLifestyle/cottage, width=300 frac=0.8] "Hay Bale House": "
 
 ===== A-Frame Tiny House =====
 Same basic ideas and mechanicals as the HayBaleHome, but:
-o Smaller; sleeps only 4 but far easier to site
-o Simpler construction:
-    o Minimal footprint: No foundation, just 4 pilings
-    o "SIP": "https://www.sips.org/about/what-are-sips" for high insulation, modular construction, and no beams
+* Smaller; sleeps only 4 but far easier to site
+* Simpler construction:
+    * Minimal footprint: No foundation, just 4 pilings
+    * "SIP": "https://www.sips.org/about/what-are-sips" for high insulation, modular construction, and no beams
 
 MOVIE: [https://youtu.be/ZeePDz_ej8M, width=600 frac=0.8] A-Frame. label{fig:AFrame}
 
 
 !split
 ======= Emergency Plans =======
-o 3 day (Evacuation)
-  o 20 gallons fresh water
-  o 25# of non-perishable food
-    o diapers and powdered milk
-    o Nuts, dried fruit
-    o Store in 5 gallon bucket with waterproof lid
-  o 40 gallons gas
-  o Camoflauge tarps
-  o Handgun with ammo
-  o Car Kits
-    o Tow rope w/ hooks
-    o Clothes
-        o Hats, mittens, socks
-        o Change of clothes for everyone
-    o Roadmaps
-    o Basic toolkit
-        o Channel locks
-        o Vice grips
-        o Pliers
-        o Tire gauge
-        o Epoxy putty
-        o Bailing wire
-        o Voltmeter
-        o Screwdrivers
-        o Portable battery/jumper
-        o Inverter
-        o Knife / Multitool
-        o Folding saw
-        o Starting fluid
-    o Communications
-        o "PLB": "http://projects.somerlot.net/._RoboticsProjects016.html#___sec15"
-        o Flares
-        o Cell phone chargers
-        o Sharpie and white plastic bags
-    o Some water and food
-    o Blanket and towels
-    o Fire extinguisher
-    o $300 in Cash and Coin
-  o 2-way radios
-  o Bleach
-  o Camping gear
-    o Headlamp
-    o Lighter
-    o Compass
-    o Rope
-    o First Aid kit
-    o Cooking equipment
-    o Sleeping bags
-    o Packs
-    o Tent / Tarp
-o 3 week (Power failure)
-  o Genset run from tractor
-    o Refrigeration
-    o Water pump
-    o Electronics
-    o Lights
-  o Woodstove for heat - always keep 5 face cord on hand
-  o Solar hot water heater
-  o Canned food
-  o Propane heater
-  o Chainsaw
-  o Crank Radio
-  o Plastic sheeting
-o 3 year (Plan a)
-  o Tools
-    o Weapons
-        o Bow
-        o Crossbow
-        o "Sniper rifle": "./ShootingProjects.html#___sec0"
-        o Sawed-off and hunting shotguns
-            o Reload kits
-    o Textiles
-        o Rope machine
-        o Foot powered sewing machine
-        o Portable Spinning wheel
-        o Backstrap Loom
-    o Mechanical
-        o Forge tools, blower
-        o Files, grinding wheel
-    o Navigation
-        o Sextant
-        o Star charts
-        o Mechanical watches
-        o Map library
-            o Nautical
-                o free NOAA charts
-            o Terrestrial
-                o Delorme atlas books
-        o Night vision
-    o Fishing gear
-    o Water
-        o Distiller
-        o Peracetic acid
-        o Activated carbon
-  o Medical
-    o Antibiotics
-    o Anesthetics
-    o Suture materials
-  o Options
-    o Migrate to more secluded location and take up simple farming
-    o Head North, away from population centers and become marine migratory hunters
-  o Food
-    o Seed stash
-    o Can stash
+===== 3 day (Evacuation) =====
+o 20 gallons fresh water
+o 25# of non-perishable food
+o diapers and powdered milk
+o Nuts, dried fruit
+o Store in 5 gallon bucket with waterproof lid
+o 40 gallons gas
+o Camoflauge tarps
+o Handgun with ammo
+o Car Kits
+o Tow rope w/ hooks
+o Clothes
+    o Hats, mittens, socks
+    o Change of clothes for everyone
+o Roadmaps
+o Basic toolkit
+    o Channel locks
+    o Vice grips
+    o Pliers
+    o Tire gauge
+    o Epoxy putty
+    o Bailing wire
+    o Voltmeter
+    o Screwdrivers
+    o Portable battery/jumper
+    o Inverter
+    o Knife / Multitool
+    o Folding saw
+    o Starting fluid
+o Communications
+    o "PLB": "http://projects.somerlot.net/._RoboticsProjects016.html#___sec15"
+    o Flares
+    o Cell phone chargers
+    o Sharpie and white plastic bags
+o Some water and food
+o Blanket and towels
+o Fire extinguisher
+o $300 in Cash and Coin
+o 2-way radios
+o Bleach
+o Camping gear
+o Headlamp
+o Lighter
+o Compass
+o Rope
+o First Aid kit
+o Cooking equipment
+o Sleeping bags
+o Packs
+o Tent / Tarp
+===== 3 week (Power failure) =====
+o Genset run from tractor
+o Refrigeration
+o Water pump
+o Electronics
+o Lights
+o Woodstove for heat - always keep 5 face cord on hand
+o Solar hot water heater
+o Canned food
+o Propane heater
+o Chainsaw
+o Crank Radio
+o Plastic sheeting
+===== 3 year (Plan a) =====
+o Tools
+o Weapons
+    o Bow
+    o Crossbow
+    o "Sniper rifle": "./ShootingProjects.html#___sec0"
+    o Sawed-off and hunting shotguns
+        o Reload kits
+o Textiles
+    o Rope machine
+    o Foot powered sewing machine
+    o Portable Spinning wheel
+    o Backstrap Loom
+o Mechanical
+    o Forge tools, blower
+    o Files, grinding wheel
+o Navigation
+    o Sextant
+    o Star charts
+    o Mechanical watches
+    o Map library
+        o Nautical
+            o free NOAA charts
+        o Terrestrial
+            o Delorme atlas books
+    o Night vision
+o Fishing gear
+o Water
+    o Distiller
+    o Peracetic acid
+    o Activated carbon
+o Medical
+o Antibiotics
+o Anesthetics
+o Suture materials
+o Options
+o Migrate to more secluded location and take up simple farming
+o Head North, away from population centers and become marine migratory hunters
+o Food
+o Seed stash
+o Can stash
 
-    
+!split
+# #include "TemporaryRetirement.do.txt"
