@@ -1,26 +1,38 @@
 TITLE: Robotics Projects
 TOC: on
 !split
-======= Environmental Sensor and Datalogger =======
+======= Common Sensor and Datalogger Platform =======
 __Description:__
 Portable and wireless environmental IoT sensor and datalogger
 
 __User Story:__
-We want to be able measure a variety of environmental conditions, without hooking up wiring. We can place a sensor indoors or outdoors just for spot checks or leave it for several weeks or add a solar power pack for permanent power. We can hook it up to a dashboard to monitor and provide alarms, or use it in more remote conditions and have it upload once wifi is available, or use a cell modem. 
+We want to be able measure a variety of environmental conditions, without hooking up wiring. We can place a sensor indoors or outdoors just for 
+spot checks or leave it for several weeks or add a solar power pack for permanent power. We can hook it up to a dashboard to monitor and 
+provide alarms, or use it in more remote conditions and have it upload once wifi is available, or use a cell modem. Some possible applications include:
+* Dive computer
+* Bike computer
+* Drone computer
+* Weather Balloon computer
+* Environmental Datalogger
+* Marine Chartplotter
+* Indoor air quality
+* Energy Monitor
+* Domotics, solar, or hydroponics controller
 
 __Feature Set:__
-o Internet connection discovery and automatic frequent communication
-o Plenty of digital and analog inputs
-o LCD Screen and a few buttons for basic status and config
-o 2-week battery life
-o Watertight enclosure
+* Internet connection discovery and automatic frequent communication
+* Plenty of digital and analog inputs
+* LCD Screen and a few buttons for basic status and config
+* 2-week battery life
+* Watertight potting and enclosure (100m)
+* Shock-proof (shotgun at 10m)
+* ports for display, antenna, power, and USB
+* WifI, Ham (APRS transmitter) and LoRa communications
 
 __Phasing:__
-o Base unit build-out and config
-o Sensor pack for indoor air quality: Temp, Humidity, CO, Smoke/particulates, Propane/VOCs
-o Sensor pack for meteorological station: Rain, sunlight, snow, Ozone, wind
-o Sensor pack for energy studies: Non-intrusive current and voltage SCADA
-o Sensor pack for stream water quality: Stream depth, turbidity, and temp
+* Base unit build-out and config
+* develop ports
+* ruggedize
 
 __BOM:__
 * Base Unit: "Adafruit Feather M0 WiFi - ATSAMD21 + ATWINC1500": "https://www.adafruit.com/product/3010"
@@ -115,7 +127,7 @@ __BOM:__
 __Notes:__
 * Needs some type of weighted or anchored container for replacing plants and rock wool easily
 * Flood chamber must be securely anchored against flotation
-
+* "First iteration": "./PlantWaterer/PlantWaterer.html" of the design was a simple Trinket-based timer that controlled a mini peristaltic pump
 
 !split
 ======= Automotive Media System =======

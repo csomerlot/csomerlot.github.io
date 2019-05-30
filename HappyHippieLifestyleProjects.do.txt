@@ -25,7 +25,11 @@ TOC: on
 
 ======= Tree House =======
 
-FIGURE: [./HappyHippieLifestyle/BlueForest_Treehouse_Amberley_Castle_1_gallery-image, width=900 frac=0.8] label{fig:treehouse}
+FIGURE: [./HappyHippieLifestyle/BlueForest_Treehouse_Amberley_Castle_1_gallery-image, width=900 frac=0.8] The kids picked this design. label{fig:treehouse}
+
+======= Books to publish from Wikipedia =======
+
+FIGURE: [./BookTopics, width=315 frac=0.8] Celtic Migration. label{fig:book1}
 
 ======= Camping Gear =======
 * Need
@@ -37,6 +41,7 @@ FIGURE: [./HappyHippieLifestyle/BlueForest_Treehouse_Amberley_Castle_1_gallery-i
 * "Camping yurt": "https://www.campingyurts.com/"
 
 ======= Wishing Well Grill =======
+- Historical Design: "Schwenker": "https://en.wikipedia.org/wiki/Schwenker"
 * Uses
   * Wood grill
   * Smoker
@@ -67,197 +72,11 @@ FIGURE: [./HappyHippieLifestyle/BlueForest_Treehouse_Amberley_Castle_1_gallery-i
 
 FIGURE: [./HappyHippieLifestyle/workbench, width=900 frac=0.8] label{fig:workbench}
 
+!split
+# # include "NorthWoodsCottage.do.txt"
 
 !split
-======= North Woods Cottage =======
-o idea came from discussions during New Year's get togethers (JoAnna calls it a commune)
-o we want a place of our own that is in a remote location (no motor access), on the water, that will give us access to the (state) woods for
-    o New Year's hangout
-    o skiiing
-    o canoeing
-    o biking
-    o hiking
-o Brantingham area seems good location for proximity, snowfall, biking and skiing on tug hill plateau, hiking in Thendara, and general proximity to Canoe Wilderness. Or Cape Breton.
-o Easy (cheap) to own
-o ideally, is teardown/rebuild of existing structure
-o keep a low investment and carry no insurance or utility costs
-o keep the tax assessor away with blair-witch stick-piles, boooby traps, scary dogs, yellin', and gun fire (in that order)
-o Architecural style should maximize use of simple, renewable, recyclable, biodegradable materials
-
-===== HayBaleHome =====
-o slab foundation
-    o concrete floor colored and grooved to look like tiles
-    o gravel substrate, but need foam for insulation?
-o straw bale walls (excellent thermal qualities)
-o thatched roof (excellent thermal qualities)
-o rubble trench foundation footer (will need to go down to 5')
-o simple floorplan for easy construction
-o 1.5 bathrooms
-o loft for sleeping space
-o beds for 8
-o glass block windows downstairs for security, cost, strength, and warmth
-o screen doors downstairs and in loft for ventilation
-o suspend gear (canoes, bikes, etc) from rafters
-o Mechanicals should be off-grid, minimalistic
-o heat
-    o wood stove in center of space with a long exposed metal chimney
-o light
-    o battery and/or oil, candles
-o water
-    o overhead tank for pressure
-        o 30" pipe in roof apex will hold 1000 gallons (but weigh 4 tons)
-    o low-power electric pump operated by solar panel
-    o hand pump in kitchen sink (also backs up electric pump)
-    o hand-augered well
-    o low-flow shower head
-o waste
-    o composting toilets
-    o kitchen and shower grey-water system
-o hot water
-    o propane on-demand (overhead tank is already room temp!)
-o kitchen
-    o small propane fridge and cooking stove
-    o grilling in summer
-    o wood stove in winter
-o electricity
-    o use a deep cycle battery and inverter, charged from solar cell
-    o really should just be used for lights, charging iPods, using speakers, etc.
-o wine cave built into the side of a hill somewhere nearby (they can burn the house but they cain't have the booze! Keep guns and a chainsaw and some cans of food in there too)
-o Construction phasing
-    o find and acquire property and site building
-    o construct yurt, hand pumped well, and outhouse for temporary housing
-    o build foundation and slab
-    o build walls, roof ridgepole with temp roofing
-    o put mechanicals in place
-    o roof
-    o furnish
-o materials estimates (we have to carry everything in by canoe!)
-    - concrete: 10 yds (~400 80lb bags)
-    - rebar: 2 ton
-    - straw: ?
-    - stone: ?
-    - gravel: ?
-o References
-    o Jon's natural construction book
-
-FIGURE: [./HappyHippieLifestyle/cottage, width=300 frac=0.8] "Hay Bale House": "./HappyHippieLifestyle/cottage.png". label{fig:cottage}
-
-===== A-Frame Tiny House =====
-Same basic ideas and mechanicals as the HayBaleHome, but:
-* Smaller; sleeps only 4 but far easier to site
-* Simpler construction:
-    * Minimal footprint: No foundation, just 4 pilings
-    * "SIP": "https://www.sips.org/about/what-are-sips" for high insulation, modular construction, and no beams
-
-MOVIE: [https://youtu.be/ZeePDz_ej8M, width=600 frac=0.8] A-Frame. label{fig:AFrame}
-
-
-!split
-======= Emergency Plans =======
-===== 3 day (Evacuation) =====
-o 20 gallons fresh water
-o 25# of non-perishable food
-o diapers and powdered milk
-o Nuts, dried fruit
-o Store in 5 gallon bucket with waterproof lid
-o 40 gallons gas
-o Camoflauge tarps
-o Handgun with ammo
-o Car Kits
-o Tow rope w/ hooks
-o Clothes
-    o Hats, mittens, socks
-    o Change of clothes for everyone
-o Roadmaps
-o Basic toolkit
-    o Channel locks
-    o Vice grips
-    o Pliers
-    o Tire gauge
-    o Epoxy putty
-    o Bailing wire
-    o Voltmeter
-    o Screwdrivers
-    o Portable battery/jumper
-    o Inverter
-    o Knife / Multitool
-    o Folding saw
-    o Starting fluid
-o Communications
-    o "PLB": "http://projects.somerlot.net/._RoboticsProjects016.html#___sec15"
-    o Flares
-    o Cell phone chargers
-    o Sharpie and white plastic bags
-o Some water and food
-o Blanket and towels
-o Fire extinguisher
-o $300 in Cash and Coin
-o 2-way radios
-o Bleach
-o Camping gear
-o Headlamp
-o Lighter
-o Compass
-o Rope
-o First Aid kit
-o Cooking equipment
-o Sleeping bags
-o Packs
-o Tent / Tarp
-===== 3 week (Power failure) =====
-o Genset run from tractor
-o Refrigeration
-o Water pump
-o Electronics
-o Lights
-o Woodstove for heat - always keep 5 face cord on hand
-o Solar hot water heater
-o Canned food
-o Propane heater
-o Chainsaw
-o Crank Radio
-o Plastic sheeting
-===== 3 year (Plan a) =====
-o Tools
-o Weapons
-    o Bow
-    o Crossbow
-    o "Sniper rifle": "./ShootingProjects.html#___sec0"
-    o Sawed-off and hunting shotguns
-        o Reload kits
-o Textiles
-    o Rope machine
-    o Foot powered sewing machine
-    o Portable Spinning wheel
-    o Backstrap Loom
-o Mechanical
-    o Forge tools, blower
-    o Files, grinding wheel
-o Navigation
-    o Sextant
-    o Star charts
-    o Mechanical watches
-    o Map library
-        o Nautical
-            o free NOAA charts
-        o Terrestrial
-            o Delorme atlas books
-    o Night vision
-o Fishing gear
-o Water
-    o Distiller
-    o Peracetic acid
-    o Activated carbon
-o Medical
-o Antibiotics
-o Anesthetics
-o Suture materials
-o Options
-o Migrate to more secluded location and take up simple farming
-o Head North, away from population centers and become marine migratory hunters
-o Food
-o Seed stash
-o Can stash
+# # include "EmergencyPlans.do.txt"
 
 !split
 # #include "TemporaryRetirement.do.txt"
