@@ -65,12 +65,8 @@ FIGURE: [./BookTopics, width=315 frac=0.8] Celtic Migration. label{fig:book1}
 * board lens and IR leds for night vision
 * remote A/V switch or multiple input PCI card
 
-======= Workbench =======
-* Scandinavian style
-* Bench Screws for vises (shoulder vise too)
-* CNC router attachment?
-
-FIGURE: [./HappyHippieLifestyle/workbench, width=900 frac=0.8] label{fig:workbench}
+!split 
+# #include "WoodWorking.do.txt"
 
 !split
 # # include "NorthWoodsCottage.do.txt"

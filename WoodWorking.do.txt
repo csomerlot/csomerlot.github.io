@@ -1,0 +1,66 @@
+======= Traditional Wood Craft =======
+===== Workbench =====
+* British/Scandinavian style
+* Bench Screws for vises (shoulder vise too)
+
+FIGURE: [./HappyHippieLifestyle/workbench, width=900 frac=0.8] label{fig:workbench}
+
+===== Projects =====
+    * Wool combs
+    * Cellar doors
+    * Yoke
+    * Picture frames
+    * Shaving brushes
+    * Canoe paddles
+    * Fishing poles
+    * Recurve bows
+    * Pack baskets
+    * Spatualas and spoons
+    * Rolling pin
+    * Tortilla press
+    * Cider press
+    * Cutting board
+    * Knife block
+    * Mortar w/ pestle
+    * Picnic basket
+    * Pasta Tines
+    * Chicken coop
+    * Carrying tote
+    * Sewing machine table
+    * Dulcimers
+    * Casket
+    * Cane
+    * Shepherds Crook
+    * Camping yurt
+    * Nutcracker (threaded)
+    * Buckets
+    * Marcy field cot
+    * Rosin bird whistle
+    * Teabox
+    * Darning egg/mushroom
+    * Bird boxes (done)
+    * Boot jack (done)
+    * Coat tree (done)
+===== Hand-made tools =====
+    * Scrub plane
+    * Shooting board
+    * Router plane
+    * Frame saw
+    * Shaving Horse
+    * Gauge
+    * Toolbox
+    * Spoke shave
+    * Knife
+    * Timber dogs
+    * "Adze": "http://www.kestreltool.com/adzes/"
+    * Mallet (done)
+    * Oiler can
+    * Card scrapers
+===== References =====
+    * Roy Underhill (Woodwrights Workshop) books
+    * Foxfire books
+    * Paul Sellers
+    * "Wikipedia": "./HappyHippieLifestyle/WoodCraft_wikipedia.pdf"
+    * "Wood Material Properties by Species": "./HappyHippieLifestyle/wood.xlsx"
+    * "The wood database": "https://www.wood-database.com/"
+

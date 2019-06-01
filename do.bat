@@ -31,5 +31,7 @@ doconce format html "TemporaryRetirement.do.txt" --cite_doconce --html_style=%st
 doconce split_html  "TemporaryRetirement.html"
 doconce format html "ThistleRidgeFarmProjects.do.txt" --cite_doconce --html_style=%style%
 doconce split_html  "ThistleRidgeFarmProjects.html"
+doconce format html "WoodWorking.do.txt" --cite_doconce --html_style=%style%
+doconce split_html  "WoodWorking.html"
 
 doconce lightclean

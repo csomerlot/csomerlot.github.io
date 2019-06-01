@@ -27,7 +27,7 @@ __Feature Set:__
 * Watertight potting and enclosure (100m)
 * Shock-proof (shotgun at 10m)
 * ports for display, antenna, power, and USB
-* WifI, Ham (APRS transmitter) and LoRa communications
+* Wifi as base networking capability, with CDMA, Ham (APRS transmitter) and LoRa communications as options
 
 __Phasing:__
 * Base unit build-out and config
@@ -51,7 +51,7 @@ __Notes:__
 * https://learn.adafruit.com/remote-iot-environmental-sensor/overview
 
 __Logic:__
-- Controller:
+o Controller:
     o Init last send time on startup
     o Read data
     o Save data to data file
@@ -60,9 +60,10 @@ __Logic:__
         o Send data going back to last successful time
         o If send succeeds, save time
     o Log everything
-    o Pause (vary time by event status or actively via MQTT)
+    o Pause (vary time by event status or actively via MQTT) 
+        o break if button is pressed
     o loop back to step 2
-- Host:
+o Host:
     o Check for duplicated data, save new
     o Check for alarm levels
     o Log everything
@@ -96,8 +97,8 @@ o Avoid custom enclosures or power supplies for safety
 
 __Phasing:__
 o Build air pump and ARV mechanicals
-    o Mount solenoid to end of gang valve
-    o mount eTape to gang valve and couple tubing for airlines and pressure sensor to it
+    o Mount solenoid to end of airline Tee
+    o mount Tee to eTape to and couple tubing for airlines and pressure sensor to it
     o Assemble and encase feather
 o Install "base controller logic": "http://projects.somerlot.net/._RoboticsProjects001.html#___sec0"
 o Build server script that runs flood routine based on MQTT events
@@ -122,7 +123,7 @@ __BOM:__
 * "Controllable Four Outlet Power Relay Module version 2": "https://www.adafruit.com/product/2935"
 * "growing media": "https://www.sunsethydro.com/collections/growing-media/products/grodan-delta-hugo-6in-block-6in-x-6in-x-6in-w-hole-individual-single-blocks"
 * "totes": "https://www.truevalue.com/catalog/product/view/id/163441/s/storage-box-see-thru-with-fuchsia-lid-56-qt/category/7453/"
-* gang valve and silicone tubing
+* Tee and silicone tubing
 
 __Notes:__
 * Needs some type of weighted or anchored container for replacing plants and rock wool easily
