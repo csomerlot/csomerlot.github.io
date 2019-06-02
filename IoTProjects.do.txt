@@ -19,6 +19,7 @@ o Sensors
         o Forced entry (pressure change)
         o Family presence (RFID)
         o Woodstove temp
+        O Roomba status
     o Exterior
         o Rain
         o Sunshine
