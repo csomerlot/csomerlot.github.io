@@ -21,6 +21,8 @@ doconce format html "index.do.txt" --cite_doconce --html_style=%style%
 doconce split_html  "index.html"
 doconce format html "intro.do.txt" --cite_doconce --html_style=%style%
 doconce split_html  "intro.html"
+doconce format html "IoTProjects.do.txt" --cite_doconce --html_style=%style%
+doconce split_html  "IoTProjects.html"
 doconce format html "NorthWoodsCottage.do.txt" --cite_doconce --html_style=%style%
 doconce split_html  "NorthWoodsCottage.html"
 doconce format html "RoboticsProjects.do.txt" --cite_doconce --html_style=%style%

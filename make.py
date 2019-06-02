@@ -17,7 +17,6 @@ o "Happy Hippie Lifestyle Projects": "HappyHippieLifestyleProjects.html"
 o "Alternative Energy Projects": "AlternativeEnergyProjects.html"
 o "Boat Projects": "BoatProjects.html"
 o "Computer Projects": "ComputerProjects.html"
-o "Robotics Projects": "RoboticsProjects.html"
 o "Business Ideas": "BusinessIdeas.html"
 o "Shooting Projects": "ShootingProjects.html"
 

@@ -1,121 +1,46 @@
 TITLE: Computer Projects
 TOC: on
 
-======= NMCCC =======
-o website
-o GIS
-    o Keep files in GML and JPG2000, UTMz18N NAD83
-    o Access
-        o CD distribution via ArcReader
-        o Subversion access to data files via EC2 spot request server, backed up by EBS volume/Snapshots
-            o Start new debian instance in same region as volume
-            o Attach volume and IP
-            o Adjust IP
-            o Mount volume as /mnt/ebs
-            o install libapache2-svn, apache2
-            o Add "Include /mnt/ebs/httpd.conf" to /etc/apache2/httpd.conf
-            o "a2enmod proxy"
-            o "/etc/init.d/apache2 restart"
-            o Connect webdav client to http://ec2.somerlot.org:80/NMCCCGIS/
-        o WFS access to layers via MapServer and Geoserver
-            o Is read-only, and requires data interop extension
-        o KML maps via website and Geoserver
-        o PostGIS server
-    o Map Library
-        o Camillus Corridor
-        o Aerial pics with Parcels
-        o USGS Topos with watershed features
+!split
+======= Robotics Club Setup =======
+__Maker kits:__
+o Tools
+    o Build tray/mat (with edges, for roll-y parts)
+    o ESC bracelet
+o Parts warehousing
+    o Tackle box with baggie system
+o Documentation
+    o GoPro for video logging
+    o Rocket book
+    o DocOnce
+    o private git server
+o AWS Workspace Dev Environment
+    o Fritzing
+    o Autodesk Fusion 360
+    o Blockly
+    o Anaconda Python Env
 
-======= Domotics =======
-o Sensors
-    o Interior
-        o Temperature and humidity of each room
-        o nonintrusive appliance load monitor
-            o Current sensors
-            o Voltage Sensors
-            o Circuit design
-                o Conceptual description = voltage and current translated to correct range for ADC, goes to ADC, ADC interface with GPIO I2C or SPI bus via isolation
-        o Oil level via flow meter
-        o Salt level
-        o Water pressure and flow
-        o Propane level via pressure sensor
-        o Air cleaner
-        o Smoke / CO / Propane
-        o Forced entry (pressure change)
-        o Family presence (RFID)
-        o Woodstove temp
-    o Exterior
-        o Rain
-        o Sunshine
-        o Wind
-        o Temp
-        o Snowfall
-        o Humidity
-        o Motion detectors
-        o Water table depth
-o Controls
-    o Furnace
-    o Fans
-    o Lights
-    o Power failure
-    o Patio snow melter
-    o Humidifier / dehumidifier
-    o Irrigation
-    o Access (electric door strike)
-    o Wood Stove blower
-        o Stepper motor-controled rheostat
-o Server
-    o Raspberry Pi
-        o Thermostat interface with LCD hat
-        o NILM data logger
-        o Wifi Router and print server
+__Projects:__
+o Init: Individual projects
+    o Basic battle bots
+    o Steampunk wearables
+o Main Missions: Group effort 
+    o Citizen science
+    o Tech-art integration
 
-======= Track GDD =======
-o Use a google calendar to track growing degree days
-    o User enters garden events on the google calendar when it happens (ie sunflowers bloom)
-    o The program connects to NOAA to pull daily min/max temperatures for user's locale and calculate GDD
-    o Next season the garden events are predicted
-    o can start off with a database of "known" GDD events (crops, etc)
-    o can track other seasonal things like honeybee activity, pest occurance, etc
-    o Can use local temp recorder rather than NOAA measurements for fine tuning to micro-locale
-    o can use long-term projected temperatures to predict occurances of events
-    o Updates iCal file of calendar events
-o References
-    o Calculating GDD
-o Local temperature
-    o Onset datalogger
-    o weatherunderground PWS
-======= Tartan designer =======
-o A gui-based designer for weaving
+__Requirements:__
+* Grades
+* Portfolio
+* Teacher recommendation
+* Behavior
 
-======= Somerlot Shooting Support System (S4) =======
-o Basic ballistics calc to support F-Class gun (drop and windage)
-o Based on computed and measured ballistic performance
-o Integrate with GPS, mapping, online weather stations, USB weather station
-
-======= Retail support tools =======
-===== Scheduler =====
-o Rule-based genetic algorithm optimizer
-
-@@@CODE ./code/Scheduler.py
-
-===== Rewards Program Calculator =====
-o Description
-    o This application was developed to track customer spending, in order to determine eligibility for rewards certificates. 
-    It relies on data exported from the POS system, and does not in any way touch any databases.
-o Usage
-    o Overview
-        o Assuming that you created the spreadsheet correctly, usage is pretty self explanatory. There are only 3 buttons. However, 
-        if the application crashes, it should prompt you to automatically send an error report via email to the developer (Chris).
-    o Input
-        o This application reads in an excel spreadsheet that was exported from the EaglePOS system, which must include sales YTD 
-        for each customer, as well as mailing info. If the application can't find the necessary data, it should let you know.
-    o Output
-        o This is the secret part, and will be filled in later.
-o "Download installer": "./Programming/setup.exe"
+__Coding DevEnv:__
+* Visual programming (blockly-scratch-mindstorm)
+* Individual programming jobs with unit testing
+* Agile - Kanban - scrum
+* Arduino Studio must be installed locally, no good browser-based IDE
 
 !split
-
 ======= Home Internet Gateway =======
 __Description:__ Cable modem, IoT gateway, wifi router, and firewall device. 
 
@@ -148,4 +73,132 @@ __Notes:__
 * https://thepi.io/how-to-use-your-raspberry-pi-as-a-wireless-access-point/
 * https://www.digikey.com/en/articles/techzone/2013/oct/building-free-space-optical-systems
 * http://shop.oreilly.com/product/9780596002046.do
+
+!split
+======= Arduino Wind Instrument =======
+__Description:__ an inexpensive and simple electronic wind instrument to learn digital music programming
+ 
+__User Story:__ Real instruments are expensive, and you can only learn to play music...
+ 
+__Feature Set:__
+o Breath and bite sensors
+o Sax fingering
+o Wireless midi port
+o FOSS full synth with effects
+
+
+__Phasing:__
+* Pick up an Akai EWI
+* Pick up the Zynthian kit parts
+ 
+__BOM:__
+* https://www.hifiberry.com/products/dacplus/
+* https://www.adafruit.com/product/1601
+* https://us.seeedstudio.com/5-inch-800x480-Capacitive-TouchScreen-p-2923.html?utm_source=Bazaar+%EF%BC%88%E7%94%B5%E5%95%86%EF%BC%89&utm_campaign=9162fdf13c-September+campaign+%E2%80%94%E2%80%94+1%24_9.21_Japanese_COPY_01&utm_medium=email&utm_term=0_4b071a49e3-9162fdf13c-49714817&ct=t()&mc_cid=9162fdf13c&mc_eid=3012c69022
+ 
+__Notes:__
+* https://hackaday.com/2014/09/18/a-diy-midi-wind-controller/
+* https://gonzos.net/projects/ewi-pi/
+* http://zynthian.org/
+
+!split
+======= Motocomms =======
+__Description:__
+A simple and mostly off-the-shelf communication and audio system for helmets
+
+__User Story:__
+helmet comm units are stupid expensive and sound terrible. And are additive to road 
+noise. And clumsy to control and link. And vendor specific. And another thing to keep charged. 
+And dumb in concept: who's wants a 5 hr running conversation when we just need to communicate 
+when stopped at an intersection about which way to turn? I want a way to use my noise-reducing 
+earbuds with an off the shelf radio through my phone so that I can also hear music or GPS. 
+Also, I like to keep my phone in my jacket pocket so there are no dangling wires. But I don't 
+want to have to look at the radio to use it or worry about charging it before riding.
+
+__Feature Set:__
+o Custom FRS, GMRS, or CB integration
+    o GMRS appears to offer best cost-vs-performance, with usable range of a couple miles and cross-compatibility with FRS
+    o "Custom-built HAM radio?": "http://projects.somerlot.net/._RoboticsProjects016.html#___sec15"
+o Integration with phone for multi-audio stream management
+o Custom handlebar control to only activate mic during push-to-talk, or switch it to VOX for regular hands-free
+o Charging bracket
+o Cross-use capable for skiing, hiking, trekking, and emergencies that are out of cell range
+o Components that are cheap enough to keep spares of or available enough to find anywhere
+
+__Phasing:__
+o Purchase radio unit
+o Start with wired connectivity, with phone and radio in tank bag:
+    o Build audio plug adapter to splice radio and phone to earbuds
+    o Add handlebar switch to mic for PTT
+o Add wireless integration
+    o Build radio mount with charge bracket
+    o Build custom Bluetooth audio adapter to connect radio to phone
+
+__BOM:__
+* "GPRS/FRS radio": "https://www.amazon.com/Midland-GXT1000VP4-Channel-Two-Way-Waterproof/dp/B001WMFYH4"
+* "BLE widget": "https://www.adafruit.com/product/2995"
+
+__Notes:__
+* https://gizmodo.com/beartooth-radio-turns-your-smartphone-into-a-walkie-tal-1635661204
+* https://www.youtube.com/watch?v=4U5ArX7J7ps
+* https://www.walkietalkiecentral.com/frs-vs-gmrs/
+* https://hackaday.io/project/3488-universal-bluetooth-audio-adapter
+
+
+!split
+======= Retail support tools =======
+===== Scheduler =====
+o Rule-based genetic algorithm optimizer
+
+@@@CODE ./code/Scheduler.py
+
+===== Rewards Program Calculator =====
+o Description
+    o This application was developed to track customer spending, in order to determine eligibility for rewards certificates. 
+    It relies on data exported from the POS system, and does not in any way touch any databases.
+o Usage
+    o Overview
+        o Assuming that you created the spreadsheet correctly, usage is pretty self explanatory. There are only 3 buttons. However, 
+        if the application crashes, it should prompt you to automatically send an error report via email to the developer (Chris).
+    o Input
+        o This application reads in an excel spreadsheet that was exported from the EaglePOS system, which must include sales YTD 
+        for each customer, as well as mailing info. If the application can't find the necessary data, it should let you know.
+    o Output
+        o This is the secret part, and will be filled in later.
+o "Download installer": "https://s3.amazonaws.com/projects.somerlot.net/Programming/setup.exe" (if you have permissions)
+
+
+!split
+======= Miscellaneous Concepts =======
+===== Tartan designer =====
+o A gui-based designer for weaving
+
+
+===== Somerlot Shooting Support System (S4) =====
+o Basic ballistics calc to support F-Class gun (drop and windage)
+o Based on computed and measured ballistic performance
+o Integrate with GPS, mapping, online weather stations, USB weather station
+
+
+# !split
+# ======= Template =======
+
+# __Description:__ 
+# __User Story:__ 
+# __Feature Set:__
+# o 
+
+# __Phasing:__
+# * 
+
+# __BOM:__ 
+# o 
+
+# __Notes:__
+# * 
+
+# __Code:__
+# @@@CODE ./filepath envir=Xpro
+
+# FIGURE: [path, width=900 frac=0.9] Something. label{fig:tag}
 
