@@ -38,10 +38,12 @@ __BOM:__
 * Base Unit: "Adafruit Feather M0 WiFi - ATSAMD21 + ATWINC1500": "https://www.adafruit.com/product/3010"
 * Base Unit: "Lithium Ion Battery Pack - 3.7V 6600mAh": "https://www.adafruit.com/product/353"
 * Base Unit: "Adafruit FeatherWing OLED - 128x32 OLED Add-on For Feather": "https://www.adafruit.com/product/2900"
-* "Adafruit BME680 - Temperature, Humidity, Pressure and Gas Sensor": "https://www.adafruit.com/product/3660"
-* "PM2.5 Air Quality Sensor and Breadboard Adapter Kit - PMS5003": "https://www.adafruit.com/product/3686"
-* "Adafruit MiCS5524 CO, Alcohol and VOC Gas Sensor Breakout": "https://www.adafruit.com/product/3199"
-* "Adafruit SGP30 Air Quality Sensor Breakout - VOC and eCO2": "https://www.adafruit.com/product/3709"
+* "Air Temperature, Humidity, Pressure and Gas Sensor": "https://www.adafruit.com/product/3660"
+* "Air Quality Sensor": "https://www.adafruit.com/product/3686"
+* "Air Quality Sensor Breakout - VOC and eCO2": "https://www.adafruit.com/product/3709"
+* "CO, Alcohol and VOC Gas Sensor": "https://www.adafruit.com/product/3199"
+* "Water turbidity and temp": "https://www.digikey.com/products/en?keywords=165D6042P003"
+* "Water pressure": "https://www.digikey.com/products/en?keywords=480-6244-ND"
 * "Non-intrusive current sensors": "https://tinyurl.com/y4jmsg6z"
 
 __Notes:__
@@ -82,7 +84,7 @@ __User Story:__ Offices are great places for plants, with ample windows and bene
 __Feature Set:__
 o Flood-based system of irrigation with emergency overflow
     o Air pump inflates bladder, raises solution level, opens ARV to deflate and drop level
-    o 27.5" max head = 1 PSI
+    o 16" max head = 0.6 PSI
 o Planting cells to allow co-planting but easy replacement/management
     o Pre-made rock wool blocks available locally
 o 14 day hands-off and quiet operation
@@ -100,7 +102,7 @@ o Build air pump and ARV mechanicals
     o Mount solenoid to end of airline Tee
     o mount Tee to eTape to and couple tubing for airlines and pressure sensor to it
     o Assemble and encase feather
-o Install "base controller logic": "http://projects.somerlot.net/._RoboticsProjects001.html#___sec0"
+o Install base controller logic
 o Build server script that runs flood routine based on MQTT events
 o Build flood tank with rock wool planting cells
 o triple-tote system: 
@@ -123,9 +125,11 @@ __BOM:__
 * "Controllable Four Outlet Power Relay Module version 2": "https://www.adafruit.com/product/2935"
 * "growing media": "https://www.sunsethydro.com/collections/growing-media/products/grodan-delta-hugo-6in-block-6in-x-6in-x-6in-w-hole-individual-single-blocks"
 * "totes": "https://www.truevalue.com/catalog/product/view/id/163441/s/storage-box-see-thru-with-fuchsia-lid-56-qt/category/7453/"
+* "MPVZ5004GW PRESSURE SENSOR by NXP": "https://www.digikey.com/product-detail/en/nxp-usa-inc/MPVZ5004GW7U/MPVZ5004GW7U-ND/1168374"
 * Tee and silicone tubing
 
 __Notes:__
+* https://learn.adafruit.com/home-automation-in-the-cloud-with-the-esp8266-and-adafruit-io/introduction
 * Needs some type of weighted or anchored container for replacing plants and rock wool easily
 * Flood chamber must be securely anchored against flotation
 * "First iteration": "./PlantWaterer/PlantWaterer.html" of the design was a simple Trinket-based timer that controlled a mini peristaltic pump
