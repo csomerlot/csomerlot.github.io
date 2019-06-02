@@ -180,25 +180,11 @@ o Based on computed and measured ballistic performance
 o Integrate with GPS, mapping, online weather stations, USB weather station
 
 
-# !split
-# ======= Template =======
+!split
+# #include "IoTProjects.do.txt"
 
-# __Description:__ 
-# __User Story:__ 
-# __Feature Set:__
-# o 
+!split
+# #include "RoboticsProjects.do.txt"
 
-# __Phasing:__
-# * 
 
-# __BOM:__ 
-# o 
-
-# __Notes:__
-# * 
-
-# __Code:__
-# @@@CODE ./filepath envir=Xpro
-
-# FIGURE: [path, width=900 frac=0.9] Something. label{fig:tag}
 
