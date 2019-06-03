@@ -395,6 +395,8 @@ o Choucroute
 o Fennel kraut?
 o Quiche?
 o Smoked cabbage wedge salad
+o PICKLES
+"Food permit ($130)": "http://www.ongov.net/health/documents/TemporaryFoodPermit.pdf"
 
 ===== SSS =====
 === Syracuse Smoked Salt ===
