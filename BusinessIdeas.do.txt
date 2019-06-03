@@ -385,15 +385,21 @@ FIGURE: [./Farm/Barrel, width=700 frac=0.8] Barrel Geometry. label{fig:barrel}
 === Schwenker Food Truck ===
 Mobile "Wishing-well grill": "http://projects.somerlot.net/HappyHippieLifestyleProjects.html#___sec5" set-up with French-German fusion small plates based on traditional Schwenker BBQ with a modern spin. And also, a smoker. Beechwood for fuel. Great for hanging out at a brewery (or hardware store).
 o Beer-marinated beef on a stick
-o Reisling-marinated chicken tenders on a stick
+o Reisling-marinated chicken sandwiches
 o "Choucroute": "https://www.instagram.com/p/ByOBlF1FFP9fePwHqDFncSu3Op7USdpZYCnuvM0/"
 o Flammekuche
 o Bean burgers
-o Potato salad?
-o Fennel kraut?
-o Quiche?
-o Spaetzle pasta salad?
+  o Josh's recipe
+o Potato salad
+  o Musgrave recipe, with egg, pickles, and onion
+o Fennel kraut
+  o Hank Shaw-inspired recipe?
+o Quiche
+  o vegetarian, meat-lovers and cheese-lovers
+o Spaetzle pasta salad
+  o made in the style of german potato salad, with bacon and vinegar dressing
 o Smoked wings
+  o Josh's recipe
 o Smoked cabbage wedge salad
 o PICKLES
 "Food permit ($130)": "http://www.ongov.net/health/documents/TemporaryFoodPermit.pdf"
