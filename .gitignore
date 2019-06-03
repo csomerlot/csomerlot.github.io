@@ -9,3 +9,6 @@ tmp_mako_*
 *.bak
 *.lib
 tmp_*
+.dict4spell.txt
+*.commit.log
+Trash
