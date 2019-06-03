@@ -382,17 +382,16 @@ FIGURE: [./Farm/HopsHanger, width=600 frac=0.8] Hops Hanger. label{fig:hops}
 FIGURE: [./Farm/Barrel, width=700 frac=0.8] Barrel Geometry. label{fig:barrel}
 
 ===== Food Truck =====
-Just making a bunch of stuff we like...
-o Smoked wings
-o Flammekuche
+Mobile "Wishing-well grill": "http://projects.somerlot.net/HappyHippieLifestyleProjects.html#___sec5" set-up with French-German fusion small plates based on traditional Schwenker BBQ with a modern spin. And also, a smoker. Beechwood for fuel
 o Beer-marinated beef on a stick
 o Reisling-marinated chicken on a stick
-o Sausage bread
-o Sausage and white beans and brown rice
-o Bean burgers
 o Choucroute
+o Flammekuche
+o Sausage and white beans and brown rice?
+o Bean burgers?
 o Fennel kraut?
 o Quiche?
+o Smoked wings
 o Smoked cabbage wedge salad
 o PICKLES
 "Food permit ($130)": "http://www.ongov.net/health/documents/TemporaryFoodPermit.pdf"
