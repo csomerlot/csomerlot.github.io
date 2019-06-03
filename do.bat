@@ -13,14 +13,10 @@ doconce format html "ComputerProjects.do.txt" --cite_doconce --html_style=%style
 doconce split_html  "ComputerProjects.html"
 doconce format html "EmergencyPlans.do.txt" --cite_doconce --html_style=%style%
 doconce split_html  "EmergencyPlans.html"
-doconce format html "everything.do.txt" --cite_doconce --html_style=%style%
-doconce split_html  "everything.html"
 doconce format html "HappyHippieLifestyleProjects.do.txt" --cite_doconce --html_style=%style%
 doconce split_html  "HappyHippieLifestyleProjects.html"
 doconce format html "index.do.txt" --cite_doconce --html_style=%style%
 doconce split_html  "index.html"
-doconce format html "intro.do.txt" --cite_doconce --html_style=%style%
-doconce split_html  "intro.html"
 doconce format html "IoTProjects.do.txt" --cite_doconce --html_style=%style%
 doconce split_html  "IoTProjects.html"
 doconce format html "NorthWoodsCottage.do.txt" --cite_doconce --html_style=%style%
@@ -35,5 +31,6 @@ doconce format html "ThistleRidgeFarmProjects.do.txt" --cite_doconce --html_styl
 doconce split_html  "ThistleRidgeFarmProjects.html"
 doconce format html "WoodWorking.do.txt" --cite_doconce --html_style=%style%
 doconce split_html  "WoodWorking.html"
+doconce format html "everything.do.txt" --cite_doconce --html_style=%style%
 
-doconce clean
+doconce lightclean
