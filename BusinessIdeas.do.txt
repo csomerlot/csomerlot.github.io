@@ -368,13 +368,11 @@ o can use micro-turbine for hydropower?
 o bring water back from bucktail falls?
 o get organic apples from McLusky's, Elderberry pond?
 o Liquor licenses
-o Forms
-o Fees
-    o Wholesale
-        o $900/yr microbrewery, $500/yr NYS farm winery, $600/yr ciders
-    o Retail
-        o $1000/yr for all
-    o Lawyer
+  o Fees
+      o Wholesale
+          o $900/yr microbrewery, $500/yr NYS farm winery, $600/yr ciders
+      o Retail
+          o $1000/yr for all
 o need business plan
 o secret to success
     o Lots of inventory! Ample testing!

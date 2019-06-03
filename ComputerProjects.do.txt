@@ -19,12 +19,12 @@ o AWS Workspace Dev Environment
     o Autodesk Fusion 360
     o Blockly
     o Anaconda Python Env
-
+    o Atom
 __Projects:__
 o Init: Individual projects
     o Basic battle bots
     o Steampunk wearables
-o Main Missions: Group effort 
+o Main Missions: Group effort
     o Citizen science
     o Tech-art integration
 
@@ -42,11 +42,11 @@ __Coding DevEnv:__
 
 !split
 ======= Home Internet Gateway =======
-__Description:__ Cable modem, IoT gateway, wifi router, and firewall device. 
+__Description:__ Cable modem, IoT gateway, wifi router, and firewall device.
 
 
-__User Story:__ I just want the internet to work. I also want to protect my family and house, integrate with Domotics and IoT, 
-and give the internet company their crap hardware back. Maybe I can even eventually dump the internet company completely for 
+__User Story:__ I just want the internet to work. I also want to protect my family and house, integrate with Domotics and IoT,
+and give the internet company their crap hardware back. Maybe I can even eventually dump the internet company completely for
 community-based wifi or a free-space optical link.
 
 
@@ -64,7 +64,7 @@ __Phasing:__
 * research and apply parental filtering and content logging
 * Install othernet
 
-__BOM:__ 
+__BOM:__
 o RPi 3
 o "PoE hat": "https://www.raspberrypi.org/blog/introducing-power-over-ethernet-poe-hat/"
 
@@ -77,9 +77,9 @@ __Notes:__
 !split
 ======= Arduino Wind Instrument =======
 __Description:__ an inexpensive and simple electronic wind instrument to learn digital music programming
- 
+
 __User Story:__ Real instruments are expensive, and you can only learn to play music...
- 
+
 __Feature Set:__
 o Breath and bite sensors
 o Sax fingering
@@ -91,14 +91,14 @@ __Phasing:__
 * Pick up an Akai EWI
 * Make a portable sound system
 * Pick up the Zynthian kit parts
- 
+
 __BOM:__
 * https://www.hifiberry.com/products/dacplus/
 * https://www.amazon.com/BOSS-Audio-CE200M-Monoblock-Amplifier/dp/B0077IA7FG?th=1&psc=1
 * https://www.amazon.com/Antigravity-Batteries-Battery-Starter-Charger/dp/B01L0F6K5C/ref=pd_aw_vtph_263_lp_tr_2/130-0236497-8146456?_encoding=UTF8&pd_rd_i=B01L0F6K5C&pd_rd_r=34b75632-85a1-11e9-9b09-4f16de09a724&pd_rd_w=rGCZ0&pd_rd_wg=hu7To&pf_rd_p=33304d62-e1a9-4538-a43c-b1d2dc49800d&pf_rd_r=1A8SNTZPHAMESVH6QJ0N&psc=1&refRID=1A8SNTZPHAMESVH6QJ0N
 * https://www.adafruit.com/product/1601
 * https://us.seeedstudio.com/5-inch-800x480-Capacitive-TouchScreen-p-2923.html?utm_source=Bazaar+%EF%BC%88%E7%94%B5%E5%95%86%EF%BC%89&utm_campaign=9162fdf13c-September+campaign+%E2%80%94%E2%80%94+1%24_9.21_Japanese_COPY_01&utm_medium=email&utm_term=0_4b071a49e3-9162fdf13c-49714817&ct=t()&mc_cid=9162fdf13c&mc_eid=3012c69022
- 
+
 __Notes:__
 * https://hackaday.com/2014/09/18/a-diy-midi-wind-controller/
 * https://gonzos.net/projects/ewi-pi/
@@ -110,12 +110,12 @@ __Description:__
 A simple and mostly off-the-shelf communication and audio system for helmets
 
 __User Story:__
-helmet comm units are stupid expensive and sound terrible. And are additive to road 
-noise. And clumsy to control and link. And vendor specific. And another thing to keep charged. 
-And dumb in concept: who's wants a 5 hr running conversation when we just need to communicate 
-when stopped at an intersection about which way to turn? I want a way to use my noise-reducing 
-earbuds with an off the shelf radio through my phone so that I can also hear music or GPS. 
-Also, I like to keep my phone in my jacket pocket so there are no dangling wires. But I don't 
+helmet comm units are stupid expensive and sound terrible. And are additive to road
+noise. And clumsy to control and link. And vendor specific. And another thing to keep charged.
+And dumb in concept: who's wants a 5 hr running conversation when we just need to communicate
+when stopped at an intersection about which way to turn? I want a way to use my noise-reducing
+earbuds with an off the shelf radio through my phone so that I can also hear music or GPS.
+Also, I like to keep my phone in my jacket pocket so there are no dangling wires. But I don't
 want to have to look at the radio to use it or worry about charging it before riding.
 
 __Feature Set:__
@@ -157,14 +157,14 @@ o Rule-based genetic algorithm optimizer
 
 ===== Rewards Program Calculator =====
 o Description
-    o This application was developed to track customer spending, in order to determine eligibility for rewards certificates. 
+    o This application was developed to track customer spending, in order to determine eligibility for rewards certificates.
     It relies on data exported from the POS system, and does not in any way touch any databases.
 o Usage
     o Overview
-        o Assuming that you created the spreadsheet correctly, usage is pretty self explanatory. There are only 3 buttons. However, 
+        o Assuming that you created the spreadsheet correctly, usage is pretty self explanatory. There are only 3 buttons. However,
         if the application crashes, it should prompt you to automatically send an error report via email to the developer (Chris).
     o Input
-        o This application reads in an excel spreadsheet that was exported from the EaglePOS system, which must include sales YTD 
+        o This application reads in an excel spreadsheet that was exported from the EaglePOS system, which must include sales YTD
         for each customer, as well as mailing info. If the application can't find the necessary data, it should let you know.
     o Output
         o This is the secret part, and will be filled in later.
@@ -188,6 +188,3 @@ o Integrate with GPS, mapping, online weather stations, USB weather station
 
 !split
 # #include "RoboticsProjects.do.txt"
-
-
-
