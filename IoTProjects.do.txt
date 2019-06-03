@@ -1,6 +1,9 @@
 TITLE: Internet-of-Things Projects
 TOC: on
 
+CircuitPython rules! Arduino drools!
+
+!split
 ======= Domotics =======
 o Sensors
     o Interior
@@ -46,7 +49,7 @@ o Server
         o NILM data logger
         o Wifi Router and print server
     o Domotics A(i) Dashboard (with voice control: *"Just ask DAD"*)
-    
+
 !split
 ======= Track GDD =======
 o Use a google calendar to track growing degree days
@@ -63,15 +66,15 @@ o References
 o Local temperature
     o Onset datalogger
     o weatherunderground PWS
-    
+
 !split
 ======= Common Sensor and Datalogger Platform =======
 __Description:__
 Portable and wireless environmental IoT sensor and datalogger
 
 __User Story:__
-We want to be able measure a variety of environmental conditions, without hooking up wiring. We can place a sensor indoors or outdoors just for 
-spot checks or leave it for several weeks or add a solar power pack for permanent power. We can hook it up to a dashboard to monitor and 
+We want to be able measure a variety of environmental conditions, without hooking up wiring. We can place a sensor indoors or outdoors just for
+spot checks or leave it for several weeks or add a solar power pack for permanent power. We can hook it up to a dashboard to monitor and
 provide alarms, or use it in more remote conditions and have it upload once wifi is available, or use a cell modem. Some possible applications include:
 * Dive computer
 * Bike computer
@@ -126,7 +129,7 @@ o Controller:
         o Send data going back to last successful time
         o If send succeeds, save time
     o Log everything
-    o Pause (vary time by event status or actively via MQTT) 
+    o Pause (vary time by event status or actively via MQTT)
         o break if button is pressed
     o loop back to step 2
 o Host:
@@ -168,12 +171,12 @@ o Build air pump and ARV mechanicals
 o Install base controller logic
 o Build server script that runs flood routine based on MQTT events
 o Build flood tank with rock wool planting cells
-o triple-tote system: 
+o triple-tote system:
     o Media tray
         o Holes in bottom for drainage and one along corner for eTape and tubing pass-through
         o Anchoring for rock wool cubes
     o Solution tank
-        o Air line running into piping header with balloons attached, 
+        o Air line running into piping header with balloons attached,
         o Latches media tray in place to avoid flotation
         o Thru-hole for overflow port
     o Overflow tank
@@ -201,7 +204,7 @@ __Notes:__
 ======= Automotive Media System =======
 __Description:__ a simple media system to stream movies and provide Android auto connectivity
 
-__User Story:__ Car audio has become increasingly complex when it doesn't need to be. Android Auto 
+__User Story:__ Car audio has become increasingly complex when it doesn't need to be. Android Auto
 can provide a great in-car experience, but all the 3rd-party AA receivers are expensive.
 
 __Feature Set:__
@@ -214,7 +217,7 @@ o SDR for radio (and everything else RF):
 o ODBII integration:
     o Logging
     o Alternate dashboard displays
-o UI/Controls: 
+o UI/Controls:
     o Macro and micro tuner wheels: for quickly moving through either the spectrum or file list selection sets
     o Touchscreen for configurable selection controls
 
@@ -243,15 +246,15 @@ __Notes:__
 !split
 ======= Technology as Art =======
 ===== Wood Burning Plotter =====
-__Description:__ 
-A polar coordinate-based dual axis large-format plotter that uses solar power to maneuver a magnifying 
+__Description:__
+A polar coordinate-based dual axis large-format plotter that uses solar power to maneuver a magnifying
 lens over a wooden canvas vertically to burn an image.
 
-__User Story:__ 
-Plotters are simple output devices, but can require a large amount of track and 
-infrastructure; using 2 motors to control location of marker via line in/out in a polar coordinate 
-fashion will allow the device to scale up to billboard size for a giant art display, say along a 
-major north/south interstate highway. For example. 
+__User Story:__
+Plotters are simple output devices, but can require a large amount of track and
+infrastructure; using 2 motors to control location of marker via line in/out in a polar coordinate
+fashion will allow the device to scale up to billboard size for a giant art display, say along a
+major north/south interstate highway. For example.
 
 __Feature Set:__
 o Weatherproof and hidden controller, motor, and spindle housing
@@ -300,7 +303,7 @@ __User Story:__ We leave the house for extended periods during hot dry weather a
 
 
 __Feature Set:__
-o Main line valves actuated by internet-connected IoT switch, on schedule with manual overrides. 
+o Main line valves actuated by internet-connected IoT switch, on schedule with manual overrides.
 o Flow meter used to activate alarm of valve failure and fine-tune water usage.
 o Rain, soil moisture, and localized temperature sensor pack to fine-tune water usage. Battery-powered and internet-connected for minimal wiring.
 o Gang valving and individual drippers in garden for easy access and fine control.
@@ -315,7 +318,7 @@ __Phasing:__
 *  cistern with submersible pump
 
 
-__BOM:__ 
+__BOM:__
 o https://www.adafruit.com/product/997
 o https://www.adafruit.com/product/3010
 o https://www.adafruit.com/product/1298
@@ -328,11 +331,11 @@ FIGURE: [HappyHippieLifestyle/plumbing, width=900 frac=0.9] Plumbing Schematic. 
 
 __Description:__ Tiny HAM radio that can be used anywhere
 
-__User Story:__ The world is still a big place and to explore certain parts in safety, we need a way to broadcast an emergency. 
-PLBS are really only domestic, not hackable (or even able to replace batteries), and for emergency only. Sat messengers have 
-not-insignificant subscription fees, and varying coverage. HAM remains the most ubiquitous global radio infrastructure, and with 
+__User Story:__ The world is still a big place and to explore certain parts in safety, we need a way to broadcast an emergency.
+PLBS are really only domestic, not hackable (or even able to replace batteries), and for emergency only. Sat messengers have
+not-insignificant subscription fees, and varying coverage. HAM remains the most ubiquitous global radio infrastructure, and with
 help, can be transmitted from any global location, for a variety of needs.
- 
+
 __Feature Set:__
 o Uses APRS for tracking mode
 o Can be modded to suit the locale and needs of a trip
@@ -350,22 +353,21 @@ __Notes:__
 # !split
 # ======= Template =======
 
-# __Description:__ 
-# __User Story:__ 
+# __Description:__
+# __User Story:__
 # __Feature Set:__
-# o 
+# o
 
 # __Phasing:__
-# * 
+# *
 
-# __BOM:__ 
-# o 
+# __BOM:__
+# o
 
 # __Notes:__
-# * 
+# *
 
 # __Code:__
 # @@@CODE ./filepath envir=Xpro
 
 # FIGURE: [path, width=900 frac=0.9] Something. label{fig:tag1}
-

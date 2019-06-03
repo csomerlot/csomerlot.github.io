@@ -1,17 +1,18 @@
 TITLE: Robotics Projects
 TOC: on
 
+Welcoming our new overlords...
 
 !split
 ======= Fixed Wing UAV =======
-__Description:__ 
-open-source, open-hardware driven custom fixed-wing UAV platform for efficient 
+__Description:__
+open-source, open-hardware driven custom fixed-wing UAV platform for efficient
 mapping projects and long-distance linear asset inspection
- 
+
 __User Story:__
-Quadcopter UAVs are great for inspections and tight places, but require many 
+Quadcopter UAVs are great for inspections and tight places, but require many
 batteries and many flights to capture site imagery used for mapping. They are also expensive and difficult to control. With so many camera and sensor options available off-the-shelf, a fixed-wing platform like the eBee makes a lot of sense for certain types of missions.
- 
+
 __Feature Set:__
 o 500 gram payload
 o Assisted take-off
@@ -23,7 +24,7 @@ o Automated flights
 __Description:__ A long-range, long-duration, aquatic robotic sensor platform for locating and investigating underwater interests
 
 
-__User Story:__ Many things are down there in the deep, waiting discovery. Metal, habitat, species... 
+__User Story:__ Many things are down there in the deep, waiting discovery. Metal, habitat, species...
 many things, in many places, some very remote. I want a platform that can travel the world with any sensor I can dream of, and deliver itself back to me.
 
 
@@ -80,7 +81,7 @@ o Re-engineer into a small remora-style package to find and attach to large anim
 
 
 __BOM:__
-1. 
+1.
 
 __Notes:__
 * https://www.raspberrypi.org/blog/fish-pi/
@@ -91,7 +92,7 @@ __Notes:__
 __Description:__ a multi-armed, multi-sensored robot for cleaning pools
 
 
-__User Story:__ Cleaning pools involves scrubbing algal growth from surfaces, and sucking up debris. What better format of robot to do this but something with 8 arms, a beak mouth, and a bag to hold debris? 
+__User Story:__ Cleaning pools involves scrubbing algal growth from surfaces, and sucking up debris. What better format of robot to do this but something with 8 arms, a beak mouth, and a bag to hold debris?
 
 
 __Feature Set:__
@@ -106,12 +107,12 @@ __Phasing:__
 * Research sensors
 
 
-!split 
+!split
 ======= Scarecrow Targeting System =======
 __Description:__ a camera-based object tracking software system
 
 
-__User Story:__ In the suburban warfare environment, its our ability to grow food versus mother nature's ability to provide - gardens versus wildlife - me versus the creatures - fencing versus projectile-based discouragement. I want to defend my many hours of invested effort from the random and sneaky browsing of deer and dog. 
+__User Story:__ In the suburban warfare environment, its our ability to grow food versus mother nature's ability to provide - gardens versus wildlife - me versus the creatures - fencing versus projectile-based discouragement. I want to defend my many hours of invested effort from the random and sneaky browsing of deer and dog.
 
 
 __Feature Set:__
@@ -145,22 +146,21 @@ __Description:__ An outdoor version of a roomba-like crawler than can identify a
 # !split
 # ======= Template =======
 
-# __Description:__ 
-# __User Story:__ 
+# __Description:__
+# __User Story:__
 # __Feature Set:__
-# o 
+# o
 
 # __Phasing:__
-# * 
+# *
 
-# __BOM:__ 
-# o 
+# __BOM:__
+# o
 
 # __Notes:__
-# * 
+# *
 
 # __Code:__
 # @@@CODE ./filepath envir=Xpro
 
 # FIGURE: [path, width=900 frac=0.9] Something. label{fig:tag}
-
