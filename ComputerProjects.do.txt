@@ -89,10 +89,13 @@ o FOSS full synth with effects
 
 __Phasing:__
 * Pick up an Akai EWI
+* Make a portable sound system
 * Pick up the Zynthian kit parts
  
 __BOM:__
 * https://www.hifiberry.com/products/dacplus/
+* https://www.amazon.com/BOSS-Audio-CE200M-Monoblock-Amplifier/dp/B0077IA7FG?th=1&psc=1
+* https://www.amazon.com/Antigravity-Batteries-Battery-Starter-Charger/dp/B01L0F6K5C/ref=pd_aw_vtph_263_lp_tr_2/130-0236497-8146456?_encoding=UTF8&pd_rd_i=B01L0F6K5C&pd_rd_r=34b75632-85a1-11e9-9b09-4f16de09a724&pd_rd_w=rGCZ0&pd_rd_wg=hu7To&pf_rd_p=33304d62-e1a9-4538-a43c-b1d2dc49800d&pf_rd_r=1A8SNTZPHAMESVH6QJ0N&psc=1&refRID=1A8SNTZPHAMESVH6QJ0N
 * https://www.adafruit.com/product/1601
 * https://us.seeedstudio.com/5-inch-800x480-Capacitive-TouchScreen-p-2923.html?utm_source=Bazaar+%EF%BC%88%E7%94%B5%E5%95%86%EF%BC%89&utm_campaign=9162fdf13c-September+campaign+%E2%80%94%E2%80%94+1%24_9.21_Japanese_COPY_01&utm_medium=email&utm_term=0_4b071a49e3-9162fdf13c-49714817&ct=t()&mc_cid=9162fdf13c&mc_eid=3012c69022
  

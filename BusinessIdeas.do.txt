@@ -1,14 +1,15 @@
 TITLE: Business Ideas
 TOC: on
 
+
+!split
+======= Technology =======
 In General:
 o Minimize startup costs
 o Find a woman to own the business
 o Use local gov't IT business incentives
 o Avoid brick and mortar type of business
 
-!split
-======= Technology =======
 ===== POS =====
 === A FOSS-based Point of Sale system ===
 o Business model basics
