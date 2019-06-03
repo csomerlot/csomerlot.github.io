@@ -60,8 +60,7 @@ FIGURE: [./HappyHippieLifestyle/workbench, width=900 frac=0.8] label{fig:workben
     * Roy Underhill (Woodwrights Workshop) books
     * Foxfire books
     * Paul Sellers ("blog": "https://paulsellers.com/") ("YouTube": "https://www.youtube.com/channel/UCc3EpWncNq5QL0QhwUNQb7w")
-    * Mr. Chickadee ("blog": "https://mrchickadee.com/blog/") ("YouTube": "
-https://www.youtube.com/playlist?list=UUHkYrJ2Fbe7pBjEZvkFzi3A")
+    * Mr. Chickadee ("blog": "https://mrchickadee.com/blog/") ("YouTube": "https://www.youtube.com/playlist?list=UUHkYrJ2Fbe7pBjEZvkFzi3A")
     * "A Wikipedia compendium": "./HappyHippieLifestyle/WoodCraft_wikipedia.pdf"
     * "Wood material properties by species": "https://docs.google.com/spreadsheets/d/1_zjI1vGxCtmsbH69QjpMYNBPJ468HVjOvgf4P3YOeug/edit?usp=sharing"
     * "The wood database": "https://www.wood-database.com/"
