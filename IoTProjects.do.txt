@@ -44,11 +44,12 @@ o Controls
     o Wood Stove blower
         o Stepper motor-controled rheostat
 o Server
-    o Raspberry Pi
+    o Raspberry Pi-based
+    o Integrations
         o Thermostat interface with LCD hat
         o NILM data logger
         o Wifi Router and print server
-    o Domotics A(i) Dashboard (with voice control: *"Just ask DAD"*)
+    o "Domotics A(i) Dashboard (with voice control: *"Just ask DAD"*)": "https://learn.adafruit.com/integrating-adafruit-io-with-home-assistant/esphome-setup"
 
 !split
 ======= Track GDD =======
