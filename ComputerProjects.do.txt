@@ -179,7 +179,9 @@ o A gui-based designer for weaving
 
 ===== Somerlot Shooting Support System (S4) =====
 o Basic ballistics calc to support F-Class gun (drop and windage)
+  o "Trajectory Science lib": "https://pypi.org/project/ballistics/"
 o Based on computed and measured ballistic performance
+  o Empirical test data to refine bullet drag and air density coefficients
 o Integrate with GPS, mapping, online weather stations, USB weather station
 
 

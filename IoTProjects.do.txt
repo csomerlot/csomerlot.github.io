@@ -162,12 +162,13 @@ o Water level and quality sensors, media moisture for SmartUtility demonstration
 o Low voltage and redundant level sensor
     o Pressure sensor for full range and eTape for top 12"
 o Attractive as office decor
-o Avoid custom enclosures or power supplies for safety
+o enclosure for housing solenoid on tee, solenoid relay, huzzah, and pressure sensor
+  DC5V in, pressure airline in, etape lead in, airpump airline in, relay control lead and airline out
 
 __Phasing:__
 o Build air pump and ARV mechanicals
     o Mount solenoid to end of airline Tee
-    o mount Tee to eTape to and couple tubing for airlines and pressure sensor to it
+    o Wire and test components
     o Assemble and encase feather
 o Install base controller logic
 o Build server script that runs flood routine based on MQTT events
