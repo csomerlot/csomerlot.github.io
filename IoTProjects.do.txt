@@ -167,7 +167,7 @@ o enclosure for housing solenoid on tee, solenoid relay, huzzah, and pressure se
 
 __Phasing:__
 o Build air pump and ARV mechanicals
-    o Mount solenoid to end of airline Tee
+    o "Mount solenoid": "https://learn.adafruit.com/assets/61219" and Tee
     o Wire and test components
     o Assemble and encase feather
 o Install base controller logic

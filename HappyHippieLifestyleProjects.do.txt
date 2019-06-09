@@ -2,18 +2,10 @@ TITLE: Happy Hippie Lifestyle Projects
 TOC: on
 
 ======= Custom Fish Tank =======
-* Made from Clear PVC Pipe
-* Dimensions
-    * 12" dia by 6.5' tall
-* Welded Bottom Cap
-* Volume
-    * 35 gallons
-* Bottom pressure
-    * None
-* Cost
-    * $112/ft.
-* Needs pump filter system
-* tap fittings int* pipe walls for filter inlet/outlet
+* Made from Clear PVC Pipe with welded Bottom Cap
+- Dimensions: 12" dia by 6.5' tall
+- Volume: 35 gallons
+* tap fittings into pipe walls for filter inlet/outlet
 * Injection port on pump effluent for feeding and air bubbles
 * Integral water heater
 * Stored on top of tank to prevent leaks
@@ -31,14 +23,12 @@ FIGURE: [./HappyHippieLifestyle/BlueForest_Treehouse_Amberley_Castle_1_gallery-i
 
 FIGURE: [./BookTopics, width=315 frac=0.8] Celtic Migration. label{fig:book1}
 
-======= Camping Gear =======
-* Need
-    * Modern headlamps
-    * Crocs
-* Chameleon Tent 
+======= Camping Gear To Make =======
+* Chameleon Tent
     * Hammock - Bivy - all purpose tent
     * a la Eureka Solitaire
 * "Camping yurt": "https://www.campingyurts.com/"
+* Fold-up wood burning grill with blower
 
 ======= Wishing Well Grill =======
 - Historical Design: "Schwenker": "https://en.wikipedia.org/wiki/Schwenker"
@@ -46,18 +36,16 @@ FIGURE: [./BookTopics, width=315 frac=0.8] Celtic Migration. label{fig:book1}
   * Wood grill
   * Smoker
   * Maple sap boiler
-    * Air-tight fit
   * Pizza / bread oven
   * Griddle
-    * Air-tight fit, bags of sand on top for holding heat?
-* Construction
+* Construction for Permanent model
   * Refractory brick on inside
   * Red brick on outside
-  * Filled 50% with sand (for luao) topped with granite or slate
+  * Filled 50% with sand (for luao) or gravel
   * Air-tight door
-    * Fitting for attaching blower
-  * Electric trolley winch
-  
+  * Winch
+* "Mobile version": "https://www.schwenktheworld.com/schwenker"
+
 ======= Birdhouse Cam =======
 * Use off-the-shelf color wireless camera
 * Solar panel and latern battery for power
@@ -65,7 +53,7 @@ FIGURE: [./BookTopics, width=315 frac=0.8] Celtic Migration. label{fig:book1}
 * board lens and IR leds for night vision
 * remote A/V switch or multiple input PCI card
 
-!split 
+!split
 # #include "WoodWorking.do.txt"
 
 !split
