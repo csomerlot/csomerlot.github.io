@@ -122,19 +122,15 @@ __Notes:__
 
 __Logic:__
 o Controller:
-    o Init last send time on startup
     o Read data
     o Save data to data file
     o If communications enabled:
         o If MQTT feed not present, establish one
-        o Send data going back to last successful time
-        o If send succeeds, save time
     o Log everything
     o Pause (vary time by event status or actively via MQTT)
         o break if button is pressed
     o loop back to step 2
 o Host:
-    o Check for duplicated data, save new
     o Check for alarm levels
     o Log everything
 
