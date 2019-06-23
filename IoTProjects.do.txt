@@ -164,6 +164,7 @@ o enclosure for housing solenoid on tee, solenoid relay, huzzah, and pressure se
 __Phasing:__
 o Build air pump and ARV mechanicals
     o "Mount solenoid": "https://learn.adafruit.com/assets/61219" and Tee
+      o keep away from electronics in case of back-flow
     o Wire and test components
     o Assemble and encase feather
 o Install base controller logic
@@ -171,11 +172,13 @@ o Build server script that runs flood routine based on MQTT events
 o Build flood tank with rock wool planting cells
 o triple-tote system:
     o Media tray
-        o Holes in bottom for drainage and one along corner for eTape and tubing pass-through
+        o Notches in bottom edge for drainage
         o Anchoring for rock wool cubes
+            o brass screws along rim, to strech rubber bands over?
     o Solution tank
-        o Air line running into piping header with balloons attached,
-        o Latches media tray in place to avoid flotation
+        o Air line running into 1 large ballon
+          o multiple balloons make multiple points of failure, plus don't inflate equally
+        o Latch media tray in place to avoid flotation
         o Thru-hole for overflow port
     o Overflow tank
         o Captures leaks or overflows
