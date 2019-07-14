@@ -53,10 +53,10 @@ community-based wifi or a free-space optical link.
 __Feature Set:__
 o Parental Filtering and logging
 o Directional Wifi
-o Performance Dashboard
+o Performance and health dashboard
 o "Othernet": "https://othernet.is/" Integration (I *so* hope this project works)
 o PoE
-
+o "FSO link": "https://github.com/IRNAS/FSO-systems"
 
 __Phasing:__
 * Set up rPI Access point
