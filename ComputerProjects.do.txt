@@ -42,37 +42,36 @@ __Coding DevEnv:__
 
 !split
 ======= Home Internet Gateway =======
-__Description:__ Cable modem, IoT gateway, wifi router, and firewall device.
+__Description:__ Cable modem, IoT gateway, wifi router/repeater, and firewall device.
 
-
-__User Story:__ I just want the internet to work. I also want to protect my family and house, integrate with Domotics and IoT,
-and give the internet company their crap hardware back. Maybe I can even eventually dump the internet company completely for
-community-based wifi or a free-space optical link.
-
+__User Story:__ I just want the internet to work. I also want to protect my family and house, integrate with Domotics and IoT, and give the internet company their crap hardware back. Maybe I can even eventually dump the internet company completely for community-based wifi or a free-space optical link.
 
 __Feature Set:__
 o Parental Filtering and logging
 o Directional Wifi
 o Performance and health dashboard
 o "Othernet": "https://othernet.is/" Integration (I *so* hope this project works)
-o PoE
 o "FSO link": "https://github.com/IRNAS/FSO-systems"
 
 __Phasing:__
-* Set up rPI Access point
-* integrate cable modem
+* configure hostapd, firewall, and dnsmasq
+* swap cable modem
 * research and apply parental filtering and content logging
-* Install othernet
+* install othernet
 
 __BOM:__
 o RPi 3
-o "PoE hat": "https://www.raspberrypi.org/blog/introducing-power-over-ethernet-poe-hat/"
 
 __Notes:__
 * https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md
 * https://thepi.io/how-to-use-your-raspberry-pi-as-a-wireless-access-point/
+* https://beebom.com/how-to-use-raspberry-pi-as-router-and-content-filter/
 * https://www.digikey.com/en/articles/techzone/2013/oct/building-free-space-optical-systems
 * http://shop.oreilly.com/product/9780596002046.do
+
+__GRAPHICS:__
+
+FIGURE: [./Programming/AP_Viewshed, width=600 frac=0.8] Line of sight between office and home. label{fig:los}
 
 !split
 ======= Arduino Wind Instrument =======

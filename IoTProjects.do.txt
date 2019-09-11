@@ -34,7 +34,7 @@ o Sensors
         o Water table depth
 o Controls
     o Furnace
-    o Fans
+    o Window Fans
     o Lights
     o Power failure
     o Patio snow melter
