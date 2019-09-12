@@ -1,34 +1,27 @@
 from turtle import *
-speed(0)
 
-maxDim = 50
-# color('red', 'yellow')
-# begin_fill()
-# while True:
-#     forward(200)
-#     left(170)
-#     if abs(pos()) < 1:
-#         break
-# end_fill()
+maxDim = 200
 
+setup (width=maxDim+10, height=maxDim+10)
 screensize(maxDim, maxDim)
-setworldcoordinates(0,0,maxDim,maxDim)
-width(10)
-# exitonclick()
+setworldcoordinates(0,maxDim,maxDim,0)
+width(5)
+speed(5)
 
 #warp
-color('yellow')
-for x in range(0,maxDim,5):
+color('red')
+for x in range(0,maxDim,width()*2):
     setx(x)
     sety(0)
     goto([x, maxDim])
 
 
 #weft
-color('yellow')
-for y in range(maxDim,0,-5):
+color('green')
+for y in range(maxDim,0,-width()*2):
     sety(y)
     setx(0)
     goto([maxDim,y])
 
-done()
+# done()
+# exitonclick()
