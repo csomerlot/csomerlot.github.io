@@ -147,6 +147,23 @@ __Notes:__
 * https://hackaday.io/project/3488-universal-bluetooth-audio-adapter
 
 
+
+!split
+======= Tartan designer =======
+o A gui-based designer for weaving
+o A great use-case and teaching example of using graphics and Programming
+  o https://docs.python.org/3.3/library/turtle.html
+
+@@@CODE ./code/TartanDesigner.py
+
+!split
+======= Somerlot Shooting Support System (S4) =======
+o Basic ballistics calc to support F-Class gun (drop and windage)
+  o "Trajectory Science lib": "https://pypi.org/project/ballistics/"
+o Based on computed and measured ballistic performance
+  o Empirical test data to refine bullet drag and air density coefficients
+o Integrate with GPS, mapping, online weather stations, USB weather station
+
 !split
 ======= Retail support tools =======
 ===== Scheduler =====
@@ -167,24 +184,6 @@ o Usage
     o Output
         o This is the secret part, and will be filled in later.
 o "Download installer": "https://s3.amazonaws.com/projects.somerlot.net/Programming/setup.exe" (if you have permissions)
-
-
-!split
-======= Tartan designer =======
-o A gui-based designer for weaving
-o A great use-case and teaching example of using graphics and Programming
-  o https://docs.python.org/3.3/library/turtle.html
-
-@@@CODE ./code/TartanDesigner.py
-
-!split
-======= Somerlot Shooting Support System (S4) =======
-o Basic ballistics calc to support F-Class gun (drop and windage)
-  o "Trajectory Science lib": "https://pypi.org/project/ballistics/"
-o Based on computed and measured ballistic performance
-  o Empirical test data to refine bullet drag and air density coefficients
-o Integrate with GPS, mapping, online weather stations, USB weather station
-
 
 !split
 # #include "IoTProjects.do.txt"
