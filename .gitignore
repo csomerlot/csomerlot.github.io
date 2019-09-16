@@ -1,4 +1,6 @@
 *.skb
+*.ini
+*.pyc
 *.dlog
 .*.copyright
 .*_html_file_collection

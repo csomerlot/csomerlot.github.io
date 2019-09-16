@@ -1,9 +1,9 @@
 from turtle import *
 
 w = 2
-set = tuple(['green']*12 + ['red']*20) * 2
+sett = tuple(['green']*12 + ['red']*20) * 2
 
-maxDim =len(set)*w
+maxDim =len(sett)*w
 setup(width=maxDim, height=maxDim)
 screensize(maxDim, maxDim)
 setworldcoordinates(0,maxDim,maxDim,0)
@@ -18,16 +18,16 @@ def tossShuttle():
         left(90)
         forward(w)
         left(90)
-        setx(maxDim)
+        settx(maxDim)
     else:
         right(90)
         forward(w)
         right(90)
-        setx(0)
+        settx(0)
 
 #warp
 home()
-for x, c in enumerate(set):
+for x, c in enumerate(sett):
     penup()
     goto([x*w, -3*w])
     pendown()
@@ -38,7 +38,7 @@ penup()
 #weft
 home()
 start = 0
-for x, c in enumerate(set):
+for x, c in enumerate(sett):
     color(c)
     treadle = start
     while 0 <= xcor() <= maxDim:
