@@ -1,6 +1,7 @@
 *.skb
 *.ini
 *.pyc
+Thumbs.db
 *.dlog
 .*.copyright
 .*_html_file_collection

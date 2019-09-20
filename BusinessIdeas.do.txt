@@ -408,6 +408,7 @@ o Scotch egg/sausage bread/bierock thingy
 o Spinach Salad
 o Smoked cabbage wedge salad
 o PICKLES
+o German chocolate cake
 "Food permit ($130)": "http://www.ongov.net/health/documents/TemporaryFoodPermit.pdf"
 
 ===== SSS =====
