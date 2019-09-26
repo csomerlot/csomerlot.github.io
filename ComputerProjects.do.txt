@@ -154,6 +154,8 @@ o A gui-based designer for weaving
 o A great use-case and teaching example of using graphics and Programming
   o https://docs.python.org/3.3/library/turtle.html
 
+FIGURE: [./code/TartanDesigner.py.png, width=600 frac=0.8] Sample output. label{fig:tartan}
+
 @@@CODE ./code/TartanDesigner.py
 
 !split
