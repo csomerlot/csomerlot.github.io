@@ -1,4 +1,4 @@
-call %ALLUSERSPROFILE%/Anaconda3/Scripts/activate.bat
+call %USERPROFILE%/Anaconda3/Scripts/activate.bat
 
 set style=bootstrap_blue
 doconce format html "AlternativeEnergyProjects.do.txt" --cite_doconce --html_style=%style%
