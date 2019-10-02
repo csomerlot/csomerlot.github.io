@@ -1,9 +1,14 @@
 === Managing this site ===
 This folder contains a bunch of notebooks authored in doconce text files, versioned via git, and stored in dropbox for possible sharing and co-authoring. The notebooks are published automatically, individually and as a whole, in a variety of formats, with media embedded.
 
-Previous efforts for this documentation included Google Keep and docs, mind maps, evernote, and onenote. None of these formats support publishing as a web site, slidedeck, and pdf, nor have the versioning or sharing
-capability. Nor low-cost and DNS integration.
+Previous efforts for this documentation included Google Keep and docs, mind maps, evernote, and onenote. None of these formats support publishing as a web site, slidedeck, and pdf, nor have the versioning or sharingcapability. Nor low-cost and DNS integration.
 
+Setup:
+    - install Anaconda, atom, git, dropbox
+    - make a bat file for preprocess in Scripts: python C:\Users\Administrator\Anaconda3\Scripts\preprocess %*
+    - install conda libraries
+      - conda install -c conda-forge awscli
+      - conda install doconce
 Editing tools:
     - atom
     - dropbox app on android

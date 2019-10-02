@@ -24,8 +24,7 @@ o plywood stitch and glue home construction
 o can carry 3 or 4 kayaks up on trampoline
 o we'll call her the Glorious Anne-Marie (because there are 2 hulls! get it?)
 o she'll probably do 20 knots downwind...
-o Designer's Photos
-o Study Plans
+o "Study Plans": "http://www.sailingcatamarans.com/strider.htm"
 ======= Skin-on-frame Kayak =======
 o greenland style
 o use traditional measurement system
@@ -49,7 +48,7 @@ o Materials
         o any light hard or softwood
         o best to get green, for cost and bendibility
 o Wood steamer
-                                                                    
+
 FIGURE: [Boats/SOFkayak, width=900 frac=0.9] Skin on frame kayak. label{fig:sof}
 
 FIGURE: [Boats/WoodSteamer, width=700 frac=0.9] Wood steamer. label{fig:steamer}
@@ -171,7 +170,7 @@ o Data
             o URI looks like <a href="syr-csomerlot.bc.brwncald.com/cgi-bin/mapserv.exe?map=/ms4w/apps/wms/wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=14800_1&STYLES=&FORMAT=image/png">This</a> (but with "&BBOX=%.6f,%.6f,%.6f,%.6f&WIDTH=256&HEIGHT")
 ======= Catamaran Daysailor =======
 o Repair Work
-    o New Rudder assembly 
+    o New Rudder assembly
         o Pintles
         o Kick-up rudder heads
         o Rudder blades (1/4" sheet aluminum?)
@@ -196,7 +195,7 @@ o Repair Work
     o Mast
         o Mast float missing
         o Mast step missing (fabricate?)
-                                                                    
+
     o Misc Hardware
         o Need 4 bolts to attach cross members to hulls (1/4"-2 1/2" SS, with wing nuts)
         o Pins for center boards  are missing - fabricate from SS bolts with acrylic tubing
@@ -209,4 +208,3 @@ o Pictures
 FIGURE: [Boats/Cat, width=400 frac=0.9] The Cal Cat in all its glory. label{fig:calcat}
 
 FIGURE: [Boats/MastStep, width=400 frac=0.9] Replacement Mast step. label{fig:maststep}
-
