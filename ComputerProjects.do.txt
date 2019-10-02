@@ -146,6 +146,22 @@ __Notes:__
 * https://www.walkietalkiecentral.com/frs-vs-gmrs/
 * https://hackaday.io/project/3488-universal-bluetooth-audio-adapter
 
+!split
+======= Track GDD =======
+o Use a google calendar to track growing degree days
+    o User enters garden events on the google calendar when it happens (ie sunflowers bloom)
+    o The program connects to NOAA to pull daily min/max temperatures for user's locale and calculate GDD
+    o Next season the garden events are predicted
+    o can start off with a database of "known" GDD events (crops, etc)
+    o can track other seasonal things like honeybee activity, pest occurance, etc
+    o Can use local temp recorder rather than NOAA measurements for fine tuning to micro-locale
+    o can use long-term projected temperatures to predict occurances of events
+    o Updates iCal file of calendar events
+o References
+    o Calculating GDD
+o Local temperature
+    o Onset datalogger
+    o weatherunderground PWS
 
 
 !split
@@ -186,104 +202,6 @@ o Usage
     o Output
         o This is the secret part, and will be filled in later.
 o "Download installer": "https://s3.amazonaws.com/projects.somerlot.net/Programming/setup.exe" (if you have permissions)
-
-!split
-======= GPS Chartplotter =======
-o A portable mapping solution
-    o for use in car or boat
-    o Should be low-cost, replaceable
-    o References
-o hardware
-    o Options
-        o desktop
-            o pico / nano / mini-itx format
-            o Shock protection
-                o Pot into silicone
-                o Shock abosrbing case
-                o Mineral oil bath
-            o LCD monitor
-            o touchscreen / trackball
-            o integrate SSB / weatherfax via soundcard
-            o WiFi sync of data
-        o old laptop
-            o hinge mod options
-                o hinges removed to open lid all the way to bottom of notebook
-                o hinges replaced with single central hinge for 180 deg flip
-                o open laptop 180 deg and keep flat, stand up or hold horizontal
-            o hardware mods
-                o replace battery
-                o replace hard drive w/ removable solid-state
-                o remove CDROM
-                o waterproof case/keyboard protector
-                    o heat dissipation?
-            o interface options
-                o touchpad screen
-                    o place outside of waterproof case
-                o trackball mouse
-    o sensor instrumentation
-        o all
-            o GPS
-            o fluxgate compass
-            o Engine sensors (ODB-II)
-            o wifi, bluetooth adapters
-            o software radio receiver (a la gnuradio/USRP)
-                o shortwave / weather / SSB
-                o DTV
-                o radio teletype
-        o boating extras
-            o sidescan sonar
-            o depth finder
-            o radar
-            o software radio receiver
-                o weatherfax
-        o automotive extras
-            o software radio receiver
-                o speed radar detector
-            o Bluetooth audio sync to phone for music, GPS
-            o DVD
-            o Extra output monitors
-            o Microphone
-    o ADC board
-    o Controls
-        o power windows
-        o power doors
-        o engine start
-        o lights
-o software
-    o options
-        o customized mapping
-            o python
-            o similar to maemo mapper
-        o google earth pro
-            o use kml data for nav/waypoints
-            o route, waypoint logging via GPX
-            o upload position to blog via googlemaps mashup, a la Magnolia log
-    o interface controls
-        o zoomin/out
-        o drag-pan
-        o recenter
-        o popup keyboard/block letter reader
-        o red or green coloring for night vision
-o Data
-    o Projection
-        o EPSG:4326
-    o WMS Map including
-        o bathymetry data
-        o real-time traffic
-        o hydrography
-        o POI
-        o Other WMS layers
-            o street
-            o sattelite/aerial
-            o real-time NEXRAD data
-            o USGS topo
-    o Host with mapserver
-        o use ms4w distribution
-        o use local server to download maps, public server to serve maps
-        o build .map file using MapWingis, MapDesk
-        o configure as WMS server
-        o Setup for maemo mapper
-            o URI looks like <a href="syr-csomerlot.bc.brwncald.com/cgi-bin/mapserv.exe?map=/ms4w/apps/wms/wms.map&SERVICE=WMS&VERSION=1.1.1&REQUEST=GetMap&LAYERS=14800_1&STYLES=&FORMAT=image/png">This</a> (but with "&BBOX=%.6f,%.6f,%.6f,%.6f&WIDTH=256&HEIGHT")
 
 !split
 # #include "IoTProjects.do.txt"
