@@ -9,9 +9,10 @@ __Description:__
 A toolbox platform for sensors and communications built around the venerable RPi.
 
 __BOM:__
-* https://www.adafruit.com/category/1000
-* https://www.adafruit.com/product/2441
-* https://www.adafruit.com/product/1497
+* "RPi": "https://www.adafruit.com/category/1000"
+* "Tiny touchscreen": "https://www.adafruit.com/product/2441"
+* "SDR": "https://www.adafruit.com/product/1497"
+* "Long-range wifi": "https://www.alfa.com.tw/products_detail/8.htm"
 
 __Notes:__
 * Similar to the "PiTop": "https://www.adafruit.com/product/3762", with a different form-factor
