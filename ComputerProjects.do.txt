@@ -60,7 +60,7 @@ __Phasing:__
 * install othernet
 
 __BOM:__
-o RPi 3
+o "Common Mobile Compute Platform": "/._ComputerProjects010.html#___sec10"
 
 __Notes:__
 * https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md

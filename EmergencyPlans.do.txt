@@ -29,7 +29,7 @@ o Basic Car toolkit:
     o Folding saw
     o Starting fluid
 o Communications:
-    o "PLB": "http://projects.somerlot.net/._RoboticsProjects016.html#___sec15"
+    o "PLB": "./._RoboticsProjects016.html#___sec15"
     o Flares
     o Cell phone chargers
     o Sharpie and white plastic bags
@@ -37,7 +37,7 @@ o Communications:
 o Some water and food
 o Blanket and towels
 o Fire extinguisher
-o $300 in Cash and Coin
+o \$300 in Cash and Coin
 o Bleach
 o Camping gear in packs:
     o Cooking equipment
