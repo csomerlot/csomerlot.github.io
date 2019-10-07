@@ -10,14 +10,17 @@ A toolbox platform for sensors and communications built around the venerable RPi
 
 __BOM:__
 * "RPi": "https://www.adafruit.com/category/1000"
+* "PoE": "https://www.adafruit.com/product/3953"
 * "Tiny touchscreen": "https://www.adafruit.com/product/2441"
 * SDR:
   * "cheap option": "https://www.adafruit.com/product/1497"
-  * "plan B option" "https://www.adafruit.com/product/3583"
-* "Long-range wifi": "https://www.alfa.com.tw/products_detail/8.htm"
+  * "plan B option": "https://www.adafruit.com/product/3583"
+* Wifi:
+  * "cheap option": "https://www.adafruit.com/product/1030"
+  * "Long-range": "https://www.alfa.com.tw/products_detail/8.htm"
 
 __Notes:__
-* Similar to the "PiTop": "https://www.adafruit.com/product/3762", with a different form-factor
+* Similar to the "PiTop": "https://www.adafruit.com/product/3762", with a compact housing
 
 !split
 ======= Domotics =======
