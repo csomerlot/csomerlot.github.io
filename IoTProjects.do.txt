@@ -11,7 +11,9 @@ A toolbox platform for sensors and communications built around the venerable RPi
 __BOM:__
 * "RPi": "https://www.adafruit.com/category/1000"
 * "Tiny touchscreen": "https://www.adafruit.com/product/2441"
-* "SDR": "https://www.adafruit.com/product/1497"
+* SDR:
+  * "cheap option": "https://www.adafruit.com/product/1497"
+  * "plan B option" "https://www.adafruit.com/product/3583"
 * "Long-range wifi": "https://www.alfa.com.tw/products_detail/8.htm"
 
 __Notes:__

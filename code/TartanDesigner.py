@@ -2,30 +2,29 @@ import os
 from turtle import *
 from PIL import Image
 
-DEBUG = False
-w = 6 # needs to be even
-c1 = [(15,15,15)]*2
+DEBUG = True
+w = 4
+c1 = [(15,15,15)]*2 ## colors are given by (R,G,B) value * number of threads
 c2 = [(136,0,0)]*14
 c3 = [(0,56,32)]*8
 c4 = [(240,240,240)]*4
-sett = tuple(c1 + c2 + c3 + c4 + c3 + c2)*2
+sett = tuple(c1 + c2 + c3 + c4 + c3 + c2)*3
 
 maxDim = len(sett)*w
 if DEBUG: print (len(sett), maxDim)
-setup(width=maxDim+20, height=maxDim+20,startx=200,starty=20)
+buffer = 20
+setup(width=maxDim+buffer, height=maxDim+buffer,startx=200,starty=20)
 screensize(maxDim, maxDim)
-setworldcoordinates(0,maxDim,maxDim,0) ## does bad things to size and placement based on pixels
+setworldcoordinates(0,maxDim,maxDim,0)
 if DEBUG:
     print(screensize())
     if screensize()[0] != maxDim or screensize()[1] != maxDim:
-        print ("WARNING: Screensize is not set to the maxDim ({}), you likely have aspect warping".format(maxDim))
+        print ("WARNING: Screensize is not set to the maxDim ({}), you likely have aspect warping. Try changing the buffer variable.".format(maxDim))
 
 width(w)
-speed(0)
-tracer(4)
+speed(10)
+tracer(2)
 colormode(255)
-# w = 12
-# register_shape("bar",( (6,0),(-6,0),(-6,24),(6,24) ))
 register_shape("bar",( (w/2,0),(-(w/2),0),(-(w/2),2*w),(w/2,2*w) ))
 shape("bar")
 hideturtle()
