@@ -148,20 +148,20 @@ __Notes:__
 
 !split
 ======= Track GDD =======
-o Use a google calendar to track growing degree days
+o Use a (google?) calendar of observations to track growing degree days
     o User enters garden events on the google calendar when it happens (ie sunflowers bloom)
-    o The program connects to NOAA to pull daily min/max temperatures for user's locale and calculate GDD
-    o Next season the garden events are predicted
-    o can start off with a database of "known" GDD events (crops, etc)
-    o can track other seasonal things like honeybee activity, pest occurance, etc
-    o Can use local temp recorder rather than NOAA measurements for fine tuning to micro-locale
-    o can use long-term projected temperatures to predict occurances of events
-    o Updates iCal file of calendar events
+      o Next season the garden events are predicted
+      o can start off with a database of "known" GDD events (crops, etc)
+      o can track other seasonal things like honeybee activity, pest occurance, etc
+    o The program uses an online API to pull daily min/max temperatures for user's locale and calculate GDD for each observed event from previous seasons
+      o can use long-term temp forecasts to predict occurances of events
+      o Updates calendar of predicted events
+    o Host on pythonanywhere as a web service
 o References
-    o Calculating GDD
+    o "Calculating GDD": "https://en.wikipedia.org/wiki/Growing_degree-day"
 o Local temperature
     o Onset datalogger
-    o weatherunderground PWS
+    o "DarkSky API": "https://rapidapi.com/darkskyapis/api/dark-sky/endpoints"
 
 
 !split
