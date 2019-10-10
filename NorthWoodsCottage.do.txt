@@ -43,7 +43,8 @@ o waste
     o composting toilets
     o kitchen and shower grey-water system
 o hot water
-    o propane on-demand (overhead tank is already room temp!)
+    o "propane on-demand": "https://www.amazon.com/dp/B002JLSH5S/?coliid=I3NOBK27OJ5OOF&colid=LXYPR4UA5ISY&psc=1&ref_=lv_ov_lig_dp_it"
+    o a 20lb tank will give 8hrs of shower hot water (overhead tank is already room temp!)
 o kitchen
     o small propane fridge and cooking stove
     o grilling in summer
