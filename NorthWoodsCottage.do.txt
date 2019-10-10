@@ -69,9 +69,9 @@ o materials estimates (we have to carry everything in by canoe!)
 o References
     o Jon's natural construction book
 
-FIGURE: [./HappyHippieLifestyle/cottage, width=300 frac=0.8] "Hay Bale House": "./HappyHippieLifestyle/cottage.png". label{fig:cottage}
+FIGURE: [./HappyHippieLifestyle/cottage, width=500 frac=0.8] "Hay Bale House": "./HappyHippieLifestyle/cottage.png". label{fig:cottage}
 
-FIGURE: [./HappyHippieLifestyle/cottage_4vw, width=600 frac=1.0] "Hay Bale House": "./HappyHippieLifestyle/cottage.png". label{fig:cottage_4vw}
+FIGURE: [./HappyHippieLifestyle/cottage_4vw, width=800 frac=1.0] "Hay Bale House": "./HappyHippieLifestyle/cottage.png". label{fig:cottage_4vw}
 
 ===== A-Frame Tiny House =====
 Same basic ideas and mechanicals as the HayBaleHome, but:
