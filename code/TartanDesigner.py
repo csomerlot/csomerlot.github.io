@@ -2,7 +2,7 @@ import os
 from turtle import *
 from PIL import Image
 
-DEBUG = True
+DEBUG = False
 w = 4
 c1 = [(15,15,15)]*2 ## colors are given by (R,G,B) value * number of threads
 c2 = [(136,0,0)]*14
@@ -18,8 +18,8 @@ screensize(maxDim, maxDim)
 setworldcoordinates(0,maxDim,maxDim,0)
 if DEBUG:
     print(screensize())
-    if screensize()[0] != maxDim or screensize()[1] != maxDim:
-        print ("WARNING: Screensize is not set to the maxDim ({}), you likely have aspect warping. Try changing the buffer variable.".format(maxDim))
+if screensize()[0] != maxDim or screensize()[1] != maxDim:
+    print ("WARNING: Screensize is not set to the maxDim ({}), you likely have aspect warping. Try changing the buffer variable.".format(maxDim))
 
 width(w)
 speed(10)
