@@ -156,7 +156,7 @@ o Use a (google?) calendar of observations to track growing degree days
     o The program uses an online API to pull daily min/max temperatures for user's locale and calculate GDD for each observed event from previous seasons
       o can use long-term temp forecasts to predict occurances of events
       o Updates calendar of predicted events
-    o Host on pythonanywhere as a web service
+    o Host on "pythonanywhere": "https://www.pythonanywhere.com/user/csomerlot/shares/d795cc4ade44422ea92ab1f1d43fab8e/" as a web service
 o References
     o "Calculating GDD": "https://en.wikipedia.org/wiki/Growing_degree-day"
 o Local temperature
