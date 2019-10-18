@@ -313,6 +313,8 @@ o Removable controller, for image and software update
 o Calibration process
 o Fire suppression
 
+__Notes:__
+o https://www.raspberrypi.org/blog/we-love-a-good-pen-plotter/
 
 __Phasing:__
 

@@ -84,6 +84,6 @@ Same basic ideas and mechanicals as the HayBaleHome, but:
         * modular construction
         * no beams
 
-FIGURE: [./HappyHippieLifestyle/A Frame Half Loft, width=800 frac=1.0] "A Frame plans": "./HappyHippieLifestyle/A Frame Half Loft.png". label{fig:AFrameplans}
+FIGURE: [./HappyHippieLifestyle/AFrameHalfLoft.png, width=800 frac=1.0] "A Frame plans": "./HappyHippieLifestyle/A Frame Half Loft.png". label{fig:AFrameplans}
 
 MOVIE: [https://youtu.be/ZeePDz_ej8M, width=600 frac=0.8] A-Frame. label{fig:AFrame}
