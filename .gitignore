@@ -1,3 +1,7 @@
+*.png
+*.eps
+*.layout
+*.skp
 *.skb
 *.ini
 *.pyc

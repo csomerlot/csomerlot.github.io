@@ -5,7 +5,7 @@ Previous efforts for this documentation included Google Keep and docs, mind maps
 
 Setup:
     - install Anaconda, atom, git, dropbox
-    - make a bat file for preprocess in Scripts: python C:\Users\Administrator\Anaconda3\Scripts\preprocess %*
+    - make a bat file for preprocess in Scripts: @echo OFF; python C:\Users\Administrator\Anaconda3\Scripts\preprocess %*
     - install conda libraries
       - conda install -c conda-forge awscli
       - conda install doconce
