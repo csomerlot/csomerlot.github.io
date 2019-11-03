@@ -6,15 +6,16 @@
 FIGURE: [./HappyHippieLifestyle/workbench, width=900 frac=0.8] label{fig:workbench}
 
 ===== Projects =====
-    * Wool combs
+o For around the house:
     * Cellar doors
-    * Yoke
     * Picture frames
     * Shaving brushes
-    * Canoe paddles
-    * Fishing poles
-    * Recurve bows
-    * Pack baskets
+    * Nutcracker (threaded)
+    * Teabox
+    * Bird boxes (done)
+    * Boot jack (done)
+    * Coat tree (done)
+o For the kitchen:
     * Spatualas and spoons
     * Rolling pin
     * Tortilla press
@@ -24,23 +25,28 @@ FIGURE: [./HappyHippieLifestyle/workbench, width=900 frac=0.8] label{fig:workben
     * Mortar w/ pestle
     * Picnic basket
     * Pasta Tines
+o For the barn:
     * Chicken coop
     * Carrying tote
-    * Sewing machine table
-    * Dulcimers
-    * Casket
-    * Cane
+    * Yoke
     * Shepherds Crook
+o For fiber projects:
+    * Wool combs
+    * Darning egg/mushroom
+    * Sewing machine/project collapsible project table
+o For outdoors:
     * Camping yurt
-    * Nutcracker (threaded)
     * Buckets
     * Marcy field cot
     * Rosin bird whistle
-    * Teabox
-    * Darning egg/mushroom
-    * Bird boxes (done)
-    * Boot jack (done)
-    * Coat tree (done)
+    * Canoe paddles
+    * Fishing poles
+    * Recurve bows
+    * Pack baskets
+o Misc:
+    * Casket
+    * Cane
+    * Dulcimers
 ===== Hand-made tools =====
     * Scrub plane
     * Shooting board
