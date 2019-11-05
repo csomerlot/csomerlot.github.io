@@ -13,6 +13,7 @@ Editing tools:
     - atom
     - dropbox app on android
     - https://www.textdropapp.com
+    - portable GIMP for making the background of images transparent
 Git hooks:
     - run doconce makefile
     - publish to S3 bucket
