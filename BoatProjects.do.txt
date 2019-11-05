@@ -2,6 +2,9 @@
 TITLE: Boat Projects
 TOC: on
 
+======= Building a Whitehall =======
+My first project in building a sailboat, for the someday I dream of... Kelly got me a "book": "https://books.google.com/books?id=6RKdTOWGYjoC&printsec=frontcover&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false" on building a "whitehall": https://en.wikipedia.org/wiki/Whitehall_rowboat", and it is perhaps the most perfect representation of a boat that I kind find.
+
 ======= Cruising Catamaran for Lake Ontario =======
 o a trailerable 25'-ish open deck multihull
 o ample sail plan for light wind
@@ -24,7 +27,9 @@ o plywood stitch and glue home construction
 o can carry 3 or 4 kayaks up on trampoline
 o we'll call her the Glorious Anne-Marie (because there are 2 hulls! get it?)
 o she'll probably do 20 knots downwind...
-o "Study Plans": "http://www.sailingcatamarans.com/strider.htm"
+o Study Plans:
+  o http://www.sailingcatamarans.com/strider.htm
+  o https://www.duckworksmagazine.com/r/plansindex/multihullsail.htm
 ======= Skin-on-frame Kayak =======
 o greenland style
 o use traditional measurement system
