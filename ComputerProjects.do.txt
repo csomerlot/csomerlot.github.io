@@ -49,23 +49,29 @@ __User Story:__ I just want the internet to work. I also want to protect my fami
 __Feature Set:__
 o Parental Filtering and logging
 o Directional Wifi
+o Switching between internet sources
 o Performance and health dashboard
 o "Othernet": "https://othernet.is/" Integration (I *so* hope this project works)
 o "FSO link": "https://github.com/IRNAS/FSO-systems"
 
 __Phasing:__
 * configure hostapd, firewall, and dnsmasq
+  * Basic config shown "here": "https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md#internet-sharing" including security and firewall set up shown "here": "https://www.raspberrypi.org/documentation/configuration/security.md"
+  * Use wlan1 instead of on-board wlan0
+  * Set up wlan0 for backdoor ssh with public key
+  * copy long conf files to /boot via another computer (make sure you have proper line endings though)
+  * "Enable hostapd logging": "https://lb.raspberrypi.org/forums/viewtopic.php?t=92859"
+  * Open network via hostapd conf shown "here": "https://elinux.org/RPI-Wireless-Hotspot"
+  * set up "tor": "https://learn.adafruit.com/onion-pi?view=all"
 * swap cable modem
 * research and apply parental filtering and content logging
+  * https://beebom.com/how-to-use-raspberry-pi-as-router-and-content-filter/
 * install othernet
 
 __BOM:__
 o "Common Mobile Compute Platform": "/._ComputerProjects010.html#___sec10"
 
 __Notes:__
-* https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md
-* https://thepi.io/how-to-use-your-raspberry-pi-as-a-wireless-access-point/
-* https://beebom.com/how-to-use-raspberry-pi-as-router-and-content-filter/
 * https://www.digikey.com/en/articles/techzone/2013/oct/building-free-space-optical-systems
 * http://shop.oreilly.com/product/9780596002046.do
 
