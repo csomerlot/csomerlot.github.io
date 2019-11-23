@@ -56,9 +56,9 @@ o "FSO link": "https://github.com/IRNAS/FSO-systems"
 
 __Phasing:__
 * configure hostapd, firewall, and dnsmasq
-  * Basic config shown "here": "https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md#internet-sharing" including security and firewall set up shown "here": "https://www.raspberrypi.org/documentation/configuration/security.md"
+  * Basic config shown "here": "https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md" (first part only) including security and firewall set up shown "here": "https://www.raspberrypi.org/documentation/configuration/security.md"
   * Use wlan1 instead of on-board wlan0
-  * Set up wlan0 for backdoor ssh with public key
+  * Set up wlan0 for backdoor ssh with public key via static IP
   * copy long conf files to /boot via another computer (make sure you have proper line endings though)
   * "Enable hostapd logging": "https://lb.raspberrypi.org/forums/viewtopic.php?t=92859"
   * Open network via hostapd conf shown "here": "https://elinux.org/RPI-Wireless-Hotspot"
