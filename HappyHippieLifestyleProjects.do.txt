@@ -14,6 +14,7 @@ TOC: on
 * Pontoons swing from overhead down under truck by hydraulics
 * Dual hydraulic jet drives in pontoons
 * Belt-driven hydraulic pump off motor for hydraulic power
+* Or, electric outboard powered by high output alternator
 
 ======= Tree House =======
 
@@ -40,6 +41,7 @@ FIGURE: [./BookTopics, width=315 frac=0.8] Celtic Migration. label{fig:book1}
   * Maple sap boiler
   * Pizza / bread oven
   * Griddle
+  * Wok
 * Construction for Permanent model
   * Refractory brick on inside
   * Red brick on outside
@@ -54,6 +56,20 @@ FIGURE: [./BookTopics, width=315 frac=0.8] Celtic Migration. label{fig:book1}
 * Retransmit signal via power line ethernet
 * board lens and IR leds for night vision
 * remote A/V switch or multiple input PCI card
+
+======= Glamping gear =======
+* Propane hot water heater
+* Propane refrigerator
+* Propane lantern
+* Trestle table
+* Marcy field cots
+* Oil lamps
+* Yurt
+* Cube mini woodstove
+* Mobile schwenker grill
+* "C-head": "http://c-head.com/"
+* knockdown ADK chairs
+* Inflatable hot tub
 
 !split
 # #include "WoodWorking.do.txt"
