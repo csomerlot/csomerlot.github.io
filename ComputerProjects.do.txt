@@ -51,6 +51,7 @@ o Parental Filtering and logging
 o Directional Wifi
 o Switching between internet sources
 o Performance and health dashboard
+o wikipeida and media cache
 o "Othernet": "https://othernet.is/" Integration (I *so* hope this project works)
 o "FSO link": "https://github.com/IRNAS/FSO-systems"
 

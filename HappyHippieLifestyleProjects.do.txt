@@ -27,6 +27,7 @@ FIGURE: [./BookTopics, width=315 frac=0.8] Celtic Migration. label{fig:book1}
 * Chameleon Tent
     * Hammock - Bivy - all purpose tent
     * a la Eureka Solitaire
+    * Fits onto a Murphy field cot
     * https://www.kickstarter.com/projects/kammok/mantis-all-in-one-hammock-tent
 * "Camping yurt": "https://www.campingyurts.com/"
 * Fold-up wood burning grill with blower

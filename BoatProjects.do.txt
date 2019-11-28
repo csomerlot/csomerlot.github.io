@@ -37,22 +37,10 @@ o use traditional measurement system
 o standard european paddle
 o Materials
     o canvas as skin (for first one, at least)
-    o wood for ribs
-        o must be able to bend into very small radius
-        o good candidates
-            o red oak
-                o heavy
-                o can't find green wood
-                o expensive
-            o cedar
-                o must be free of knots
-                o expensive
-            o ash
-                o pallet manufacterers (green!)
-    o wood for gunwales, stringers, etc
-        o any light hard or softwood
-        o best to get green, for cost and bendibility
-o Wood steamer
+    o wood choices
+            o Black locust
+            o Douglas fir
+            o Ash
 
 FIGURE: [Boats/SOFkayak, width=900 frac=0.9] Skin on frame kayak. label{fig:sof}
 
