@@ -102,3 +102,26 @@ o Pictures
 FIGURE: [Boats/Cat, width=400 frac=0.9] The Cal Cat in all its glory. label{fig:calcat}
 
 FIGURE: [Boats/MastStep, width=400 frac=0.9] Replacement Mast step. label{fig:maststep}
+
+======= Amphibious Vehicle System =======
+What nerd hasn't tried to figure this one out? I think the reason that we don't have a commercial product like this is that a break-away, auto-positioning, self-launching hull system is very hard.
+
+===== Electric Hatch-back =====
+With the rise of electric outboards, a drive system is easier than ever when coupled to a high-output alternator. Or at least, would be fun to experiment with!
+* Split hull stored on roof on land mode
+* Hull gets placed for drive-on at boat launch and has rollers for transition into water
+* Dual electric thrust pods are coupled to the wheels somehow for directional control via the steering wheel
+
+===== Amphibious Truck =====
+* Pontoons swing from overhead down under truck by hydraulics
+* Dual hydraulic jet drives in pontoons
+* Belt-driven hydraulic pump off motor for hydraulic power
+
+===== Car Barge =====
+* High-displacement, low draft drive-on LST-style carrier that stays behind when tranisitioning to land
+* Hydraulic drive-on or roll-off deck to completely isolate the vehicle from touching water when transitioning dockside, boat launch, or even from beach
+* Deck uses turn table for loading from an angle, with jacking to lower COG when onboard
+* Electric jet-drive from on-board batteries, backed-up by high-output alternator and charging from shore power
+* Remote or auto-piloting of barge from slip or mooring allows user to remain in vehicle through transition
+* Hull can take many forms, including houseboat, canalboat, trailerable barge, large trimaran
+* Lift points for loading onto rail flatbed for long-hauling

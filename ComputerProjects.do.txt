@@ -52,6 +52,7 @@ o Directional Wifi
 o Switching between internet sources
 o Performance and health dashboard
 o wikipeida and media cache
+o privacy and ad blocking
 o "Othernet": "https://othernet.is/" Integration (I *so* hope this project works)
 o "FSO link": "https://github.com/IRNAS/FSO-systems"
 
@@ -64,9 +65,11 @@ __Phasing:__
   * "Enable hostapd logging": "https://lb.raspberrypi.org/forums/viewtopic.php?t=92859"
   * Open network via hostapd conf shown "here": "https://elinux.org/RPI-Wireless-Hotspot"
   * set up "tor": "https://learn.adafruit.com/onion-pi?view=all"
+  * set up pi-hole
 * swap cable modem
 * research and apply parental filtering and content logging
   * https://beebom.com/how-to-use-raspberry-pi-as-router-and-content-filter/
+  * e2guardian with tinyproxy
 * install othernet
 
 __BOM:__

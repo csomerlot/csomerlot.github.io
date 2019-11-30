@@ -10,12 +10,6 @@ TOC: on
 * Integral water heater
 * Stored on top of tank to prevent leaks
 
-======= Amphibious Truck =======
-* Pontoons swing from overhead down under truck by hydraulics
-* Dual hydraulic jet drives in pontoons
-* Belt-driven hydraulic pump off motor for hydraulic power
-* Or, electric outboard powered by high output alternator
-
 ======= Tree House =======
 
 FIGURE: [./HappyHippieLifestyle/BlueForest_Treehouse_Amberley_Castle_1_gallery-image, width=900 frac=0.8] The kids picked this design. label{fig:treehouse}
