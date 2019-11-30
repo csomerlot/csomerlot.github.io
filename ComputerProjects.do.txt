@@ -64,6 +64,7 @@ __Phasing:__
   * copy long conf files to /boot via another computer (make sure you have proper line endings though)
   * "Enable hostapd logging": "https://lb.raspberrypi.org/forums/viewtopic.php?t=92859"
   * Open network via hostapd conf shown "here": "https://elinux.org/RPI-Wireless-Hotspot"
+  * set up "Dynamic DNS": "https://aws.amazon.com/blogs/startups/how-to-build-a-serverless-dynamic-dns-system-with-aws/"
   * set up "tor": "https://learn.adafruit.com/onion-pi?view=all" or a VPN
   * set up pi-hole
 * swap cable modem
