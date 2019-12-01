@@ -121,7 +121,7 @@ With the rise of electric outboards, a drive system is easier than ever when cou
 * High-displacement, low draft drive-on LST-style carrier that stays behind when tranisitioning to land
 * Hydraulic drive-on or roll-off deck to completely isolate the vehicle from touching water when transitioning dockside, boat launch, or even from beach
 * Deck uses turn table for loading from an angle and a lift to raise/lower and keep COG low when onboard
-* Electric jet or tunnel drive from on-board batteries, backed-up by high-output alternator and charging from shore power
+* Electric jet or tunnel drive from on-board batteries, backed-up by high-output alternator and charging from shore power and solar PV panels
 * Remote or auto-piloting of barge from slip or mooring allows user to remain in vehicle through transition
 * Hull can take many forms, including houseboat, canalboat, trailerable barge, large trimaran
 * Lift points for loading onto rail flatbed for long-hauling
