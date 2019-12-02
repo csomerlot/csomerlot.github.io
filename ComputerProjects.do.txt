@@ -73,7 +73,7 @@ __Phasing:__
 * install othernet
 
 __BOM:__
-o "Common Mobile Compute Platform": "/._ComputerProjects010.html#___sec10"
+o "Common Mobile Compute Platform": "/._ComputerProjects010.html#___sec10" (two, one for testing, one for production)
 
 __Notes:__
 * https://www.digikey.com/en/articles/techzone/2013/oct/building-free-space-optical-systems

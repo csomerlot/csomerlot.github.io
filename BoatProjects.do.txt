@@ -118,10 +118,11 @@ With the rise of electric outboards, a drive system is easier than ever when cou
 * Belt-driven hydraulic pump off motor for hydraulic power
 
 ===== Car Barge =====
-* High-displacement, low draft drive-on LST-style carrier that stays behind when tranisitioning to land
+* High-displacement, low draft drive-on LST-style carrier that stays behind when transitioning to land
 * Hydraulic drive-on or roll-off deck to completely isolate the vehicle from touching water when transitioning dockside, boat launch, or even from beach
 * Deck uses turn table for loading from an angle and a lift to raise/lower and keep COG low when onboard
-* Electric jet or tunnel drive from on-board batteries, backed-up by high-output alternator and charging from shore power and solar PV panels
+* Electric propulsion driven from on-board batteries, recharged via high-output alternator on the car, shore power and/or solar PV panels
+  * back of the envelope math: a 20hp "electric outboard": "https://www.torqeedo.com/us/en-us/products/outboards/cruise/cruise-10.0-r/M-1240-00.html" draws 10kW peak (15 mph), 1.5 kW at cruise (5 mph), and a "high-output alternator": "https://www.nationsstarteralternator.com/270-Amp-XP-High-Output-Alternator-for-Subaru-p/13645-270-xp.htm" on a small hatchback car (4.25 ton) can produce 3.5kW at 2500 rpm.
 * Remote or auto-piloting of barge from slip or mooring allows user to remain in vehicle through transition
 * Hull can take many forms, including houseboat, canalboat, trailerable barge, large trimaran
 * Lift points for loading onto rail flatbed for long-hauling

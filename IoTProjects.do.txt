@@ -9,7 +9,7 @@ __Description:__
 A toolbox platform for sensors and communications built around the venerable RPi.
 
 __BOM:__
-* "RPi": "https://www.adafruit.com/category/1000"
+* "RPi": "https://www.adafruit.com/category/1000" with SD card and power supply
 * "PoE": "https://www.adafruit.com/product/3953"
 * "Tiny touchscreen": "https://www.adafruit.com/product/2441"
 * SDR:
@@ -121,6 +121,7 @@ __Notes:__
 * http://i-carus.com/
 * https://learn.adafruit.com/freq-show-raspberry-pi-rtl-sdr-scanner/overview
 * https://othernet.is/
+* https://magpi.raspberrypi.org/articles/android-auto-openauto
 
 !split
 ======= GPS Chartplotter =======
