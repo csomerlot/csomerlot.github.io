@@ -24,6 +24,7 @@ __Projects:__
 o Init: Individual projects
     o Basic battle bots
     o Steampunk wearables
+    o Ornaments
 o Main Missions: Group effort
     o Citizen science
     o Tech-art integration
@@ -38,7 +39,7 @@ __Coding DevEnv:__
 * Visual programming (blockly-scratch-mindstorm)
 * Individual programming jobs with unit testing
 * Agile - Kanban - scrum
-* Arduino Studio must be installed locally, no good browser-based IDE
+* Arduino Studio must be installed locally, no good browser-based IDE (need to test PlatformIO though)
 
 !split
 ======= Home Internet Gateway =======
@@ -51,24 +52,24 @@ o Parental Filtering and logging
 o Directional Wifi
 o Switching between internet sources
 o Performance and health dashboard
-o wikipeida and media cache
+o wikipedia and media cache
 o privacy and ad blocking
 o "Othernet": "https://othernet.is/" Integration (I *so* hope this project works)
 o "FSO link": "https://github.com/IRNAS/FSO-systems"
 
 __Phasing:__
-* configure hostapd, firewall, and dnsmasq
+* configure basic access point
   * Basic config shown "here": "https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md" (first part only) including security and firewall set up shown "here": "https://www.raspberrypi.org/documentation/configuration/security.md"
-  * Use wlan1 instead of on-board wlan0
-  * Enable "hostapd": "https://lb.raspberrypi.org/forums/viewtopic.php?t=92859" and "dnsmasq": "https://www.linux.com/tutorials/advanced-dnsmasq-tips-and-tricks/" logging
-  * Open network via hostapd conf shown "here": "https://elinux.org/RPI-Wireless-Hotspot"
+    * Use wlan1 instead of on-board wlan0
+    * Enable "hostapd": "https://lb.raspberrypi.org/forums/viewtopic.php?t=92859" and "dnsmasq": "https://www.linux.com/tutorials/advanced-dnsmasq-tips-and-tricks/" logging
+    * Open network via hostapd conf shown "here": "https://elinux.org/RPI-Wireless-Hotspot"
+  * set ip tables to allow ssh in only, using MAC filtering and port knocking for stealth
+  * set up "e2guardian": "https://beebom.com/how-to-use-raspberry-pi-as-router-and-content-filter/" but with tinyproxy and WPAD
   * set up "Dynamic DNS": "https://aws.amazon.com/blogs/startups/how-to-build-a-serverless-dynamic-dns-system-with-aws/"
   * set up "tor": "https://learn.adafruit.com/onion-pi?view=all" or a VPN
   * set up pi-hole
-  * set firewall to allow ssh in only, using MAC filtering and port knocking for stealth
 * swap cable modem
-* research and apply parental filtering and content logging
-  * "e2guardian": "https://beebom.com/how-to-use-raspberry-pi-as-router-and-content-filter/" but with tinyproxy and WPAD
+* add external storage with media library
 * install othernet
 
 __BOM:__
