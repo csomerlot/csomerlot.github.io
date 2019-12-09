@@ -9,7 +9,7 @@ __Description:__
 A toolbox platform for sensors and communications built around the venerable RPi.
 
 __BOM:__
-* "RPi": "https://www.adafruit.com/category/1000" with SD card and power supply
+* "RPi": "https://www.adafruit.com/category/1000" with SD card and power supply. 3b+ is best model while v4 gets debugged.
 * Power
   * "Battery": "https://www.adafruit.com/product/3196"
   * "PoE": "https://www.adafruit.com/product/3953"
@@ -17,7 +17,7 @@ __BOM:__
   * "Tiny touchscreen": "https://www.adafruit.com/product/2441"
   * "Minimal OLED": "https://www.adafruit.com/product/3527"
   * "LCD": "https://www.adafruit.com/product/1115"
-* RTC
+* RTC: without this logs and data collection is useless
   * "cheap option": "https://www.adafruit.com/product/3386"
   * "good option": "https://www.adafruit.com/product/4282"
 * SDR:

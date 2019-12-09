@@ -126,3 +126,4 @@ With the rise of electric outboards, a drive system is easier than ever when cou
 * Remote or auto-piloting of barge from slip or mooring allows user to remain in vehicle through transition
 * Hull can take many forms, including houseboat, canalboat, internal docking barge, large trimaran
 * Lift points for loading onto rail flatbed for long-hauling
+* Use a pivoting gantry crane instead, like a log trailer?
