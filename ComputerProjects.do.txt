@@ -58,13 +58,15 @@ o "Othernet": "https://othernet.is/" Integration (I *so* hope this project works
 o "FSO link": "https://github.com/IRNAS/FSO-systems"
 
 __Phasing:__
-* configure basic access point
-  * Basic config shown "here": "https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md" (first part only) including security and firewall set up shown "here": "https://www.raspberrypi.org/documentation/configuration/security.md"
+* configure basic access point (check functionality after each step)
+  * Basic config shown "here": "https://www.raspberrypi.org/documentation/configuration/wireless/access-point.md" (first part only) including security (but not ufw firewall) set up shown "here": "https://www.raspberrypi.org/documentation/configuration/security.md"
     * Use wlan1 instead of on-board wlan0
     * Enable "hostapd": "https://lb.raspberrypi.org/forums/viewtopic.php?t=92859" and "dnsmasq": "https://www.linux.com/tutorials/advanced-dnsmasq-tips-and-tricks/" logging
     * Open network via hostapd conf shown "here": "https://elinux.org/RPI-Wireless-Hotspot"
-  * set ip tables to allow ssh in only, using MAC filtering and port knocking for stealth
+  * "mod iptables to allow ssh in only": "https://serverfault.com/questions/214996/iptables-allow-ssh-access-only-nothing-else-in-or-out"
+    * check with nmap -sS -p 1-65535 <external ip>
   * set up "e2guardian": "https://beebom.com/how-to-use-raspberry-pi-as-router-and-content-filter/" but with tinyproxy and WPAD
+    * or, set up a "MITM proxy": "https://www.dinofizzotti.com/blog/2019-01-09-running-a-man-in-the-middle-proxy-on-a-raspberry-pi-3/" which needs no proxy config by end users, and allows inspection of traffic later
   * set up "Dynamic DNS": "https://aws.amazon.com/blogs/startups/how-to-build-a-serverless-dynamic-dns-system-with-aws/"
   * set up "tor": "https://learn.adafruit.com/onion-pi?view=all" or a VPN
   * set up pi-hole
