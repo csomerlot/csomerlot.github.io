@@ -138,7 +138,7 @@ o Custom FRS, GMRS, or CB integration
     o GMRS appears to offer best cost-vs-performance, with usable range of a couple miles and cross-compatibility with FRS
     o "Custom-built HAM radio?": "http://projects.somerlot.net/._RoboticsProjects016.html#___sec15"
 o Integration with phone for multi-audio stream management
-o Custom handlebar control to only activate mic during push-to-talk, or switch it to VOX for regular hands-free
+o Custom handlebar control to only activate mic during push-to-talk, or switch it to VOX for regular hands-free, or turn off music
 o Charging bracket
 o Cross-use capable for skiing, hiking, trekking, and emergencies that are out of cell range
 o Components that are cheap enough to keep spares of or available enough to find anywhere
@@ -146,7 +146,7 @@ o Components that are cheap enough to keep spares of or available enough to find
 __Phasing:__
 o Purchase radio unit
 o Start with wired connectivity, with phone and radio in tank bag:
-    o Build audio plug adapter to splice radio and phone to earbuds
+    o Build "stereo-line mixer": "https://www.amazon.com/Saramonic-SmartRig-Microphone-Camcorders-Smartphones/dp/B0716NNXF4?ref_=fsclp_pl_dp_2" to combine radio, phone, and earbuds
     o Add handlebar switch to mic for PTT
 o Add wireless integration
     o Build radio mount with charge bracket
