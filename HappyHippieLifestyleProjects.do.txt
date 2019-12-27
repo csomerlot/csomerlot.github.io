@@ -21,9 +21,11 @@ FIGURE: [./BookTopics, width=315 frac=0.8] Celtic Migration. label{fig:book1}
 ======= Camping Gear To Make =======
 * Chameleon Tent
     * Hammock - Bivy - all purpose tent
-    * trekking poles for tent mode?
+    * trekking poles to extend corners to add room/space
+    * half-hoop aluminum poles to extend roof to add room/space
+    * sleeved floor to secure sleeping pad
     * Fits onto a Marcy field cot
-    * Similar to "Eureka Solitaire": "https://eurekacamping.johnsonoutdoors.com/tents/backpacking/solitaire-fg-1-person-tent"
+    * Similar to "Eureka Solitaire": "https://eurekacamping.johnsonoutdoors.com/tents/backpacking/solitaire-al?id=21436", maybe even just figure out how to attach this into a cheap hammock?
     * "Someone beat me to it, as usual": "https://kammok.com/collections/hammock-tents/products/sunda-hammock-tent?variant=34518730631"
 * "Camping yurt": "https://www.campingyurts.com/"
 * Fold-up wood burning grill with blower
