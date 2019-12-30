@@ -69,7 +69,7 @@ __Phasing:__
     * or, set up a "MITM proxy": "https://www.dinofizzotti.com/blog/2019-01-09-running-a-man-in-the-middle-proxy-on-a-raspberry-pi-3/" in transparent mode, but will require accepting and installing a certificate
   * set up "Dynamic DNS": "https://aws.amazon.com/blogs/startups/how-to-build-a-serverless-dynamic-dns-system-with-aws/"
   * set up pi-hole to cut down on ads
-  * use OpenDNS to cut down on phishing and increase DNS lookup speeds
+  * use OpenDNS to cut down on phishing and increase DNS lookup speeds ("use option 6": "https://www.raspberrypi.org/forums/viewtopic.php?t=210933")
   * set up "tor": "https://learn.adafruit.com/onion-pi?view=all" or a VPN
   * set up a dashboard for the 5 options above and a choice of wlan0 or eth0
 * swap cable modem
