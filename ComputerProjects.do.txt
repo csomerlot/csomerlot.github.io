@@ -65,11 +65,13 @@ __Phasing:__
     * Open network via hostapd conf shown "here": "https://elinux.org/RPI-Wireless-Hotspot"
   * "mod iptables to allow ssh in only": "https://serverfault.com/questions/214996/iptables-allow-ssh-access-only-nothing-else-in-or-out"
     * check with nmap -sS -p 1-65535 <external ip>
-  * set up tcpdump and analyze with wireshark to log visited URLs
-    * or, set up a "MITM proxy": "https://www.dinofizzotti.com/blog/2019-01-09-running-a-man-in-the-middle-proxy-on-a-raspberry-pi-3/" in transparent mode, but will require accepting and installing a certificate
-  * set up "Dynamic DNS": "https://aws.amazon.com/blogs/startups/how-to-build-a-serverless-dynamic-dns-system-with-aws/"
+  * create a log of sites visited by MAC address
+    * set up tcpdump to save link headers to a DB server (see code below)
+    * The best option is to use a "MITM proxy": "https://www.dinofizzotti.com/blog/2019-01-09-running-a-man-in-the-middle-proxy-on-a-raspberry-pi-3/" in transparent mode, but will require accepting and installing a certificates
+    * use powerBI or some other data analyzer to produce drillable reports, filter out certain traffic
+  * set up "Dynamic DNS": "https://aws.amazon.com/blogs/startups/how-to-build-a-serverless-dynamic-dns-system-with-aws/" (see code below)
   * set up pi-hole to cut down on ads
-  * use OpenDNS to cut down on phishing and increase DNS lookup speeds ("use option 6": "https://www.raspberrypi.org/forums/viewtopic.php?t=210933")
+  * use OpenDNS to cut down on phishing and increase DNS lookup speeds ("Has to be set up in dnsmasq using option 6": "https://www.raspberrypi.org/forums/viewtopic.php?t=210933")
   * set up "tor": "https://learn.adafruit.com/onion-pi?view=all" or a VPN
   * set up a dashboard for the 5 options above and a choice of wlan0 or eth0
 * swap cable modem
