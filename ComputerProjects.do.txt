@@ -91,6 +91,11 @@ FIGURE: [./Programming/AP_Viewshed, width=600 frac=0.8] Line of sight between of
 __CODE:__
 @@@CODE ./code/route53update.py
 
+
+__CODE:__
+@@@CODE ./code/watcher.py
+
+
 !split
 ======= Arduino Wind Instrument =======
 __Description:__ an inexpensive and simple electronic wind instrument to learn digital music programming
