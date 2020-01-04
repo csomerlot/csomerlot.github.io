@@ -69,7 +69,7 @@ __Phasing:__
   * create a log of sites visited by MAC address
     * set up tcpdump to save link headers to "MySQL": "https://www.raspberrypi.org/forums/viewtopic.php?t=237584" (see code below)
     * The better option is to use a "MITM proxy": "https://www.dinofizzotti.com/blog/2019-01-09-running-a-man-in-the-middle-proxy-on-a-raspberry-pi-3/" in transparent mode, but that requires users accepting and installing a certificate
-    * use R studio to create BI reports of traffic
+    * use "dash": "https://dash-gallery.plotly.host/dash-oil-and-gas/" to create BI reports of traffic
     * link with "MAC dbs": "https://code.wireshark.org/review/gitweb?p=wireshark.git;a=blob_plain;f=manuf" and commonly-used domains DB
   * set up "Dynamic DNS": "https://aws.amazon.com/blogs/startups/how-to-build-a-serverless-dynamic-dns-system-with-aws/" (see code below)
   * set up pi-hole to cut down on ads

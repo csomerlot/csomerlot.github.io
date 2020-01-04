@@ -20,7 +20,10 @@ def dbInit():
     import mysql.connector as mariadb
     import json
 
-    # Read the credentials from secret
+    ## take care to configure security correctly:
+    #### https://stackoverflow.com/questions/1559955/host-xxx-xx-xxx-xxx-is-not-allowed-to-connect-to-this-mysql-server
+    #### https://mariadb.com/kb/en/configuring-mariadb-for-remote-client-access/
+    ## Now, read the credentials from secret
     credentials = None
     with open(__file__.replace(".py", ".jsn")) as f:
         credentials = json.load(f)
@@ -32,34 +35,36 @@ def dbInit():
             user=credentials.get('user'),
             password=credentials.get('password'),
             database=credentials.get('database'),
-            host=credentials.get('host')'
+            host=credentials.get('host')
         )
         cursor = connection.cursor()
 
         # Execute the query
-        cursor.execute("CREATE TABLE IF NOT EXISTS activity (d DATETIME primary key, len TINYINT UNSIGNED, path NVARCHAR(255)));")
+        cursor.execute("CREATE TABLE IF NOT EXISTS activity (dt DATETIME, len INT UNSIGNED NOT NULL, path NVARCHAR(255) NOT NULL);")
 
         return connection
 
 def dbInsert(dbconn, data):
     cursor = dbconn.cursor()
-    insertStr = "INSERT INTO activity "
+    insertStr = "INSERT INTO activity VALUES "
 
     for path in data:
-        insertStr += "({},{},{}) ".format(time.strftime("%Y-%m-%d %H:%M", time.localtime()), data[path], path)
+        insertStr += "('{}',{},'{}'), ".format(time.strftime("%Y-%m-%d %H:%M", time.localtime()), data[path], path)
+    insertStr = insertStr[:-2] + ';'
 
     cursor.execute(insertStr)
-    cursor.execute("commit;")
+    dbconn.commit()
 
 if __name__ == '__main__':
+    ## simplest use is 'nohup python3 watcher.py &', but making it a systemctl service is better
 
-    datastore = csvInit()
-    saveData = csvInsert
+    # datastore = csvInit()
+    # saveData = csvInsert
     # or
-    # datastore = dbInit()
-    # saveData = dbInsert
+    datastore = dbInit()
+    saveData = dbInsert
 
-    timeIndex = 4 ## index of the struct_time; 4 for sum data by minute, 3 for sum by hour
+    timeIndex = 4 ## index of the struct_time; 5 for sum by second, 4 for sum data by minute, 3 for sum by hour
 
     lastmin = time.localtime()[timeIndex]
     db = {}
