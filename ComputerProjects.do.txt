@@ -67,9 +67,9 @@ __Phasing:__
     * check with nmap -sS -p 1-65535 <external ip>
     * set up sshd with "best practices": "https://www.cyberciti.biz/tips/linux-unix-bsd-openssh-server-best-practices.html"
   * create a log of sites visited by MAC address
-    * set up tcpdump to save link headers to a DB server (see code below)
-    * The best option is to use a "MITM proxy": "https://www.dinofizzotti.com/blog/2019-01-09-running-a-man-in-the-middle-proxy-on-a-raspberry-pi-3/" in transparent mode, but will require accepting and installing a certificates
-    * use powerBI or some other data analyzer to produce drillable reports, filter out certain traffic
+    * set up tcpdump to save link headers to "MySQL": "https://www.raspberrypi.org/forums/viewtopic.php?t=237584" (see code below)
+    * The better option is to use a "MITM proxy": "https://www.dinofizzotti.com/blog/2019-01-09-running-a-man-in-the-middle-proxy-on-a-raspberry-pi-3/" in transparent mode, but that requires users accepting and installing a certificate
+    * use R studio to create BI reports of traffic
     * link with "MAC dbs": "https://code.wireshark.org/review/gitweb?p=wireshark.git;a=blob_plain;f=manuf" and commonly-used domains DB
   * set up "Dynamic DNS": "https://aws.amazon.com/blogs/startups/how-to-build-a-serverless-dynamic-dns-system-with-aws/" (see code below)
   * set up pi-hole to cut down on ads
@@ -79,6 +79,8 @@ __Phasing:__
 * swap cable modem
 * add external storage with media library
 * install othernet
+* build FSO tranceivers
+  * "Laser":"https://www.adafruit.com/product/1056" transmitter coupled to a "photo transister": "https://www.adafruit.com/product/2831" receiver mounted on a "spotting scope": "https://www.amazon.com/BARSKA-15-40x50-Colorado-Spotting-Scope/dp/B0049IZMUW/ref=sr_1_16?dchild=1&keywords=spotting+scope&qid=1578058031&sr=8-16", with fiber optic modulators
 
 __BOM:__
 o "Common Mobile Compute Platform": "/._ComputerProjects010.html#___sec10" (two, one for testing, one for production)
