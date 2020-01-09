@@ -40,23 +40,53 @@ def dbInit():
         cursor = connection.cursor()
 
         # Execute the query
-        cursor.execute("CREATE TABLE IF NOT EXISTS activity (dt DATETIME, len INT UNSIGNED NOT NULL, path NVARCHAR(255) NOT NULL);")
+        cursor.execute("CREATE TABLE IF NOT EXISTS activity (\
+            date DATE,  hour TINYINT, minute TINYINT, second TINYINT, \
+            len INT UNSIGNED NOT NULL, \
+            fromAddress NVARCHAR(255) NOT NULL, fromPort NVARCHAR (50), fromContext NVARCHAR (50),\
+            toAddress NVARCHAR(255) NOT NULL, toPort NVARCHAR (50), toContext NVARCHAR (50)\
+            );")
 
         return connection
 
 def dbInsert(dbconn, data):
     cursor = dbconn.cursor()
     insertStr = "INSERT INTO activity VALUES "
+    now = time.localtime()
 
     for path in data:
-        insertStr += "('{}',{},'{}'), ".format(time.strftime("%Y-%m-%d %H:%M", time.localtime()), data[path], path)
+        insertStr += "('{}',{},{},{},{}".format(time.strftime("%Y-%m-%d", now), now[3], now[4], now[5], data[path])
+        for pp in parsePath(path):
+            insertStr += ",'{}'".format(pp)
+        insertStr += "), "
     insertStr = insertStr[:-2] + ';'
 
     cursor.execute(insertStr)
     dbconn.commit()
 
+def parsePath(path):
+    _from, _to = path.strip().split(" > ")
+    _fromPort = _from.split(".")[-1]
+    _fromAdd = _from[:-1*(len(_fromPort)+1)]
+    _fromContext = domainLookup(_fromAdd)
+    _toPort = _to.split(".")[-1]
+    _toAdd = _to[:-1*(len(_toPort)+1)]
+    _toContext = domainLookup(_toAdd)
+
+    return _fromAdd, _fromPort, _fromContext, _toAdd, _toPort, _toContext
+
+def domainLookup(address):
+    if address == 'BCBRWN-PF0QMJMY' or address.replace(".","").isdigit(): context = address
+    elif address.endswith('1e100.net'): context = "gmail"
+    elif address.startswith("iRobot"): context = "Roomba"
+    elif address.startswith("instagram"): context = "instagram"
+    elif address.endswith(".com") or address.endswith(".net") or address.endswith(".org"):
+        context = address.split(".")[-2]
+    else: context = ""
+    return context
+
 if __name__ == '__main__':
-    ## simplest use is 'nohup python3 watcher.py &', but making it a systemctl service is better
+    ## simplest use is 'nohup python3 watcher.py &', but making it a systemctl service is better: https://www.raspberrypi.org/documentation/linux/usage/systemd.md
 
     # datastore = csvInit()
     # saveData = csvInsert
