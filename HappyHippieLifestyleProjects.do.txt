@@ -29,6 +29,7 @@ FIGURE: [./BookTopics, width=315 frac=0.8] Celtic Migration. label{fig:book1}
     * "Someone beat me to it, as usual": "https://kammok.com/collections/hammock-tents/products/sunda-hammock-tent?variant=34518730631"
 * "Camping yurt": "https://www.campingyurts.com/"
 * Fold-up wood burning grill with blower
+* Pressure cooker, to use less energy and time to cook light-weight foods like dried veggies and mushrooms, beans and rice, etc
 
 ======= Wishing Well Grill =======
 - Historical Design: "Schwenker": "https://en.wikipedia.org/wiki/Schwenker"
