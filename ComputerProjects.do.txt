@@ -131,6 +131,7 @@ __Notes:__
 * https://hackaday.com/2014/09/18/a-diy-midi-wind-controller/
 * https://gonzos.net/projects/ewi-pi/
 * http://zynthian.org/
+* https://ewiusb.com/software
 
 !split
 ======= Motocomms =======
