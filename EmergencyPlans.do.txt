@@ -9,6 +9,7 @@ o Bug-out bags
 o Tow rope w/ hooks
 o Change of clothes for everyone
 o Road maps
+o Booze (for bartering)
 o Basic Car toolkit:
     o Channel locks
     o Vice grips
@@ -81,12 +82,13 @@ o Water
     o Peracetic acid
     o Activated carbon
 o Medical
-o Antibiotics
-o Anesthetics
-o Suture materials
+  o Antibiotics
+  o Anesthetics
+  o Suture materials
 o Options
     o Migrate to more secluded location and take up simple farming
     o Head North, away from population centers and become marine migratory hunters
 o Food
     o Seed stash
     o Can stash
+    o Booze stash

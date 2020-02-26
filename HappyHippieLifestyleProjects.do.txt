@@ -28,6 +28,7 @@ FIGURE: [./BookTopics, width=315 frac=0.8] Celtic Migration. label{fig:book1}
     * Similar to "Eureka Solitaire": "https://eurekacamping.johnsonoutdoors.com/tents/backpacking/solitaire-al?id=21436", maybe even just figure out how to attach this into a cheap hammock?
     * "Someone beat me to it, as usual": "https://kammok.com/collections/hammock-tents/products/sunda-hammock-tent?variant=34518730631" (but always out of stock! I'm onto something...)
     * "How to sleep in one": "https://www.treklightgear.com/blogs/trek-life/hammock-angle"
+    * https://ripstopbytheroll.com/collections/diy-kits?avad=33433_a18f10ed1
 * "Camping yurt": "https://www.campingyurts.com/"
 * Fold-up wood burning grill with blower
 * Pressure cooker, to use less energy and time to cook light-weight foods like dried veggies and mushrooms, beans and rice, etc

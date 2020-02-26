@@ -72,7 +72,7 @@ __Phasing:__
     * use "dash": "https://dash-gallery.plotly.host/dash-oil-and-gas/" to create BI reports of traffic
     * link with "MAC dbs": "https://code.wireshark.org/review/gitweb?p=wireshark.git;a=blob_plain;f=manuf" and commonly-used domains DB
   * set up "Dynamic DNS": "https://aws.amazon.com/blogs/startups/how-to-build-a-serverless-dynamic-dns-system-with-aws/" (see code below)
-  * set up pi-hole to cut down on ads
+  * set up a DNS Sinkhole such as "pi-hole": "https://en.wikipedia.org/wiki/Pi-hole" or "NoTrack": "https://github.com/quidsup/notrack" to cut down on ads
   * use OpenDNS to cut down on phishing and increase DNS lookup speeds ("Has to be set up in dnsmasq using option 6": "https://www.raspberrypi.org/forums/viewtopic.php?t=210933")
   * set up "tor": "https://learn.adafruit.com/onion-pi?view=all" or a VPN
   * set up a dashboard for the 5 options above and a choice of wlan0 or eth0
