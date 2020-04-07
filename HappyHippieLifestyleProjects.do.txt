@@ -20,7 +20,7 @@ FIGURE: [./BookTopics, width=315 frac=0.8] Celtic Migration. label{fig:book1}
 
 ======= Camping Gear To Make =======
 - Chameleon Tent: Hammock - Bivy - all purpose tent
-    * Bridge hammock (as opposed to gathered-ends hammock) because:
+    * "Bridge hammock": "https://ripstopbytheroll.com/collections/diy-hammock-kits/products/pre-cut-bridge-hammock-kit?variant=7685978554416" (as opposed to gathered-ends hammock) because:
       * I can't seem how to figure out "how to sleep comfortably": "https://www.treklightgear.com/blogs/trek-life/hammock-angle" in a GE Hammock
       * my legs stick out when at an angle
       * I don't want to buy a underquilt
