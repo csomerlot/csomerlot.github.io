@@ -25,6 +25,7 @@ o For the kitchen:
     * Mortar w/ pestle
     * Picnic basket
     * Pasta Tines
+    * Mandolin
 o For the barn:
     * Chicken coop
     * Carrying tote
@@ -45,7 +46,6 @@ o For outdoors:
     * Recurve bows
     * Pack baskets
 o Misc:
-    * Casket
     * Cane
     * Dulcimers
 ===== Hand-made tools =====
