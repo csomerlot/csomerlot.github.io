@@ -88,3 +88,18 @@ Same basic ideas and mechanicals as the HayBaleHome, but:
 FIGURE: [./HappyHippieLifestyle/AFrameHalfLoft.png, width=800 frac=1.0] "A Frame plans": "./HappyHippieLifestyle/A Frame Half Loft.png". label{fig:AFrameplans}
 
 MOVIE: [https://youtu.be/ZeePDz_ej8M, width=600 frac=0.8] A-Frame. label{fig:AFrame}
+
+===== Off-grid Mechanicals Vault =====
+Every camp-type structure needs a small electricity supply and running hot water. A minimalistic vault design can help simplify the setup, maintenance, and constructability of this.
+ o Structure
+  - A vault that is 95% buried still has an accessible and visible top (so no one runs it over) and is mostly protected from the elements and contains noise
+ o Mechanicals
+  - Battery bank
+  - Well pump
+  - Pressure Tank
+    - this shouldn't be large, as a portable water tower should be used for increased capacity
+  - Filter
+  - UV
+  - Propane tankless water heater
+ o Power
+ o Monitoring
