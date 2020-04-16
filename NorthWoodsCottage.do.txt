@@ -91,15 +91,16 @@ MOVIE: [https://youtu.be/ZeePDz_ej8M, width=600 frac=0.8] A-Frame. label{fig:AFr
 
 ===== Off-grid Mechanicals Vault =====
 Every camp-type structure needs a small electricity supply and running hot water. A minimalistic vault design can help simplify the setup, maintenance, and constructability of this.
- o Structure
-  - A vault that is 95% buried still has an accessible and visible top (so no one runs it over) and is mostly protected from the elements and contains noise
+ o Structure: 4 ft cube build of double-layer ply, with spray foam in between
+    o 95% buried for thermal efficiency, low noise, and security
+    o Accessible and visible top (so no one runs it over)
  o Mechanicals
-  - Battery bank
-  - Well pump
-  - Pressure Tank
-    - this shouldn't be large, as a portable water tower should be used for increased capacity
-  - Filter
-  - UV
-  - Propane tankless water heater
+    o Battery bank
+    o Well pump
+    o Pressure Tank
+        o this shouldn't be large, as a portable water tower should be used for increased capacity
+    o Filter
+    o UV
+    o Propane tankless water heater
  o Power
  o Monitoring
