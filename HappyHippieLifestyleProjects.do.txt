@@ -27,6 +27,7 @@ FIGURE: [./BookTopics, width=315 frac=0.8] Celtic Migration. label{fig:book1}
       * I don't care about weight or needing poles
     * Similar to "Eureka Solitaire": "https://eurekacamping.johnsonoutdoors.com/tents/backpacking/solitaire-al?id=21436", maybe even just figure out how to attach this into a "kit": "https://ripstopbytheroll.com/collections/diy-hammock-kits/products/pre-cut-bridge-hammock-kit?variant=7685978554416" hammock?
 * Fold-up wood burning grill with blower
+    * Like "this": "https://www.amazon.com/dp/B012NHG1CS/?coliid=I32YFIHZ75Y1T&colid=LXYPR4UA5ISY&psc=1&ref_=lv_ov_lig_dp_it" but with the option of attaching a blower
 * Pressure cooker, to use less energy and time to cook light-weight foods like dried veggies and mushrooms, beans and rice, etc
 
 ======= Wishing Well Grill =======
