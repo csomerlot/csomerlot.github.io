@@ -21,8 +21,7 @@ FIGURE: [./BookTopics, width=315 frac=0.8] Celtic Migration. label{fig:book1}
 ======= Backpacking Gear To Make =======
 - Chameleon Tent: Hammock - Bivy - all purpose tent
     * "Bridge hammock": "https://www.eurekatentscanada.com/products/view/494?s=section_4" (as opposed to gathered-ends hammock) because:
-      * I can't seem how to figure out "how to sleep comfortably": "https://www.treklightgear.com/blogs/trek-life/hammock-angle" in a GE Hammock
-      * my legs stick out when at an angle
+      * I can't seem how to figure out "how to sleep comfortably": "https://www.treklightgear.com/blogs/trek-life/hammock-angle" in a gathered-ends hammock, and my legs stick out when at an angle
       * I don't want to buy a underquilt
       * I don't care about weight or needing poles
     * Similar to "Eureka Solitaire": "https://eurekacamping.johnsonoutdoors.com/tents/backpacking/solitaire-al?id=21436", maybe even just figure out how to attach this into a "kit": "https://ripstopbytheroll.com/collections/diy-hammock-kits/products/pre-cut-bridge-hammock-kit?variant=7685978554416" hammock?
@@ -65,8 +64,9 @@ FIGURE: [./BookTopics, width=315 frac=0.8] Celtic Migration. label{fig:book1}
 * Cube mini woodstove
 * Mobile schwenker grill
 * "C-head": "http://c-head.com/"
-* knockdown ADK chairs
+* Knockdown ADK chairs
 * Inflatable hot tub
+* Dry-laid masonry oven
 
 !split
 # #include "WoodWorking.do.txt"
