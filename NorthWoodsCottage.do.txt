@@ -94,7 +94,8 @@ Every camp-type structure would benefit from a temporary and small electricity s
 o Structure:
     o Constructability: 4 ft cube built of double-layer waterproof plywood, with spray foam in between
     o 95% buried for thermal efficiency, low noise, and security
-    o Accessible and visible top (so no one runs it over) yet protected from the elements and vandalism
+    o Accessible and visible top (so no one runs it over) yet protected from the elements and vandalism. Could also site structure on top of it, and size it for lock-box usage as well.
+    o insulated and heated for consistent temp and low humidity
 o Mechanicals
     o Battery bank: lithium
     o Well: some people "do this": "https://www.drillyourownwell.com/" but a lot depends on siting for soil type and depth to water table
@@ -109,12 +110,15 @@ o Mechanicals
     o Power:
         o 12v for safety and convenience
         o charger that can handle solar, genset, alternator, or wind turbine inputs
-o Monitoring
-    o power level
-    o fiter pressure drop
+o Monitoring:
+    o power level and charge rates
+    o filter pressure drop
     o UV beam strength
     o vault temp and humidity
-    o telemetery: wifi?
+    o telemetery: wifi? feather LoRa?
     o pressure tank back pressure
     o vault door alarm
     o propane and CO monitors
+    o well and dry-well levels and temp
+    o pump draw, flow rate, and pressure
+    o propane tank pressure
