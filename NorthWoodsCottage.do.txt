@@ -102,8 +102,8 @@ o Mechanicals
     o Pump: 12v, need not be large capacity
     o Pressure Tank
         o this shouldn't be large, as a portable water tower should be used for increased capacity
-    o Filter: 50 micron follows by 5 micron for sediment and protozoa
-    o UV: for bacteria and viruses
+    o Filter: 50 micron fiber followed by 5 micron charcoal to remove sediment, chemicals, and protozoa
+    o UV: to remove bacteria and viruses
     o Propane tankless water heater:
         o if its a long pipe run, may want to move inside
         o solar preheat coils?

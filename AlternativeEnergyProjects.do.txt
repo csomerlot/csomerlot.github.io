@@ -1,25 +1,28 @@
 
-TITLE: Alternative Energy Projects 
+TITLE: Alternative Energy Projects
 TOC: on
 
-======= Wind Generator =======
-o uses old silo
-  o mount generator on top
-  o house inverter and electroncs inside - send high-voltage back to house
-  o "follow historical build": "http://www.yorktown-windmill.org/"
-o 1kw Unit
-  o 12ft diameter
-o There is 12 mph avg wind speed at our house
-  o probably a little higher on top of silo
-o Connect to grid and net-meter
-  o or, only power certain dedicated devices
-   o water pre-heater tank?
-   o small battery bank and certain appliances
-    o water pump
-    o furnace
-o "Calcs": "https://docs.google.com/spreadsheets/d/1BE7IC5iOtepUQnVXKRCmcoHuhD5HZvn4YsTMwtWeens/edit?usp=sharing"
+We currently use about 18000 kWh per year (avg 50 kWh per day), with electric heat (25%) and hot water (50%), and 5 face cord of firewood for alternative heat. Better basement sealing could probably reduce this 10%. If we put solar panels on the barn roof, "a 6 kW unit would pay for itself in 5 years": "https://docs.google.com/spreadsheets/d/189Td1nhGW3Vrj0CtqKAWVy8kJlys1NEx5la_6wacGrw/edit#gid=1167446425".
 
-======= Stirling Engine Solar Powerplant =======
+======= Concrete Silo Retrofits =======
+This structure isn't going anywhere, so use it
+
+===== Wind Mill Generator =====
+o Use old silo for base structure, but otherwise "follow a historical build": "http://www.yorktown-windmill.org/"
+  o o 12ft diameter wind vanes (with auto-furling) should peak out at
+  o A modern upgrade: a 20ft diameter thrust bearing for it to change direction automatically
+o Mount generator on top: 1kw Unit, for about 10kWh per year
+  o House inverter and electroncs inside and send high-voltage back to house?
+  o There is 12 mph avg wind speed at our house - maybe a little higher on top of silo?
+  o Option 1: connect to grid and net-meter (against zoning, without variance)
+  o Option 2: power certain dedicated devices
+    o water pre-heater tank
+    o small battery bank and certain appliances
+    o compressed air
+    o water pump
+  o "Calcs": "http://zebu.uoregon.edu/1996/ph162/l14.html"
+
+===== Stirling Engine Solar Powerplant =====
 o retrofit the old silo for
  o housing for a large Stirling engine
   o engine configuration TBD (ross-yoke beta?) but these are good ideas
@@ -73,4 +76,3 @@ o Set furnace fan to run on timer to distribute heat and run air cleaner
 o 24 hp can power a 15kw Genset head
     o Enough to power water heater and well pump at same time
 o Buy genset head and mount to tractor, driven by mower belt
-
