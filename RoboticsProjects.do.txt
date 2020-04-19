@@ -142,6 +142,36 @@ __BOM:__
 ======= Invasive Species Patroller =======
 __Description:__ An outdoor version of a roomba-like crawler than can identify and deal with a targeted invasive species
 
+!split
+======= Signal-Tracking Antenna Mount =======
+
+__Description:__
+A mechanism to automate the pointing of recevier/transmitter sensors.
+
+__User Story:__
+If my awesome new FOS laser link at remote data IoT device can't communicate, its not nearly as useful.
+
+# __Feature Set:__
+# o
+#
+# __Phasing:__
+# *
+#
+# __BOM:__
+# o
+#
+# __Notes:__
+# *
+#
+# __Code:__
+# @@@CODE ./filepath envir=Xpro
+#
+# FIGURE: [path, width=900 frac=0.9] Something. label{fig:tag}
+
+
+
+
+
 
 # !split
 # ======= Template =======
