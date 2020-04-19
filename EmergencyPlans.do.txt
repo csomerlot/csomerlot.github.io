@@ -1,15 +1,22 @@
 ======= Emergency Plans =======
 ===== 3 day (Evacuation) =====
-o 40 gallons gas
-o 10 gallons fresh water
-o 25# of non-perishable food
+Grab and go:
+o Water
+o Non-perishable food (and dog food)
+o Toiletries
+o Bug-out bags
+o Booze (for bartering)
+o Extra gas
+o Backpacking camping gear
+o 2-way radios
 o Camouflage tarps
 o Take-down bow
-o Bug-out bags
+o Bleach
+Lives in the Car:
 o Tow rope w/ hooks
 o Change of clothes for everyone
+o TP
 o Road maps
-o Booze (for bartering)
 o Basic Car toolkit:
     o Channel locks
     o Vice grips
@@ -29,12 +36,9 @@ o Communications:
     o Flares
     o Cell phone chargers
     o Sharpie and white plastic bags
-    o 2-way radios
 o Blanket and towels
 o Fire extinguisher
 o \$300 in Cash and Coin
-o Bleach
-o Backpacking camping gear
 
 ===== 3 week (Power failure) =====
 o Genset run from tractor
