@@ -19,3 +19,7 @@ tmp_*
 .dict4spell.txt
 *.commit.log
 Trash
+*.log
+*.csv
+*Log.bat
+watcher.pbix
