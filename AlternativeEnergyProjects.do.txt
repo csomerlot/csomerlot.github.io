@@ -9,9 +9,9 @@ This structure isn't going anywhere, so use it
 
 ===== Wind Mill Generator =====
 o Use old silo for base structure, but otherwise "follow a historical build": "http://www.yorktown-windmill.org/"
-  o o 12ft diameter wind vanes (with auto-furling) should peak out at
+  o 24ft diameter wind vanes (4 arms, with auto-furling) should peak out at 7hp
   o A modern upgrade: a 20ft diameter thrust bearing for it to change direction automatically
-o Mount generator on top: 1kw Unit, for about 10kWh per year
+o Mount generator on top: 5kw Unit, for about 4400 kWh per year
   o House inverter and electroncs inside and send high-voltage back to house?
   o There is 12 mph avg wind speed at our house - maybe a little higher on top of silo?
   o Option 1: connect to grid and net-meter (against zoning, without variance)
