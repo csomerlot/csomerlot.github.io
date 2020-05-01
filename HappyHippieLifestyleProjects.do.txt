@@ -54,20 +54,25 @@ FIGURE: [./BookTopics, width=315 frac=0.8] Celtic Migration. label{fig:book1}
 * board lens and IR leds for night vision
 * remote A/V switch or multiple input PCI card
 
-======= Glamping gear =======
-* Propane hot water heater
-* Propane refrigerator
-* Propane lantern
-* Trestle table
-* Marcy field cots
-* Oil lamps
+======= Glamping/Gypsy/Travellers =======
+* Teardrop trailer
 * Yurt
-* Cube mini woodstove
-* Mobile schwenker grill
-* "C-head": "http://c-head.com/"
-* Knockdown ADK chairs
-* Inflatable hot tub
-* Dry-laid masonry oven
+* Campaign furniture:
+  * Trestle table
+  * Marcy field cots
+  * Oil lamps
+  * Cube mini woodstove
+  * Mobile schwenker grill
+  * "C-head": "http://c-head.com/"
+  * Knockdown ADK chairs
+  * Inflatable hot tub
+  * Dry-laid masonry oven
+* Propane appliances
+  * Fridge
+  * Hot water heater
+  * Griddle
+  * Lamps
+* Water heating coil for the fire
 
 !split
 # #include "WoodWorking.do.txt"
