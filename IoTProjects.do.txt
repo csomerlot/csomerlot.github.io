@@ -45,7 +45,6 @@ o Sensors
             o Voltage Sensors
             o Circuit design
                 o Conceptual description = voltage and current translated to correct range for ADC, goes to ADC, ADC interface with GPIO I2C or SPI bus via isolation
-        o Oil level via flow meter
         o Salt level
         o Water pressure and flow
         o Propane level via pressure sensor
@@ -57,6 +56,7 @@ o Sensors
         O Roomba status
     o Exterior
         o Rain
+        o Soil moisture
         o Sunshine
         o Wind
         o Temp
@@ -65,7 +65,7 @@ o Sensors
         o Motion detectors
         o Water table depth
 o Controls
-    o Furnace
+    o Heat pump
     o Window Fans
     o Lights
     o Power failure
@@ -369,16 +369,16 @@ o Main line plumbing hidden and removable for storage, freeze protection, repair
 
 
 __Phasing:__
-* indoor plumbing to hose cock
-*  IoT switch, meter, and main line valve
-*  buried main line and gang valving
-*  meteorological sensor pack
-*  cistern with submersible pump
+* indoor plumbing to hose cock (done)
+* IoT switch, meter, and main line valve
+* buried main line and gang valving
+* meteorological sensor pack
+* cistern with submersible pump
 
 
 __BOM:__
 o https://www.adafruit.com/product/997
-o https://www.adafruit.com/product/3010
+o https://www.adafruit.com/product/2821
 o https://www.adafruit.com/product/1298
 o https://www.adafruit.com/product/828
 

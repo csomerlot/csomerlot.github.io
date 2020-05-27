@@ -61,6 +61,7 @@ FIGURE: [./BookTopics, width=315 frac=0.8] Celtic Migration. label{fig:book1}
   * Trestle table
   * Marcy field cots
   * Oil lamps
+  
   * Cube mini woodstove
   * Mobile schwenker grill
   * "C-head": "http://c-head.com/"
