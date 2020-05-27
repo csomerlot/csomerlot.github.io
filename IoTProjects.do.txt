@@ -377,10 +377,10 @@ __Phasing:__
 
 
 __BOM:__
-o https://www.adafruit.com/product/997
-o https://www.adafruit.com/product/2821
-o https://www.adafruit.com/product/1298
-o https://www.adafruit.com/product/828
+o "Valve": "https://www.adafruit.com/product/997"
+o "Controller": "https://www.adafruit.com/product/2821"
+o "Sensor": "https://www.adafruit.com/product/1298"
+o "Flow meter": "https://www.adafruit.com/product/828"
 
 FIGURE: [HappyHippieLifestyle/plumbing, width=900 frac=0.9] Plumbing Schematic. label{fig:plumbing}
 
