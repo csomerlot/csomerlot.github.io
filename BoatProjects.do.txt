@@ -97,6 +97,7 @@ o Attempts at Identification
     o Cal Cat
     o Parts
     o Hobie Inspiration
+    o Similar enough to an "Aqua Cat 14": "https://www.americansail.com/products/boats/aqua-cat-14-catamaran" that we can use those parts?
 o Pictures
 
 FIGURE: [Boats/Cat, width=400 frac=0.9] The Cal Cat in all its glory. label{fig:calcat}

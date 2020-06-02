@@ -79,7 +79,7 @@ o Navigation
             o free NOAA charts
         o Terrestrial
             o Delorme atlas books
-    o Night vision
+    o "Night vision": "https://www.amazon.com/SiOnyx-Aurora-Sport-Vision-Camera/dp/B07XJ86Q8G/ref=pd_rhf_ee_s_bmx_0_3/142-5274756-4662861?_encoding=UTF8&pd_rd_i=B07XJ86Q8G&pd_rd_r=e0fb48b6-9c51-46e9-80d1-be21e37fa6ac&pd_rd_w=ylhoM&pd_rd_wg=4JJNT&pf_rd_p=8b7e22e9-af4c-4b2f-89c8-2bbe22eb41bf&pf_rd_r=XKNKGYTC2JV5BACFA5Y8&psc=1&refRID=XKNKGYTC2JV5BACFA5Y8"
 o Fishing gear
 o Water
     o Distiller
