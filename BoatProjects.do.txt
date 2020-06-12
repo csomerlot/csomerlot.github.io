@@ -113,7 +113,7 @@ With the rise of electric outboards, a drive system is easier than ever when cou
 * Hull gets placed for drive-on at boat launch and has rollers for transition into water
 * Dual electric thrust pods are coupled to the wheels somehow for directional control via the steering wheel
 
-===== Amphibious Truck =====
+===== Amphibious Truck/Camper Van =====
 * Pontoons swing from overhead down under truck by hydraulics
 * Dual hydraulic jet drives in pontoons
 * Belt-driven hydraulic pump off motor for hydraulic power

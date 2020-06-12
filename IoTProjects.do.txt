@@ -378,7 +378,7 @@ __Phasing:__
 
 __BOM:__
 o "Valve": "https://www.adafruit.com/product/997"
-o "Controller": "https://www.adafruit.com/product/2821"
+o "Controller": "https://www.adafruit.com/product/3619"
 o "Sensor": "https://www.adafruit.com/product/1298"
 o "Flow meter": "https://www.adafruit.com/product/828"
 
