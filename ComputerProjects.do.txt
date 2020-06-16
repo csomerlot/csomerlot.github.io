@@ -17,6 +17,12 @@ o Documentation
 o AWS Workspace Dev Environment
     o Fritzing
     o Autodesk Fusion 360
+        o experiment for replacing this due to FormIt going to paid model and clsoed format and no linux:
+            o OpenSCAD (because programming is better)
+            o DesignSpark Mechanical
+              o Opens .skp!
+            o FreeCAD
+            o SolveSpace
     o Blockly
     o Anaconda Python Env
     o Atom
