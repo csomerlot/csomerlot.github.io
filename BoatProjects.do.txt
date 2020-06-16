@@ -64,56 +64,57 @@ o submersible mode
 
 !split
 ======= Catamaran Daysailor =======
-o Attempts at Identification
+===== Identification =====
     o Cal Cat
     o Parts
     o Hobie Inspiration
     o Similar enough to an "Aqua Cat 14": "https://www.americansail.com/products/boats/aqua-cat-14-catamaran" that we can use those parts?
-o Repair Work
-    o New Rudder assembly
-        o Pintles
-        o Kick-up rudder heads
-        o Rudder blades (1/4" sheet aluminum?)
-        o Tillers (aluminum tubes?) missing one length
-        o Fabricate from wood?
-            o Pittsford Lumber has sheets of Marine Okaume-Joubert plywood in 1/8"
+===== Repair Work =====
+o New Rudder assembly
+    o Pintles
+    o Kick-up rudder heads
+    o Rudder blades (1/4" sheet aluminum?)
+    o Tillers (aluminum tubes?) missing one length
+    o Fabricate from wood?
+        o Pittsford Lumber has sheets of Marine Okaume-Joubert plywood in 1/8"
 FIGURE: [Boats/transom, width=400 frac=0.9] Transom. label{fig:calcat4}
-    o Hulls
-        o Powerwash
-        o Patch gel coat?
-        o Stablize / Replace foam? There is a bunch of loose stuff in there
-        o Replace drain plugs, for good measure
-    o Trampoline
-        o Clean
-        o Replace 3/8" line in seam?
-        o Add grommets on back edge
-    o Standing rigging
-        o Need four tool-less clevis pins for forward turnbuckles
-        o Need 3/16" static line to lash trampoline to rear cross member (approx twenty ft )
-        o One aft stay (SS) has 4 busted threads
-    o Running Rigging
-        o Replace halyard (5/16" static line, forty ft )
-    o Mast
-        o Mast float missing
-        o Mast step missing (fabricate?)
-    o Sail
-        o Tear near foot
-    o Misc Hardware
-        o Need 4 bolts to attach cross members to hulls (1/4"-2 1/2" SS, with wing nuts) or quick pins
-        o Pins for center boards  are missing - fabricate from SS bolts with acrylic tubing
+o Hulls
+    o Powerwash
+    o Patch gel coat?
+    o Stablize / Replace foam? There is a bunch of loose stuff in there
+    o Replace drain plugs, for good measure
+o Trampoline
+    o Clean
+    o Replace 3/8" line in seam?
+    o Add grommets on back edge
+o Standing rigging
+    o Need four tool-less clevis pins for forward turnbuckles
+    o Need 3/16" static line to lash trampoline to rear cross member (approx twenty ft )
+    o One aft stay (SS) has 4 busted threads
+o Running Rigging
+    o Replace halyard (5/16" static line, forty ft )
 
-o Pictures
+FIGURE: [Boats/mainsheet, width=400 frac=0.9] Mainsheet hardware. label{fig:calcat5}
 
-FIGURE: [Boats/Cat, width=400 frac=0.9] The Cal Cat in all its glory. label{fig:calcat1}
+o Mast
+    o Mast float missing
+    o Mast step missing (fabricate?)
 
 FIGURE: [Boats/MastStep, width=400 frac=0.9] Replacement Mast step. label{fig:maststep}
 
 FIGURE: [Boats/calcat3, width=400 frac=0.9] Where the mast step goes. label{fig:calcat2}
 
+o Sail
+    o Tear near foot
+o Misc Hardware
+    o Need 4 bolts to attach cross members to hulls (1/4"-2 1/2" SS, with wing nuts) or quick pins
+    o Pins for center boards  are missing - fabricate from SS bolts with acrylic tubing
+
+===== Pictures =====
+
+FIGURE: [Boats/Cat, width=400 frac=0.9] The Cal Cat in all its glory. label{fig:calcat1}
+
 FIGURE: [Boats/calcat2, width=400 frac=0.9] The Cal Cat in all its glory. label{fig:calcat3}
-
-
-FIGURE: [Boats/mainsheet, width=400 frac=0.9] Mainsheet hardware. label{fig:calcat5}
 
 !split
 ======= Amphibious Vehicle System =======
