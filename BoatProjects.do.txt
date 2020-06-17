@@ -83,19 +83,18 @@ FIGURE: [Boats/transom, width=400 frac=0.9] Transom. label{fig:calcat4}
 
 o Hulls
     o Powerwash
-    o Patch gel coat?
+    o "Patch gel coat?": "https://www.youtube.com/watch?v=sfnL6L73h48"
     o Stablize / Replace foam? There is a bunch of loose stuff in there
     o Replace drain plugs, for good measure
 o Trampoline
     o Clean
     o Replace 3/8" line in seam?
-    o Add grommets on back edge
 o Standing rigging
     o Need four tool-less clevis pins for forward turnbuckles
-    o Need 3/16" static line to lash trampoline to rear cross member (approx twenty ft )
+    o Need 1/8""" "spectra": "https://usarope.net/marine-ropes/", 20 ft, to lash trampoline to rear cross member
     o One aft stay (SS) has 4 busted threads
 o Running Rigging
-    o Replace halyard (5/16" static line, forty ft )
+    o Replace halyard (1/8""" "spectra": "https://usarope.net/marine-ropes/", 40 ft )
 
 FIGURE: [Boats/mainsheet, width=400 frac=0.9] Mainsheet hardware. label{fig:calcat5}
 
