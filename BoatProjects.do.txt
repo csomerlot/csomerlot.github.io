@@ -64,13 +64,18 @@ o submersible mode
 
 !split
 ======= Catamaran Daysailor =======
+Jon and I inherited one from his childhood.
 ===== Cal Cat =====
-    o Similar designs (parts)
-      o Hobie Inspiration
-      o "Aqua Cat 14": "https://www.americansail.com/products/boats/aqua-cat-14-catamaran"
-      o "Paper tiger": "http://www.papertigercatamaran.org/"
+o Specs:
+  o LOA:
+  o LWL:
+  o Beam:
+  o Sail area:
+o Similar designs (for parts):
+  o Hobie Inspiration
+  o "Aqua Cat 14": "https://www.americansail.com/products/boats/aqua-cat-14-catamaran"
+  o "Paper tiger": "http://www.papertigercatamaran.org/"
 ===== Repair Work =====
-
 o Hulls
     o Powerwash
     o Spot epoxy repair, fiberglass repair under aft starboard support junction
@@ -88,13 +93,14 @@ o Standing rigging
 o Running Rigging
     o Replace halyard (1/8" UHMWPE, 40 ft )
 o "New steering assembly": "https://www.storerboatplans.com/boatplans/viola-sailing-canoe-plan-cartop-sailing-dinghy/rigging-details-for-the-viola-14-sailing-canoe/make-simple-canoe-rudder-rudderbox-sailing/"
-    o Avoids expensive pintles
+    o Avoids expensive pintles, and more secure
     o Simpler and better steering than kick-up rudders
-    o Tillers (aluminum tube?)
-    o Rudder blades
-        o 5 mm sheet aluminum?
-        o Fabricate from wood?
+    o Tillers: aluminum tube
+    o Rudder
+        o 2.5 mm sheet aluminum for box
+        o Fabricate blade from wood
             o Pittsford Lumber has sheets of Marine Okaume-Joubert plywood in 1/8"
+            o Epoxy and then gelcoat
 o Sail: Tear near foot
 o Misc Hardware
     o Need 4 clevis pins to attach cross members to hulls: 1/4"-2 1/2" 316SS
