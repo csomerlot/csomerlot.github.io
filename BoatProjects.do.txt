@@ -8,10 +8,8 @@ My first project in building a sailboat, for the someday I dream of... years ago
 ======= Cruising Catamaran for Lake Ontario =======
 o a trailerable 25'-ish open deck multihull
 o ample sail plan for light wind
-    o Sloop rigged
-    o Spinnaker
-        o no pole needed
-    o pirate-red sails
+    o Sloop rigged with Jennnaker (no pole needed)
+    o Pirate-red sails!
 o 10hp OB in center wet well for propulsion
 o each hull self-serving for 1 couple with double berth
     o hinged breeze-way hatches
@@ -97,9 +95,9 @@ o "New steering assembly": "https://www.storerboatplans.com/boatplans/viola-sail
     o Simpler and better steering than kick-up rudders
     o Tillers: aluminum tube
     o Rudder
-        o 2.5 mm sheet aluminum for box
+        o 3mm sheet aluminum for box
         o Fabricate blade from wood
-            o Pittsford Lumber has sheets of Marine Okaume-Joubert plywood in 1/8"
+            o Pittsford Lumber has sheets of "Marine Okaume-Joubert plywood": "https://www.pittsfordlumber.com/Pittsford-Lumber/Marine-Okoume-Plywood-Rochester-NY.html" in 6mm
             o Epoxy and then gelcoat
 o Sail: Tear near foot
 o Misc Hardware
