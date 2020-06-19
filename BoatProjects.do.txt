@@ -87,8 +87,8 @@ o Trampoline
     o Replace 3/8" line in seam?
 o Standing rigging
     o Need four 316SS clevis pins for forward turnbuckles
+    o Replace all stays with 1/8" UHMWPE (40 ft)
     o Need 1/8" "UHMWPE": "https://usarope.net/product/18-spectra-12-strand/", 20 ft, to lash trampoline to rear cross member
-    o Replace all stays with 1/8" UHMWPE
     o Sail dry lube for tracks
 o Running Rigging
     o Replace halyard (1/8" UHMWPE, 40 ft )
@@ -105,9 +105,10 @@ o Sail: Tear near foot
 o Misc Hardware
     o Need 4 clevis pins to attach cross members to hulls: 1/4"-2 1/2" 316SS
     o Pins for center boards are missing: fabricate from SS bolts with acrylic tubing
-    o Mast
+o Mast
   o Mast step missing: fabricate from 316SS plate and a high-strength pin
   o Float missing (but forums say do without)
+  o Spray-foam ends to seal
 
 FIGURE: [Boats/transom, width=400 frac=0.9] Transom. label{fig:calcat4}
 
