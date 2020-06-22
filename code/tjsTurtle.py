@@ -12,18 +12,18 @@ end_fill()
 right(100)
 circle(100)
 done()
-        break
+
 penup()
 left()
 pendown()
-break
+
 color('black', 'green')
 begin_fill
 while True:
     foward(200)
     left(200)
     if abs(pos()) < 2:
-break
+        break
 end_fill
 right(100)
 circle(100)
