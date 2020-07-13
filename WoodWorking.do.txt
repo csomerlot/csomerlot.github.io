@@ -39,6 +39,11 @@ o For fiber projects:
     * Sewing machine/project collapsible project table
 o For outdoors:
     * "Camping yurt": "https://www.campingyurts.com/"
+
+
+    MOVIE: [https://www.youtube.com/watch?v=0BQT9I4qAYk, width=600 frac=0.8] Yurt Setup. label{fig:yurt}
+
+
     * "Adirondak Chairs": "http://pop.h-cdn.co/assets/cm/15/06/54d112e5a5fd4_-_PMX0706Adiron.pdf" (or a "folding version": "https://www.rockler.com/folding-adirondack-chair-templates-with-plan-and-hardware-packs")
     * "Marcy field cot": "https://www.google.com/url?sa=t&source=web&rct=j&url=http://ajhamler.com/yahoo_site_admin/assets/docs/Field_Cot_from_CWW-II.21112127.pdf&ved=2ahUKEwiKhveYtovmAhWxiOAKHfxXCnIQFjAKegQIAhAB&usg=AOvVaw2yUrp_O4La2HmkB5D521xg"
     * Buckets
