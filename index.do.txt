@@ -25,3 +25,7 @@ o "ShootingProjects": "ShootingProjects.html"
 o "TemporaryRetirement": "TemporaryRetirement.html"
 o "ThistleRidgeFarmProjects": "ThistleRidgeFarmProjects.html"
 o "WoodWorking": "WoodWorking.html"
+
+======= Changes =======
+__Code:__
+@@@CODE ./diff.log
