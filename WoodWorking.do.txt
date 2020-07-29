@@ -41,7 +41,7 @@ o For outdoors:
     * "Camping yurt": "https://www.campingyurts.com/"
 
 
-    MOVIE: [https://www.youtube.com/watch?v=0BQT9I4qAYk, width=600 frac=0.8] Yurt Setup. label{fig:yurt}
+MOVIE: [https://www.youtube.com/watch?v=0BQT9I4qAYk, width=600 frac=0.8] Yurt Setup. label{fig:yurt}
 
 
     * "Adirondak Chairs": "http://pop.h-cdn.co/assets/cm/15/06/54d112e5a5fd4_-_PMX0706Adiron.pdf" (or a "folding version": "https://www.rockler.com/folding-adirondack-chair-templates-with-plan-and-hardware-packs")
