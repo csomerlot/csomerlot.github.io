@@ -1,2 +1,2 @@
-call %USERPROFILE%/Anaconda3/Scripts/activate.bat
+call C:\ProgramData\Anaconda3\Scripts\activate.bat
 aws s3 sync ./ s3://projects.somerlot.net --exclude "*" --include "*.html" --include "*.png" --include "*.jpg" --include "*.svg" --include "*.pdf" --acl public-read --delete
