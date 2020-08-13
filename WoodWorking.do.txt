@@ -16,7 +16,6 @@ o For around the house:
     * Bird boxes (done)
     * Boot jack (done)
     * Coat tree (done)
-    * "Sewing machine case": "https://www.instructables.com/id/How-to-Make-a-Custom-Sewing-Machine-Case/" with fold-out work surface
 o For the kitchen:
     * Spatualas and spoons
     * Rolling pin
@@ -37,7 +36,7 @@ o For the barn:
 o For fiber projects:
     * Wool combs
     * Darning egg/mushroom
-    * Sewing machine/project collapsible project table
+    * Sewing machine case with "collapsible project table": "https://www.instructables.com/id/How-to-Make-a-Custom-Sewing-Machine-Case/"
 o For outdoors:
     * "Camping yurt": "https://www.campingyurts.com/"
 
@@ -45,7 +44,9 @@ o For outdoors:
 MOVIE: [https://www.youtube.com/watch?v=0BQT9I4qAYk, width=600 frac=0.8] Yurt Setup. label{fig:yurt}
 
 
-    * "Adirondak Chairs": "http://pop.h-cdn.co/assets/cm/15/06/54d112e5a5fd4_-_PMX0706Adiron.pdf" (or a "folding version": "https://www.rockler.com/folding-adirondack-chair-templates-with-plan-and-hardware-packs")
+    * "Adirondak Chairs": "http://pop.h-cdn.co/assets/cm/15/06/54d112e5a5fd4_-_PMX0706Adiron.pdf"
+      * "folding version": "https://www.rockler.com/folding-adirondack-chair-templates-with-plan-and-hardware-packs"
+      * "simple version": "https://www.popularmechanics.com/home/how-to-plans/a30655985/diy-lounge-chair/"
     * "Marcy field cot": "https://www.google.com/url?sa=t&source=web&rct=j&url=http://ajhamler.com/yahoo_site_admin/assets/docs/Field_Cot_from_CWW-II.21112127.pdf&ved=2ahUKEwiKhveYtovmAhWxiOAKHfxXCnIQFjAKegQIAhAB&usg=AOvVaw2yUrp_O4La2HmkB5D521xg"
     * Buckets
     * Rosin bird whistle
