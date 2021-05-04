@@ -14,18 +14,21 @@ o Documentation
     o Rocket book
     o DocOnce
     o private git server
-o AWS Workspace Dev Environment
-    o Fritzing
-    o Autodesk Fusion 360
-        o experiment for replacing this due to FormIt going to paid model and clsoed format and no linux:
-            o OpenSCAD (because programming is better)
+o Dev Environment
+    o Platforms
+        o IaaS: AWS Workspace
+        o PaaS: Platform.io
+        o Local: Raspberry Pi
+    o Software:
+        o Fritzing
+        o 3D CAD
+            o SolidPython (OpenSCAD) (because programming is better)
             o DesignSpark Mechanical
               o Opens .skp!
-            o FreeCAD
-            o SolveSpace
-    o Blockly
-    o Anaconda Python Env
-    o Atom
+              o But no linux
+        o Blockly
+        o Anaconda Python Env
+        o Atom
 __Projects:__
 o Init: Individual project options
     o Basic battle bots

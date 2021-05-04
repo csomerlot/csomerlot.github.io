@@ -53,7 +53,7 @@ o Sensors
         o Forced entry (pressure change)
         o Family presence (RFID)
         o Woodstove temp
-        O Roomba status
+        o Roomba status
     o Exterior
         o Rain
         o Soil moisture
@@ -80,7 +80,7 @@ o Server
         o Thermostat interface with LCD hat
         o NILM data logger
         o Wifi Router and print server
-    o "Domotics A(i) Dashboard (with voice control: *"Just ask DAD"*)": "https://learn.adafruit.com/integrating-adafruit-io-with-home-assistant/esphome-setup"
+    o https://www.home-assistant.io/
 
 __BOM:__
     * "Common Mobile Compute Platform": "/._ComputerProjects010.html#___sec10"
