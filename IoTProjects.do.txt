@@ -298,6 +298,25 @@ __Notes:__
 * "First iteration": "./PlantWaterer/PlantWaterer.html" of the design was a simple Trinket-based timer that controlled a mini peristaltic pump
 
 
+__Logic:__
+o Server scheduling:
+	o Repeat Daily:
+		o Fire client event
+		o If no completion signal in 60 minutes, report
+o Client event:
+    o turn on air pump and close air release valve for until level has stabilized to within 0.25" for 5 minutes
+		o Report time to complete
+        o Repeat every 15 seconds: 
+            o report solution level from both sensors
+            o if it has been more than 20 minutes, terminate on cycle and alert
+    o if sensors do not agree on level, alert
+    o if solution level falls below 3", alert
+
+
+__CODE:__
+@@@CODE ./code/microHydroponics/microHydroponics.ino
+
+
 
 !split
 ======= Technology as Art =======
@@ -426,6 +445,8 @@ __Notes:__
 
 # __Notes:__
 # *
+
+# __Logic:__
 
 # __Code:__
 # @@@CODE ./filepath envir=Xpro
