@@ -261,7 +261,7 @@ __Phasing:__
 o Build air pump and ARV mechanicals
     o "Mount solenoid": "https://learn.adafruit.com/assets/61219" and Tee
       o keep away from electronics in case of back-flow
-    o Wire and test components
+    o Pot pressure sensor into NPT fitting and solder a lead
     o Assemble and encase feather
 o Install base controller logic
 o Build server script that runs flood routine based on MQTT events
@@ -282,10 +282,11 @@ o triple-tote system:
 o Open-top cabinet on casters to hold everything and make pretty
 
 __BOM:__
-* "Adafruit Huzzah ESP8266": "https://www.adafruit.com/product/2471"
+* "Adafruit Huzzah ESP8266": "https://www.adafruit.com/product/2471" or "Adafruit ESP32 Feather": "http://adafru.it/3619" or "Adafruit Feather m0 with WiFi": "https://www.adafruit.com/product/3010"
 * "12in Chemical eTape Liquid Level Sensor": "https://www.adafruit.com/product/464"
-* "Mini solenoid": "https://www.adafruit.com/product/2776"
+* "Mini solenoid air valve": "https://www.adafruit.com/product/4663"
 * "Controllable Four Outlet Power Relay Module version 2": "https://www.adafruit.com/product/2935"
+* Separate 5v 1.5A power supply for solenoid and connectors to 
 * "growing media": "https://www.sunsethydro.com/collections/growing-media/products/grodan-delta-hugo-6in-block-6in-x-6in-x-6in-w-hole-individual-single-blocks"
 * "totes": "https://www.truevalue.com/catalog/product/view/id/163441/s/storage-box-see-thru-with-fuchsia-lid-56-qt/category/7453/"
 * "MPVZ5004GW PRESSURE SENSOR by NXP": "https://www.digikey.com/product-detail/en/nxp-usa-inc/MPVZ5004GW7U/MPVZ5004GW7U-ND/1168374"
@@ -293,9 +294,9 @@ __BOM:__
 
 __Notes:__
 * https://learn.adafruit.com/home-automation-in-the-cloud-with-the-esp8266-and-adafruit-io/introduction
-* Needs some type of weighted or anchored container for replacing plants and rock wool easily
+* Needs some type of anchoring for media in top container for replacing plants and rock wool easily
 * Flood chamber must be securely anchored against flotation
-* "First iteration": "./PlantWaterer/PlantWaterer.html" of the design was a simple Trinket-based timer that controlled a mini peristaltic pump
+* "First iteration": "./PlantWaterer/PlantWaterer.html" of the design was a simple Trinket-based timer that controlled a "mini peristaltic pump": "https://www.adafruit.com/product/1150". It worked if the water source was elevated to deal with the limits of the pump curve.
 
 
 __Logic:__
@@ -314,7 +315,7 @@ o Client event:
 
 
 __CODE:__
-@@@CODE ./code/microHydroponics/microHydroponics.ino
+@@@CODE ./code/microHydroponics/microHydroponics.ino envir=cpro
 
 
 
