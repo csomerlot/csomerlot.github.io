@@ -259,9 +259,7 @@ o enclosure for housing solenoid on tee, solenoid relay, huzzah, and pressure se
 
 __Phasing:__
 o Build air pump and ARV mechanicals
-    o "Mount solenoid": "https://learn.adafruit.com/assets/61219" and Tee
-      o keep away from electronics in case of back-flow
-    o Pot pressure sensor into NPT fitting and solder a lead
+    o Pot sensors into NPT fitting and solder a lead
     o Assemble and encase feather
 o Install base controller logic
 o Build server script that runs flood routine based on MQTT events
@@ -301,12 +299,12 @@ __Notes:__
 
 __Logic:__
 o Server scheduling:
-	o Repeat Daily:
-		o Fire client event
-		o If no completion signal in 60 minutes, report
+    o Repeat Daily:
+        o Fire client event
+        o If no completion signal in 60 minutes, report
 o Client event:
     o turn on air pump and close air release valve for until level has stabilized to within 0.25" for 5 minutes
-		o Report time to complete
+        o Report time to complete
         o Repeat every 15 seconds: 
             o report solution level from both sensors
             o if it has been more than 20 minutes, terminate on cycle and alert
