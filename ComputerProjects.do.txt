@@ -104,15 +104,15 @@ __Notes:__
 
 __GRAPHICS:__
 
-FIGURE: [../Programming/AP_Viewshed, width=600 frac=0.8] Line of sight between office and home. label{fig:los}
+FIGURE: [./Programming/AP_Viewshed, width=600 frac=0.8] Line of sight between office and home. label{fig:los}
 
 
 __CODE:__
-@@@CODE ../code/route53update.py
+@@@CODE ./code/route53update.py
 
 
 __CODE:__
-@@@CODE ../code/watcher.py
+@@@CODE ./code/watcher.py
 
 
 !split
@@ -213,9 +213,9 @@ o A gui-based designer for weaving
 o A great use-case and teaching example of using graphics and Programming
   o https://docs.python.org/3.3/library/turtle.html
 
-FIGURE: [../code/TartanDesigner.py.png, width=600 frac=0.8] Sample output. label{fig:tartan}
+FIGURE: [./code/TartanDesigner.py.png, width=600 frac=0.8] Sample output. label{fig:tartan}
 
-@@@CODE ../code/TartanDesigner.py
+@@@CODE ./code/TartanDesigner.py
 
 !split
 ======= Somerlot Shooting Support System (S4) =======
@@ -230,7 +230,7 @@ o Integrate with GPS, mapping, online weather stations, USB weather station
 ===== Scheduler =====
 o Rule-based genetic algorithm optimizer
 
-@@@CODE ../code/Scheduler.py
+@@@CODE ./code/Scheduler.py
 
 ===== Rewards Program Calculator =====
 o Description

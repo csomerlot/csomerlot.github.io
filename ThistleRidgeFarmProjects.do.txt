@@ -257,11 +257,11 @@ o Quill Drive
 o References
     o Peguin wheel
     
-FIGURE: [../Fiber/Wheel, width=300 frac=0.8] label{fig:wheel1}
+FIGURE: [./Fiber/Wheel, width=300 frac=0.8] label{fig:wheel1}
 
-FIGURE: [../Fiber/Wheel2.1, width=600 frac=0.8] label{fig:wheel2.1}
+FIGURE: [./Fiber/Wheel2.1, width=600 frac=0.8] label{fig:wheel2.1}
 
-FIGURE: [../Fiber/Wheel2.2, width=600 frac=0.8] label{fig:wheel2.2}
+FIGURE: [./Fiber/Wheel2.2, width=600 frac=0.8] label{fig:wheel2.2}
 
 === warping board ===
 o two 1x2s 4' long with 3" nails every 8", nailed to wall 5' apart
@@ -279,7 +279,7 @@ o washing and dyeing done in one step
 o weave with singles
 o sectional warping
 
-FIGURE: [../Fiber/PICT2608_T, width=300 frac=0.8] label{fig:weave}
+FIGURE: [./Fiber/PICT2608_T, width=300 frac=0.8] label{fig:weave}
 
 !split
 

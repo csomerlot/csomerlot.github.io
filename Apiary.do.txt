@@ -28,11 +28,11 @@ o design parameters
     o top bars use triangular comb guide, nailed on
 o baggie feeding of honey to get them started
 
-FIGURE: [../Farm/ktbh2, width=600 frac=0.8] Made from basic dimensional lumber, nailed. label{fig:ktbh2}
+FIGURE: [./Farm/ktbh2, width=600 frac=0.8] Made from basic dimensional lumber, nailed. label{fig:ktbh2}
 
-FIGURE: [../Farm/ktbh1, width=600 frac=0.8] Simplicity in design. label{fig:ktbh1}
+FIGURE: [./Farm/ktbh1, width=600 frac=0.8] Simplicity in design. label{fig:ktbh1}
 
-FIGURE: [../Farm/ktbh, width=600 frac=0.8] With stand. label{fig:ktbh}
+FIGURE: [./Farm/ktbh, width=600 frac=0.8] With stand. label{fig:ktbh}
 
 ===== Feral Bees =====
 o use bait hives with pheremone to catch
@@ -52,7 +52,7 @@ o groove for light blockers outside of glass grooves
     o use cardboard
     o tape "life cycle of bees" posters (brushy mountain bee supply) to cardboard
 
-FIGURE: [../Farm/obshive, width=250 frac=0.8] label{fig:obshive}
+FIGURE: [./Farm/obshive, width=250 frac=0.8] label{fig:obshive}
 
 
 ===== IPM for mites (in order) =====

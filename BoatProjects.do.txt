@@ -45,9 +45,9 @@ o Materials
             o Douglas fir
             o Ash
 
-FIGURE: [../Boats/SOFkayak, width=900 frac=0.9] Skin on frame kayak. label{fig:sof}
+FIGURE: [Boats/SOFkayak, width=900 frac=0.9] Skin on frame kayak. label{fig:sof}
 
-FIGURE: [../Boats/WoodSteamer, width=700 frac=0.9] Wood steamer. label{fig:steamer}
+FIGURE: [Boats/WoodSteamer, width=700 frac=0.9] Wood steamer. label{fig:steamer}
 
 ======= Ultralight Trimaran Plans =======
 o Can be built in field with minimum of tools, in emergency
@@ -113,19 +113,19 @@ o Mast
   o Float missing (but forums say do without)
   o Spray-foam ends to seal
 
-FIGURE: [../Boats/transom, width=400 frac=0.9] Transom. label{fig:calcat4}
+FIGURE: [Boats/transom, width=400 frac=0.9] Transom. label{fig:calcat4}
 
-FIGURE: [../Boats/mainsheet, width=400 frac=0.9] Mainsheet hardware. label{fig:calcat5}
+FIGURE: [Boats/mainsheet, width=400 frac=0.9] Mainsheet hardware. label{fig:calcat5}
 
-FIGURE: [../Boats/MastStep, width=400 frac=0.9] Replacement Mast step. label{fig:maststep}
+FIGURE: [Boats/MastStep, width=400 frac=0.9] Replacement Mast step. label{fig:maststep}
 
-FIGURE: [../Boats/calcat3, width=400 frac=0.9] Where the mast step goes. label{fig:calcat2}
+FIGURE: [Boats/calcat3, width=400 frac=0.9] Where the mast step goes. label{fig:calcat2}
 
 ===== Pictures =====
 
-FIGURE: [../Boats/Cat, width=400 frac=0.9] The Cal Cat in all its glory. label{fig:calcat1}
+FIGURE: [Boats/Cat, width=400 frac=0.9] The Cal Cat in all its glory. label{fig:calcat1}
 
-FIGURE: [../Boats/calcat2, width=400 frac=0.9] The Cal Cat in all its glory. label{fig:calcat3}
+FIGURE: [Boats/calcat2, width=400 frac=0.9] The Cal Cat in all its glory. label{fig:calcat3}
 
 !split
 ======= Amphibious Vehicle System =======
