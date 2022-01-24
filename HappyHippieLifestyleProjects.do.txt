@@ -12,7 +12,7 @@ TOC: on
 
 ======= Tree House =======
 
-FIGURE: [./HappyHippieLifestyle/BlueForest_Treehouse_Amberley_Castle_1_gallery-image, width=900 frac=0.8] The kids picked this design. label{fig:treehouse}
+FIGURE: [../HappyHippieLifestyle/BlueForest_Treehouse_Amberley_Castle_1_gallery-image, width=900 frac=0.8] The kids picked this design. label{fig:treehouse}
 
 ======= Books to publish from Wikipedia =======
 

@@ -232,7 +232,7 @@ o Host:
 
 __Controller Arduino Code:__
 
-@@@CODE ./code/StreamDataLogger/StreamDataLogger.ino envir=cpro
+@@@CODE ../code/StreamDataLogger/StreamDataLogger.ino envir=cpro
 
 !split
 ======= Micro Hydroponics =======
@@ -311,7 +311,7 @@ o Client event:
 
 
 __CODE:__
-@@@CODE ./code/microHydroponics/microHydroponics.ino envir=cpro
+@@@CODE ../code/microHydroponics/microHydroponics.ino envir=cpro
 
 
 
