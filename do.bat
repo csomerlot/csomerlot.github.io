@@ -32,4 +32,6 @@ python %doconce% format html "WoodWorking.do.txt" --cite_doconce --html_style=%s
 python %doconce% split_html  "WoodWorking.html"
 python %doconce% format html "everything.do.txt" --cite_doconce --html_style=%style%
 
+move *.html ./site
+
 python %doconce% lightclean
