@@ -5,6 +5,11 @@ TOC: on
 ======= Building a Whitehall =======
 My first project in building a sailboat, for the someday I dream of... years ago I received "this book": "https://books.google.com/books?id=6RKdTOWGYjoC&printsec=frontcover&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false" on building a "whitehall": "https://en.wikipedia.org/wiki/Whitehall_rowboat", and it is perhaps the most perfect representation of a boat that I can find.
 
+Cool options to consider:
+o Removable thwart, like in Chesapeake Light Crafts version.
+o A tent like Roger Barnes' dinghy tent
+
+
 ======= Cruising Catamaran for Lake Ontario =======
 o a trailerable 25'-ish open deck multihull
 o ample sail plan for light wind
