@@ -19,3 +19,4 @@ Trash
 *.csv
 *Log.bat
 watcher.pbix
+keys*.h
