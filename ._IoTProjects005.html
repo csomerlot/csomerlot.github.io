@@ -1,0 +1,502 @@
+<!--
+Automatically generated HTML file from DocOnce source
+(https://github.com/hplgit/doconce/)
+-->
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="generator" content="DocOnce: https://github.com/hplgit/doconce/" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta name="description" content="Internet-of-Things Projects">
+
+<title>Internet-of-Things Projects</title>
+
+<!-- Bootstrap style: bootstrap_blue -->
+<link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_styles/style_bootstrap/css/bootstrap_blue.css" rel="stylesheet">
+<!-- not necessary
+<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+-->
+
+<style type="text/css">
+
+/* Add scrollbar to dropdown menus in bootstrap navigation bar */
+.dropdown-menu {
+   height: auto;
+   max-height: 400px;
+   overflow-x: hidden;
+}
+
+/* Adds an invisible element before each target to offset for the navigation
+   bar */
+.anchor::before {
+  content:"";
+  display:block;
+  height:50px;      /* fixed header height for style bootstrap_blue */
+  margin:-50px 0 0; /* negative fixed header height */
+}
+</style>
+
+
+</head>
+
+<!-- tocinfo
+{'highest level': 1,
+ 'sections': [('Table of contents',
+               1,
+               'table_of_contents',
+               'table_of_contents'),
+              ('Common Mobile Compute Platform', 1, None, '___sec0'),
+              ('Domotics', 1, None, '___sec1'),
+              ('Automotive Media System', 1, None, '___sec2'),
+              ('GPS Chartplotter', 1, None, '___sec3'),
+              ('Common Sensor and Datalogger Platform', 1, None, '___sec4'),
+              ('Micro Hydroponics', 1, None, '___sec5'),
+              ('Technology as Art', 1, None, '___sec6'),
+              ('Wood Burning Plotter', 2, None, '___sec7'),
+              ('Lightning Catcher', 2, None, '___sec8'),
+              ('Irrigation Remote', 1, None, '___sec9'),
+              ('The Best Damn Radio System', 1, None, '___sec10')]}
+end of tocinfo -->
+
+<body>
+
+    
+<!-- Bootstrap navigation bar -->
+<div class="navbar navbar-default navbar-fixed-top">
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="IoTProjects.html">Internet-of-Things Projects</a>
+  </div>
+
+  <div class="navbar-collapse collapse navbar-responsive-collapse">
+    <ul class="nav navbar-nav navbar-right">
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contents <b class="caret"></b></a>
+        <ul class="dropdown-menu">
+     <!-- navigation toc: --> <li><a href="._IoTProjects000.html#table_of_contents" style="font-size: 80%;"><b>Table of contents</b></a></li>
+     <!-- navigation toc: --> <li><a href="._IoTProjects001.html#___sec0" style="font-size: 80%;"><b>Common Mobile Compute Platform</b></a></li>
+     <!-- navigation toc: --> <li><a href="._IoTProjects002.html#___sec1" style="font-size: 80%;"><b>Domotics</b></a></li>
+     <!-- navigation toc: --> <li><a href="._IoTProjects003.html#___sec2" style="font-size: 80%;"><b>Automotive Media System</b></a></li>
+     <!-- navigation toc: --> <li><a href="._IoTProjects004.html#___sec3" style="font-size: 80%;"><b>GPS Chartplotter</b></a></li>
+     <!-- navigation toc: --> <li><a href="#___sec4" style="font-size: 80%;"><b>Common Sensor and Datalogger Platform</b></a></li>
+     <!-- navigation toc: --> <li><a href="._IoTProjects006.html#___sec5" style="font-size: 80%;"><b>Micro Hydroponics</b></a></li>
+     <!-- navigation toc: --> <li><a href="._IoTProjects007.html#___sec6" style="font-size: 80%;"><b>Technology as Art</b></a></li>
+     <!-- navigation toc: --> <li><a href="._IoTProjects007.html#___sec7" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Wood Burning Plotter</a></li>
+     <!-- navigation toc: --> <li><a href="._IoTProjects007.html#___sec8" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Lightning Catcher</a></li>
+     <!-- navigation toc: --> <li><a href="._IoTProjects008.html#___sec9" style="font-size: 80%;"><b>Irrigation Remote</b></a></li>
+     <!-- navigation toc: --> <li><a href="._IoTProjects009.html#___sec10" style="font-size: 80%;"><b>The Best Damn Radio System</b></a></li>
+
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>
+</div> <!-- end of navigation bar -->
+
+<div class="container">
+
+<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p> <!-- add vertical space -->
+
+<a name="part0005"></a>
+<!-- !split -->
+
+<h1 id="___sec4" class="anchor">Common Sensor and Datalogger Platform </h1>
+<b>Description:</b>
+Portable and wireless environmental IoT sensor and datalogger
+
+<p>
+<b>User Story:</b>
+We want to be able measure a variety of environmental conditions, without hooking up wiring. We can place a sensor indoors or outdoors just for
+spot checks or leave it for several weeks or add a solar power pack for permanent power. We can hook it up to a dashboard to monitor and
+provide alarms, or use it in more remote conditions and have it upload once wifi is available, or use a cell modem. Some possible applications include:
+
+<ul>
+<li> Dive computer</li>
+<li> Bike computer</li>
+<li> Drone computer</li>
+<li> Weather Balloon computer</li>
+<li> Environmental Datalogger</li>
+<li> Marine Chartplotter</li>
+<li> Indoor air quality</li>
+<li> Energy Monitor</li>
+<li> Domotics, solar, or hydroponics controller</li>
+</ul>
+
+<b>Feature Set:</b>
+
+<ul>
+<li> Internet connection discovery and automatic frequent communication</li>
+<li> Plenty of digital and analog inputs</li>
+<li> LCD Screen and a few buttons for basic status and config</li>
+<li> 2-week battery life</li>
+<li> Watertight potting and enclosure (100m)</li>
+<li> Shock-proof (shotgun at 10m)</li>
+<li> ports for display, antenna, power, and USB</li>
+<li> Wifi as base networking capability, with CDMA, Ham (APRS transmitter) and LoRa communications as options</li>
+</ul>
+
+<b>Phasing:</b>
+
+<ul>
+<li> Base unit build-out and config</li>
+<li> develop ports</li>
+<li> ruggedize</li>
+</ul>
+
+<b>BOM:</b>
+
+<ul>
+<li> Base Unit: <a href="https://www.adafruit.com/product/3010" target="_self">Adafruit Feather M0 WiFi - ATSAMD21 + ATWINC1500</a></li>
+<li> Base Unit: <a href="https://www.adafruit.com/product/353" target="_self">Lithium Ion Battery Pack - 3.7V 6600mAh</a></li>
+<li> Base Unit: <a href="https://www.adafruit.com/product/2900" target="_self">Adafruit FeatherWing OLED - 128x32 OLED Add-on For Feather</a></li>
+<li> <a href="https://www.adafruit.com/product/3660" target="_self">Air Temperature, Humidity, Pressure and Gas Sensor</a></li>
+<li> <a href="https://www.adafruit.com/product/3686" target="_self">Air Quality Sensor</a></li>
+<li> <a href="https://www.adafruit.com/product/3709" target="_self">Air Quality Sensor Breakout - VOC and eCO2</a></li>
+<li> <a href="https://www.adafruit.com/product/3199" target="_self">CO, Alcohol and VOC Gas Sensor</a></li>
+<li> <a href="https://www.digikey.com/products/en?keywords=165D6042P003" target="_self">Water turbidity and temp</a></li>
+<li> <a href="https://www.digikey.com/products/en?keywords=480-6244-ND" target="_self">Water pressure</a></li>
+<li> <a href="https://tinyurl.com/y4jmsg6z" target="_self">Non-intrusive current sensors</a></li>
+</ul>
+
+<b>Notes:</b>
+
+<ul>
+<li> <a href="https://io.adafruit.com/" target="_self">Adafruit.io</a> for dashboard and short-term data warehousing</li>
+<li> <a href="https://learn.adafruit.com/make-it-data-log-spreadsheet-circuit-playground" target="_self"><tt>https://learn.adafruit.com/make-it-data-log-spreadsheet-circuit-playground</tt></a></li>
+<li> <a href="https://thecavepearlproject.org/" target="_self"><tt>https://thecavepearlproject.org/</tt></a></li>
+<li> <a href="https://learn.adafruit.com/remote-iot-environmental-sensor/overview" target="_self"><tt>https://learn.adafruit.com/remote-iot-environmental-sensor/overview</tt></a></li>
+</ul>
+
+<b>Logic:</b>
+
+<ol>
+<li> Controller:
+
+<ol type="a"></li>
+   <li> Read data</li>
+   <li> Save data to data file</li>
+   <li> If communications enabled:</li>
+
+<ol>
+       <li> If MQTT feed not present, establish one</li>
+</ol>
+
+   <li> Log everything</li>
+   <li> Pause (vary time by event status or actively via MQTT)</li>
+
+<ol>
+       <li> break if button is pressed</li>
+</ol>
+
+   <li> loop back to step 2</li>
+</ol>
+
+<li> Host:
+
+<ol type="a"></li>
+   <li> Check for alarm levels</li>
+   <li> Log everything</li>
+</ol>
+
+</ol>
+
+<b>Controller Arduino Code:</b>
+
+<p>
+
+<!-- code=c (!bc cpro) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><span style="color: #BC7A00">#include</span> <span style="color: #408080; font-style: italic">&lt;Wire.h&gt;</span><span style="color: #BC7A00"></span>
+<span style="color: #BC7A00">#include</span> <span style="color: #408080; font-style: italic">&quot;RTClib.h&quot;</span><span style="color: #BC7A00"></span>
+<span style="color: #BC7A00">#include</span> <span style="color: #408080; font-style: italic">&lt;SPI.h&gt;</span><span style="color: #BC7A00"></span>
+<span style="color: #BC7A00">#include</span> <span style="color: #408080; font-style: italic">&lt;SD.h&gt;</span><span style="color: #BC7A00"></span>
+<span style="color: #BC7A00">#include</span> <span style="color: #408080; font-style: italic">&lt;WiFi101.h&gt;</span><span style="color: #BC7A00"></span>
+<span style="color: #BC7A00">#include</span> <span style="color: #408080; font-style: italic">&quot;Adafruit_MQTT.h&quot;</span><span style="color: #BC7A00"></span>
+<span style="color: #BC7A00">#include</span> <span style="color: #408080; font-style: italic">&quot;Adafruit_MQTT_Client.h&quot;</span><span style="color: #BC7A00"></span>
+<span style="color: #BC7A00">#include</span> <span style="color: #408080; font-style: italic">&quot;keysandstuff.h&quot;</span><span style="color: #BC7A00"></span>
+
+<span style="color: #408080; font-style: italic">// Adafruit IO Analog In Example</span>
+<span style="color: #408080; font-style: italic">// Tutorial Link: https://learn.adafruit.com/adafruit-io-basics-analog-input</span>
+<span style="color: #408080; font-style: italic">//</span>
+<span style="color: #408080; font-style: italic">// Adafruit invests time and resources providing this open source code.</span>
+<span style="color: #408080; font-style: italic">// Please support Adafruit and open source hardware by purchasing</span>
+<span style="color: #408080; font-style: italic">// products from Adafruit!</span>
+<span style="color: #408080; font-style: italic">//</span>
+<span style="color: #408080; font-style: italic">// Written by Todd Treece for Adafruit Industries</span>
+<span style="color: #408080; font-style: italic">// Copyright (c) 2016 Adafruit Industries</span>
+<span style="color: #408080; font-style: italic">// Licensed under the MIT license.</span>
+<span style="color: #408080; font-style: italic">//</span>
+<span style="color: #408080; font-style: italic">// All text above must be included in any redistribution.</span>
+
+
+<span style="color: #408080; font-style: italic">/* COMMON DATA LOGGING PLATFORM</span>
+<span style="color: #408080; font-style: italic">This code:</span>
+<span style="color: #408080; font-style: italic">- uses MQTT for light-weight communication, data delivery verification</span>
+<span style="color: #408080; font-style: italic">- blinks an error code via the built-in LED</span>
+<span style="color: #408080; font-style: italic">- writes data and log messages to an SD card</span>
+<span style="color: #408080; font-style: italic">- uses a RTC module for acurate time stamps</span>
+<span style="color: #408080; font-style: italic">- runs mostly in low-power mode</span>
+<span style="color: #408080; font-style: italic">- can change behavoir dynamically via MQTT or on-board buttons</span>
+<span style="color: #408080; font-style: italic">- shows status via OLED</span>
+<span style="color: #408080; font-style: italic">*/</span>
+
+<span style="color: #408080; font-style: italic">// RTC clock setup</span>
+<span style="color: #BC7A00">#if defined(ARDUINO_ARCH_SAMD)</span>
+<span style="color: #BC7A00">#endif</span>
+
+<span style="color: #408080; font-style: italic">//Set up the wifi client</span>
+WiFiClient client;
+
+Adafruit_MQTT_Client <span style="color: #0000FF">mqtt</span>(<span style="color: #666666">&amp;</span>client, AIO_SERVER, AIO_SERVERPORT, AIO_USERNAME, AIO_KEY);
+
+<span style="color: #408080; font-style: italic">//#define halt(s) { Serial.println(F( s )); while(1);  }</span>
+
+<span style="color: #408080; font-style: italic">/****************************** Feeds ***************************************/</span>
+
+<span style="color: #408080; font-style: italic">// Notice MQTT paths for AIO follow the form: &lt;username&gt;/feeds/&lt;feedname&gt;</span>
+Adafruit_MQTT_Publish Depth <span style="color: #666666">=</span>             Adafruit_MQTT_Publish(<span style="color: #666666">&amp;</span>mqtt, AIO_USERNAME <span style="color: #BA2121">&quot;/feeds/&quot;</span> SITE_NAME <span style="color: #BA2121">&quot;.stage-dn&quot;</span>);
+Adafruit_MQTT_Publish Temperature <span style="color: #666666">=</span>       Adafruit_MQTT_Publish(<span style="color: #666666">&amp;</span>mqtt, AIO_USERNAME <span style="color: #BA2121">&quot;/feeds/&quot;</span> SITE_NAME <span style="color: #BA2121">&quot;.temperature-dn&quot;</span>);
+Adafruit_MQTT_Publish TSS <span style="color: #666666">=</span>               Adafruit_MQTT_Publish(<span style="color: #666666">&amp;</span>mqtt, AIO_USERNAME <span style="color: #BA2121">&quot;/feeds/&quot;</span> SITE_NAME <span style="color: #BA2121">&quot;.tss-dn&quot;</span>);
+Adafruit_MQTT_Publish Voltage <span style="color: #666666">=</span>           Adafruit_MQTT_Publish(<span style="color: #666666">&amp;</span>mqtt, AIO_USERNAME <span style="color: #BA2121">&quot;/feeds/&quot;</span> SITE_NAME <span style="color: #BA2121">&quot;.voltage-dn&quot;</span>);
+Adafruit_MQTT_Publish Depth_calc <span style="color: #666666">=</span>        Adafruit_MQTT_Publish(<span style="color: #666666">&amp;</span>mqtt, AIO_USERNAME <span style="color: #BA2121">&quot;/feeds/&quot;</span> SITE_NAME <span style="color: #BA2121">&quot;.stage-m&quot;</span>);
+Adafruit_MQTT_Publish Temperature_calc <span style="color: #666666">=</span>  Adafruit_MQTT_Publish(<span style="color: #666666">&amp;</span>mqtt, AIO_USERNAME <span style="color: #BA2121">&quot;/feeds/&quot;</span> SITE_NAME <span style="color: #BA2121">&quot;.temperature-f&quot;</span>);
+Adafruit_MQTT_Publish TSS_calc <span style="color: #666666">=</span>          Adafruit_MQTT_Publish(<span style="color: #666666">&amp;</span>mqtt, AIO_USERNAME <span style="color: #BA2121">&quot;/feeds/&quot;</span> SITE_NAME <span style="color: #BA2121">&quot;.tss-mg-per-l&quot;</span>);
+Adafruit_MQTT_Publish Voltage_calc <span style="color: #666666">=</span>      Adafruit_MQTT_Publish(<span style="color: #666666">&amp;</span>mqtt, AIO_USERNAME <span style="color: #BA2121">&quot;/feeds/&quot;</span> SITE_NAME <span style="color: #BA2121">&quot;.voltage-V&quot;</span>);
+
+RTC_PCF8523 rtc;
+File logfile;
+
+<span style="color: #B00040">int</span> sdStatus   <span style="color: #666666">=</span> <span style="color: #666666">0</span>;
+<span style="color: #B00040">int</span> wifiStatus <span style="color: #666666">=</span> <span style="color: #666666">0</span>;
+<span style="color: #B00040">int</span> RTCstatus  <span style="color: #666666">=</span> <span style="color: #666666">0</span>;
+<span style="color: #B00040">int</span> oledStatus <span style="color: #666666">=</span> <span style="color: #666666">0</span>;
+<span style="color: #B00040">int</span> serialStatus <span style="color: #666666">=</span> <span style="color: #666666">0</span>;
+
+<span style="color: #408080; font-style: italic">// blink out an error code</span>
+<span style="color: #B00040">void</span> <span style="color: #0000FF">error</span>(<span style="color: #B00040">int</span> errno) {
+<span style="color: #408080; font-style: italic">/* ERROR CODES</span>
+<span style="color: #408080; font-style: italic">1 - no network</span>
+<span style="color: #408080; font-style: italic">2 - no sd card</span>
+<span style="color: #408080; font-style: italic">3 - no RTC</span>
+<span style="color: #408080; font-style: italic">*/</span>
+  <span style="color: #008000; font-weight: bold">while</span>(<span style="color: #666666">1</span>) {
+    <span style="color: #B00040">uint8_t</span> i;
+    <span style="color: #008000; font-weight: bold">for</span> (i<span style="color: #666666">=0</span>; i<span style="color: #666666">&lt;</span>errno; i<span style="color: #666666">++</span>) {
+      digitalWrite(<span style="color: #666666">13</span>, HIGH);
+      delay(<span style="color: #666666">100</span>);
+      digitalWrite(<span style="color: #666666">13</span>, LOW);
+      delay(<span style="color: #666666">100</span>);
+    }
+    <span style="color: #008000; font-weight: bold">for</span> (i<span style="color: #666666">=</span>errno; i<span style="color: #666666">&lt;10</span>; i<span style="color: #666666">++</span>) {
+      delay(<span style="color: #666666">200</span>);
+    }
+  }
+}
+
+<span style="color: #B00040">void</span> <span style="color: #0000FF">setup</span>() {
+  <span style="color: #408080; font-style: italic">//status = WL_IDLE_STATUS;</span>
+  <span style="color: #408080; font-style: italic">// start the serial connection, sets rate of data transmission</span>
+  Serial.begin(<span style="color: #666666">115200</span>);
+  <span style="color: #408080; font-style: italic">// wait for serial monitor to open</span>
+  <span style="color: #008000; font-weight: bold">while</span> (<span style="color: #666666">!</span>Serial);
+
+
+  <span style="color: #408080; font-style: italic">// see if the card is present and can be initialized:</span>
+  <span style="color: #008000; font-weight: bold">if</span> (<span style="color: #666666">!</span>SD.begin(cardSelect)) {
+    Serial.println(<span style="color: #BA2121">&quot;Card init. failed!&quot;</span>);
+    error(<span style="color: #666666">2</span>);
+  }
+  <span style="color: #B00040">char</span> filename[<span style="color: #666666">15</span>];
+  strcpy(filename, <span style="color: #BA2121">&quot;LOG00.CSV&quot;</span>);
+  <span style="color: #008000; font-weight: bold">for</span> (<span style="color: #B00040">uint8_t</span> i <span style="color: #666666">=</span> <span style="color: #666666">0</span>; i <span style="color: #666666">&lt;</span> <span style="color: #666666">100</span>; i<span style="color: #666666">++</span>) {
+    filename[<span style="color: #666666">3</span>] <span style="color: #666666">=</span> <span style="color: #BA2121">&#39;0&#39;</span> <span style="color: #666666">+</span> i<span style="color: #666666">/10</span>;
+    filename[<span style="color: #666666">4</span>] <span style="color: #666666">=</span> <span style="color: #BA2121">&#39;0&#39;</span> <span style="color: #666666">+</span> i<span style="color: #666666">%10</span>;
+    <span style="color: #408080; font-style: italic">// create if does not exist, do not open existing, write, sync after write</span>
+    <span style="color: #008000; font-weight: bold">if</span> (<span style="color: #666666">!</span> SD.exists(filename)) {
+      <span style="color: #008000; font-weight: bold">break</span>;
+    }
+  }
+
+  logfile <span style="color: #666666">=</span> SD.open(filename, FILE_WRITE);
+  <span style="color: #008000; font-weight: bold">if</span>( <span style="color: #666666">!</span> logfile ) {
+    Serial.print(<span style="color: #BA2121">&quot;Couldnt create &quot;</span>);
+    Serial.println(filename);
+    error(<span style="color: #666666">3</span>);
+  }
+  Serial.print(<span style="color: #BA2121">&quot;Writing to &quot;</span>);
+  Serial.println(filename);
+
+  <span style="color: #408080; font-style: italic">// Wifi init</span>
+  <span style="color: #408080; font-style: italic">//WiFi pins specific to the Adafruit Feather M0 WiFi - ATSAMD21 + ATWINC1500 breakout board</span>
+  WiFi.setPins(<span style="color: #666666">8</span>,<span style="color: #666666">7</span>,<span style="color: #666666">4</span>,<span style="color: #666666">2</span>);
+  <span style="color: #408080; font-style: italic">// attempt to connect to Wifi network:</span>
+  <span style="color: #408080; font-style: italic">// Initialise the Client</span>
+  Serial.print(F(<span style="color: #BA2121">&quot;</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">Init the WiFi module...&quot;</span>));
+  <span style="color: #408080; font-style: italic">// check for the presence of the breakout</span>
+
+  <span style="color: #408080; font-style: italic">// SD Card setup</span>
+  <span style="color: #408080; font-style: italic">// Set the pins used</span>
+  <span style="color: #B00040">int</span> cardSelect <span style="color: #666666">=</span> <span style="color: #666666">10</span>
+  <span style="color: #008000; font-weight: bold">if</span> (WiFi.status() <span style="color: #666666">==</span> WL_NO_SHIELD) {
+    Serial.println(<span style="color: #BA2121">&quot;WINC1500 not present&quot;</span>);
+    <span style="color: #408080; font-style: italic">// don&#39;t continue:</span>
+    <span style="color: #008000; font-weight: bold">while</span> (<span style="color: #008000">true</span>);
+  }
+  Serial.println(<span style="color: #BA2121">&quot;ATWINC OK!&quot;</span>);
+
+  <span style="color: #008000; font-weight: bold">if</span> (<span style="color: #666666">!</span> rtc.begin()) {
+    Serial.println(<span style="color: #BA2121">&quot;Couldn&#39;t find RTC&quot;</span>);
+    <span style="color: #008000; font-weight: bold">while</span> (<span style="color: #666666">1</span>);
+  }
+
+  <span style="color: #008000; font-weight: bold">if</span> (<span style="color: #666666">!</span> rtc.initialized()) {
+    Serial.println(<span style="color: #BA2121">&quot;RTC is NOT running!&quot;</span>);
+    error(<span style="color: #666666">3</span>);
+  }
+
+  pinMode(<span style="color: #666666">13</span>, OUTPUT);
+  <span style="color: #408080; font-style: italic">//pinMode(8, OUTPUT);</span>
+
+
+  Serial.println(<span style="color: #BA2121">&quot;Ready!</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>);
+}
+
+<span style="color: #B00040">void</span> <span style="color: #0000FF">loop</span>() {
+
+    <span style="color: #408080; font-style: italic">// read the input on analog pin A0 A1 A2 A3</span>
+    <span style="color: #408080; font-style: italic">// Calculate water quality parameters using equations from calibration curves</span>
+    <span style="color: #408080; font-style: italic">// These variables are required for the below functions</span>
+    Serial.println(<span style="color: #BA2121">&quot;Reading pins&quot;</span>);
+    <span style="color: #B00040">int</span> Depth_pin <span style="color: #666666">=</span> analogRead(A0);
+    <span style="color: #B00040">int</span> TSS_pin <span style="color: #666666">=</span> analogRead(A1);
+    <span style="color: #B00040">int</span> Temp_pin <span style="color: #666666">=</span> analogRead(A2);
+    <span style="color: #B00040">int</span> Volt_pin <span style="color: #666666">=</span> analogRead(A3);
+    <span style="color: #B00040">float</span> Depth_m <span style="color: #666666">=</span> <span style="color: #666666">0.0075*</span>(<span style="color: #B00040">float</span>(Depth_pin))<span style="color: #666666">-0.7786</span>;
+    <span style="color: #B00040">float</span> TSS_mgL <span style="color: #666666">=</span> <span style="color: #666666">23977*</span>exp(<span style="color: #666666">-0.007*</span><span style="color: #B00040">float</span>(TSS_pin));
+    <span style="color: #B00040">float</span> Temp_F <span style="color: #666666">=</span> <span style="color: #666666">0.2165*</span>(<span style="color: #B00040">float</span>(Temp_pin))<span style="color: #666666">-7.6926</span>;
+    <span style="color: #B00040">float</span> Volt_V <span style="color: #666666">=</span> Volt_pin;
+    Serial.println(<span style="color: #BA2121">&quot;Writing data&quot;</span>);
+    SD_write(   Depth_pin, TSS_pin, Temp_pin, Volt_pin, Depth_m, TSS_mgL, Temp_F, Volt_V);
+    IO_publish( Depth_pin, TSS_pin, Temp_pin, Volt_pin, Depth_m, TSS_mgL, Temp_F, Volt_V);
+
+    delay(LOOP_DELAY);
+}
+
+<span style="color: #B00040">void</span> <span style="color: #0000FF">MQTT_connect</span>() {
+    <span style="color: #408080; font-style: italic">// Function to connect and reconnect as necessary to the MQTT server.</span>
+    <span style="color: #408080; font-style: italic">// Should be called in the loop function and it will take care if connecting.</span>
+    <span style="color: #B00040">int8_t</span> ret;
+
+    <span style="color: #408080; font-style: italic">// attempt to connect to Wifi network:</span>
+    <span style="color: #008000; font-weight: bold">while</span> (WiFi.status() <span style="color: #666666">!=</span> WL_CONNECTED) {
+        Serial.print(<span style="color: #BA2121">&quot;Attempting to connect to Primary   SSID: &quot;</span>);
+        Serial.println(ssid);
+
+        status <span style="color: #666666">=</span> WiFi.begin(ssid);
+
+        <span style="color: #408080; font-style: italic">// wait xx seconds for connection:</span>
+        <span style="color: #B00040">uint8_t</span> timeout <span style="color: #666666">=</span> <span style="color: #666666">15</span>;
+        <span style="color: #008000; font-weight: bold">while</span> (timeout <span style="color: #666666">&amp;&amp;</span> (WiFi.status() <span style="color: #666666">!=</span> WL_CONNECTED)) {
+          timeout<span style="color: #666666">--</span>;
+          delay(<span style="color: #666666">1000</span>);
+        }
+    }
+
+    <span style="color: #408080; font-style: italic">// Stop if already connected.</span>
+    <span style="color: #008000; font-weight: bold">if</span> (mqtt.connected()) {
+        <span style="color: #008000; font-weight: bold">return</span>;
+    }
+
+    Serial.print(<span style="color: #BA2121">&quot;Connecting to MQTT... &quot;</span>);
+
+    <span style="color: #008000; font-weight: bold">while</span> ((ret <span style="color: #666666">=</span> mqtt.connect()) <span style="color: #666666">!=</span> <span style="color: #666666">0</span>) { <span style="color: #408080; font-style: italic">// connect will return 0 for connected</span>
+         Serial.println(mqtt.connectErrorString(ret));
+         Serial.println(<span style="color: #BA2121">&quot;Retrying MQTT connection in 5 seconds...&quot;</span>);
+         mqtt.disconnect();
+         delay(<span style="color: #666666">5000</span>);  <span style="color: #408080; font-style: italic">// wait 5 seconds</span>
+    }
+    Serial.println(<span style="color: #BA2121">&quot;MQTT Connected!&quot;</span>);
+}
+
+<span style="color: #B00040">void</span> <span style="color: #0000FF">SD_write</span>(<span style="color: #B00040">int</span> Depth_pin, <span style="color: #B00040">int</span> TSS_pin, <span style="color: #B00040">int</span> Temp_pin, <span style="color: #B00040">int</span> Volt_pin, <span style="color: #B00040">int</span> Depth_m, <span style="color: #B00040">int</span> TSS_mgL, <span style="color: #B00040">int</span> Temp_F, <span style="color: #B00040">int</span> Volt_V) {
+    Serial.println(<span style="color: #BA2121">&quot;  SD card writing function&quot;</span>);
+    String line<span style="color: #666666">=</span>timeNow()<span style="color: #666666">+</span><span style="color: #BA2121">&quot;,&quot;</span><span style="color: #666666">+</span>Depth_pin<span style="color: #666666">+</span><span style="color: #BA2121">&quot;,&quot;</span><span style="color: #666666">+</span>TSS_pin<span style="color: #666666">+</span><span style="color: #BA2121">&quot;,&quot;</span><span style="color: #666666">+</span>Temp_pin<span style="color: #666666">+</span><span style="color: #BA2121">&quot;,&quot;</span><span style="color: #666666">+</span>Volt_pin<span style="color: #666666">+</span><span style="color: #BA2121">&quot;,&quot;</span><span style="color: #666666">+</span>Depth_m<span style="color: #666666">+</span><span style="color: #BA2121">&quot;,&quot;</span><span style="color: #666666">+</span>TSS_mgL<span style="color: #666666">+</span><span style="color: #BA2121">&quot;,&quot;</span><span style="color: #666666">+</span>Temp_F<span style="color: #666666">+</span><span style="color: #BA2121">&quot;,&quot;</span><span style="color: #666666">+</span>Volt_V;
+    Serial.println(line);
+    logfile.println(line);
+    logfile.flush();
+}
+
+<span style="color: #B00040">void</span> <span style="color: #0000FF">IO_publish</span> (<span style="color: #B00040">uint32_t</span> d_Depth, <span style="color: #B00040">uint32_t</span> d_TSS, <span style="color: #B00040">uint32_t</span> d_Temp, <span style="color: #B00040">uint32_t</span> d_Volt, <span style="color: #B00040">float</span> a_Depth, <span style="color: #B00040">float</span> a_TSS, <span style="color: #B00040">float</span> a_Temp, <span style="color: #B00040">int</span> a_Volt) {
+    Serial.println(<span style="color: #BA2121">&quot;  IO publishing function&quot;</span>);
+
+    <span style="color: #408080; font-style: italic">// Ensure the connection to the MQTT server is alive (this will make the first</span>
+    <span style="color: #408080; font-style: italic">// connection and automatically reconnect when disconnected).  See the MQTT_connect</span>
+    <span style="color: #408080; font-style: italic">// function definition further below.</span>
+    MQTT_connect();
+
+    Serial.print(<span style="color: #BA2121">&quot;Pushing to MQTTserver: &quot;</span>);
+    <span style="color: #008000; font-weight: bold">if</span> (
+    Depth.publish(d_Depth) <span style="color: #666666">&amp;&amp;</span>
+    Temperature.publish(d_TSS) <span style="color: #666666">&amp;&amp;</span>
+    TSS.publish(d_Temp) <span style="color: #666666">&amp;&amp;</span>
+    Voltage.publish(d_Volt) <span style="color: #666666">&amp;&amp;</span>
+    Depth_calc.publish(a_Depth, <span style="color: #666666">3</span>) <span style="color: #666666">&amp;&amp;</span>
+    TSS_calc.publish(a_TSS, <span style="color: #666666">3</span>) <span style="color: #666666">&amp;&amp;</span>
+    Temperature_calc.publish(a_Temp, <span style="color: #666666">3</span>) <span style="color: #666666">&amp;&amp;</span>
+    Voltage_calc.publish(a_Volt, <span style="color: #666666">3</span>)
+    )
+    {
+    Serial.println(<span style="color: #BA2121">&quot;Published&quot;</span>);
+    } <span style="color: #008000; font-weight: bold">else</span> {
+    Serial.println(<span style="color: #BA2121">&quot;Failed!&quot;</span>);
+    }
+}
+
+String <span style="color: #0000FF">timeNow</span>() {
+    DateTime now <span style="color: #666666">=</span> rtc.now();
+    <span style="color: #408080; font-style: italic">//Serial.println(now.unixtime() / 86400L);</span>
+    String thistime <span style="color: #666666">=</span> String(now.month())<span style="color: #666666">+</span><span style="color: #BA2121">&#39;/&#39;</span><span style="color: #666666">+</span>String(now.day())<span style="color: #666666">+</span><span style="color: #BA2121">&#39;/&#39;</span><span style="color: #666666">+</span>String(now.year())<span style="color: #666666">+</span><span style="color: #BA2121">&quot; &quot;</span><span style="color: #666666">+</span>String(now.hour())<span style="color: #666666">+</span><span style="color: #BA2121">&#39;:&#39;</span><span style="color: #666666">+</span>String(now.minute())<span style="color: #666666">+</span><span style="color: #BA2121">&#39;:&#39;</span><span style="color: #666666">+</span>String(now.second());
+    <span style="color: #408080; font-style: italic">//Serial.println(thistime);</span>
+    <span style="color: #008000; font-weight: bold">return</span> thistime;
+}
+</pre></div>
+<p>
+<p>
+<!-- navigation buttons at the bottom of the page -->
+<ul class="pager">
+
+  <li class="previous">
+    <a href="._IoTProjects004.html">&larr; Prev</a>
+  </li>
+
+  <li class="next">
+    <a href="._IoTProjects006.html">Next &rarr;</a>
+  </li>
+</ul>
+<!-- ------------------- end of main content --------------- -->
+
+</div>  <!-- end container -->
+<!-- include javascript, jQuery *first* -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+<!-- Bootstrap footer
+<footer>
+<a href="http://..."><img width="250" align=right src="http://..."></a>
+</footer>
+-->
+
+
+<center style="font-size:80%">
+<!-- copyright only on the titlepage -->
+</center>
+
+
+</body>
+</html>
+    
+
