@@ -1,5 +1,3 @@
-*.png
-*.eps
 *.layout
 *.skp
 *.skb
@@ -8,8 +6,6 @@
 Thumbs.db
 *.dlog
 .*.copyright
-.*_html_file_collection
-*.html
 reveal.js
 oldSite
 tmp_mako_*
