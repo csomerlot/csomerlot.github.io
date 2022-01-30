@@ -159,20 +159,20 @@ shifts <span style="color: #666666">=</span> [<span style="color: #BA2121">&quot
 
 <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">fitness_score</span>(schedule, rules):
     score <span style="color: #666666">=</span> <span style="color: #666666">0</span>
-    <span style="color: #408080; font-style: italic"># Rules by schedule</span>
+    <span style="color: #3D7B7B; font-style: italic"># Rules by schedule</span>
     
-    <span style="color: #408080; font-style: italic"># check at least 1 person has keys for open and close</span>
-    
-    
+    <span style="color: #3D7B7B; font-style: italic"># check at least 1 person has keys for open and close</span>
     
     
-    <span style="color: #408080; font-style: italic"># Rules by person</span>
+    
+    
+    <span style="color: #3D7B7B; font-style: italic"># Rules by person</span>
     <span style="color: #008000; font-weight: bold">for</span> emp <span style="color: #AA22FF; font-weight: bold">in</span> schedule[<span style="color: #BA2121">&quot;ByPerson&quot;</span>]:
-        <span style="color: #408080; font-style: italic"># print emp</span>
-        <span style="color: #408080; font-style: italic"># check total</span>
+        <span style="color: #3D7B7B; font-style: italic"># print emp</span>
+        <span style="color: #3D7B7B; font-style: italic"># check total</span>
         <span style="color: #008000; font-weight: bold">if</span> <span style="color: #008000">len</span>(schedule[<span style="color: #BA2121">&quot;ByPerson&quot;</span>][emp]) <span style="color: #666666">&gt;</span> rules[emp][<span style="color: #BA2121">&quot;ShiftsPerWeek&quot;</span>]: 
             score<span style="color: #666666">+=</span> <span style="color: #008000">len</span>(schedule[<span style="color: #BA2121">&quot;ByPerson&quot;</span>][emp]) <span style="color: #666666">-</span> rules[emp][<span style="color: #BA2121">&quot;ShiftsPerWeek&quot;</span>]
-            <span style="color: #408080; font-style: italic"># print &quot;\tToo many shifts&quot;, score</span>
+            <span style="color: #3D7B7B; font-style: italic"># print &quot;\tToo many shifts&quot;, score</span>
         
         weekend <span style="color: #666666">=</span> <span style="color: #666666">0</span>
         morning <span style="color: #666666">=</span> <span style="color: #666666">0</span>
@@ -184,24 +184,24 @@ shifts <span style="color: #666666">=</span> [<span style="color: #BA2121">&quot
                 <span style="color: #008000; font-weight: bold">if</span> <span style="color: #BA2121">&quot;Afternoon&quot;</span> <span style="color: #AA22FF; font-weight: bold">in</span> shift_desc: afternn<span style="color: #666666">+=1</span>
                 <span style="color: #008000; font-weight: bold">if</span> <span style="color: #BA2121">&quot;Evening&quot;</span>   <span style="color: #AA22FF; font-weight: bold">in</span> shift_desc: evening<span style="color: #666666">+=1</span>
                 
-        <span style="color: #408080; font-style: italic"># check works weekends</span>
+        <span style="color: #3D7B7B; font-style: italic"># check works weekends</span>
         <span style="color: #008000; font-weight: bold">if</span> <span style="color: #AA22FF; font-weight: bold">not</span> rules[emp][<span style="color: #BA2121">&quot;WorksWeekends&quot;</span>]: 
             score<span style="color: #666666">+=</span>weekend
-            <span style="color: #408080; font-style: italic"># print &quot;\tNo weekends&quot;, score</span>
+            <span style="color: #3D7B7B; font-style: italic"># print &quot;\tNo weekends&quot;, score</span>
             
-        <span style="color: #408080; font-style: italic"># check morning, afternoon, evening shift</span>
+        <span style="color: #3D7B7B; font-style: italic"># check morning, afternoon, evening shift</span>
         <span style="color: #008000; font-weight: bold">if</span> <span style="color: #AA22FF; font-weight: bold">not</span> rules[emp][<span style="color: #BA2121">&quot;WorksMornings&quot;</span>]: 
             score<span style="color: #666666">+=</span>morning
-            <span style="color: #408080; font-style: italic"># print &quot;\tMornings bad&quot;, score</span>
+            <span style="color: #3D7B7B; font-style: italic"># print &quot;\tMornings bad&quot;, score</span>
         <span style="color: #008000; font-weight: bold">if</span> <span style="color: #AA22FF; font-weight: bold">not</span> rules[emp][<span style="color: #BA2121">&quot;WorksAfternoons&quot;</span>]: 
             score <span style="color: #666666">+=</span>afternn
-            <span style="color: #408080; font-style: italic"># print &quot;\tAfternoons bad&quot;, score</span>
+            <span style="color: #3D7B7B; font-style: italic"># print &quot;\tAfternoons bad&quot;, score</span>
         <span style="color: #008000; font-weight: bold">if</span> <span style="color: #AA22FF; font-weight: bold">not</span> rules[emp][<span style="color: #BA2121">&quot;WorksEvenings&quot;</span>]: 
             score <span style="color: #666666">+=</span>evening
-            <span style="color: #408080; font-style: italic"># print &quot;\tEvenings bad&quot;, score</span>
+            <span style="color: #3D7B7B; font-style: italic"># print &quot;\tEvenings bad&quot;, score</span>
             
-        <span style="color: #408080; font-style: italic"># check only back-to-back double shifts</span>
-    <span style="color: #408080; font-style: italic"># print </span>
+        <span style="color: #3D7B7B; font-style: italic"># check only back-to-back double shifts</span>
+    <span style="color: #3D7B7B; font-style: italic"># print </span>
     <span style="color: #008000; font-weight: bold">return</span> score
 
 <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">getRules</span>(url):
@@ -217,7 +217,7 @@ shifts <span style="color: #666666">=</span> [<span style="color: #BA2121">&quot
                 <span style="color: #008000; font-weight: bold">if</span> val <span style="color: #666666">==</span> <span style="color: #BA2121">&#39;FALSE&#39;</span>: val <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">False</span>
                 <span style="color: #008000; font-weight: bold">try</span>:
                     val <span style="color: #666666">=</span> <span style="color: #008000">int</span>(val)
-                <span style="color: #008000; font-weight: bold">except</span> <span style="color: #D2413A; font-weight: bold">ValueError</span>:
+                <span style="color: #008000; font-weight: bold">except</span> <span style="color: #CB3F38; font-weight: bold">ValueError</span>:
                     <span style="color: #008000; font-weight: bold">pass</span>
                 rules[row[<span style="color: #BA2121">&#39;Employee&#39;</span>]][k] <span style="color: #666666">=</span> val
     <span style="color: #008000; font-weight: bold">return</span> rules
@@ -226,11 +226,11 @@ shifts <span style="color: #666666">=</span> [<span style="color: #BA2121">&quot
     <span style="color: #008000; font-weight: bold">for</span> gene <span style="color: #AA22FF; font-weight: bold">in</span> individual[<span style="color: #BA2121">&quot;gene_dict&quot;</span>]:
         <span style="color: #008000; font-weight: bold">if</span> random<span style="color: #666666">.</span>randint(<span style="color: #666666">0</span>,<span style="color: #666666">100</span>) <span style="color: #666666">&lt;=</span> Mutation_Rate:
             individual[<span style="color: #BA2121">&quot;gene_dict&quot;</span>][gene] <span style="color: #666666">=</span> random<span style="color: #666666">.</span>randint(<span style="color: #666666">1</span>,<span style="color: #666666">9</span>)
-    <span style="color: #408080; font-style: italic">#individual[&quot;fitness&quot;] = fitness_score(individual[&quot;gene_dict&quot;])</span>
+    <span style="color: #3D7B7B; font-style: italic">#individual[&quot;fitness&quot;] = fitness_score(individual[&quot;gene_dict&quot;])</span>
     <span style="color: #008000; font-weight: bold">return</span> individual
 
-<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">mortality</span>(population): <span style="color: #408080; font-style: italic">#sort individuals (list by fitness score), kill off least fit</span>
-    sortedPop <span style="color: #666666">=</span> <span style="color: #008000">sorted</span>(population) <span style="color: #408080; font-style: italic">#sorted function accepts any iterable, where list.sort does not</span>
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">mortality</span>(population): <span style="color: #3D7B7B; font-style: italic">#sort individuals (list by fitness score), kill off least fit</span>
+    sortedPop <span style="color: #666666">=</span> <span style="color: #008000">sorted</span>(population) <span style="color: #3D7B7B; font-style: italic">#sorted function accepts any iterable, where list.sort does not</span>
     <span style="color: #008000; font-weight: bold">return</span> sortedPop[:Population_Size]
 
 <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">reproduction</span>(population, rules):
@@ -238,8 +238,8 @@ shifts <span style="color: #666666">=</span> [<span style="color: #BA2121">&quot
     <span style="color: #008000; font-weight: bold">for</span> i <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">range</span>(<span style="color: #008000">len</span>(population)<span style="color: #666666">/2</span>):
         parent_1 <span style="color: #666666">=</span> random<span style="color: #666666">.</span>choice(population)
         parent_2 <span style="color: #666666">=</span> random<span style="color: #666666">.</span>choice(population)
-<span style="color: #408080; font-style: italic">##        while parent_1 == parent_2:</span>
-<span style="color: #408080; font-style: italic">##            parent_2 = random.choice(population)</span>
+<span style="color: #3D7B7B; font-style: italic">##        while parent_1 == parent_2:</span>
+<span style="color: #3D7B7B; font-style: italic">##            parent_2 = random.choice(population)</span>
 
         <span style="color: #008000; font-weight: bold">for</span> offspring <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">range</span>(Litter_Size):
         
@@ -289,13 +289,13 @@ shifts <span style="color: #666666">=</span> [<span style="color: #BA2121">&quot
     
 <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">evolve</span>(rules):
 
-    <span style="color: #408080; font-style: italic"># make initial random population</span>
+    <span style="color: #3D7B7B; font-style: italic"># make initial random population</span>
     population <span style="color: #666666">=</span> []
     <span style="color: #008000; font-weight: bold">for</span> i <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">range</span>(Population_Size<span style="color: #666666">+1</span>):
         population<span style="color: #666666">.</span>append(makeRandomSchedule(rules))
     best <span style="color: #666666">=</span> <span style="color: #008000">sorted</span>(population)[<span style="color: #666666">0</span>][<span style="color: #666666">0</span>]
     
-    <span style="color: #408080; font-style: italic"># main evolution loop </span>
+    <span style="color: #3D7B7B; font-style: italic"># main evolution loop </span>
     GenerationCount <span style="color: #666666">=</span> <span style="color: #666666">0</span>
     <span style="color: #008000; font-weight: bold">while</span> best <span style="color: #666666">&gt;</span> <span style="color: #666666">0</span>:
         newpop <span style="color: #666666">=</span> mortality(population)

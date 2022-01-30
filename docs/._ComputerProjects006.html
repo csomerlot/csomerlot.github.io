@@ -152,7 +152,7 @@ end of tocinfo -->
 <center> <!-- figure label: --> <div id="fig:tartan"></div> <!-- FIGURE -->
 <hr class="figure">
 <center><p class="caption">Figure 2:  Sample output.  <!-- caption label: fig:tartan --> </p></center>
-<p><img src="./code/TartanDesigner.py.png" align="bottom" width=600></p>
+<p><img src=".././code/TartanDesigner.py.png" align="bottom" width=600></p>
 </center>
 
 <p>
@@ -164,7 +164,7 @@ end of tocinfo -->
 
 DEBUG <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">False</span>
 w <span style="color: #666666">=</span> <span style="color: #666666">4</span>
-c1 <span style="color: #666666">=</span> [(<span style="color: #666666">15</span>,<span style="color: #666666">15</span>,<span style="color: #666666">15</span>)]<span style="color: #666666">*2</span> <span style="color: #408080; font-style: italic">## colors are given by (R,G,B) value * number of threads</span>
+c1 <span style="color: #666666">=</span> [(<span style="color: #666666">15</span>,<span style="color: #666666">15</span>,<span style="color: #666666">15</span>)]<span style="color: #666666">*2</span> <span style="color: #3D7B7B; font-style: italic">## colors are given by (R,G,B) value * number of threads</span>
 c2 <span style="color: #666666">=</span> [(<span style="color: #666666">136</span>,<span style="color: #666666">0</span>,<span style="color: #666666">0</span>)]<span style="color: #666666">*14</span>
 c3 <span style="color: #666666">=</span> [(<span style="color: #666666">0</span>,<span style="color: #666666">56</span>,<span style="color: #666666">32</span>)]<span style="color: #666666">*8</span>
 c4 <span style="color: #666666">=</span> [(<span style="color: #666666">240</span>,<span style="color: #666666">240</span>,<span style="color: #666666">240</span>)]<span style="color: #666666">*4</span>
@@ -179,7 +179,7 @@ setworldcoordinates(<span style="color: #666666">0</span>,maxDim,maxDim,<span st
 <span style="color: #008000; font-weight: bold">if</span> DEBUG:
     <span style="color: #008000">print</span>(screensize())
 <span style="color: #008000; font-weight: bold">if</span> screensize()[<span style="color: #666666">0</span>] <span style="color: #666666">!=</span> maxDim <span style="color: #AA22FF; font-weight: bold">or</span> screensize()[<span style="color: #666666">1</span>] <span style="color: #666666">!=</span> maxDim:
-    <span style="color: #008000">print</span> (<span style="color: #BA2121">&quot;WARNING: Screensize is not set to the maxDim (</span><span style="color: #BB6688; font-weight: bold">{}</span><span style="color: #BA2121">), you likely have aspect warping. Try changing the buffer variable.&quot;</span><span style="color: #666666">.</span>format(maxDim))
+    <span style="color: #008000">print</span> (<span style="color: #BA2121">&quot;WARNING: Screensize is not set to the maxDim (</span><span style="color: #A45A77; font-weight: bold">{}</span><span style="color: #BA2121">), you likely have aspect warping. Try changing the buffer variable.&quot;</span><span style="color: #666666">.</span>format(maxDim))
 
 width(w)
 speed(<span style="color: #666666">10</span>)
@@ -201,7 +201,7 @@ hideturtle()
         right(<span style="color: #666666">90</span>)
         setx(<span style="color: #666666">0</span>)
 
-<span style="color: #408080; font-style: italic">#warp</span>
+<span style="color: #3D7B7B; font-style: italic">#warp</span>
 home()
 t2 <span style="color: #666666">=</span> Turtle()
 t2<span style="color: #666666">.</span>width(<span style="color: #666666">1</span>)
@@ -213,7 +213,7 @@ t2<span style="color: #666666">.</span>home()
     color(c)
     goto([x<span style="color: #666666">*</span>w<span style="color: #666666">-</span>w<span style="color: #666666">/2</span>, maxDim<span style="color: #666666">+3*</span>w])
 
-    <span style="color: #408080; font-style: italic"># shade lines</span>
+    <span style="color: #3D7B7B; font-style: italic"># shade lines</span>
     t2<span style="color: #666666">.</span>penup()
     t2<span style="color: #666666">.</span>goto([x<span style="color: #666666">*</span>w<span style="color: #666666">-</span>w, <span style="color: #666666">-3*</span>w])
     t2<span style="color: #666666">.</span>pendown()
@@ -222,15 +222,15 @@ t2<span style="color: #666666">.</span>home()
 penup()
 
 
-<span style="color: #408080; font-style: italic">#weft</span>
+<span style="color: #3D7B7B; font-style: italic">#weft</span>
 home()
 treadle <span style="color: #666666">=</span> <span style="color: #666666">0</span>
 <span style="color: #008000; font-weight: bold">for</span> x, c <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">enumerate</span>(sett):
-    <span style="color: #408080; font-style: italic"># color(&quot;&quot;, c)</span>
+    <span style="color: #3D7B7B; font-style: italic"># color(&quot;&quot;, c)</span>
     color([<span style="color: #008000">int</span>(<span style="color: #666666">0.8*</span>x) <span style="color: #008000; font-weight: bold">for</span> x <span style="color: #AA22FF; font-weight: bold">in</span> c], c)
     forward(treadle<span style="color: #666666">*</span>w)
 
-    <span style="color: #408080; font-style: italic"># if DEBUG: print(&quot;Heading: {0:5}, Treadle: {2}, Coords: {1}&quot;.format(heading(), pos(), treadle))</span>
+    <span style="color: #3D7B7B; font-style: italic"># if DEBUG: print(&quot;Heading: {0:5}, Treadle: {2}, Coords: {1}&quot;.format(heading(), pos(), treadle))</span>
 
     <span style="color: #008000; font-weight: bold">while</span> <span style="color: #666666">0</span> <span style="color: #666666">&lt;=</span> xcor() <span style="color: #666666">&lt;</span> maxDim:
         stamp()
@@ -244,7 +244,7 @@ treadle <span style="color: #666666">=</span> <span style="color: #666666">0</sp
         getcanvas()<span style="color: #666666">.</span>postscript(file<span style="color: #666666">=</span><span style="color: #19177C">__file__</span><span style="color: #666666">+</span><span style="color: #BA2121">&quot;.eps&quot;</span>, colormode<span style="color: #666666">=</span><span style="color: #BA2121">&#39;color&#39;</span>)
         Image<span style="color: #666666">.</span>open(<span style="color: #19177C">__file__</span><span style="color: #666666">+</span><span style="color: #BA2121">&quot;.eps&quot;</span>)<span style="color: #666666">.</span>save(<span style="color: #19177C">__file__</span><span style="color: #666666">+</span><span style="color: #BA2121">&quot;.png&quot;</span>)
         os<span style="color: #666666">.</span>startfile(<span style="color: #19177C">__file__</span><span style="color: #666666">+</span><span style="color: #BA2121">&quot;.png&quot;</span>)
-    <span style="color: #008000; font-weight: bold">except</span> <span style="color: #D2413A; font-weight: bold">IOError</span>:
+    <span style="color: #008000; font-weight: bold">except</span> <span style="color: #CB3F38; font-weight: bold">IOError</span>:
         <span style="color: #008000">print</span>(<span style="color: #BA2121">&quot;cannot save image&quot;</span>)
 
 exitonclick()

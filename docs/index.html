@@ -103,7 +103,7 @@ end of tocinfo -->
 <br>
 
 <p>
-<center><h4>Jan 24, 2022</h4></center> <!-- date -->
+<center><h4>Jan 29, 2022</h4></center> <!-- date -->
 <br>
 <p>
 I have a lot of ideas, and getting them jotted down helps me focus on other things. That, and I love to innovate and engineer anything I can.
@@ -147,7 +147,78 @@ I have a lot of ideas, and getting them jotted down helps me focus on other thin
 <p>
 
 <!-- code=text (!bc txt) typeset with pygments style "default" -->
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span>commit 289dcfac937bd80795e8601b66b812872de0a365
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span>commit b1cb09fb49dff0777d74272d71274b41e630c79c
+Author: Chris Somerlot &lt;csomerlot@brwncald.com&gt;
+Date:   Mon Jan 24 12:23:24 2022 -0500
+
+    Revert &quot;repathing linked files&quot;
+    
+    This reverts commit f486184805ff2a8aae1e6cee8a71115e79a14e4f.
+
+ Apiary.do.txt                       |  8 ++++----
+ BoatProjects.do.txt                 | 16 ++++++++--------
+ ComputerProjects.do.txt             | 12 ++++++------
+ HappyHippieLifestyleProjects.do.txt |  2 +-
+ IoTProjects.do.txt                  |  4 ++--
+ NorthWoodsCottage.do.txt            |  6 +++---
+ ThistleRidgeFarmProjects.do.txt     |  8 ++++----
+ WoodWorking.do.txt                  |  4 ++--
+ docs/._index000.html                | 22 ++++++++++------------
+ docs/index.html                     | 22 ++++++++++------------
+ 10 files changed, 50 insertions(+), 54 deletions(-)
+
+commit f486184805ff2a8aae1e6cee8a71115e79a14e4f
+Author: Chris Somerlot &lt;csomerlot@brwncald.com&gt;
+Date:   Mon Jan 24 11:54:18 2022 -0500
+
+    repathing linked files
+
+ Apiary.do.txt                       |  8 ++++----
+ BoatProjects.do.txt                 | 16 ++++++++--------
+ ComputerProjects.do.txt             | 12 ++++++------
+ HappyHippieLifestyleProjects.do.txt |  2 +-
+ IoTProjects.do.txt                  |  4 ++--
+ NorthWoodsCottage.do.txt            |  6 +++---
+ ThistleRidgeFarmProjects.do.txt     |  8 ++++----
+ WoodWorking.do.txt                  |  4 ++--
+ docs/._index000.html                | 22 ++++++++++++----------
+ docs/index.html                     | 22 ++++++++++++----------
+ 10 files changed, 54 insertions(+), 50 deletions(-)
+
+commit 5d81622d94b763cf2c959ba972614127842ed879
+Author: Chris Somerlot &lt;csomerlot@brwncald.com&gt;
+Date:   Mon Jan 24 11:32:43 2022 -0500
+
+    stripping out submodules
+
+ .gitignore                                         |   1 +
+ .gitmodules                                        |   3 -
+ code/StreamDataLogger                              |   1 -
+ code/StreamDataLogger.ino                          | 253 +++++++++++++++++++++
+ code/microHydroponics                              |   1 -
+ code/microHydroponics.ino                          | 194 ++++++++++++++++
+ code/sample_code/Continuous servo testing.ino      |  55 -----
+ .../MaxBotix Ultrasonic Analog Test Code.ino       |  24 --
+ code/sample_code/NeoPixel Rainbow.ino              |  77 -------
+ code/sample_code/RedRoverTheRobot.ino              | 113 ---------
+ .../esp8266-Adafruit_MQTT-get-test.ino             | 142 ------------
+ .../esp8266-Adafruit_MQTT-get-test/keysandstuff.h  |  16 --
+ docs/._index000.html                               | 198 ++++++++--------
+ docs/index.html                                    | 198 ++++++++--------
+ 14 files changed, 640 insertions(+), 636 deletions(-)
+
+commit 258d4aa860766ef68d388314936e1d6ea89676ad
+Author: Chris Somerlot &lt;csomerlot@brwncald.com&gt;
+Date:   Mon Jan 24 10:57:42 2022 -0500
+
+    buncha crap. Fixing *again*
+
+ do.bat               |  2 +-
+ docs/._index000.html | 25 +++++++++++++------------
+ docs/index.html      | 25 +++++++++++++------------
+ 3 files changed, 27 insertions(+), 25 deletions(-)
+
+commit 289dcfac937bd80795e8601b66b812872de0a365
 Author: Chris Somerlot &lt;csomerlot@brwncald.com&gt;
 Date:   Mon Jan 24 10:54:51 2022 -0500
 
@@ -241,226 +312,6 @@ Date:   Mon Jan 24 10:54:51 2022 -0500
  {site =&gt; docs}/everything.html                     |   0
  {site =&gt; docs}/index.html                          | 113 +++++++++++++++++++--
  87 files changed, 206 insertions(+), 20 deletions(-)
-
-commit c2784ad126f4d1f3bf5b9d8f080cde7500e5131f
-Author: Chris Somerlot &lt;csomerlot@brwncald.com&gt;
-Date:   Mon Jan 24 10:45:56 2022 -0500
-
-    cleaning up
-
- code/StreamDataLogger |   2 +-
- code/microHydroponics |   2 +-
- site/._index000.html  | 110 ++++++++++++++++++++++++++++++++++++++++++++------
- site/index.html       | 110 ++++++++++++++++++++++++++++++++++++++++++++------
- 4 files changed, 198 insertions(+), 26 deletions(-)
-
-commit c681c92d0f2a51a55b8e3023620a5360a946549b
-Author: Chris Somerlot &lt;csomerlot@brwncald.com&gt;
-Date:   Mon Jan 24 10:39:33 2022 -0500
-
-    more cleanup
-
- ._AlternativeEnergyProjects000.html    |  322 --
- ._Apiary000.html                       |  300 --
- ._Apiary001.html                       |  189 -
- ._BoatProjects000.html                 |  292 --
- ._BoatProjects001.html                 |  287 --
- ._BoatProjects002.html                 |  179 -
- ._BusinessIdeas000.html                |  171 -
- ._BusinessIdeas001.html                | 1026 ------
- ._BusinessIdeas002.html                |  311 --
- ._ComputerProjects000.html             |  210 --
- ._ComputerProjects001.html             |  275 --
- ._ComputerProjects002.html             |  449 ---
- ._ComputerProjects003.html             |  219 --
- ._ComputerProjects004.html             |  242 --
- ._ComputerProjects005.html             |  213 --
- ._ComputerProjects006.html             |  287 --
- ._ComputerProjects007.html             |  192 -
- ._ComputerProjects008.html             |  385 --
- ._ComputerProjects009.html             |  212 --
- ._ComputerProjects010.html             |  227 --
- ._ComputerProjects011.html             |  274 --
- ._ComputerProjects012.html             |  250 --
- ._ComputerProjects013.html             |  223 --
- ._ComputerProjects014.html             |  534 ---
- ._ComputerProjects015.html             |  534 ---
- ._ComputerProjects016.html             |  242 --
- ._ComputerProjects017.html             |  219 --
- ._ComputerProjects018.html             |  207 --
- ._ComputerProjects019.html             |  190 -
- ._ComputerProjects020.html             |  212 --
- ._ComputerProjects021.html             |  193 -
- ._ComputerProjects022.html             |  292 --
- ._ComputerProjects023.html             |  199 -
- ._ComputerProjects024.html             |  213 --
- ._ComputerProjects025.html             |  179 -
- ._ComputerProjects026.html             |  185 -
- ._ComputerProjects027.html             |  196 -
- ._EmergencyPlans000.html               |  260 --
- ._HappyHippieLifestyleProjects000.html |  341 --
- ._HappyHippieLifestyleProjects001.html |  326 --
- ._HappyHippieLifestyleProjects002.html |  427 ---
- ._HappyHippieLifestyleProjects003.html |  347 --
- ._HappyHippieLifestyleProjects004.html |  286 --
- ._IoTProjects000.html                  |  165 -
- ._IoTProjects001.html                  |  195 -
- ._IoTProjects002.html                  |  242 --
- ._IoTProjects003.html                  |  218 --
- ._IoTProjects004.html                  |  191 -
- ._IoTProjects005.html                  |  502 ---
- ._IoTProjects006.html                  |  502 ---
- ._IoTProjects007.html                  |  210 --
- ._IoTProjects008.html                  |  187 -
- ._IoTProjects009.html                  |  175 -
- ._IoTProjects010.html                  |  155 -
- ._NorthWoodsCottage000.html            |  340 --
- ._RoboticsProjects000.html             |  150 -
- ._RoboticsProjects001.html             |  151 -
- ._RoboticsProjects002.html             |  250 --
- ._RoboticsProjects003.html             |  157 -
- ._RoboticsProjects004.html             |  171 -
- ._RoboticsProjects005.html             |  137 -
- ._RoboticsProjects006.html             |  143 -
- ._RoboticsProjects007.html             |  154 -
- ._ShootingProjects000.html             |  314 --
- ._TemporaryRetirement000.html          |  204 --
- ._ThistleRidgeFarmProjects000.html     |  661 ----
- ._ThistleRidgeFarmProjects001.html     |  437 ---
- ._ThistleRidgeFarmProjects002.html     |  379 --
- ._ThistleRidgeFarmProjects003.html     |  264 --
- ._WoodWorking000.html                  |  241 --
- ._index000.html                        |  231 --
- .gitmodules                            |    4 +-
- AlternativeEnergyProjects.html         |  322 --
- Apiary.html                            |  300 --
- BoatProjects.html                      |  292 --
- BusinessIdeas.html                     |  171 -
- ComputerProjects.html                  |  210 --
- EmergencyPlans.html                    |  260 --
- HappyHippieLifestyleProjects.html      |  341 --
- IoTProjects.html                       |  165 -
- NorthWoodsCottage.html                 |  340 --
- RoboticsProjects.html                  |  150 -
- ShootingProjects.html                  |  314 --
- TemporaryRetirement.html               |  204 --
- ThistleRidgeFarmProjects.html          |  661 ----
- WoodWorking.html                       |  241 --
- _config.yml                            |    1 -
- do.bat                                 |    2 +
- error.htm                              |   10 -
- everything.html                        | 6291 --------------------------------
- index.html                             |  319 --
- site/._index000.html                   |  136 +-
- site/everything.html                   |    2 +-
- site/index.html                        |  136 +-
- 94 files changed, 229 insertions(+), 30086 deletions(-)
-
-commit b28c6c98f1c56108a752e877d0d7810d947bf374
-Author: Chris Somerlot &lt;csomerlot@brwncald.com&gt;
-Date:   Mon Jan 24 10:25:24 2022 -0500
-
-    moving files around
-
- everything.html                             |    2 +-
- index.html                                  |  136 +-
- site/._AlternativeEnergyProjects000.html    |  322 ++
- site/._Apiary000.html                       |  300 ++
- site/._Apiary001.html                       |  189 +
- site/._BoatProjects000.html                 |  292 ++
- site/._BoatProjects001.html                 |  287 ++
- site/._BoatProjects002.html                 |  179 +
- site/._BusinessIdeas000.html                |  171 +
- site/._BusinessIdeas001.html                | 1026 +++++
- site/._BusinessIdeas002.html                |  311 ++
- site/._ComputerProjects000.html             |  210 +
- site/._ComputerProjects001.html             |  275 ++
- site/._ComputerProjects002.html             |  449 ++
- site/._ComputerProjects003.html             |  219 +
- site/._ComputerProjects004.html             |  242 ++
- site/._ComputerProjects005.html             |  213 +
- site/._ComputerProjects006.html             |  287 ++
- site/._ComputerProjects007.html             |  192 +
- site/._ComputerProjects008.html             |  385 ++
- site/._ComputerProjects009.html             |  212 +
- site/._ComputerProjects010.html             |  227 +
- site/._ComputerProjects011.html             |  274 ++
- site/._ComputerProjects012.html             |  250 ++
- site/._ComputerProjects013.html             |  223 +
- site/._ComputerProjects014.html             |  534 +++
- site/._ComputerProjects015.html             |  534 +++
- site/._ComputerProjects016.html             |  242 ++
- site/._ComputerProjects017.html             |  219 +
- site/._ComputerProjects018.html             |  207 +
- site/._ComputerProjects019.html             |  190 +
- site/._ComputerProjects020.html             |  212 +
- site/._ComputerProjects021.html             |  193 +
- site/._ComputerProjects022.html             |  292 ++
- site/._ComputerProjects023.html             |  199 +
- site/._ComputerProjects024.html             |  213 +
- site/._ComputerProjects025.html             |  179 +
- site/._ComputerProjects026.html             |  185 +
- site/._ComputerProjects027.html             |  196 +
- site/._EmergencyPlans000.html               |  260 ++
- site/._HappyHippieLifestyleProjects000.html |  341 ++
- site/._HappyHippieLifestyleProjects001.html |  326 ++
- site/._HappyHippieLifestyleProjects002.html |  427 ++
- site/._HappyHippieLifestyleProjects003.html |  347 ++
- site/._HappyHippieLifestyleProjects004.html |  286 ++
- site/._IoTProjects000.html                  |  165 +
- site/._IoTProjects001.html                  |  195 +
- site/._IoTProjects002.html                  |  242 ++
- site/._IoTProjects003.html                  |  218 +
- site/._IoTProjects004.html                  |  191 +
- site/._IoTProjects005.html                  |  502 +++
- site/._IoTProjects006.html                  |  502 +++
- site/._IoTProjects007.html                  |  210 +
- site/._IoTProjects008.html                  |  187 +
- site/._IoTProjects009.html                  |  175 +
- site/._IoTProjects010.html                  |  155 +
- site/._NorthWoodsCottage000.html            |  340 ++
- site/._RoboticsProjects000.html             |  150 +
- site/._RoboticsProjects001.html             |  151 +
- site/._RoboticsProjects002.html             |  250 ++
- site/._RoboticsProjects003.html             |  157 +
- site/._RoboticsProjects004.html             |  171 +
- site/._RoboticsProjects005.html             |  137 +
- site/._RoboticsProjects006.html             |  143 +
- site/._RoboticsProjects007.html             |  154 +
- site/._ShootingProjects000.html             |  314 ++
- site/._TemporaryRetirement000.html          |  204 +
- site/._ThistleRidgeFarmProjects000.html     |  661 +++
- site/._ThistleRidgeFarmProjects001.html     |  437 ++
- site/._ThistleRidgeFarmProjects002.html     |  379 ++
- site/._ThistleRidgeFarmProjects003.html     |  264 ++
- site/._WoodWorking000.html                  |  241 +
- site/._index000.html                        |  231 +
- site/AlternativeEnergyProjects.html         |  322 ++
- site/Apiary.html                            |  300 ++
- site/BoatProjects.html                      |  292 ++
- site/BusinessIdeas.html                     |  171 +
- site/ComputerProjects.html                  |  210 +
- site/EmergencyPlans.html                    |  260 ++
- site/HappyHippieLifestyleProjects.html      |  341 ++
- site/IoTProjects.html                       |  165 +
- site/NorthWoodsCottage.html                 |  340 ++
- site/RoboticsProjects.html                  |  150 +
- site/ShootingProjects.html                  |  314 ++
- site/TemporaryRetirement.html               |  204 +
- site/ThistleRidgeFarmProjects.html          |  661 +++
- site/WoodWorking.html                       |  241 +
- site/everything.html                        | 6291 +++++++++++++++++++++++++++
- site/index.html                             |  231 +
- 89 files changed, 30049 insertions(+), 25 deletions(-)
-
-commit 81f23642bdaa13a78b0e601387de4532d069b324
-Author: Chris Somerlot &lt;csomerlot@users.noreply.github.com&gt;
-Date:   Sun Jan 23 21:40:37 2022 -0500
-
-    Set theme jekyll-theme-modernist
-
- _config.yml | 1 +
- 1 file changed, 1 insertion(+)
 </pre></div>
 <p>
 

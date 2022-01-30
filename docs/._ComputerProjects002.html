@@ -234,7 +234,7 @@ I just want the internet to work. I also want to protect my family and house, in
 <center> <!-- figure label: --> <div id="fig:los"></div> <!-- FIGURE -->
 <hr class="figure">
 <center><p class="caption">Figure 1:  Line of sight between office and home.  <!-- caption label: fig:los --> </p></center>
-<p><img src="./Programming/AP_Viewshed.jpg" align="bottom" width=600></p>
+<p><img src=".././Programming/AP_Viewshed.jpg" align="bottom" width=600></p>
 </center>
 
 <p>
@@ -242,7 +242,7 @@ I just want the internet to work. I also want to protect my family and house, in
 <p>
 
 <!-- code=python (!bc pypro) typeset with pygments style "default" -->
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><span style="color: #408080; font-style: italic">### This script updates Route53 AWS Cloud service with the DNS record for the public IP</span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><span style="color: #3D7B7B; font-style: italic">### This script updates Route53 AWS Cloud service with the DNS record for the public IP</span>
 
 
 <span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">boto3</span>
@@ -252,10 +252,10 @@ I just want the internet to work. I also want to protect my family and house, in
 public_ip <span style="color: #666666">=</span> ni<span style="color: #666666">.</span>ifaddresses(<span style="color: #BA2121">&#39;eth0&#39;</span>)[AF_INET][<span style="color: #666666">0</span>][<span style="color: #BA2121">&#39;addr&#39;</span>]
 <span style="color: #008000">print</span>(public_ip)
 
-<span style="color: #408080; font-style: italic">#https://github.com/awslabs/route53-dynamic-dns-with-lambda/blob/master/v1/dynamic_dns_lambda.py</span>
+<span style="color: #3D7B7B; font-style: italic">#https://github.com/awslabs/route53-dynamic-dns-with-lambda/blob/master/v1/dynamic_dns_lambda.py</span>
 client <span style="color: #666666">=</span> boto3<span style="color: #666666">.</span>client(<span style="color: #BA2121">&#39;route53&#39;</span> )
-route_53_zone_id     <span style="color: #666666">=</span> <span style="color: #BA2121">&#39;&#39;</span> <span style="color: #408080; font-style: italic"># your zone ID here</span>
-route_53_record_name <span style="color: #666666">=</span> <span style="color: #BA2121">&#39;&#39;</span> <span style="color: #408080; font-style: italic"># your FQDN here</span>
+route_53_zone_id     <span style="color: #666666">=</span> <span style="color: #BA2121">&#39;&#39;</span> <span style="color: #3D7B7B; font-style: italic"># your zone ID here</span>
+route_53_record_name <span style="color: #666666">=</span> <span style="color: #BA2121">&#39;&#39;</span> <span style="color: #3D7B7B; font-style: italic"># your FQDN here</span>
 route_53_record_type <span style="color: #666666">=</span> <span style="color: #BA2121">&#39;A&#39;</span>
 route_53_record_ttl  <span style="color: #666666">=</span> <span style="color: #666666">300</span>
 
@@ -293,32 +293,32 @@ response <span style="color: #666666">=</span> client<span style="color: #666666
     <span style="color: #008000">print</span>(message)
 
 <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">csvInit</span>():
-    <span style="color: #008000; font-weight: bold">with</span> <span style="color: #008000">open</span>(<span style="color: #19177C">__file__</span><span style="color: #666666">.</span>replace(<span style="color: #BA2121">&quot;.py&quot;</span>, <span style="color: #BA2121">&quot;.csv&quot;</span>), <span style="color: #BA2121">&#39;w&#39;</span>, encoding<span style="color: #666666">=</span><span style="color: #BA2121">&#39;utf-8&#39;</span>, newline<span style="color: #666666">=</span><span style="color: #BA2121">&#39;</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&#39;</span>) <span style="color: #008000; font-weight: bold">as</span> csvf:
-        csvf<span style="color: #666666">.</span>write(<span style="color: #BA2121">&quot;datetime,path,size</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>)
+    <span style="color: #008000; font-weight: bold">with</span> <span style="color: #008000">open</span>(<span style="color: #19177C">__file__</span><span style="color: #666666">.</span>replace(<span style="color: #BA2121">&quot;.py&quot;</span>, <span style="color: #BA2121">&quot;.csv&quot;</span>), <span style="color: #BA2121">&#39;w&#39;</span>, encoding<span style="color: #666666">=</span><span style="color: #BA2121">&#39;utf-8&#39;</span>, newline<span style="color: #666666">=</span><span style="color: #BA2121">&#39;</span><span style="color: #AA5D1F; font-weight: bold">\n</span><span style="color: #BA2121">&#39;</span>) <span style="color: #008000; font-weight: bold">as</span> csvf:
+        csvf<span style="color: #666666">.</span>write(<span style="color: #BA2121">&quot;datetime,path,size</span><span style="color: #AA5D1F; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>)
 
     <span style="color: #008000; font-weight: bold">return</span> csvf<span style="color: #666666">.</span>name
 
 <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">csvInsert</span>(fname, data):
-    <span style="color: #008000; font-weight: bold">with</span> <span style="color: #008000">open</span>(fname, <span style="color: #BA2121">&#39;a&#39;</span>, encoding<span style="color: #666666">=</span><span style="color: #BA2121">&#39;utf-8&#39;</span>, newline<span style="color: #666666">=</span><span style="color: #BA2121">&#39;</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&#39;</span>) <span style="color: #008000; font-weight: bold">as</span> csvf:
+    <span style="color: #008000; font-weight: bold">with</span> <span style="color: #008000">open</span>(fname, <span style="color: #BA2121">&#39;a&#39;</span>, encoding<span style="color: #666666">=</span><span style="color: #BA2121">&#39;utf-8&#39;</span>, newline<span style="color: #666666">=</span><span style="color: #BA2121">&#39;</span><span style="color: #AA5D1F; font-weight: bold">\n</span><span style="color: #BA2121">&#39;</span>) <span style="color: #008000; font-weight: bold">as</span> csvf:
         <span style="color: #008000; font-weight: bold">for</span> row <span style="color: #AA22FF; font-weight: bold">in</span> data:
-            csvf<span style="color: #666666">.</span>write(<span style="color: #BA2121">&quot;</span><span style="color: #BB6688; font-weight: bold">{}</span><span style="color: #BA2121">,</span><span style="color: #BB6688; font-weight: bold">{}</span><span style="color: #BA2121">,</span><span style="color: #BB6688; font-weight: bold">{}</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span><span style="color: #666666">.</span>format(time<span style="color: #666666">.</span>strftime(<span style="color: #BA2121">&quot;%m/</span><span style="color: #BB6688; font-weight: bold">%d</span><span style="color: #BA2121">/%Y %H:%M&quot;</span>, time<span style="color: #666666">.</span>localtime()), row, data[row]))
+            csvf<span style="color: #666666">.</span>write(<span style="color: #BA2121">&quot;</span><span style="color: #A45A77; font-weight: bold">{}</span><span style="color: #BA2121">,</span><span style="color: #A45A77; font-weight: bold">{}</span><span style="color: #BA2121">,</span><span style="color: #A45A77; font-weight: bold">{}</span><span style="color: #AA5D1F; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span><span style="color: #666666">.</span>format(time<span style="color: #666666">.</span>strftime(<span style="color: #BA2121">&quot;%m/</span><span style="color: #A45A77; font-weight: bold">%d</span><span style="color: #BA2121">/%Y %H:%M&quot;</span>, time<span style="color: #666666">.</span>localtime()), row, data[row]))
 
 <span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">dbInit</span>():
-    <span style="color: #408080; font-style: italic">## https://enterprise-docs.anaconda.com/en/latest/data-science-workflows/data/mariadb.html</span>
+    <span style="color: #3D7B7B; font-style: italic">## https://enterprise-docs.anaconda.com/en/latest/data-science-workflows/data/mariadb.html</span>
     <span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">mysql.connector</span> <span style="color: #008000; font-weight: bold">as</span> <span style="color: #0000FF; font-weight: bold">mariadb</span>
     <span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">json</span>
 
-    <span style="color: #408080; font-style: italic">## take care to configure security correctly:</span>
-    <span style="color: #408080; font-style: italic">#### https://stackoverflow.com/questions/1559955/host-xxx-xx-xxx-xxx-is-not-allowed-to-connect-to-this-mysql-server</span>
-    <span style="color: #408080; font-style: italic">#### https://mariadb.com/kb/en/configuring-mariadb-for-remote-client-access/</span>
-    <span style="color: #408080; font-style: italic">## Now, read the credentials from secret</span>
+    <span style="color: #3D7B7B; font-style: italic">## take care to configure security correctly:</span>
+    <span style="color: #3D7B7B; font-style: italic">#### https://stackoverflow.com/questions/1559955/host-xxx-xx-xxx-xxx-is-not-allowed-to-connect-to-this-mysql-server</span>
+    <span style="color: #3D7B7B; font-style: italic">#### https://mariadb.com/kb/en/configuring-mariadb-for-remote-client-access/</span>
+    <span style="color: #3D7B7B; font-style: italic">## Now, read the credentials from secret</span>
     credentials <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">None</span>
     <span style="color: #008000; font-weight: bold">with</span> <span style="color: #008000">open</span>(<span style="color: #19177C">__file__</span><span style="color: #666666">.</span>replace(<span style="color: #BA2121">&quot;.py&quot;</span>, <span style="color: #BA2121">&quot;.jsn&quot;</span>)) <span style="color: #008000; font-weight: bold">as</span> f:
         credentials <span style="color: #666666">=</span> json<span style="color: #666666">.</span>load(f)
 
-    <span style="color: #408080; font-style: italic"># Ensure your credentials were setup</span>
+    <span style="color: #3D7B7B; font-style: italic"># Ensure your credentials were setup</span>
     <span style="color: #008000; font-weight: bold">if</span> credentials:
-        <span style="color: #408080; font-style: italic"># Connect to the DB</span>
+        <span style="color: #3D7B7B; font-style: italic"># Connect to the DB</span>
         connection <span style="color: #666666">=</span> mariadb<span style="color: #666666">.</span>connect(
             user<span style="color: #666666">=</span>credentials<span style="color: #666666">.</span>get(<span style="color: #BA2121">&#39;user&#39;</span>),
             password<span style="color: #666666">=</span>credentials<span style="color: #666666">.</span>get(<span style="color: #BA2121">&#39;password&#39;</span>),
@@ -327,12 +327,12 @@ response <span style="color: #666666">=</span> client<span style="color: #666666
         )
         cursor <span style="color: #666666">=</span> connection<span style="color: #666666">.</span>cursor()
 
-        <span style="color: #408080; font-style: italic"># Execute the query</span>
-        cursor<span style="color: #666666">.</span>execute(<span style="color: #BA2121">&quot;CREATE TABLE IF NOT EXISTS activity (</span><span style="color: #BB6622; font-weight: bold">\</span>
-<span style="color: #BA2121">            date DATE,  hour TINYINT, minute TINYINT, second TINYINT, </span><span style="color: #BB6622; font-weight: bold">\</span>
-<span style="color: #BA2121">            len INT UNSIGNED NOT NULL, </span><span style="color: #BB6622; font-weight: bold">\</span>
-<span style="color: #BA2121">            fromAddress NVARCHAR(255) NOT NULL, fromPort NVARCHAR (50), fromContext NVARCHAR (50),</span><span style="color: #BB6622; font-weight: bold">\</span>
-<span style="color: #BA2121">            toAddress NVARCHAR(255) NOT NULL, toPort NVARCHAR (50), toContext NVARCHAR (50)</span><span style="color: #BB6622; font-weight: bold">\</span>
+        <span style="color: #3D7B7B; font-style: italic"># Execute the query</span>
+        cursor<span style="color: #666666">.</span>execute(<span style="color: #BA2121">&quot;CREATE TABLE IF NOT EXISTS activity (</span><span style="color: #AA5D1F; font-weight: bold">\</span>
+<span style="color: #BA2121">            date DATE,  hour TINYINT, minute TINYINT, second TINYINT, </span><span style="color: #AA5D1F; font-weight: bold">\</span>
+<span style="color: #BA2121">            len INT UNSIGNED NOT NULL, </span><span style="color: #AA5D1F; font-weight: bold">\</span>
+<span style="color: #BA2121">            fromAddress NVARCHAR(255) NOT NULL, fromPort NVARCHAR (50), fromContext NVARCHAR (50),</span><span style="color: #AA5D1F; font-weight: bold">\</span>
+<span style="color: #BA2121">            toAddress NVARCHAR(255) NOT NULL, toPort NVARCHAR (50), toContext NVARCHAR (50)</span><span style="color: #AA5D1F; font-weight: bold">\</span>
 <span style="color: #BA2121">            );&quot;</span>)
 
         <span style="color: #008000; font-weight: bold">return</span> connection
@@ -343,9 +343,9 @@ response <span style="color: #666666">=</span> client<span style="color: #666666
     now <span style="color: #666666">=</span> time<span style="color: #666666">.</span>localtime()
 
     <span style="color: #008000; font-weight: bold">for</span> path <span style="color: #AA22FF; font-weight: bold">in</span> data:
-        insertStr <span style="color: #666666">+=</span> <span style="color: #BA2121">&quot;(&#39;</span><span style="color: #BB6688; font-weight: bold">{}</span><span style="color: #BA2121">&#39;,</span><span style="color: #BB6688; font-weight: bold">{}</span><span style="color: #BA2121">,</span><span style="color: #BB6688; font-weight: bold">{}</span><span style="color: #BA2121">,</span><span style="color: #BB6688; font-weight: bold">{}</span><span style="color: #BA2121">,</span><span style="color: #BB6688; font-weight: bold">{}</span><span style="color: #BA2121">&quot;</span><span style="color: #666666">.</span>format(time<span style="color: #666666">.</span>strftime(<span style="color: #BA2121">&quot;%Y-%m-</span><span style="color: #BB6688; font-weight: bold">%d</span><span style="color: #BA2121">&quot;</span>, now), now[<span style="color: #666666">3</span>], now[<span style="color: #666666">4</span>], now[<span style="color: #666666">5</span>], data[path])
+        insertStr <span style="color: #666666">+=</span> <span style="color: #BA2121">&quot;(&#39;</span><span style="color: #A45A77; font-weight: bold">{}</span><span style="color: #BA2121">&#39;,</span><span style="color: #A45A77; font-weight: bold">{}</span><span style="color: #BA2121">,</span><span style="color: #A45A77; font-weight: bold">{}</span><span style="color: #BA2121">,</span><span style="color: #A45A77; font-weight: bold">{}</span><span style="color: #BA2121">,</span><span style="color: #A45A77; font-weight: bold">{}</span><span style="color: #BA2121">&quot;</span><span style="color: #666666">.</span>format(time<span style="color: #666666">.</span>strftime(<span style="color: #BA2121">&quot;%Y-%m-</span><span style="color: #A45A77; font-weight: bold">%d</span><span style="color: #BA2121">&quot;</span>, now), now[<span style="color: #666666">3</span>], now[<span style="color: #666666">4</span>], now[<span style="color: #666666">5</span>], data[path])
         <span style="color: #008000; font-weight: bold">for</span> pp <span style="color: #AA22FF; font-weight: bold">in</span> parsePath(path):
-            insertStr <span style="color: #666666">+=</span> <span style="color: #BA2121">&quot;,&#39;</span><span style="color: #BB6688; font-weight: bold">{}</span><span style="color: #BA2121">&#39;&quot;</span><span style="color: #666666">.</span>format(pp)
+            insertStr <span style="color: #666666">+=</span> <span style="color: #BA2121">&quot;,&#39;</span><span style="color: #A45A77; font-weight: bold">{}</span><span style="color: #BA2121">&#39;&quot;</span><span style="color: #666666">.</span>format(pp)
         insertStr <span style="color: #666666">+=</span> <span style="color: #BA2121">&quot;), &quot;</span>
     insertStr <span style="color: #666666">=</span> insertStr[:<span style="color: #666666">-2</span>] <span style="color: #666666">+</span> <span style="color: #BA2121">&#39;;&#39;</span>
 
@@ -374,26 +374,26 @@ response <span style="color: #666666">=</span> client<span style="color: #666666
     <span style="color: #008000; font-weight: bold">return</span> context
 
 <span style="color: #008000; font-weight: bold">if</span> <span style="color: #19177C">__name__</span> <span style="color: #666666">==</span> <span style="color: #BA2121">&#39;__main__&#39;</span>:
-    <span style="color: #408080; font-style: italic">## simplest use is &#39;nohup python3 watcher.py &amp;&#39;, but making it a systemctl service is better: https://www.raspberrypi.org/documentation/linux/usage/systemd.md</span>
+    <span style="color: #3D7B7B; font-style: italic">## simplest use is &#39;nohup python3 watcher.py &amp;&#39;, but making it a systemctl service is better: https://www.raspberrypi.org/documentation/linux/usage/systemd.md</span>
 
-    <span style="color: #408080; font-style: italic"># datastore = csvInit()</span>
-    <span style="color: #408080; font-style: italic"># saveData = csvInsert</span>
-    <span style="color: #408080; font-style: italic"># or</span>
+    <span style="color: #3D7B7B; font-style: italic"># datastore = csvInit()</span>
+    <span style="color: #3D7B7B; font-style: italic"># saveData = csvInsert</span>
+    <span style="color: #3D7B7B; font-style: italic"># or</span>
     datastore <span style="color: #666666">=</span> dbInit()
     saveData <span style="color: #666666">=</span> dbInsert
 
-    timeIndex <span style="color: #666666">=</span> <span style="color: #666666">4</span> <span style="color: #408080; font-style: italic">## index of the struct_time; 5 for sum by second, 4 for sum data by minute, 3 for sum by hour</span>
+    timeIndex <span style="color: #666666">=</span> <span style="color: #666666">4</span> <span style="color: #3D7B7B; font-style: italic">## index of the struct_time; 5 for sum by second, 4 for sum data by minute, 3 for sum by hour</span>
 
     lastmin <span style="color: #666666">=</span> time<span style="color: #666666">.</span>localtime()[timeIndex]
     db <span style="color: #666666">=</span> {}
 
-    <span style="color: #408080; font-style: italic">## run tcpdump in buffer mode, link headers only</span>
+    <span style="color: #3D7B7B; font-style: italic">## run tcpdump in buffer mode, link headers only</span>
     p <span style="color: #666666">=</span> sub<span style="color: #666666">.</span>Popen((<span style="color: #BA2121">&#39;sudo&#39;</span>, <span style="color: #BA2121">&#39;tcpdump&#39;</span>, <span style="color: #BA2121">&#39;-q&#39;</span>, <span style="color: #BA2121">&#39;-i&#39;</span>, <span style="color: #BA2121">&#39;wlan1&#39;</span>, <span style="color: #BA2121">&#39;-le&#39;</span>, <span style="color: #BA2121">&#39;greater 55 and tcp&#39;</span>), stdout<span style="color: #666666">=</span>sub<span style="color: #666666">.</span>PIPE)
     <span style="color: #008000; font-weight: bold">for</span> row <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">iter</span>(p<span style="color: #666666">.</span>stdout<span style="color: #666666">.</span>readline, <span style="color: #BA2121">b&#39;&#39;</span>):
 
-    <span style="color: #408080; font-style: italic">## or use a test file for debugging</span>
-    <span style="color: #408080; font-style: italic"># with open(&#39;test.log&#39;, &#39;rb&#39;) as f: testlog = f.readlines()</span>
-    <span style="color: #408080; font-style: italic"># for row in testlog:</span>
+    <span style="color: #3D7B7B; font-style: italic">## or use a test file for debugging</span>
+    <span style="color: #3D7B7B; font-style: italic"># with open(&#39;test.log&#39;, &#39;rb&#39;) as f: testlog = f.readlines()</span>
+    <span style="color: #3D7B7B; font-style: italic"># for row in testlog:</span>
 
         <span style="color: #008000; font-weight: bold">try</span>:
             mainParts <span style="color: #666666">=</span>  row<span style="color: #666666">.</span>decode(<span style="color: #BA2121">&#39;utf-8&#39;</span>)<span style="color: #666666">.</span>strip()<span style="color: #666666">.</span>split(<span style="color: #BA2121">&#39;,&#39;</span>)
@@ -408,8 +408,8 @@ response <span style="color: #666666">=</span> client<span style="color: #666666
                 db <span style="color: #666666">=</span> {}
                 lastmin <span style="color: #666666">=</span> time<span style="color: #666666">.</span>localtime()[timeIndex]
 
-        <span style="color: #008000; font-weight: bold">except</span> <span style="color: #D2413A; font-weight: bold">ValueError</span>:
-            log(<span style="color: #BA2121">&quot;Bad row: </span><span style="color: #BB6688; font-weight: bold">{}</span><span style="color: #BA2121">&quot;</span><span style="color: #666666">.</span>format(row<span style="color: #666666">.</span>strip()))
+        <span style="color: #008000; font-weight: bold">except</span> <span style="color: #CB3F38; font-weight: bold">ValueError</span>:
+            log(<span style="color: #BA2121">&quot;Bad row: </span><span style="color: #A45A77; font-weight: bold">{}</span><span style="color: #BA2121">&quot;</span><span style="color: #666666">.</span>format(row<span style="color: #666666">.</span>strip()))
 </pre></div>
 <p>
 <p>

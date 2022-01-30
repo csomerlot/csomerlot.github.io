@@ -45,9 +45,9 @@ o Materials
             o Douglas fir
             o Ash
 
-FIGURE: [Boats/SOFkayak, width=900 frac=0.9] Skin on frame kayak. label{fig:sof}
+FIGURE: [Boats/SOFkayak.png, width=900 frac=0.9] Skin on frame kayak. label{fig:sof}
 
-FIGURE: [Boats/WoodSteamer, width=700 frac=0.9] Wood steamer. label{fig:steamer}
+FIGURE: [Boats/WoodSteamer.png, width=700 frac=0.9] Wood steamer. label{fig:steamer}
 
 ======= Ultralight Trimaran Plans =======
 o Can be built in field with minimum of tools, in emergency

@@ -242,259 +242,259 @@ provide alarms, or use it in more remote conditions and have it upload once wifi
 <p>
 
 <!-- code=c (!bc cpro) typeset with pygments style "default" -->
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><span style="color: #BC7A00">#include</span> <span style="color: #408080; font-style: italic">&lt;Wire.h&gt;</span><span style="color: #BC7A00"></span>
-<span style="color: #BC7A00">#include</span> <span style="color: #408080; font-style: italic">&quot;RTClib.h&quot;</span><span style="color: #BC7A00"></span>
-<span style="color: #BC7A00">#include</span> <span style="color: #408080; font-style: italic">&lt;SPI.h&gt;</span><span style="color: #BC7A00"></span>
-<span style="color: #BC7A00">#include</span> <span style="color: #408080; font-style: italic">&lt;SD.h&gt;</span><span style="color: #BC7A00"></span>
-<span style="color: #BC7A00">#include</span> <span style="color: #408080; font-style: italic">&lt;WiFi101.h&gt;</span><span style="color: #BC7A00"></span>
-<span style="color: #BC7A00">#include</span> <span style="color: #408080; font-style: italic">&quot;Adafruit_MQTT.h&quot;</span><span style="color: #BC7A00"></span>
-<span style="color: #BC7A00">#include</span> <span style="color: #408080; font-style: italic">&quot;Adafruit_MQTT_Client.h&quot;</span><span style="color: #BC7A00"></span>
-<span style="color: #BC7A00">#include</span> <span style="color: #408080; font-style: italic">&quot;keysandstuff.h&quot;</span><span style="color: #BC7A00"></span>
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><span style="color: #9C6500">#include</span><span style="color: #bbbbbb"> </span><span style="color: #3D7B7B; font-style: italic">&lt;Wire.h&gt;</span><span style="color: #9C6500"></span>
+<span style="color: #9C6500">#include</span><span style="color: #bbbbbb"> </span><span style="color: #3D7B7B; font-style: italic">&quot;RTClib.h&quot;</span><span style="color: #9C6500"></span>
+<span style="color: #9C6500">#include</span><span style="color: #bbbbbb"> </span><span style="color: #3D7B7B; font-style: italic">&lt;SPI.h&gt;</span><span style="color: #9C6500"></span>
+<span style="color: #9C6500">#include</span><span style="color: #bbbbbb"> </span><span style="color: #3D7B7B; font-style: italic">&lt;SD.h&gt;</span><span style="color: #9C6500"></span>
+<span style="color: #9C6500">#include</span><span style="color: #bbbbbb"> </span><span style="color: #3D7B7B; font-style: italic">&lt;WiFi101.h&gt;</span><span style="color: #9C6500"></span>
+<span style="color: #9C6500">#include</span><span style="color: #bbbbbb"> </span><span style="color: #3D7B7B; font-style: italic">&quot;Adafruit_MQTT.h&quot;</span><span style="color: #9C6500"></span>
+<span style="color: #9C6500">#include</span><span style="color: #bbbbbb"> </span><span style="color: #3D7B7B; font-style: italic">&quot;Adafruit_MQTT_Client.h&quot;</span><span style="color: #9C6500"></span>
+<span style="color: #9C6500">#include</span><span style="color: #bbbbbb"> </span><span style="color: #3D7B7B; font-style: italic">&quot;keysandstuff.h&quot;</span><span style="color: #9C6500"></span>
 
-<span style="color: #408080; font-style: italic">// Adafruit IO Analog In Example</span>
-<span style="color: #408080; font-style: italic">// Tutorial Link: https://learn.adafruit.com/adafruit-io-basics-analog-input</span>
-<span style="color: #408080; font-style: italic">//</span>
-<span style="color: #408080; font-style: italic">// Adafruit invests time and resources providing this open source code.</span>
-<span style="color: #408080; font-style: italic">// Please support Adafruit and open source hardware by purchasing</span>
-<span style="color: #408080; font-style: italic">// products from Adafruit!</span>
-<span style="color: #408080; font-style: italic">//</span>
-<span style="color: #408080; font-style: italic">// Written by Todd Treece for Adafruit Industries</span>
-<span style="color: #408080; font-style: italic">// Copyright (c) 2016 Adafruit Industries</span>
-<span style="color: #408080; font-style: italic">// Licensed under the MIT license.</span>
-<span style="color: #408080; font-style: italic">//</span>
-<span style="color: #408080; font-style: italic">// All text above must be included in any redistribution.</span>
-
-
-<span style="color: #408080; font-style: italic">/* COMMON DATA LOGGING PLATFORM</span>
-<span style="color: #408080; font-style: italic">This code:</span>
-<span style="color: #408080; font-style: italic">- uses MQTT for light-weight communication, data delivery verification</span>
-<span style="color: #408080; font-style: italic">- blinks an error code via the built-in LED</span>
-<span style="color: #408080; font-style: italic">- writes data and log messages to an SD card</span>
-<span style="color: #408080; font-style: italic">- uses a RTC module for acurate time stamps</span>
-<span style="color: #408080; font-style: italic">- runs mostly in low-power mode</span>
-<span style="color: #408080; font-style: italic">- can change behavoir dynamically via MQTT or on-board buttons</span>
-<span style="color: #408080; font-style: italic">- shows status via OLED</span>
-<span style="color: #408080; font-style: italic">*/</span>
-
-<span style="color: #408080; font-style: italic">// RTC clock setup</span>
-<span style="color: #BC7A00">#if defined(ARDUINO_ARCH_SAMD)</span>
-<span style="color: #BC7A00">#endif</span>
-
-<span style="color: #408080; font-style: italic">//Set up the wifi client</span>
-WiFiClient client;
-
-Adafruit_MQTT_Client <span style="color: #0000FF">mqtt</span>(<span style="color: #666666">&amp;</span>client, AIO_SERVER, AIO_SERVERPORT, AIO_USERNAME, AIO_KEY);
-
-<span style="color: #408080; font-style: italic">//#define halt(s) { Serial.println(F( s )); while(1);  }</span>
-
-<span style="color: #408080; font-style: italic">/****************************** Feeds ***************************************/</span>
-
-<span style="color: #408080; font-style: italic">// Notice MQTT paths for AIO follow the form: &lt;username&gt;/feeds/&lt;feedname&gt;</span>
-Adafruit_MQTT_Publish Depth <span style="color: #666666">=</span>             Adafruit_MQTT_Publish(<span style="color: #666666">&amp;</span>mqtt, AIO_USERNAME <span style="color: #BA2121">&quot;/feeds/&quot;</span> SITE_NAME <span style="color: #BA2121">&quot;.stage-dn&quot;</span>);
-Adafruit_MQTT_Publish Temperature <span style="color: #666666">=</span>       Adafruit_MQTT_Publish(<span style="color: #666666">&amp;</span>mqtt, AIO_USERNAME <span style="color: #BA2121">&quot;/feeds/&quot;</span> SITE_NAME <span style="color: #BA2121">&quot;.temperature-dn&quot;</span>);
-Adafruit_MQTT_Publish TSS <span style="color: #666666">=</span>               Adafruit_MQTT_Publish(<span style="color: #666666">&amp;</span>mqtt, AIO_USERNAME <span style="color: #BA2121">&quot;/feeds/&quot;</span> SITE_NAME <span style="color: #BA2121">&quot;.tss-dn&quot;</span>);
-Adafruit_MQTT_Publish Voltage <span style="color: #666666">=</span>           Adafruit_MQTT_Publish(<span style="color: #666666">&amp;</span>mqtt, AIO_USERNAME <span style="color: #BA2121">&quot;/feeds/&quot;</span> SITE_NAME <span style="color: #BA2121">&quot;.voltage-dn&quot;</span>);
-Adafruit_MQTT_Publish Depth_calc <span style="color: #666666">=</span>        Adafruit_MQTT_Publish(<span style="color: #666666">&amp;</span>mqtt, AIO_USERNAME <span style="color: #BA2121">&quot;/feeds/&quot;</span> SITE_NAME <span style="color: #BA2121">&quot;.stage-m&quot;</span>);
-Adafruit_MQTT_Publish Temperature_calc <span style="color: #666666">=</span>  Adafruit_MQTT_Publish(<span style="color: #666666">&amp;</span>mqtt, AIO_USERNAME <span style="color: #BA2121">&quot;/feeds/&quot;</span> SITE_NAME <span style="color: #BA2121">&quot;.temperature-f&quot;</span>);
-Adafruit_MQTT_Publish TSS_calc <span style="color: #666666">=</span>          Adafruit_MQTT_Publish(<span style="color: #666666">&amp;</span>mqtt, AIO_USERNAME <span style="color: #BA2121">&quot;/feeds/&quot;</span> SITE_NAME <span style="color: #BA2121">&quot;.tss-mg-per-l&quot;</span>);
-Adafruit_MQTT_Publish Voltage_calc <span style="color: #666666">=</span>      Adafruit_MQTT_Publish(<span style="color: #666666">&amp;</span>mqtt, AIO_USERNAME <span style="color: #BA2121">&quot;/feeds/&quot;</span> SITE_NAME <span style="color: #BA2121">&quot;.voltage-V&quot;</span>);
-
-RTC_PCF8523 rtc;
-File logfile;
-
-<span style="color: #B00040">int</span> sdStatus   <span style="color: #666666">=</span> <span style="color: #666666">0</span>;
-<span style="color: #B00040">int</span> wifiStatus <span style="color: #666666">=</span> <span style="color: #666666">0</span>;
-<span style="color: #B00040">int</span> RTCstatus  <span style="color: #666666">=</span> <span style="color: #666666">0</span>;
-<span style="color: #B00040">int</span> oledStatus <span style="color: #666666">=</span> <span style="color: #666666">0</span>;
-<span style="color: #B00040">int</span> serialStatus <span style="color: #666666">=</span> <span style="color: #666666">0</span>;
-
-<span style="color: #408080; font-style: italic">// blink out an error code</span>
-<span style="color: #B00040">void</span> <span style="color: #0000FF">error</span>(<span style="color: #B00040">int</span> errno) {
-<span style="color: #408080; font-style: italic">/* ERROR CODES</span>
-<span style="color: #408080; font-style: italic">1 - no network</span>
-<span style="color: #408080; font-style: italic">2 - no sd card</span>
-<span style="color: #408080; font-style: italic">3 - no RTC</span>
-<span style="color: #408080; font-style: italic">*/</span>
-  <span style="color: #008000; font-weight: bold">while</span>(<span style="color: #666666">1</span>) {
-    <span style="color: #B00040">uint8_t</span> i;
-    <span style="color: #008000; font-weight: bold">for</span> (i<span style="color: #666666">=0</span>; i<span style="color: #666666">&lt;</span>errno; i<span style="color: #666666">++</span>) {
-      digitalWrite(<span style="color: #666666">13</span>, HIGH);
-      delay(<span style="color: #666666">100</span>);
-      digitalWrite(<span style="color: #666666">13</span>, LOW);
-      delay(<span style="color: #666666">100</span>);
-    }
-    <span style="color: #008000; font-weight: bold">for</span> (i<span style="color: #666666">=</span>errno; i<span style="color: #666666">&lt;10</span>; i<span style="color: #666666">++</span>) {
-      delay(<span style="color: #666666">200</span>);
-    }
-  }
-}
-
-<span style="color: #B00040">void</span> <span style="color: #0000FF">setup</span>() {
-  <span style="color: #408080; font-style: italic">//status = WL_IDLE_STATUS;</span>
-  <span style="color: #408080; font-style: italic">// start the serial connection, sets rate of data transmission</span>
-  Serial.begin(<span style="color: #666666">115200</span>);
-  <span style="color: #408080; font-style: italic">// wait for serial monitor to open</span>
-  <span style="color: #008000; font-weight: bold">while</span> (<span style="color: #666666">!</span>Serial);
+<span style="color: #3D7B7B; font-style: italic">// Adafruit IO Analog In Example</span>
+<span style="color: #3D7B7B; font-style: italic">// Tutorial Link: https://learn.adafruit.com/adafruit-io-basics-analog-input</span>
+<span style="color: #3D7B7B; font-style: italic">//</span>
+<span style="color: #3D7B7B; font-style: italic">// Adafruit invests time and resources providing this open source code.</span>
+<span style="color: #3D7B7B; font-style: italic">// Please support Adafruit and open source hardware by purchasing</span>
+<span style="color: #3D7B7B; font-style: italic">// products from Adafruit!</span>
+<span style="color: #3D7B7B; font-style: italic">//</span>
+<span style="color: #3D7B7B; font-style: italic">// Written by Todd Treece for Adafruit Industries</span>
+<span style="color: #3D7B7B; font-style: italic">// Copyright (c) 2016 Adafruit Industries</span>
+<span style="color: #3D7B7B; font-style: italic">// Licensed under the MIT license.</span>
+<span style="color: #3D7B7B; font-style: italic">//</span>
+<span style="color: #3D7B7B; font-style: italic">// All text above must be included in any redistribution.</span>
 
 
-  <span style="color: #408080; font-style: italic">// see if the card is present and can be initialized:</span>
-  <span style="color: #008000; font-weight: bold">if</span> (<span style="color: #666666">!</span>SD.begin(cardSelect)) {
-    Serial.println(<span style="color: #BA2121">&quot;Card init. failed!&quot;</span>);
-    error(<span style="color: #666666">2</span>);
-  }
-  <span style="color: #B00040">char</span> filename[<span style="color: #666666">15</span>];
-  strcpy(filename, <span style="color: #BA2121">&quot;LOG00.CSV&quot;</span>);
-  <span style="color: #008000; font-weight: bold">for</span> (<span style="color: #B00040">uint8_t</span> i <span style="color: #666666">=</span> <span style="color: #666666">0</span>; i <span style="color: #666666">&lt;</span> <span style="color: #666666">100</span>; i<span style="color: #666666">++</span>) {
-    filename[<span style="color: #666666">3</span>] <span style="color: #666666">=</span> <span style="color: #BA2121">&#39;0&#39;</span> <span style="color: #666666">+</span> i<span style="color: #666666">/10</span>;
-    filename[<span style="color: #666666">4</span>] <span style="color: #666666">=</span> <span style="color: #BA2121">&#39;0&#39;</span> <span style="color: #666666">+</span> i<span style="color: #666666">%10</span>;
-    <span style="color: #408080; font-style: italic">// create if does not exist, do not open existing, write, sync after write</span>
-    <span style="color: #008000; font-weight: bold">if</span> (<span style="color: #666666">!</span> SD.exists(filename)) {
-      <span style="color: #008000; font-weight: bold">break</span>;
-    }
-  }
+<span style="color: #3D7B7B; font-style: italic">/* COMMON DATA LOGGING PLATFORM</span>
+<span style="color: #3D7B7B; font-style: italic">This code:</span>
+<span style="color: #3D7B7B; font-style: italic">- uses MQTT for light-weight communication, data delivery verification</span>
+<span style="color: #3D7B7B; font-style: italic">- blinks an error code via the built-in LED</span>
+<span style="color: #3D7B7B; font-style: italic">- writes data and log messages to an SD card</span>
+<span style="color: #3D7B7B; font-style: italic">- uses a RTC module for acurate time stamps</span>
+<span style="color: #3D7B7B; font-style: italic">- runs mostly in low-power mode</span>
+<span style="color: #3D7B7B; font-style: italic">- can change behavoir dynamically via MQTT or on-board buttons</span>
+<span style="color: #3D7B7B; font-style: italic">- shows status via OLED</span>
+<span style="color: #3D7B7B; font-style: italic">*/</span><span style="color: #bbbbbb"></span>
 
-  logfile <span style="color: #666666">=</span> SD.open(filename, FILE_WRITE);
-  <span style="color: #008000; font-weight: bold">if</span>( <span style="color: #666666">!</span> logfile ) {
-    Serial.print(<span style="color: #BA2121">&quot;Couldnt create &quot;</span>);
-    Serial.println(filename);
-    error(<span style="color: #666666">3</span>);
-  }
-  Serial.print(<span style="color: #BA2121">&quot;Writing to &quot;</span>);
-  Serial.println(filename);
+<span style="color: #3D7B7B; font-style: italic">// RTC clock setup</span>
+<span style="color: #9C6500">#if defined(ARDUINO_ARCH_SAMD)</span>
+<span style="color: #9C6500">#endif</span>
 
-  <span style="color: #408080; font-style: italic">// Wifi init</span>
-  <span style="color: #408080; font-style: italic">//WiFi pins specific to the Adafruit Feather M0 WiFi - ATSAMD21 + ATWINC1500 breakout board</span>
-  WiFi.setPins(<span style="color: #666666">8</span>,<span style="color: #666666">7</span>,<span style="color: #666666">4</span>,<span style="color: #666666">2</span>);
-  <span style="color: #408080; font-style: italic">// attempt to connect to Wifi network:</span>
-  <span style="color: #408080; font-style: italic">// Initialise the Client</span>
-  Serial.print(F(<span style="color: #BA2121">&quot;</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">Init the WiFi module...&quot;</span>));
-  <span style="color: #408080; font-style: italic">// check for the presence of the breakout</span>
+<span style="color: #3D7B7B; font-style: italic">//Set up the wifi client</span>
+WiFiClient<span style="color: #bbbbbb"> </span>client;<span style="color: #bbbbbb"></span>
 
-  <span style="color: #408080; font-style: italic">// SD Card setup</span>
-  <span style="color: #408080; font-style: italic">// Set the pins used</span>
-  <span style="color: #B00040">int</span> cardSelect <span style="color: #666666">=</span> <span style="color: #666666">10</span>
-  <span style="color: #008000; font-weight: bold">if</span> (WiFi.status() <span style="color: #666666">==</span> WL_NO_SHIELD) {
-    Serial.println(<span style="color: #BA2121">&quot;WINC1500 not present&quot;</span>);
-    <span style="color: #408080; font-style: italic">// don&#39;t continue:</span>
-    <span style="color: #008000; font-weight: bold">while</span> (<span style="color: #008000">true</span>);
-  }
-  Serial.println(<span style="color: #BA2121">&quot;ATWINC OK!&quot;</span>);
+Adafruit_MQTT_Client<span style="color: #bbbbbb"> </span><span style="color: #0000FF">mqtt</span>(<span style="color: #666666">&amp;</span>client,<span style="color: #bbbbbb"> </span>AIO_SERVER,<span style="color: #bbbbbb"> </span>AIO_SERVERPORT,<span style="color: #bbbbbb"> </span>AIO_USERNAME,<span style="color: #bbbbbb"> </span>AIO_KEY);<span style="color: #bbbbbb"></span>
 
-  <span style="color: #008000; font-weight: bold">if</span> (<span style="color: #666666">!</span> rtc.begin()) {
-    Serial.println(<span style="color: #BA2121">&quot;Couldn&#39;t find RTC&quot;</span>);
-    <span style="color: #008000; font-weight: bold">while</span> (<span style="color: #666666">1</span>);
-  }
+<span style="color: #3D7B7B; font-style: italic">//#define halt(s) { Serial.println(F( s )); while(1);  }</span>
 
-  <span style="color: #008000; font-weight: bold">if</span> (<span style="color: #666666">!</span> rtc.initialized()) {
-    Serial.println(<span style="color: #BA2121">&quot;RTC is NOT running!&quot;</span>);
-    error(<span style="color: #666666">3</span>);
-  }
+<span style="color: #3D7B7B; font-style: italic">/****************************** Feeds ***************************************/</span><span style="color: #bbbbbb"></span>
 
-  pinMode(<span style="color: #666666">13</span>, OUTPUT);
-  <span style="color: #408080; font-style: italic">//pinMode(8, OUTPUT);</span>
+<span style="color: #3D7B7B; font-style: italic">// Notice MQTT paths for AIO follow the form: &lt;username&gt;/feeds/&lt;feedname&gt;</span>
+Adafruit_MQTT_Publish<span style="color: #bbbbbb"> </span>Depth<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb">             </span>Adafruit_MQTT_Publish(<span style="color: #666666">&amp;</span>mqtt,<span style="color: #bbbbbb"> </span>AIO_USERNAME<span style="color: #bbbbbb"> </span><span style="color: #BA2121">&quot;/feeds/&quot;</span><span style="color: #bbbbbb"> </span>SITE_NAME<span style="color: #bbbbbb"> </span><span style="color: #BA2121">&quot;.stage-dn&quot;</span>);<span style="color: #bbbbbb"></span>
+Adafruit_MQTT_Publish<span style="color: #bbbbbb"> </span>Temperature<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb">       </span>Adafruit_MQTT_Publish(<span style="color: #666666">&amp;</span>mqtt,<span style="color: #bbbbbb"> </span>AIO_USERNAME<span style="color: #bbbbbb"> </span><span style="color: #BA2121">&quot;/feeds/&quot;</span><span style="color: #bbbbbb"> </span>SITE_NAME<span style="color: #bbbbbb"> </span><span style="color: #BA2121">&quot;.temperature-dn&quot;</span>);<span style="color: #bbbbbb"></span>
+Adafruit_MQTT_Publish<span style="color: #bbbbbb"> </span>TSS<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb">               </span>Adafruit_MQTT_Publish(<span style="color: #666666">&amp;</span>mqtt,<span style="color: #bbbbbb"> </span>AIO_USERNAME<span style="color: #bbbbbb"> </span><span style="color: #BA2121">&quot;/feeds/&quot;</span><span style="color: #bbbbbb"> </span>SITE_NAME<span style="color: #bbbbbb"> </span><span style="color: #BA2121">&quot;.tss-dn&quot;</span>);<span style="color: #bbbbbb"></span>
+Adafruit_MQTT_Publish<span style="color: #bbbbbb"> </span>Voltage<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb">           </span>Adafruit_MQTT_Publish(<span style="color: #666666">&amp;</span>mqtt,<span style="color: #bbbbbb"> </span>AIO_USERNAME<span style="color: #bbbbbb"> </span><span style="color: #BA2121">&quot;/feeds/&quot;</span><span style="color: #bbbbbb"> </span>SITE_NAME<span style="color: #bbbbbb"> </span><span style="color: #BA2121">&quot;.voltage-dn&quot;</span>);<span style="color: #bbbbbb"></span>
+Adafruit_MQTT_Publish<span style="color: #bbbbbb"> </span>Depth_calc<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb">        </span>Adafruit_MQTT_Publish(<span style="color: #666666">&amp;</span>mqtt,<span style="color: #bbbbbb"> </span>AIO_USERNAME<span style="color: #bbbbbb"> </span><span style="color: #BA2121">&quot;/feeds/&quot;</span><span style="color: #bbbbbb"> </span>SITE_NAME<span style="color: #bbbbbb"> </span><span style="color: #BA2121">&quot;.stage-m&quot;</span>);<span style="color: #bbbbbb"></span>
+Adafruit_MQTT_Publish<span style="color: #bbbbbb"> </span>Temperature_calc<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb">  </span>Adafruit_MQTT_Publish(<span style="color: #666666">&amp;</span>mqtt,<span style="color: #bbbbbb"> </span>AIO_USERNAME<span style="color: #bbbbbb"> </span><span style="color: #BA2121">&quot;/feeds/&quot;</span><span style="color: #bbbbbb"> </span>SITE_NAME<span style="color: #bbbbbb"> </span><span style="color: #BA2121">&quot;.temperature-f&quot;</span>);<span style="color: #bbbbbb"></span>
+Adafruit_MQTT_Publish<span style="color: #bbbbbb"> </span>TSS_calc<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb">          </span>Adafruit_MQTT_Publish(<span style="color: #666666">&amp;</span>mqtt,<span style="color: #bbbbbb"> </span>AIO_USERNAME<span style="color: #bbbbbb"> </span><span style="color: #BA2121">&quot;/feeds/&quot;</span><span style="color: #bbbbbb"> </span>SITE_NAME<span style="color: #bbbbbb"> </span><span style="color: #BA2121">&quot;.tss-mg-per-l&quot;</span>);<span style="color: #bbbbbb"></span>
+Adafruit_MQTT_Publish<span style="color: #bbbbbb"> </span>Voltage_calc<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb">      </span>Adafruit_MQTT_Publish(<span style="color: #666666">&amp;</span>mqtt,<span style="color: #bbbbbb"> </span>AIO_USERNAME<span style="color: #bbbbbb"> </span><span style="color: #BA2121">&quot;/feeds/&quot;</span><span style="color: #bbbbbb"> </span>SITE_NAME<span style="color: #bbbbbb"> </span><span style="color: #BA2121">&quot;.voltage-V&quot;</span>);<span style="color: #bbbbbb"></span>
+
+RTC_PCF8523<span style="color: #bbbbbb"> </span>rtc;<span style="color: #bbbbbb"></span>
+File<span style="color: #bbbbbb"> </span>logfile;<span style="color: #bbbbbb"></span>
+
+<span style="color: #B00040">int</span><span style="color: #bbbbbb"> </span>sdStatus<span style="color: #bbbbbb">   </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #666666">0</span>;<span style="color: #bbbbbb"></span>
+<span style="color: #B00040">int</span><span style="color: #bbbbbb"> </span>wifiStatus<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #666666">0</span>;<span style="color: #bbbbbb"></span>
+<span style="color: #B00040">int</span><span style="color: #bbbbbb"> </span>RTCstatus<span style="color: #bbbbbb">  </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #666666">0</span>;<span style="color: #bbbbbb"></span>
+<span style="color: #B00040">int</span><span style="color: #bbbbbb"> </span>oledStatus<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #666666">0</span>;<span style="color: #bbbbbb"></span>
+<span style="color: #B00040">int</span><span style="color: #bbbbbb"> </span>serialStatus<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #666666">0</span>;<span style="color: #bbbbbb"></span>
+
+<span style="color: #3D7B7B; font-style: italic">// blink out an error code</span>
+<span style="color: #B00040">void</span><span style="color: #bbbbbb"> </span><span style="color: #0000FF">error</span>(<span style="color: #B00040">int</span><span style="color: #bbbbbb"> </span>errno)<span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"></span>
+<span style="color: #3D7B7B; font-style: italic">/* ERROR CODES</span>
+<span style="color: #3D7B7B; font-style: italic">1 - no network</span>
+<span style="color: #3D7B7B; font-style: italic">2 - no sd card</span>
+<span style="color: #3D7B7B; font-style: italic">3 - no RTC</span>
+<span style="color: #3D7B7B; font-style: italic">*/</span><span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">while</span>(<span style="color: #666666">1</span>)<span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span><span style="color: #B00040">uint8_t</span><span style="color: #bbbbbb"> </span>i;<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">for</span><span style="color: #bbbbbb"> </span>(i<span style="color: #666666">=0</span>;<span style="color: #bbbbbb"> </span>i<span style="color: #666666">&lt;</span>errno;<span style="color: #bbbbbb"> </span>i<span style="color: #666666">++</span>)<span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">      </span>digitalWrite(<span style="color: #666666">13</span>,<span style="color: #bbbbbb"> </span>HIGH);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">      </span>delay(<span style="color: #666666">100</span>);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">      </span>digitalWrite(<span style="color: #666666">13</span>,<span style="color: #bbbbbb"> </span>LOW);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">      </span>delay(<span style="color: #666666">100</span>);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>}<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">for</span><span style="color: #bbbbbb"> </span>(i<span style="color: #666666">=</span>errno;<span style="color: #bbbbbb"> </span>i<span style="color: #666666">&lt;10</span>;<span style="color: #bbbbbb"> </span>i<span style="color: #666666">++</span>)<span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">      </span>delay(<span style="color: #666666">200</span>);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>}<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">  </span>}<span style="color: #bbbbbb"></span>
+}<span style="color: #bbbbbb"></span>
+
+<span style="color: #B00040">void</span><span style="color: #bbbbbb"> </span><span style="color: #0000FF">setup</span>()<span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">  </span><span style="color: #3D7B7B; font-style: italic">//status = WL_IDLE_STATUS;</span>
+<span style="color: #bbbbbb">  </span><span style="color: #3D7B7B; font-style: italic">// start the serial connection, sets rate of data transmission</span>
+<span style="color: #bbbbbb">  </span>Serial.begin(<span style="color: #666666">115200</span>);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">  </span><span style="color: #3D7B7B; font-style: italic">// wait for serial monitor to open</span>
+<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">while</span><span style="color: #bbbbbb"> </span>(<span style="color: #666666">!</span>Serial);<span style="color: #bbbbbb"></span>
 
 
-  Serial.println(<span style="color: #BA2121">&quot;Ready!</span><span style="color: #BB6622; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>);
-}
+<span style="color: #bbbbbb">  </span><span style="color: #3D7B7B; font-style: italic">// see if the card is present and can be initialized:</span>
+<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #bbbbbb"> </span>(<span style="color: #666666">!</span>SD.begin(cardSelect))<span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>Serial.println(<span style="color: #BA2121">&quot;Card init. failed!&quot;</span>);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>error(<span style="color: #666666">2</span>);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">  </span>}<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">  </span><span style="color: #B00040">char</span><span style="color: #bbbbbb"> </span>filename[<span style="color: #666666">15</span>];<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">  </span>strcpy(filename,<span style="color: #bbbbbb"> </span><span style="color: #BA2121">&quot;LOG00.CSV&quot;</span>);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">for</span><span style="color: #bbbbbb"> </span>(<span style="color: #B00040">uint8_t</span><span style="color: #bbbbbb"> </span>i<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #666666">0</span>;<span style="color: #bbbbbb"> </span>i<span style="color: #bbbbbb"> </span><span style="color: #666666">&lt;</span><span style="color: #bbbbbb"> </span><span style="color: #666666">100</span>;<span style="color: #bbbbbb"> </span>i<span style="color: #666666">++</span>)<span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>filename[<span style="color: #666666">3</span>]<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #BA2121">&#39;0&#39;</span><span style="color: #bbbbbb"> </span><span style="color: #666666">+</span><span style="color: #bbbbbb"> </span>i<span style="color: #666666">/10</span>;<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>filename[<span style="color: #666666">4</span>]<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #BA2121">&#39;0&#39;</span><span style="color: #bbbbbb"> </span><span style="color: #666666">+</span><span style="color: #bbbbbb"> </span>i<span style="color: #666666">%10</span>;<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span><span style="color: #3D7B7B; font-style: italic">// create if does not exist, do not open existing, write, sync after write</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #bbbbbb"> </span>(<span style="color: #666666">!</span><span style="color: #bbbbbb"> </span>SD.exists(filename))<span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">      </span><span style="color: #008000; font-weight: bold">break</span>;<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>}<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">  </span>}<span style="color: #bbbbbb"></span>
 
-<span style="color: #B00040">void</span> <span style="color: #0000FF">loop</span>() {
+<span style="color: #bbbbbb">  </span>logfile<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>SD.open(filename,<span style="color: #bbbbbb"> </span>FILE_WRITE);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">if</span>(<span style="color: #bbbbbb"> </span><span style="color: #666666">!</span><span style="color: #bbbbbb"> </span>logfile<span style="color: #bbbbbb"> </span>)<span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>Serial.print(<span style="color: #BA2121">&quot;Couldnt create &quot;</span>);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>Serial.println(filename);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>error(<span style="color: #666666">3</span>);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">  </span>}<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">  </span>Serial.print(<span style="color: #BA2121">&quot;Writing to &quot;</span>);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">  </span>Serial.println(filename);<span style="color: #bbbbbb"></span>
 
-    <span style="color: #408080; font-style: italic">// read the input on analog pin A0 A1 A2 A3</span>
-    <span style="color: #408080; font-style: italic">// Calculate water quality parameters using equations from calibration curves</span>
-    <span style="color: #408080; font-style: italic">// These variables are required for the below functions</span>
-    Serial.println(<span style="color: #BA2121">&quot;Reading pins&quot;</span>);
-    <span style="color: #B00040">int</span> Depth_pin <span style="color: #666666">=</span> analogRead(A0);
-    <span style="color: #B00040">int</span> TSS_pin <span style="color: #666666">=</span> analogRead(A1);
-    <span style="color: #B00040">int</span> Temp_pin <span style="color: #666666">=</span> analogRead(A2);
-    <span style="color: #B00040">int</span> Volt_pin <span style="color: #666666">=</span> analogRead(A3);
-    <span style="color: #B00040">float</span> Depth_m <span style="color: #666666">=</span> <span style="color: #666666">0.0075*</span>(<span style="color: #B00040">float</span>(Depth_pin))<span style="color: #666666">-0.7786</span>;
-    <span style="color: #B00040">float</span> TSS_mgL <span style="color: #666666">=</span> <span style="color: #666666">23977*</span>exp(<span style="color: #666666">-0.007*</span><span style="color: #B00040">float</span>(TSS_pin));
-    <span style="color: #B00040">float</span> Temp_F <span style="color: #666666">=</span> <span style="color: #666666">0.2165*</span>(<span style="color: #B00040">float</span>(Temp_pin))<span style="color: #666666">-7.6926</span>;
-    <span style="color: #B00040">float</span> Volt_V <span style="color: #666666">=</span> Volt_pin;
-    Serial.println(<span style="color: #BA2121">&quot;Writing data&quot;</span>);
-    SD_write(   Depth_pin, TSS_pin, Temp_pin, Volt_pin, Depth_m, TSS_mgL, Temp_F, Volt_V);
-    IO_publish( Depth_pin, TSS_pin, Temp_pin, Volt_pin, Depth_m, TSS_mgL, Temp_F, Volt_V);
+<span style="color: #bbbbbb">  </span><span style="color: #3D7B7B; font-style: italic">// Wifi init</span>
+<span style="color: #bbbbbb">  </span><span style="color: #3D7B7B; font-style: italic">//WiFi pins specific to the Adafruit Feather M0 WiFi - ATSAMD21 + ATWINC1500 breakout board</span>
+<span style="color: #bbbbbb">  </span>WiFi.setPins(<span style="color: #666666">8</span>,<span style="color: #666666">7</span>,<span style="color: #666666">4</span>,<span style="color: #666666">2</span>);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">  </span><span style="color: #3D7B7B; font-style: italic">// attempt to connect to Wifi network:</span>
+<span style="color: #bbbbbb">  </span><span style="color: #3D7B7B; font-style: italic">// Initialise the Client</span>
+<span style="color: #bbbbbb">  </span>Serial.print(F(<span style="color: #BA2121">&quot;</span><span style="color: #AA5D1F; font-weight: bold">\n</span><span style="color: #BA2121">Init the WiFi module...&quot;</span>));<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">  </span><span style="color: #3D7B7B; font-style: italic">// check for the presence of the breakout</span>
 
-    delay(LOOP_DELAY);
-}
+<span style="color: #bbbbbb">  </span><span style="color: #3D7B7B; font-style: italic">// SD Card setup</span>
+<span style="color: #bbbbbb">  </span><span style="color: #3D7B7B; font-style: italic">// Set the pins used</span>
+<span style="color: #bbbbbb">  </span><span style="color: #B00040">int</span><span style="color: #bbbbbb"> </span>cardSelect<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #666666">10</span><span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #bbbbbb"> </span>(WiFi.status()<span style="color: #bbbbbb"> </span><span style="color: #666666">==</span><span style="color: #bbbbbb"> </span>WL_NO_SHIELD)<span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>Serial.println(<span style="color: #BA2121">&quot;WINC1500 not present&quot;</span>);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span><span style="color: #3D7B7B; font-style: italic">// don&#39;t continue:</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">while</span><span style="color: #bbbbbb"> </span>(<span style="color: #008000">true</span>);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">  </span>}<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">  </span>Serial.println(<span style="color: #BA2121">&quot;ATWINC OK!&quot;</span>);<span style="color: #bbbbbb"></span>
 
-<span style="color: #B00040">void</span> <span style="color: #0000FF">MQTT_connect</span>() {
-    <span style="color: #408080; font-style: italic">// Function to connect and reconnect as necessary to the MQTT server.</span>
-    <span style="color: #408080; font-style: italic">// Should be called in the loop function and it will take care if connecting.</span>
-    <span style="color: #B00040">int8_t</span> ret;
+<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #bbbbbb"> </span>(<span style="color: #666666">!</span><span style="color: #bbbbbb"> </span>rtc.begin())<span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>Serial.println(<span style="color: #BA2121">&quot;Couldn&#39;t find RTC&quot;</span>);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">while</span><span style="color: #bbbbbb"> </span>(<span style="color: #666666">1</span>);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">  </span>}<span style="color: #bbbbbb"></span>
 
-    <span style="color: #408080; font-style: italic">// attempt to connect to Wifi network:</span>
-    <span style="color: #008000; font-weight: bold">while</span> (WiFi.status() <span style="color: #666666">!=</span> WL_CONNECTED) {
-        Serial.print(<span style="color: #BA2121">&quot;Attempting to connect to Primary   SSID: &quot;</span>);
-        Serial.println(ssid);
+<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #bbbbbb"> </span>(<span style="color: #666666">!</span><span style="color: #bbbbbb"> </span>rtc.initialized())<span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>Serial.println(<span style="color: #BA2121">&quot;RTC is NOT running!&quot;</span>);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>error(<span style="color: #666666">3</span>);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">  </span>}<span style="color: #bbbbbb"></span>
 
-        status <span style="color: #666666">=</span> WiFi.begin(ssid);
+<span style="color: #bbbbbb">  </span>pinMode(<span style="color: #666666">13</span>,<span style="color: #bbbbbb"> </span>OUTPUT);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">  </span><span style="color: #3D7B7B; font-style: italic">//pinMode(8, OUTPUT);</span>
 
-        <span style="color: #408080; font-style: italic">// wait xx seconds for connection:</span>
-        <span style="color: #B00040">uint8_t</span> timeout <span style="color: #666666">=</span> <span style="color: #666666">15</span>;
-        <span style="color: #008000; font-weight: bold">while</span> (timeout <span style="color: #666666">&amp;&amp;</span> (WiFi.status() <span style="color: #666666">!=</span> WL_CONNECTED)) {
-          timeout<span style="color: #666666">--</span>;
-          delay(<span style="color: #666666">1000</span>);
-        }
-    }
 
-    <span style="color: #408080; font-style: italic">// Stop if already connected.</span>
-    <span style="color: #008000; font-weight: bold">if</span> (mqtt.connected()) {
-        <span style="color: #008000; font-weight: bold">return</span>;
-    }
+<span style="color: #bbbbbb">  </span>Serial.println(<span style="color: #BA2121">&quot;Ready!</span><span style="color: #AA5D1F; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>);<span style="color: #bbbbbb"></span>
+}<span style="color: #bbbbbb"></span>
 
-    Serial.print(<span style="color: #BA2121">&quot;Connecting to MQTT... &quot;</span>);
+<span style="color: #B00040">void</span><span style="color: #bbbbbb"> </span><span style="color: #0000FF">loop</span>()<span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"></span>
 
-    <span style="color: #008000; font-weight: bold">while</span> ((ret <span style="color: #666666">=</span> mqtt.connect()) <span style="color: #666666">!=</span> <span style="color: #666666">0</span>) { <span style="color: #408080; font-style: italic">// connect will return 0 for connected</span>
-         Serial.println(mqtt.connectErrorString(ret));
-         Serial.println(<span style="color: #BA2121">&quot;Retrying MQTT connection in 5 seconds...&quot;</span>);
-         mqtt.disconnect();
-         delay(<span style="color: #666666">5000</span>);  <span style="color: #408080; font-style: italic">// wait 5 seconds</span>
-    }
-    Serial.println(<span style="color: #BA2121">&quot;MQTT Connected!&quot;</span>);
-}
+<span style="color: #bbbbbb">    </span><span style="color: #3D7B7B; font-style: italic">// read the input on analog pin A0 A1 A2 A3</span>
+<span style="color: #bbbbbb">    </span><span style="color: #3D7B7B; font-style: italic">// Calculate water quality parameters using equations from calibration curves</span>
+<span style="color: #bbbbbb">    </span><span style="color: #3D7B7B; font-style: italic">// These variables are required for the below functions</span>
+<span style="color: #bbbbbb">    </span>Serial.println(<span style="color: #BA2121">&quot;Reading pins&quot;</span>);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span><span style="color: #B00040">int</span><span style="color: #bbbbbb"> </span>Depth_pin<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>analogRead(A0);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span><span style="color: #B00040">int</span><span style="color: #bbbbbb"> </span>TSS_pin<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>analogRead(A1);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span><span style="color: #B00040">int</span><span style="color: #bbbbbb"> </span>Temp_pin<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>analogRead(A2);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span><span style="color: #B00040">int</span><span style="color: #bbbbbb"> </span>Volt_pin<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>analogRead(A3);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span><span style="color: #B00040">float</span><span style="color: #bbbbbb"> </span>Depth_m<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #666666">0.0075*</span>(<span style="color: #B00040">float</span>(Depth_pin))<span style="color: #666666">-0.7786</span>;<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span><span style="color: #B00040">float</span><span style="color: #bbbbbb"> </span>TSS_mgL<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #666666">23977*</span>exp(<span style="color: #666666">-0.007*</span><span style="color: #B00040">float</span>(TSS_pin));<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span><span style="color: #B00040">float</span><span style="color: #bbbbbb"> </span>Temp_F<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #666666">0.2165*</span>(<span style="color: #B00040">float</span>(Temp_pin))<span style="color: #666666">-7.6926</span>;<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span><span style="color: #B00040">float</span><span style="color: #bbbbbb"> </span>Volt_V<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>Volt_pin;<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>Serial.println(<span style="color: #BA2121">&quot;Writing data&quot;</span>);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>SD_write(<span style="color: #bbbbbb">   </span>Depth_pin,<span style="color: #bbbbbb"> </span>TSS_pin,<span style="color: #bbbbbb"> </span>Temp_pin,<span style="color: #bbbbbb"> </span>Volt_pin,<span style="color: #bbbbbb"> </span>Depth_m,<span style="color: #bbbbbb"> </span>TSS_mgL,<span style="color: #bbbbbb"> </span>Temp_F,<span style="color: #bbbbbb"> </span>Volt_V);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>IO_publish(<span style="color: #bbbbbb"> </span>Depth_pin,<span style="color: #bbbbbb"> </span>TSS_pin,<span style="color: #bbbbbb"> </span>Temp_pin,<span style="color: #bbbbbb"> </span>Volt_pin,<span style="color: #bbbbbb"> </span>Depth_m,<span style="color: #bbbbbb"> </span>TSS_mgL,<span style="color: #bbbbbb"> </span>Temp_F,<span style="color: #bbbbbb"> </span>Volt_V);<span style="color: #bbbbbb"></span>
 
-<span style="color: #B00040">void</span> <span style="color: #0000FF">SD_write</span>(<span style="color: #B00040">int</span> Depth_pin, <span style="color: #B00040">int</span> TSS_pin, <span style="color: #B00040">int</span> Temp_pin, <span style="color: #B00040">int</span> Volt_pin, <span style="color: #B00040">int</span> Depth_m, <span style="color: #B00040">int</span> TSS_mgL, <span style="color: #B00040">int</span> Temp_F, <span style="color: #B00040">int</span> Volt_V) {
-    Serial.println(<span style="color: #BA2121">&quot;  SD card writing function&quot;</span>);
-    String line<span style="color: #666666">=</span>timeNow()<span style="color: #666666">+</span><span style="color: #BA2121">&quot;,&quot;</span><span style="color: #666666">+</span>Depth_pin<span style="color: #666666">+</span><span style="color: #BA2121">&quot;,&quot;</span><span style="color: #666666">+</span>TSS_pin<span style="color: #666666">+</span><span style="color: #BA2121">&quot;,&quot;</span><span style="color: #666666">+</span>Temp_pin<span style="color: #666666">+</span><span style="color: #BA2121">&quot;,&quot;</span><span style="color: #666666">+</span>Volt_pin<span style="color: #666666">+</span><span style="color: #BA2121">&quot;,&quot;</span><span style="color: #666666">+</span>Depth_m<span style="color: #666666">+</span><span style="color: #BA2121">&quot;,&quot;</span><span style="color: #666666">+</span>TSS_mgL<span style="color: #666666">+</span><span style="color: #BA2121">&quot;,&quot;</span><span style="color: #666666">+</span>Temp_F<span style="color: #666666">+</span><span style="color: #BA2121">&quot;,&quot;</span><span style="color: #666666">+</span>Volt_V;
-    Serial.println(line);
-    logfile.println(line);
-    logfile.flush();
-}
+<span style="color: #bbbbbb">    </span>delay(LOOP_DELAY);<span style="color: #bbbbbb"></span>
+}<span style="color: #bbbbbb"></span>
 
-<span style="color: #B00040">void</span> <span style="color: #0000FF">IO_publish</span> (<span style="color: #B00040">uint32_t</span> d_Depth, <span style="color: #B00040">uint32_t</span> d_TSS, <span style="color: #B00040">uint32_t</span> d_Temp, <span style="color: #B00040">uint32_t</span> d_Volt, <span style="color: #B00040">float</span> a_Depth, <span style="color: #B00040">float</span> a_TSS, <span style="color: #B00040">float</span> a_Temp, <span style="color: #B00040">int</span> a_Volt) {
-    Serial.println(<span style="color: #BA2121">&quot;  IO publishing function&quot;</span>);
+<span style="color: #B00040">void</span><span style="color: #bbbbbb"> </span><span style="color: #0000FF">MQTT_connect</span>()<span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span><span style="color: #3D7B7B; font-style: italic">// Function to connect and reconnect as necessary to the MQTT server.</span>
+<span style="color: #bbbbbb">    </span><span style="color: #3D7B7B; font-style: italic">// Should be called in the loop function and it will take care if connecting.</span>
+<span style="color: #bbbbbb">    </span><span style="color: #B00040">int8_t</span><span style="color: #bbbbbb"> </span>ret;<span style="color: #bbbbbb"></span>
 
-    <span style="color: #408080; font-style: italic">// Ensure the connection to the MQTT server is alive (this will make the first</span>
-    <span style="color: #408080; font-style: italic">// connection and automatically reconnect when disconnected).  See the MQTT_connect</span>
-    <span style="color: #408080; font-style: italic">// function definition further below.</span>
-    MQTT_connect();
+<span style="color: #bbbbbb">    </span><span style="color: #3D7B7B; font-style: italic">// attempt to connect to Wifi network:</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">while</span><span style="color: #bbbbbb"> </span>(WiFi.status()<span style="color: #bbbbbb"> </span><span style="color: #666666">!=</span><span style="color: #bbbbbb"> </span>WL_CONNECTED)<span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">        </span>Serial.print(<span style="color: #BA2121">&quot;Attempting to connect to Primary   SSID: &quot;</span>);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">        </span>Serial.println(ssid);<span style="color: #bbbbbb"></span>
 
-    Serial.print(<span style="color: #BA2121">&quot;Pushing to MQTTserver: &quot;</span>);
-    <span style="color: #008000; font-weight: bold">if</span> (
-    Depth.publish(d_Depth) <span style="color: #666666">&amp;&amp;</span>
-    Temperature.publish(d_TSS) <span style="color: #666666">&amp;&amp;</span>
-    TSS.publish(d_Temp) <span style="color: #666666">&amp;&amp;</span>
-    Voltage.publish(d_Volt) <span style="color: #666666">&amp;&amp;</span>
-    Depth_calc.publish(a_Depth, <span style="color: #666666">3</span>) <span style="color: #666666">&amp;&amp;</span>
-    TSS_calc.publish(a_TSS, <span style="color: #666666">3</span>) <span style="color: #666666">&amp;&amp;</span>
-    Temperature_calc.publish(a_Temp, <span style="color: #666666">3</span>) <span style="color: #666666">&amp;&amp;</span>
-    Voltage_calc.publish(a_Volt, <span style="color: #666666">3</span>)
-    )
-    {
-    Serial.println(<span style="color: #BA2121">&quot;Published&quot;</span>);
-    } <span style="color: #008000; font-weight: bold">else</span> {
-    Serial.println(<span style="color: #BA2121">&quot;Failed!&quot;</span>);
-    }
-}
+<span style="color: #bbbbbb">        </span>status<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>WiFi.begin(ssid);<span style="color: #bbbbbb"></span>
 
-String <span style="color: #0000FF">timeNow</span>() {
-    DateTime now <span style="color: #666666">=</span> rtc.now();
-    <span style="color: #408080; font-style: italic">//Serial.println(now.unixtime() / 86400L);</span>
-    String thistime <span style="color: #666666">=</span> String(now.month())<span style="color: #666666">+</span><span style="color: #BA2121">&#39;/&#39;</span><span style="color: #666666">+</span>String(now.day())<span style="color: #666666">+</span><span style="color: #BA2121">&#39;/&#39;</span><span style="color: #666666">+</span>String(now.year())<span style="color: #666666">+</span><span style="color: #BA2121">&quot; &quot;</span><span style="color: #666666">+</span>String(now.hour())<span style="color: #666666">+</span><span style="color: #BA2121">&#39;:&#39;</span><span style="color: #666666">+</span>String(now.minute())<span style="color: #666666">+</span><span style="color: #BA2121">&#39;:&#39;</span><span style="color: #666666">+</span>String(now.second());
-    <span style="color: #408080; font-style: italic">//Serial.println(thistime);</span>
-    <span style="color: #008000; font-weight: bold">return</span> thistime;
-}
+<span style="color: #bbbbbb">        </span><span style="color: #3D7B7B; font-style: italic">// wait xx seconds for connection:</span>
+<span style="color: #bbbbbb">        </span><span style="color: #B00040">uint8_t</span><span style="color: #bbbbbb"> </span>timeout<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #666666">15</span>;<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">while</span><span style="color: #bbbbbb"> </span>(timeout<span style="color: #bbbbbb"> </span><span style="color: #666666">&amp;&amp;</span><span style="color: #bbbbbb"> </span>(WiFi.status()<span style="color: #bbbbbb"> </span><span style="color: #666666">!=</span><span style="color: #bbbbbb"> </span>WL_CONNECTED))<span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">          </span>timeout<span style="color: #666666">--</span>;<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">          </span>delay(<span style="color: #666666">1000</span>);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">        </span>}<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>}<span style="color: #bbbbbb"></span>
+
+<span style="color: #bbbbbb">    </span><span style="color: #3D7B7B; font-style: italic">// Stop if already connected.</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #bbbbbb"> </span>(mqtt.connected())<span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">return</span>;<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>}<span style="color: #bbbbbb"></span>
+
+<span style="color: #bbbbbb">    </span>Serial.print(<span style="color: #BA2121">&quot;Connecting to MQTT... &quot;</span>);<span style="color: #bbbbbb"></span>
+
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">while</span><span style="color: #bbbbbb"> </span>((ret<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>mqtt.connect())<span style="color: #bbbbbb"> </span><span style="color: #666666">!=</span><span style="color: #bbbbbb"> </span><span style="color: #666666">0</span>)<span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"> </span><span style="color: #3D7B7B; font-style: italic">// connect will return 0 for connected</span>
+<span style="color: #bbbbbb">         </span>Serial.println(mqtt.connectErrorString(ret));<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">         </span>Serial.println(<span style="color: #BA2121">&quot;Retrying MQTT connection in 5 seconds...&quot;</span>);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">         </span>mqtt.disconnect();<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">         </span>delay(<span style="color: #666666">5000</span>);<span style="color: #bbbbbb">  </span><span style="color: #3D7B7B; font-style: italic">// wait 5 seconds</span>
+<span style="color: #bbbbbb">    </span>}<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>Serial.println(<span style="color: #BA2121">&quot;MQTT Connected!&quot;</span>);<span style="color: #bbbbbb"></span>
+}<span style="color: #bbbbbb"></span>
+
+<span style="color: #B00040">void</span><span style="color: #bbbbbb"> </span><span style="color: #0000FF">SD_write</span>(<span style="color: #B00040">int</span><span style="color: #bbbbbb"> </span>Depth_pin,<span style="color: #bbbbbb"> </span><span style="color: #B00040">int</span><span style="color: #bbbbbb"> </span>TSS_pin,<span style="color: #bbbbbb"> </span><span style="color: #B00040">int</span><span style="color: #bbbbbb"> </span>Temp_pin,<span style="color: #bbbbbb"> </span><span style="color: #B00040">int</span><span style="color: #bbbbbb"> </span>Volt_pin,<span style="color: #bbbbbb"> </span><span style="color: #B00040">int</span><span style="color: #bbbbbb"> </span>Depth_m,<span style="color: #bbbbbb"> </span><span style="color: #B00040">int</span><span style="color: #bbbbbb"> </span>TSS_mgL,<span style="color: #bbbbbb"> </span><span style="color: #B00040">int</span><span style="color: #bbbbbb"> </span>Temp_F,<span style="color: #bbbbbb"> </span><span style="color: #B00040">int</span><span style="color: #bbbbbb"> </span>Volt_V)<span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>Serial.println(<span style="color: #BA2121">&quot;  SD card writing function&quot;</span>);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>String<span style="color: #bbbbbb"> </span>line<span style="color: #666666">=</span>timeNow()<span style="color: #666666">+</span><span style="color: #BA2121">&quot;,&quot;</span><span style="color: #666666">+</span>Depth_pin<span style="color: #666666">+</span><span style="color: #BA2121">&quot;,&quot;</span><span style="color: #666666">+</span>TSS_pin<span style="color: #666666">+</span><span style="color: #BA2121">&quot;,&quot;</span><span style="color: #666666">+</span>Temp_pin<span style="color: #666666">+</span><span style="color: #BA2121">&quot;,&quot;</span><span style="color: #666666">+</span>Volt_pin<span style="color: #666666">+</span><span style="color: #BA2121">&quot;,&quot;</span><span style="color: #666666">+</span>Depth_m<span style="color: #666666">+</span><span style="color: #BA2121">&quot;,&quot;</span><span style="color: #666666">+</span>TSS_mgL<span style="color: #666666">+</span><span style="color: #BA2121">&quot;,&quot;</span><span style="color: #666666">+</span>Temp_F<span style="color: #666666">+</span><span style="color: #BA2121">&quot;,&quot;</span><span style="color: #666666">+</span>Volt_V;<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>Serial.println(line);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>logfile.println(line);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>logfile.flush();<span style="color: #bbbbbb"></span>
+}<span style="color: #bbbbbb"></span>
+
+<span style="color: #B00040">void</span><span style="color: #bbbbbb"> </span><span style="color: #0000FF">IO_publish</span><span style="color: #bbbbbb"> </span>(<span style="color: #B00040">uint32_t</span><span style="color: #bbbbbb"> </span>d_Depth,<span style="color: #bbbbbb"> </span><span style="color: #B00040">uint32_t</span><span style="color: #bbbbbb"> </span>d_TSS,<span style="color: #bbbbbb"> </span><span style="color: #B00040">uint32_t</span><span style="color: #bbbbbb"> </span>d_Temp,<span style="color: #bbbbbb"> </span><span style="color: #B00040">uint32_t</span><span style="color: #bbbbbb"> </span>d_Volt,<span style="color: #bbbbbb"> </span><span style="color: #B00040">float</span><span style="color: #bbbbbb"> </span>a_Depth,<span style="color: #bbbbbb"> </span><span style="color: #B00040">float</span><span style="color: #bbbbbb"> </span>a_TSS,<span style="color: #bbbbbb"> </span><span style="color: #B00040">float</span><span style="color: #bbbbbb"> </span>a_Temp,<span style="color: #bbbbbb"> </span><span style="color: #B00040">int</span><span style="color: #bbbbbb"> </span>a_Volt)<span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>Serial.println(<span style="color: #BA2121">&quot;  IO publishing function&quot;</span>);<span style="color: #bbbbbb"></span>
+
+<span style="color: #bbbbbb">    </span><span style="color: #3D7B7B; font-style: italic">// Ensure the connection to the MQTT server is alive (this will make the first</span>
+<span style="color: #bbbbbb">    </span><span style="color: #3D7B7B; font-style: italic">// connection and automatically reconnect when disconnected).  See the MQTT_connect</span>
+<span style="color: #bbbbbb">    </span><span style="color: #3D7B7B; font-style: italic">// function definition further below.</span>
+<span style="color: #bbbbbb">    </span>MQTT_connect();<span style="color: #bbbbbb"></span>
+
+<span style="color: #bbbbbb">    </span>Serial.print(<span style="color: #BA2121">&quot;Pushing to MQTTserver: &quot;</span>);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #bbbbbb"> </span>(<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>Depth.publish(d_Depth)<span style="color: #bbbbbb"> </span><span style="color: #666666">&amp;&amp;</span><span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>Temperature.publish(d_TSS)<span style="color: #bbbbbb"> </span><span style="color: #666666">&amp;&amp;</span><span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>TSS.publish(d_Temp)<span style="color: #bbbbbb"> </span><span style="color: #666666">&amp;&amp;</span><span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>Voltage.publish(d_Volt)<span style="color: #bbbbbb"> </span><span style="color: #666666">&amp;&amp;</span><span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>Depth_calc.publish(a_Depth,<span style="color: #bbbbbb"> </span><span style="color: #666666">3</span>)<span style="color: #bbbbbb"> </span><span style="color: #666666">&amp;&amp;</span><span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>TSS_calc.publish(a_TSS,<span style="color: #bbbbbb"> </span><span style="color: #666666">3</span>)<span style="color: #bbbbbb"> </span><span style="color: #666666">&amp;&amp;</span><span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>Temperature_calc.publish(a_Temp,<span style="color: #bbbbbb"> </span><span style="color: #666666">3</span>)<span style="color: #bbbbbb"> </span><span style="color: #666666">&amp;&amp;</span><span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>Voltage_calc.publish(a_Volt,<span style="color: #bbbbbb"> </span><span style="color: #666666">3</span>)<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>)<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>Serial.println(<span style="color: #BA2121">&quot;Published&quot;</span>);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>}<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">else</span><span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>Serial.println(<span style="color: #BA2121">&quot;Failed!&quot;</span>);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>}<span style="color: #bbbbbb"></span>
+}<span style="color: #bbbbbb"></span>
+
+String<span style="color: #bbbbbb"> </span><span style="color: #0000FF">timeNow</span>()<span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>DateTime<span style="color: #bbbbbb"> </span>now<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>rtc.now();<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span><span style="color: #3D7B7B; font-style: italic">//Serial.println(now.unixtime() / 86400L);</span>
+<span style="color: #bbbbbb">    </span>String<span style="color: #bbbbbb"> </span>thistime<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>String(now.month())<span style="color: #666666">+</span><span style="color: #BA2121">&#39;/&#39;</span><span style="color: #666666">+</span>String(now.day())<span style="color: #666666">+</span><span style="color: #BA2121">&#39;/&#39;</span><span style="color: #666666">+</span>String(now.year())<span style="color: #666666">+</span><span style="color: #BA2121">&quot; &quot;</span><span style="color: #666666">+</span>String(now.hour())<span style="color: #666666">+</span><span style="color: #BA2121">&#39;:&#39;</span><span style="color: #666666">+</span>String(now.minute())<span style="color: #666666">+</span><span style="color: #BA2121">&#39;:&#39;</span><span style="color: #666666">+</span>String(now.second());<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span><span style="color: #3D7B7B; font-style: italic">//Serial.println(thistime);</span>
+<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #bbbbbb"> </span>thistime;<span style="color: #bbbbbb"></span>
+}<span style="color: #bbbbbb"></span>
 </pre></div>
 <p>
 <p>
