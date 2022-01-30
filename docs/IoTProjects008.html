@@ -78,7 +78,7 @@ end of tocinfo -->
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contents <b class="caret"></b></a>
         <ul class="dropdown-menu">
-     <!-- navigation toc: --> <li><a href="#table_of_contents" style="font-size: 80%;"><b>Table of contents</b></a></li>
+     <!-- navigation toc: --> <li><a href="IoTProjects000.html#table_of_contents" style="font-size: 80%;"><b>Table of contents</b></a></li>
      <!-- navigation toc: --> <li><a href="IoTProjects001.html#___sec0" style="font-size: 80%;"><b>Common Mobile Compute Platform</b></a></li>
      <!-- navigation toc: --> <li><a href="IoTProjects002.html#___sec1" style="font-size: 80%;"><b>Domotics</b></a></li>
      <!-- navigation toc: --> <li><a href="IoTProjects003.html#___sec2" style="font-size: 80%;"><b>Automotive Media System</b></a></li>
@@ -88,7 +88,7 @@ end of tocinfo -->
      <!-- navigation toc: --> <li><a href="IoTProjects007.html#___sec6" style="font-size: 80%;"><b>Technology as Art</b></a></li>
      <!-- navigation toc: --> <li><a href="IoTProjects007.html#___sec7" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Wood Burning Plotter</a></li>
      <!-- navigation toc: --> <li><a href="IoTProjects007.html#___sec8" style="font-size: 80%;">&nbsp;&nbsp;&nbsp;Lightning Catcher</a></li>
-     <!-- navigation toc: --> <li><a href="IoTProjects008.html#___sec9" style="font-size: 80%;"><b>Irrigation Remote</b></a></li>
+     <!-- navigation toc: --> <li><a href="#___sec9" style="font-size: 80%;"><b>Irrigation Remote</b></a></li>
      <!-- navigation toc: --> <li><a href="IoTProjects009.html#___sec10" style="font-size: 80%;"><b>The Best Damn Radio System</b></a></li>
 
         </ul>
@@ -102,42 +102,64 @@ end of tocinfo -->
 
 <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p> <!-- add vertical space -->
 
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0008"></a>
+<!-- !split -->
 
-
-
-<div class="jumbotron">
-<center><h1>Internet-of-Things Projects</h1></center>  <!-- document title -->
-
-<p>
-</div> <!-- end jumbotron -->
-
-<h1 id="table_of_contents">Table of contents</h2>
+<h1 id="___sec9" class="anchor">Irrigation Remote </h1>
+<b>Description:</b>
+Simple SCADA to drive drip irrigation.
 
 <p>
-<a href="IoTProjects001.html#___sec0"> Common Mobile Compute Platform </a><br>
-<a href="IoTProjects002.html#___sec1"> Domotics </a><br>
-<a href="IoTProjects003.html#___sec2"> Automotive Media System </a><br>
-<a href="IoTProjects004.html#___sec3"> GPS Chartplotter </a><br>
-<a href="IoTProjects005.html#___sec4"> Common Sensor and Datalogger Platform </a><br>
-<a href="IoTProjects006.html#___sec5"> Micro Hydroponics </a><br>
-<a href="IoTProjects007.html#___sec6"> Technology as Art </a><br>
-&nbsp; &nbsp; &nbsp; <a href="IoTProjects007.html#___sec7"> Wood Burning Plotter </a><br>
-&nbsp; &nbsp; &nbsp; <a href="IoTProjects007.html#___sec8"> Lightning Catcher </a><br>
-<a href="IoTProjects008.html#___sec9"> Irrigation Remote </a><br>
-<a href="IoTProjects009.html#___sec10"> The Best Damn Radio System </a><br>
-</p>
+<b>User Story:</b>
+We leave the house for extended periods during hot dry weather and know that we won't lose plants. When we harvest, we can turn off drippers by plant. Plumbing and electrical are unobtrusive and dependable. Water is conserved as much as possible. We can use rain water if desired.
+
 <p>
-CircuitPython rules! Arduino drools! Let them eat RaspberryPi!
+<b>Feature Set:</b>
+
+<ol>
+<li> Main line valves actuated by internet-connected IoT switch, on schedule with manual overrides.</li>
+<li> Flow meter used to activate alarm of valve failure and fine-tune water usage.</li>
+<li> Rain, soil moisture, and localized temperature sensor pack to fine-tune water usage. Battery-powered and internet-connected for minimal wiring.</li>
+<li> Gang valving and individual drippers in garden for easy access and fine control.</li>
+<li> Main line plumbing hidden and removable for storage, freeze protection, repair, and protection.</li>
+</ol>
+
+<b>Phasing:</b>
+
+<ul>
+<li> indoor plumbing to hose cock (done)</li>
+<li> IoT switch, meter, and main line valve</li>
+<li> buried main line and gang valving</li>
+<li> meteorological sensor pack</li>
+<li> cistern with submersible pump</li>
+</ul>
+
+<b>BOM:</b>
+
+<ol>
+<li> <a href="https://www.adafruit.com/product/997" target="_self">Valve</a></li>
+<li> <a href="https://www.adafruit.com/product/3619" target="_self">Controller</a></li>
+<li> <a href="https://www.adafruit.com/product/1298" target="_self">Sensor</a></li>
+<li> <a href="https://www.adafruit.com/product/828" target="_self">Flow meter</a></li>
+</ol>
+
+<center> <!-- figure label: --> <div id="fig:plumbing"></div> <!-- FIGURE -->
+<hr class="figure">
+<center><p class="caption">Figure 1:  Plumbing Schematic.  <!-- caption label: fig:plumbing --> </p></center>
+<p><img src="https://raw.githubusercontent.com/csomerlot/csomerlot.github.io/master/HappyHippieLifestyle/plumbing.png" align="bottom" width=900></p>
+</center>
 
 <p>
 <p>
 <!-- navigation buttons at the bottom of the page -->
 <ul class="pager">
 
+  <li class="previous">
+    <a href="IoTProjects007.html">&larr; Prev</a>
+  </li>
+
   <li class="next">
-    <a href="IoTProjects001.html">Next &rarr;</a>
+    <a href="IoTProjects009.html">Next &rarr;</a>
   </li>
 </ul>
 <!-- ------------------- end of main content --------------- -->
@@ -155,7 +177,7 @@ CircuitPython rules! Arduino drools! Let them eat RaspberryPi!
 
 
 <center style="font-size:80%">
-<!-- copyright -->  Made with <a href="https://github.com/hplgit/doconce">DocOnce</a>
+<!-- copyright only on the titlepage -->
 </center>
 
 

@@ -73,9 +73,9 @@ end of tocinfo -->
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contents <b class="caret"></b></a>
         <ul class="dropdown-menu">
-     <!-- navigation toc: --> <li><a href="#table_of_contents" style="font-size: 80%;">Table of contents</a></li>
+     <!-- navigation toc: --> <li><a href="RoboticsProjects000.html#table_of_contents" style="font-size: 80%;">Table of contents</a></li>
      <!-- navigation toc: --> <li><a href="RoboticsProjects001.html#___sec0" style="font-size: 80%;">Fixed Wing UAV</a></li>
-     <!-- navigation toc: --> <li><a href="RoboticsProjects002.html#___sec1" style="font-size: 80%;">Submersible / Surface ROV</a></li>
+     <!-- navigation toc: --> <li><a href="#___sec1" style="font-size: 80%;">Submersible / Surface ROV</a></li>
      <!-- navigation toc: --> <li><a href="RoboticsProjects003.html#___sec2" style="font-size: 80%;">Pool Octobot</a></li>
      <!-- navigation toc: --> <li><a href="RoboticsProjects004.html#___sec3" style="font-size: 80%;">Scarecrow Targeting System</a></li>
      <!-- navigation toc: --> <li><a href="RoboticsProjects005.html#___sec4" style="font-size: 80%;">Invasive Species Patroller</a></li>
@@ -92,37 +92,137 @@ end of tocinfo -->
 
 <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p> <!-- add vertical space -->
 
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0002"></a>
+<!-- !split -->
 
-
-
-<div class="jumbotron">
-<center><h1>Robotics Projects</h1></center>  <!-- document title -->
-
-<p>
-</div> <!-- end jumbotron -->
-
-<h1 id="table_of_contents">Table of contents</h2>
+<h1 id="___sec1" class="anchor">Submersible / Surface ROV </h1>
+<b>Description:</b>
+A long-range, long-duration, aquatic robotic sensor platform for locating and investigating underwater interests
 
 <p>
-<a href="RoboticsProjects001.html#___sec0"> Fixed Wing UAV </a><br>
-<a href="RoboticsProjects002.html#___sec1"> Submersible / Surface ROV </a><br>
-<a href="RoboticsProjects003.html#___sec2"> Pool Octobot </a><br>
-<a href="RoboticsProjects004.html#___sec3"> Scarecrow Targeting System </a><br>
-<a href="RoboticsProjects005.html#___sec4"> Invasive Species Patroller </a><br>
-<a href="RoboticsProjects006.html#___sec5"> Signal-Tracking Antenna Mount </a><br>
-</p>
-<p>
-Welcoming our new overlords...
+<b>User Story:</b>
+Many things are down there in the deep, waiting discovery. Metal, habitat, species...
+many things, in many places, some very remote. I want a platform that can travel the world with any sensor I can dream of, and deliver itself back to me.
 
 <p>
+<b>Feature Set:</b>
+
+<ul>
+<li> Surface capabilities:</li>
+
+<ul>
+    <li> Solar charging</li>
+    <li> Navigation</li>
+
+<ul>
+        <li> Distance (proximity) sensors</li>
+        <li> Surface GPS</li>
+</ul>
+
+    <li> Sonar scanning</li>
+</ul>
+
+<li> Subsurface capabilities:</li>
+
+<ul>
+    <li> Dives to 1000m, up to 72 hrs</li>
+    <li> Imaging</li>
+
+<ul>
+        <li> Scheduled</li>
+        <li> Event-driven</li>
+
+<ul>
+            <li> Sudden light change</li>
+            <li> Proximity alert</li>
+</ul>
+
+        <li> 360-degree FOV</li>
+        <li> Low-light</li>
+        <li> Mission-based</li>
+
+<ul>
+            <li> Wrecks</li>
+            <li> Reefs</li>
+</ul>
+
+</ul>
+
+    <li> Metal detection</li>
+    <li> Bathymetric scans</li>
+    <li> Evasion</li>
+</ul>
+
+<li> Locomotion</li>
+
+<ul>
+    <li> Low-speed/power, mostly currents</li>
+    <li> Impeller with vent clearing</li>
+</ul>
+
+<li> Communications/data link</li>
+
+<ul>
+    <li> ASPRS for global, daily logging of location, vital metrics</li>
+    <li> On-demand wifi for debugging</li>
+    <li> Low-power, long-range packet radio receiver for actuating beacons</li>
+</ul>
+
+<li> Fail-safes:</li>
+
+<ul>
+    <li> Coordinate with round-the-world sailing orgs for manual recovery</li>
+    <li> Emergency surfacing and diving</li>
+    <li> Beacons (event-driven)</li>
+
+<ul>
+        <li> VHS</li>
+        <li> Lights</li>
+</ul>
+
+    <li> Packet radio for near-shore communication</li>
+    <li> 7-day reserve power</li>
+    <li> Hibernation mode</li>
+    <li> Warning labeling in many languages</li>
+    <li> Claws for getting unstuck from tight places and fishing lines</li>
+</ul>
+
+</ul>
+
+<b>Phasing:</b>
+
+<ol>
+<li> Build manual prototype with goPro</li>
+<li> Sensors package development and testing</li>
+<li> Upgrades for survivability and power reserve</li>
+<li> Mission programming and data logging</li>
+<li> 24 hr Otisco test</li>
+<li> 30 day Ontario test</li>
+<li> 180 day Gulf Stream mission (launch in Ft Pierce in Feb, recover in Iceland)</li>
+<li> Re-engineer into a small remora-style package to find and attach to large animals</li>
+</ol>
+
+<b>BOM:</b>
+1.
+
+<p>
+<b>Notes:</b>
+
+<ul>
+<li> <a href="https://www.raspberrypi.org/blog/fish-pi/" target="_self"><tt>https://www.raspberrypi.org/blog/fish-pi/</tt></a></li>
+<li> <a href="http://cma.soton.ac.uk/research/black-sea-map/" target="_self"><tt>http://cma.soton.ac.uk/research/black-sea-map/</tt></a></li>
+</ul>
+
 <p>
 <!-- navigation buttons at the bottom of the page -->
 <ul class="pager">
 
+  <li class="previous">
+    <a href="RoboticsProjects001.html">&larr; Prev</a>
+  </li>
+
   <li class="next">
-    <a href="RoboticsProjects001.html">Next &rarr;</a>
+    <a href="RoboticsProjects003.html">Next &rarr;</a>
   </li>
 </ul>
 <!-- ------------------- end of main content --------------- -->
@@ -140,7 +240,7 @@ Welcoming our new overlords...
 
 
 <center style="font-size:80%">
-<!-- copyright -->  Made with <a href="https://github.com/hplgit/doconce">DocOnce</a>
+<!-- copyright only on the titlepage -->
 </center>
 
 

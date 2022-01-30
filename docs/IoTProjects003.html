@@ -78,10 +78,10 @@ end of tocinfo -->
       <li class="dropdown">
         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contents <b class="caret"></b></a>
         <ul class="dropdown-menu">
-     <!-- navigation toc: --> <li><a href="#table_of_contents" style="font-size: 80%;"><b>Table of contents</b></a></li>
+     <!-- navigation toc: --> <li><a href="IoTProjects000.html#table_of_contents" style="font-size: 80%;"><b>Table of contents</b></a></li>
      <!-- navigation toc: --> <li><a href="IoTProjects001.html#___sec0" style="font-size: 80%;"><b>Common Mobile Compute Platform</b></a></li>
      <!-- navigation toc: --> <li><a href="IoTProjects002.html#___sec1" style="font-size: 80%;"><b>Domotics</b></a></li>
-     <!-- navigation toc: --> <li><a href="IoTProjects003.html#___sec2" style="font-size: 80%;"><b>Automotive Media System</b></a></li>
+     <!-- navigation toc: --> <li><a href="#___sec2" style="font-size: 80%;"><b>Automotive Media System</b></a></li>
      <!-- navigation toc: --> <li><a href="IoTProjects004.html#___sec3" style="font-size: 80%;"><b>GPS Chartplotter</b></a></li>
      <!-- navigation toc: --> <li><a href="IoTProjects005.html#___sec4" style="font-size: 80%;"><b>Common Sensor and Datalogger Platform</b></a></li>
      <!-- navigation toc: --> <li><a href="IoTProjects006.html#___sec5" style="font-size: 80%;"><b>Micro Hydroponics</b></a></li>
@@ -102,42 +102,95 @@ end of tocinfo -->
 
 <p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p> <!-- add vertical space -->
 
-<a name="part0000"></a>
-<!-- ------------------- main content ---------------------- -->
+<a name="part0003"></a>
+<!-- !split -->
 
-
-
-<div class="jumbotron">
-<center><h1>Internet-of-Things Projects</h1></center>  <!-- document title -->
-
-<p>
-</div> <!-- end jumbotron -->
-
-<h1 id="table_of_contents">Table of contents</h2>
+<h1 id="___sec2" class="anchor">Automotive Media System </h1>
+<b>Description:</b>
+a simple media system to stream movies and provide Android auto connectivity
 
 <p>
-<a href="IoTProjects001.html#___sec0"> Common Mobile Compute Platform </a><br>
-<a href="IoTProjects002.html#___sec1"> Domotics </a><br>
-<a href="IoTProjects003.html#___sec2"> Automotive Media System </a><br>
-<a href="IoTProjects004.html#___sec3"> GPS Chartplotter </a><br>
-<a href="IoTProjects005.html#___sec4"> Common Sensor and Datalogger Platform </a><br>
-<a href="IoTProjects006.html#___sec5"> Micro Hydroponics </a><br>
-<a href="IoTProjects007.html#___sec6"> Technology as Art </a><br>
-&nbsp; &nbsp; &nbsp; <a href="IoTProjects007.html#___sec7"> Wood Burning Plotter </a><br>
-&nbsp; &nbsp; &nbsp; <a href="IoTProjects007.html#___sec8"> Lightning Catcher </a><br>
-<a href="IoTProjects008.html#___sec9"> Irrigation Remote </a><br>
-<a href="IoTProjects009.html#___sec10"> The Best Damn Radio System </a><br>
-</p>
-<p>
-CircuitPython rules! Arduino drools! Let them eat RaspberryPi!
+<b>User Story:</b>
+Car audio has become increasingly complex when it doesn't need to be. Android Auto
+can provide a great in-car experience, but all the 3rd-party AA receivers are expensive.
 
 <p>
+<b>Feature Set:</b>
+
+<ol>
+<li> Android Auto</li>
+<li> Media network share</li>
+<li> SDR for radio (and everything else RF):
+
+<ol type="a"></li>
+   <li> FM radio with station/song info</li>
+   <li> Weather Band/Fax</li>
+   <li> Police scanner</li>
+   <li> SSB</li>
+</ol>
+
+<li> ODBII integration:
+
+<ol type="a"></li>
+   <li> Logging</li>
+   <li> Alternate dashboard displays</li>
+</ol>
+
+<li> UI/Controls:
+
+<ol type="a"></li>
+   <li> Macro and micro tuner wheels: for quickly moving through either the spectrum or file list selection sets</li>
+   <li> Touchscreen for configurable selection controls</li>
+</ol>
+
+<li> External:
+
+<ol type="a"></li>
+   <li> Engine start?</li>
+   <li> GPS tracking</li>
+</ol>
+
+</ol>
+
+<b>Phasing:</b>
+
+<ol>
+<li> Build RPi software stack</li>
+<li> Integrate touch screen, push buttons, and dials</li>
+<li> Integrate peripheral hardware: SDR, HD, microphone</li>
+<li> Integrate 6-channel amplifier and stereo hat</li>
+<li> Build housing</li>
+<li> Build wiring harness</li>
+<li> Install</li>
+</ol>
+
+<b>BOM:</b>
+
+<ul>
+<li> <a href="/ComputerProjects010.html#___sec10" target="_self">Common Mobile Compute Platform</a></li>
+<li> <a href="https://www.adafruit.com/product/1752" target="_self"><tt>https://www.adafruit.com/product/1752</tt></a></li>
+</ul>
+
+<b>Notes:</b>
+
+<ul>
+<li> <a href="https://www.zdnet.com/article/raspberry-pi-goes-android-auto-now-you-can-build-your-own-cheap-car-head-unit/" target="_self"><tt>https://www.zdnet.com/article/raspberry-pi-goes-android-auto-now-you-can-build-your-own-cheap-car-head-unit/</tt></a></li>
+<li> <a href="http://i-carus.com/" target="_self"><tt>http://i-carus.com/</tt></a></li>
+<li> <a href="https://learn.adafruit.com/freq-show-raspberry-pi-rtl-sdr-scanner/overview" target="_self"><tt>https://learn.adafruit.com/freq-show-raspberry-pi-rtl-sdr-scanner/overview</tt></a></li>
+<li> <a href="https://othernet.is/" target="_self"><tt>https://othernet.is/</tt></a></li>
+<li> <a href="https://magpi.raspberrypi.org/articles/android-auto-openauto" target="_self"><tt>https://magpi.raspberrypi.org/articles/android-auto-openauto</tt></a></li>
+</ul>
+
 <p>
 <!-- navigation buttons at the bottom of the page -->
 <ul class="pager">
 
+  <li class="previous">
+    <a href="IoTProjects002.html">&larr; Prev</a>
+  </li>
+
   <li class="next">
-    <a href="IoTProjects001.html">Next &rarr;</a>
+    <a href="IoTProjects004.html">Next &rarr;</a>
   </li>
 </ul>
 <!-- ------------------- end of main content --------------- -->
@@ -155,7 +208,7 @@ CircuitPython rules! Arduino drools! Let them eat RaspberryPi!
 
 
 <center style="font-size:80%">
-<!-- copyright -->  Made with <a href="https://github.com/hplgit/doconce">DocOnce</a>
+<!-- copyright only on the titlepage -->
 </center>
 
 
