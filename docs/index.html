@@ -147,7 +147,51 @@ I have a lot of ideas, and getting them jotted down helps me focus on other thin
 <p>
 
 <!-- code=text (!bc txt) typeset with pygments style "default" -->
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span>commit b1cb09fb49dff0777d74272d71274b41e630c79c
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span>commit 161ab5483a12ddbfc293a3e08e8219a2057bcc7c
+Author: Chris Somerlot &lt;csomerlot@brwncald.com&gt;
+Date:   Sat Jan 29 22:47:33 2022 -0500
+
+    refactoring the html files per github.io pathing
+
+ BoatProjects.do.txt                         |    4 +-
+ IoTProjects.do.txt                          |    4 +-
+ do.bat                                      |    2 +-
+ docs/._AlternativeEnergyProjects000.html    |    2 +-
+ docs/._Apiary000.html                       |    8 +-
+ docs/._BoatProjects000.html                 |    4 +-
+ docs/._BoatProjects001.html                 |   12 +-
+ docs/._BusinessIdeas002.html                |    4 +-
+ docs/._ComputerProjects002.html             |   70 +-
+ docs/._ComputerProjects006.html             |   18 +-
+ docs/._ComputerProjects008.html             |   44 +-
+ docs/._ComputerProjects014.html             |  506 ++++++-------
+ docs/._ComputerProjects015.html             |  380 +++++-----
+ docs/._ComputerProjects017.html             |    2 +-
+ docs/._HappyHippieLifestyleProjects000.html |    4 +-
+ docs/._HappyHippieLifestyleProjects001.html |    2 +-
+ docs/._HappyHippieLifestyleProjects002.html |    6 +-
+ docs/._IoTProjects005.html                  |  506 ++++++-------
+ docs/._IoTProjects006.html                  |  380 +++++-----
+ docs/._IoTProjects008.html                  |    2 +-
+ docs/._NorthWoodsCottage000.html            |    6 +-
+ docs/._ThistleRidgeFarmProjects000.html     |    4 +-
+ docs/._ThistleRidgeFarmProjects001.html     |    8 +-
+ docs/._ThistleRidgeFarmProjects002.html     |    8 +-
+ docs/._WoodWorking000.html                  |    2 +-
+ docs/._index000.html                        |  143 +---
+ docs/AlternativeEnergyProjects.html         |    2 +-
+ docs/Apiary.html                            |    8 +-
+ docs/BoatProjects.html                      |    4 +-
+ docs/HappyHippieLifestyleProjects.html      |    4 +-
+ docs/NorthWoodsCottage.html                 |    6 +-
+ docs/ThistleRidgeFarmProjects.html          |    4 +-
+ docs/WoodWorking.html                       |    2 +-
+ docs/everything.html                        | 1076 +++++++++++++--------------
+ docs/index.html                             |  295 ++------
+ publish.py                                  |    8 +
+ 36 files changed, 1663 insertions(+), 1877 deletions(-)
+
+commit b1cb09fb49dff0777d74272d71274b41e630c79c
 Author: Chris Somerlot &lt;csomerlot@brwncald.com&gt;
 Date:   Mon Jan 24 12:23:24 2022 -0500
 
@@ -217,101 +261,6 @@ Date:   Mon Jan 24 10:57:42 2022 -0500
  docs/._index000.html | 25 +++++++++++++------------
  docs/index.html      | 25 +++++++++++++------------
  3 files changed, 27 insertions(+), 25 deletions(-)
-
-commit 289dcfac937bd80795e8601b66b812872de0a365
-Author: Chris Somerlot &lt;csomerlot@brwncald.com&gt;
-Date:   Mon Jan 24 10:54:51 2022 -0500
-
-    changed folder name. Thanks github.io :|
-
- {site =&gt; docs}/._AlternativeEnergyProjects000.html |   0
- {site =&gt; docs}/._Apiary000.html                    |   0
- {site =&gt; docs}/._Apiary001.html                    |   0
- {site =&gt; docs}/._BoatProjects000.html              |   0
- {site =&gt; docs}/._BoatProjects001.html              |   0
- {site =&gt; docs}/._BoatProjects002.html              |   0
- {site =&gt; docs}/._BusinessIdeas000.html             |   0
- {site =&gt; docs}/._BusinessIdeas001.html             |   0
- {site =&gt; docs}/._BusinessIdeas002.html             |   0
- {site =&gt; docs}/._ComputerProjects000.html          |   0
- {site =&gt; docs}/._ComputerProjects001.html          |   0
- {site =&gt; docs}/._ComputerProjects002.html          |   0
- {site =&gt; docs}/._ComputerProjects003.html          |   0
- {site =&gt; docs}/._ComputerProjects004.html          |   0
- {site =&gt; docs}/._ComputerProjects005.html          |   0
- {site =&gt; docs}/._ComputerProjects006.html          |   0
- {site =&gt; docs}/._ComputerProjects007.html          |   0
- {site =&gt; docs}/._ComputerProjects008.html          |   0
- {site =&gt; docs}/._ComputerProjects009.html          |   0
- {site =&gt; docs}/._ComputerProjects010.html          |   0
- {site =&gt; docs}/._ComputerProjects011.html          |   0
- {site =&gt; docs}/._ComputerProjects012.html          |   0
- {site =&gt; docs}/._ComputerProjects013.html          |   0
- {site =&gt; docs}/._ComputerProjects014.html          |   0
- {site =&gt; docs}/._ComputerProjects015.html          |   0
- {site =&gt; docs}/._ComputerProjects016.html          |   0
- {site =&gt; docs}/._ComputerProjects017.html          |   0
- {site =&gt; docs}/._ComputerProjects018.html          |   0
- {site =&gt; docs}/._ComputerProjects019.html          |   0
- {site =&gt; docs}/._ComputerProjects020.html          |   0
- {site =&gt; docs}/._ComputerProjects021.html          |   0
- {site =&gt; docs}/._ComputerProjects022.html          |   0
- {site =&gt; docs}/._ComputerProjects023.html          |   0
- {site =&gt; docs}/._ComputerProjects024.html          |   0
- {site =&gt; docs}/._ComputerProjects025.html          |   0
- {site =&gt; docs}/._ComputerProjects026.html          |   0
- {site =&gt; docs}/._ComputerProjects027.html          |   0
- {site =&gt; docs}/._EmergencyPlans000.html            |   0
- .../._HappyHippieLifestyleProjects000.html         |   0
- .../._HappyHippieLifestyleProjects001.html         |   0
- .../._HappyHippieLifestyleProjects002.html         |   0
- .../._HappyHippieLifestyleProjects003.html         |   0
- .../._HappyHippieLifestyleProjects004.html         |   0
- {site =&gt; docs}/._IoTProjects000.html               |   0
- {site =&gt; docs}/._IoTProjects001.html               |   0
- {site =&gt; docs}/._IoTProjects002.html               |   0
- {site =&gt; docs}/._IoTProjects003.html               |   0
- {site =&gt; docs}/._IoTProjects004.html               |   0
- {site =&gt; docs}/._IoTProjects005.html               |   0
- {site =&gt; docs}/._IoTProjects006.html               |   0
- {site =&gt; docs}/._IoTProjects007.html               |   0
- {site =&gt; docs}/._IoTProjects008.html               |   0
- {site =&gt; docs}/._IoTProjects009.html               |   0
- {site =&gt; docs}/._IoTProjects010.html               |   0
- {site =&gt; docs}/._NorthWoodsCottage000.html         |   0
- {site =&gt; docs}/._RoboticsProjects000.html          |   0
- {site =&gt; docs}/._RoboticsProjects001.html          |   0
- {site =&gt; docs}/._RoboticsProjects002.html          |   0
- {site =&gt; docs}/._RoboticsProjects003.html          |   0
- {site =&gt; docs}/._RoboticsProjects004.html          |   0
- {site =&gt; docs}/._RoboticsProjects005.html          |   0
- {site =&gt; docs}/._RoboticsProjects006.html          |   0
- {site =&gt; docs}/._RoboticsProjects007.html          |   0
- {site =&gt; docs}/._ShootingProjects000.html          |   0
- {site =&gt; docs}/._TemporaryRetirement000.html       |   0
- {site =&gt; docs}/._ThistleRidgeFarmProjects000.html  |   0
- {site =&gt; docs}/._ThistleRidgeFarmProjects001.html  |   0
- {site =&gt; docs}/._ThistleRidgeFarmProjects002.html  |   0
- {site =&gt; docs}/._ThistleRidgeFarmProjects003.html  |   0
- {site =&gt; docs}/._WoodWorking000.html               |   0
- {site =&gt; docs}/._index000.html                     | 113 +++++++++++++++++++--
- {site =&gt; docs}/AlternativeEnergyProjects.html      |   0
- {site =&gt; docs}/Apiary.html                         |   0
- {site =&gt; docs}/BoatProjects.html                   |   0
- {site =&gt; docs}/BusinessIdeas.html                  |   0
- {site =&gt; docs}/ComputerProjects.html               |   0
- {site =&gt; docs}/EmergencyPlans.html                 |   0
- {site =&gt; docs}/HappyHippieLifestyleProjects.html   |   0
- {site =&gt; docs}/IoTProjects.html                    |   0
- {site =&gt; docs}/NorthWoodsCottage.html              |   0
- {site =&gt; docs}/RoboticsProjects.html               |   0
- {site =&gt; docs}/ShootingProjects.html               |   0
- {site =&gt; docs}/TemporaryRetirement.html            |   0
- {site =&gt; docs}/ThistleRidgeFarmProjects.html       |   0
- {site =&gt; docs}/WoodWorking.html                    |   0
- {site =&gt; docs}/everything.html                     |   0
- {site =&gt; docs}/index.html                          | 113 +++++++++++++++++++--
- 87 files changed, 206 insertions(+), 20 deletions(-)
 </pre></div>
 <p>
 
