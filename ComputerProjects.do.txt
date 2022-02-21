@@ -184,11 +184,10 @@ __BOM:__
 * "BLE widget": "https://www.adafruit.com/product/2995"
 
 __Notes:__
-* https://gizmodo.com/beartooth-radio-turns-your-smartphone-into-a-walkie-tal-1635661204
-* https://www.youtube.com/watch?v=4U5ArX7J7ps
-* https://www.walkietalkiecentral.com/frs-vs-gmrs/
-* https://hackaday.io/project/3488-universal-bluetooth-audio-adapter
-* https://forums.radioreference.com/threads/would-a-gmrs-frs-radio-built-into-a-smartphone-or-battery-case-interest-you.394416/
+* "FortNine on earbuds": "https://www.youtube.com/watch?v=4U5ArX7J7ps"
+* "Bluetooth mixer": "https://hackaday.io/project/3488-universal-bluetooth-audio-adapter"
+* "Another hardware integration": "https://forums.radioreference.com/threads/would-a-gmrs-frs-radio-built-into-a-smartphone-or-battery-case-interest-you.394416/"
+* How about a LoRa or Wifi mesh tranceivers ala "BearTooth": "https://beartooth.com/"?
 
 !split
 ======= Track GDD =======
