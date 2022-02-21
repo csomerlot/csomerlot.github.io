@@ -171,16 +171,16 @@ o Cross-use capable for skiing, hiking, trekking, and emergencies that are out o
 o Components that are cheap enough to keep spares of or available enough to find anywhere
 
 __Phasing:__
-o Purchase radio unit
-o Start with wired connectivity, with phone and radio in tank bag:
-    o Build "stereo-line mixer": "https://www.amazon.com/Saramonic-SmartRig-Microphone-Camcorders-Smartphones/dp/B0716NNXF4?ref_=fsclp_pl_dp_2" to combine radio, phone, and earbuds
-    o Add handlebar switch to mic for PTT
+o Purchase "radio unit": "https://www.baofengradio.com/products/gt-5r" (done)
+o Start with wired connectivity, with phone and radio in tank bag (done):
+    o Build "stereo-line mixer": "https://www.monoprice.com/product?p_id=10146" to combine radio, phone, and earbuds 
+    o Add "handlebar switch": "https://baofengtech.com/product/adapter-3-5mm/" to mic for PTT
 o Add wireless integration
     o Build radio mount with charge bracket
     o Build custom Bluetooth audio adapter to connect radio to phone
 
 __BOM:__
-* "GPRS/FRS radio": "https://www.amazon.com/Midland-GXT1000VP4-Channel-Two-Way-Waterproof/dp/B001WMFYH4"
+* Any GPRS/FRS radio
 * "BLE widget": "https://www.adafruit.com/product/2995"
 
 __Notes:__
@@ -188,6 +188,7 @@ __Notes:__
 * https://www.youtube.com/watch?v=4U5ArX7J7ps
 * https://www.walkietalkiecentral.com/frs-vs-gmrs/
 * https://hackaday.io/project/3488-universal-bluetooth-audio-adapter
+* https://forums.radioreference.com/threads/would-a-gmrs-frs-radio-built-into-a-smartphone-or-battery-case-interest-you.394416/
 
 !split
 ======= Track GDD =======

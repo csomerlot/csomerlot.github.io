@@ -103,7 +103,7 @@ end of tocinfo -->
 <br>
 
 <p>
-<center><h4>Jan 29, 2022</h4></center> <!-- date -->
+<center><h4>Feb 21, 2022</h4></center> <!-- date -->
 <br>
 <p>
 I have a lot of ideas, and getting them jotted down helps me focus on other things. That, and I love to innovate and engineer anything I can.
@@ -147,7 +147,101 @@ I have a lot of ideas, and getting them jotted down helps me focus on other thin
 <p>
 
 <!-- code=text (!bc txt) typeset with pygments style "default" -->
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span>commit f3addc18f88a8894d9025b4fd612b189b039d00d
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span>commit 8e1b712594c3819cced3401209eec6eb7d3ddfdf
+Author: Chris Somerlot &lt;csomerlot@brwncald.com&gt;
+Date:   Sat Jan 29 23:32:03 2022 -0500
+
+    again
+
+ docs/ComputerProjects000.html                    | 210 --------------------
+ docs/ComputerProjects009.html                    | 212 ---------------------
+ docs/ComputerProjects020.html                    | 212 ---------------------
+ ...s000.html =&gt; AlternativeEnergyProjects000.html} |   0
+ docs/Apiary.html                                   |   2 +-
+ docs/{Apiary000.html =&gt; Apiary000.html}          |   2 +-
+ docs/{Apiary001.html =&gt; Apiary001.html}          |   2 +-
+ docs/BoatProjects.html                             |  34 ++--
+ ...BoatProjects000.html =&gt; BoatProjects000.html} |  34 ++--
+ ...BoatProjects001.html =&gt; BoatProjects001.html} |  22 +--
+ ...BoatProjects002.html =&gt; BoatProjects002.html} |  20 +-
+ docs/BusinessIdeas.html                            |  46 ++---
+ ...BusinessIdeas000.html =&gt; BusinessIdeas000.html} |  46 ++---
+ ...BusinessIdeas001.html =&gt; BusinessIdeas001.html} |  20 +-
+ ...BusinessIdeas002.html =&gt; BusinessIdeas002.html} |  18 +-
+ docs/ComputerProjects.html                         | 112 +++++------
+ docs/ComputerProjects000.html                      | 210 ++++++++++++++++++++
+ ...erProjects001.html =&gt; ComputerProjects001.html} |  58 +++---
+ ...erProjects002.html =&gt; ComputerProjects002.html} |  60 +++---
+ ...erProjects003.html =&gt; ComputerProjects003.html} |  58 +++---
+ ...erProjects004.html =&gt; ComputerProjects004.html} |  60 +++---
+ ...erProjects005.html =&gt; ComputerProjects005.html} |  58 +++---
+ ...erProjects006.html =&gt; ComputerProjects006.html} |  58 +++---
+ ...erProjects007.html =&gt; ComputerProjects007.html} |  58 +++---
+ ...erProjects008.html =&gt; ComputerProjects008.html} |  54 +++---
+ docs/ComputerProjects009.html                      | 212 +++++++++++++++++++++
+ ...erProjects010.html =&gt; ComputerProjects010.html} |  58 +++---
+ ...erProjects011.html =&gt; ComputerProjects011.html} |  60 +++---
+ ...erProjects012.html =&gt; ComputerProjects012.html} |  60 +++---
+ ...erProjects013.html =&gt; ComputerProjects013.html} |  60 +++---
+ ...erProjects014.html =&gt; ComputerProjects014.html} |  58 +++---
+ ...erProjects015.html =&gt; ComputerProjects015.html} |  58 +++---
+ ...erProjects016.html =&gt; ComputerProjects016.html} |  54 +++---
+ ...erProjects017.html =&gt; ComputerProjects017.html} |  58 +++---
+ ...erProjects018.html =&gt; ComputerProjects018.html} |  58 +++---
+ ...erProjects019.html =&gt; ComputerProjects019.html} |  60 +++---
+ docs/ComputerProjects020.html                      | 212 +++++++++++++++++++++
+ ...erProjects021.html =&gt; ComputerProjects021.html} |  58 +++---
+ ...erProjects022.html =&gt; ComputerProjects022.html} |  58 +++---
+ ...erProjects023.html =&gt; ComputerProjects023.html} |  58 +++---
+ ...erProjects024.html =&gt; ComputerProjects024.html} |  58 +++---
+ ...erProjects025.html =&gt; ComputerProjects025.html} |  58 +++---
+ ...erProjects026.html =&gt; ComputerProjects026.html} |  58 +++---
+ ...erProjects027.html =&gt; ComputerProjects027.html} |  58 +++---
+ docs/EmergencyPlans.html                           |   2 +-
+ ...ergencyPlans000.html =&gt; EmergencyPlans000.html} |   2 +-
+ docs/HappyHippieLifestyleProjects.html             |  82 ++++----
+ ...0.html =&gt; HappyHippieLifestyleProjects000.html} |  82 ++++----
+ ...1.html =&gt; HappyHippieLifestyleProjects001.html} |  48 ++---
+ ...2.html =&gt; HappyHippieLifestyleProjects002.html} |  52 ++---
+ ...3.html =&gt; HappyHippieLifestyleProjects003.html} |  54 +++---
+ ...4.html =&gt; HappyHippieLifestyleProjects004.html} |  46 ++---
+ docs/IoTProjects.html                              |  46 ++---
+ .../{IoTProjects000.html =&gt; IoTProjects000.html} |  46 ++---
+ .../{IoTProjects001.html =&gt; IoTProjects001.html} |  26 +--
+ .../{IoTProjects002.html =&gt; IoTProjects002.html} |  28 +--
+ .../{IoTProjects003.html =&gt; IoTProjects003.html} |  28 +--
+ .../{IoTProjects004.html =&gt; IoTProjects004.html} |  28 +--
+ .../{IoTProjects005.html =&gt; IoTProjects005.html} |  26 +--
+ .../{IoTProjects006.html =&gt; IoTProjects006.html} |  26 +--
+ .../{IoTProjects007.html =&gt; IoTProjects007.html} |  22 +--
+ .../{IoTProjects008.html =&gt; IoTProjects008.html} |  26 +--
+ .../{IoTProjects009.html =&gt; IoTProjects009.html} |  26 +--
+ .../{IoTProjects010.html =&gt; IoTProjects010.html} |  26 +--
+ ...dsCottage000.html =&gt; NorthWoodsCottage000.html} |   0
+ docs/RoboticsProjects.html                         |  26 +--
+ ...csProjects000.html =&gt; RoboticsProjects000.html} |  26 +--
+ ...csProjects001.html =&gt; RoboticsProjects001.html} |  16 +-
+ ...csProjects002.html =&gt; RoboticsProjects002.html} |  16 +-
+ ...csProjects003.html =&gt; RoboticsProjects003.html} |  16 +-
+ ...csProjects004.html =&gt; RoboticsProjects004.html} |  16 +-
+ ...csProjects005.html =&gt; RoboticsProjects005.html} |  16 +-
+ ...csProjects006.html =&gt; RoboticsProjects006.html} |  16 +-
+ ...csProjects007.html =&gt; RoboticsProjects007.html} |  16 +-
+ ...ngProjects000.html =&gt; ShootingProjects000.html} |   0
+ ...irement000.html =&gt; TemporaryRetirement000.html} |   0
+ docs/ThistleRidgeFarmProjects.html                 |  76 ++++----
+ ...ts000.html =&gt; ThistleRidgeFarmProjects000.html} |  76 ++++----
+ ...ts001.html =&gt; ThistleRidgeFarmProjects001.html} |  44 ++---
+ ...ts002.html =&gt; ThistleRidgeFarmProjects002.html} |  44 ++---
+ ...ts003.html =&gt; ThistleRidgeFarmProjects003.html} |  56 +++---
+ .../{WoodWorking000.html =&gt; WoodWorking000.html} |   0
+ docs/everything.html                               |  12 +-
+ docs/index.html                                    | 103 +++++-----
+ docs/{index000.html =&gt; index000.html}            | 103 +++++-----
+ publish.py                                         |   4 +-
+ 86 files changed, 2247 insertions(+), 2237 deletions(-)
+
+commit f3addc18f88a8894d9025b4fd612b189b039d00d
 Author: Chris Somerlot &lt;csomerlot@brwncald.com&gt;
 Date:   Sat Jan 29 23:15:34 2022 -0500
 
@@ -256,24 +350,6 @@ Date:   Mon Jan 24 12:23:24 2022 -0500
  docs/index000.html                | 22 ++++++++++------------
  docs/index.html                     | 22 ++++++++++------------
  10 files changed, 50 insertions(+), 54 deletions(-)
-
-commit f486184805ff2a8aae1e6cee8a71115e79a14e4f
-Author: Chris Somerlot &lt;csomerlot@brwncald.com&gt;
-Date:   Mon Jan 24 11:54:18 2022 -0500
-
-    repathing linked files
-
- Apiary.do.txt                       |  8 ++++----
- BoatProjects.do.txt                 | 16 ++++++++--------
- ComputerProjects.do.txt             | 12 ++++++------
- HappyHippieLifestyleProjects.do.txt |  2 +-
- IoTProjects.do.txt                  |  4 ++--
- NorthWoodsCottage.do.txt            |  6 +++---
- ThistleRidgeFarmProjects.do.txt     |  8 ++++----
- WoodWorking.do.txt                  |  4 ++--
- docs/index000.html                | 22 ++++++++++++----------
- docs/index.html                     | 22 ++++++++++++----------
- 10 files changed, 54 insertions(+), 50 deletions(-)
 </pre></div>
 <p>
 
