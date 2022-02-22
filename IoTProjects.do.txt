@@ -411,6 +411,7 @@ not-insignificant subscription fees, and varying coverage. HAM remains the most 
 help, can be transmitted from any global location, for a variety of needs.
 
 __Feature Set:__
+o Handheld SDR
 o Uses APRS for tracking mode
 o Can be modded to suit the locale and needs of a trip
 o Can be launched airborne via flare or rocket (and recovered) for visibility and reach
@@ -422,8 +423,11 @@ o Optional yagi antenna to use as a directional beacon
 
 __Notes:__
 * Ruggedize by potting in epoxy with heat sinks?
-* https://www.byonics.com/tinytrak4
-* similar to Delorme Explorer
+* Reference builds:
+    * "Tiny tracker": "https://www.byonics.com/tinytrak4"
+    * "Inreach Explorer": "https://www.garmin.com/en-US/p/561269"
+    * "PortableSDR on Hackaday": "https://hackaday.io/project/1538-portablesdr"
+    * "Great Scott base unit": "https://www.adafruit.com/product/3583?gclid=CjwKCAiAsNKQBhAPEiwAB-I5zUZdGPTO1cpWq1uvHynsPHWheqFeQ6TxZsp3_P-s2Zo4jjYT4xDFMhoCwPQQAvD_BwE"
 
 
 # !split
