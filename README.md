@@ -9,8 +9,7 @@ Previous efforts for this documentation included Google Keep and docs, mind maps
     - install conda libraries
       - conda install doconce
 ### Editing tools:
-    - atom or VS Code or android app
-    - https://www.textdropapp.com
+    - directly in github
     - portable GIMP for making the background of images transparent
 ### Git hooks:
     - run doconce makefile
