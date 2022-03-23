@@ -161,7 +161,7 @@ Also, I like to keep my phone in my jacket pocket so there are no dangling wires
 want to have to look at the radio to use it or worry about charging it before riding.
 
 __Feature Set:__
-o Custom FRS, GMRS, or CB integration
+o Custom FRS, GMRS integration
     o GMRS appears to offer best cost-vs-performance, with usable range of a couple miles and cross-compatibility with FRS
     o "Custom-built HAM radio?": "http://projects.somerlot.net/._RoboticsProjects016.html#___sec15"
 o Integration with phone for multi-audio stream management

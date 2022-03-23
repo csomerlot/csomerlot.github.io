@@ -417,13 +417,12 @@ o Can be modded to suit the locale and needs of a trip
 o Can be launched airborne via flare or rocket (and recovered) for visibility and reach
 o Can be used for personal messaging, way-point tacking, sharing progress
 o Provides a backup near-field communication device by integrating with a headset, antenna, and power source
-o Ruggedized
+o Ruggedize by potting in epoxy with heat sinks?
 o Cheap and small enough to carry spares
 o Optional yagi antenna to use as a directional beacon
 
 __Notes:__
-* Ruggedize by potting in epoxy with heat sinks?
-* Reference builds:
+* Reference devices:
     * "Tiny tracker": "https://www.byonics.com/tinytrak4"
     * "Inreach Explorer": "https://www.garmin.com/en-US/p/561269"
     * "PortableSDR on Hackaday": "https://hackaday.io/project/1538-portablesdr"
