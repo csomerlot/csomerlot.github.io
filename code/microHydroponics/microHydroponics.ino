@@ -14,8 +14,8 @@
   MIT license, all text above must be included in any redistribution
  ****************************************************/
 
-//#include <WiFi101.h>
-#include <WiFi.h> // for Feather HUZZAH32 ESP32
+#include <WiFi101.h> // for Feather M0 ATWINC1500
+//#include <WiFi.h> // for Feather HUZZAH32 ESP32
 //#include <ESP8266WiFi.h>
 #include "Adafruit_MQTT.h"
 #include "Adafruit_MQTT_Client.h"
@@ -26,7 +26,7 @@
 const int switch_pin = 0;
 
 // Functions
-void MQTT_connect();
+//void MQTT_connect();
 
 WiFiClient client;
 
@@ -47,16 +47,21 @@ Adafruit_MQTT_Publish level_Tape = Adafruit_MQTT_Publish(&mqtt, AIO_USERNAME "/f
 /*************************** Sketch Code ************************************/
 
 void setup() {
+  //Configure pins for Adafruit ATWINC1500 Feather
+  WiFi.setPins(8,7,4,2);
+  
   pinMode(switch_pin, OUTPUT);
 
   Serial.begin(115200);
+  while (!Serial) { ; } // wait for serial port to connect. Needed for debugging with serial monitor only
+  
   delay(10);
 
   // Connect to WiFi access point.
   Serial.println();
   Serial.println();
 
-  Serial.print(F("Connecting to "));
+  Serial.print("Connecting to ");
   Serial.println(WLAN_SSID);
 
   WiFi.begin(WLAN_SSID, WLAN_PASS);
@@ -79,7 +84,7 @@ void setup() {
 }
 
 void loop() {
-  int8_t ret;
+  int8_t jobDuration;
   Adafruit_MQTT_Subscribe *subscription;
 
   // ping adafruit io a few times to make sure we remain connected
@@ -107,15 +112,11 @@ void loop() {
       String message = String(value);
       message.trim();
       if (message == "ON") {
-        ret = Job();
+         jobDuration= Flood();      
         break;
       }
-      //if (message == "OFF") {digitalWrite(switch_pin, HIGH);}
-      
     }
-
   }
-
 }
 
 // connect to adafruit io via MQTT
@@ -151,18 +152,22 @@ void MQTT_connect() {
   for the feed will be received almost immediately.
   */
   Serial.println("publishing to /get");
-  onoff_get.publish(0);
+  onoff_get.publish((int32_t)0);
 }
 
-int8_t Job() {
-    int timer;
+int8_t Flood() {
+    int timer = 0;
+
+    // turn on air pump and close ARV
+    digitalWrite(switch_pin, LOW);
+    
     float level_pressure_data;
     float level_tape_data;
 
     float last_level_pressure_data = 0;
     float last_level_tape_data = 0;
     while (true) {
-        timer += 15;
+        timer += 3;
         level_pressure_data = 0;
         level_tape_data = 0;
         if (! level_Pressure.publish(level_pressure_data))
@@ -184,11 +189,12 @@ int8_t Job() {
         if ((level_pressure_data < 3) || (level_tape_data < 3)){
             //send alert
         }
-        if (timer > 60) {
+        if (timer > 20) {
             //send alert
-            continue;
+            digitalWrite(switch_pin, HIGH);
+            break;
         }
-        delay(30000);
+        delay(3000);
     }
     return timer;
 }
