@@ -317,8 +317,8 @@ Offices are great places for plants, with ample windows and beneficial effects f
 <span style="color: #3D7B7B; font-style: italic">  MIT license, all text above must be included in any redistribution</span>
 <span style="color: #3D7B7B; font-style: italic"> ****************************************************/</span><span style="color: #bbbbbb"></span>
 
-<span style="color: #3D7B7B; font-style: italic">//#include &lt;WiFi101.h&gt;</span>
-<span style="color: #9C6500">#include</span><span style="color: #bbbbbb"> </span><span style="color: #3D7B7B; font-style: italic">&lt;WiFi.h&gt; // for Feather HUZZAH32 ESP32</span><span style="color: #9C6500"></span>
+<span style="color: #9C6500">#include</span><span style="color: #bbbbbb"> </span><span style="color: #3D7B7B; font-style: italic">&lt;WiFi101.h&gt; // for Feather M0 ATWINC1500</span><span style="color: #9C6500"></span>
+<span style="color: #3D7B7B; font-style: italic">//#include &lt;WiFi.h&gt; // for Feather HUZZAH32 ESP32</span>
 <span style="color: #3D7B7B; font-style: italic">//#include &lt;ESP8266WiFi.h&gt;</span>
 <span style="color: #9C6500">#include</span><span style="color: #bbbbbb"> </span><span style="color: #3D7B7B; font-style: italic">&quot;Adafruit_MQTT.h&quot;</span><span style="color: #9C6500"></span>
 <span style="color: #9C6500">#include</span><span style="color: #bbbbbb"> </span><span style="color: #3D7B7B; font-style: italic">&quot;Adafruit_MQTT_Client.h&quot;</span><span style="color: #9C6500"></span>
@@ -329,7 +329,7 @@ Offices are great places for plants, with ample windows and beneficial effects f
 <span style="color: #008000; font-weight: bold">const</span><span style="color: #bbbbbb"> </span><span style="color: #B00040">int</span><span style="color: #bbbbbb"> </span>switch_pin<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #666666">0</span>;<span style="color: #bbbbbb"></span>
 
 <span style="color: #3D7B7B; font-style: italic">// Functions</span>
-<span style="color: #B00040">void</span><span style="color: #bbbbbb"> </span><span style="color: #0000FF">MQTT_connect</span>();<span style="color: #bbbbbb"></span>
+<span style="color: #3D7B7B; font-style: italic">//void MQTT_connect();</span>
 
 WiFiClient<span style="color: #bbbbbb"> </span>client;<span style="color: #bbbbbb"></span>
 
@@ -350,16 +350,21 @@ Adafruit_MQTT_Publish<span style="color: #bbbbbb"> </span>level_Tape<span style=
 <span style="color: #3D7B7B; font-style: italic">/*************************** Sketch Code ************************************/</span><span style="color: #bbbbbb"></span>
 
 <span style="color: #B00040">void</span><span style="color: #bbbbbb"> </span><span style="color: #0000FF">setup</span>()<span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">  </span><span style="color: #3D7B7B; font-style: italic">//Configure pins for Adafruit ATWINC1500 Feather</span>
+<span style="color: #bbbbbb">  </span>WiFi.setPins(<span style="color: #666666">8</span>,<span style="color: #666666">7</span>,<span style="color: #666666">4</span>,<span style="color: #666666">2</span>);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">  </span>
 <span style="color: #bbbbbb">  </span>pinMode(switch_pin,<span style="color: #bbbbbb"> </span>OUTPUT);<span style="color: #bbbbbb"></span>
 
 <span style="color: #bbbbbb">  </span>Serial.begin(<span style="color: #666666">115200</span>);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">while</span><span style="color: #bbbbbb"> </span>(<span style="color: #666666">!</span>Serial)<span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"> </span>;<span style="color: #bbbbbb"> </span>}<span style="color: #bbbbbb"> </span><span style="color: #3D7B7B; font-style: italic">// wait for serial port to connect. Needed for debugging with serial monitor only</span>
+<span style="color: #bbbbbb">  </span>
 <span style="color: #bbbbbb">  </span>delay(<span style="color: #666666">10</span>);<span style="color: #bbbbbb"></span>
 
 <span style="color: #bbbbbb">  </span><span style="color: #3D7B7B; font-style: italic">// Connect to WiFi access point.</span>
 <span style="color: #bbbbbb">  </span>Serial.println();<span style="color: #bbbbbb"></span>
 <span style="color: #bbbbbb">  </span>Serial.println();<span style="color: #bbbbbb"></span>
 
-<span style="color: #bbbbbb">  </span>Serial.print(F(<span style="color: #BA2121">&quot;Connecting to &quot;</span>));<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">  </span>Serial.print(<span style="color: #BA2121">&quot;Connecting to &quot;</span>);<span style="color: #bbbbbb"></span>
 <span style="color: #bbbbbb">  </span>Serial.println(WLAN_SSID);<span style="color: #bbbbbb"></span>
 
 <span style="color: #bbbbbb">  </span>WiFi.begin(WLAN_SSID,<span style="color: #bbbbbb"> </span>WLAN_PASS);<span style="color: #bbbbbb"></span>
@@ -382,7 +387,7 @@ Adafruit_MQTT_Publish<span style="color: #bbbbbb"> </span>level_Tape<span style=
 }<span style="color: #bbbbbb"></span>
 
 <span style="color: #B00040">void</span><span style="color: #bbbbbb"> </span><span style="color: #0000FF">loop</span>()<span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">  </span><span style="color: #B00040">int8_t</span><span style="color: #bbbbbb"> </span>ret;<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">  </span><span style="color: #B00040">int8_t</span><span style="color: #bbbbbb"> </span>jobDuration;<span style="color: #bbbbbb"></span>
 <span style="color: #bbbbbb">  </span>Adafruit_MQTT_Subscribe<span style="color: #bbbbbb"> </span><span style="color: #666666">*</span>subscription;<span style="color: #bbbbbb"></span>
 
 <span style="color: #bbbbbb">  </span><span style="color: #3D7B7B; font-style: italic">// ping adafruit io a few times to make sure we remain connected</span>
@@ -410,15 +415,13 @@ Adafruit_MQTT_Publish<span style="color: #bbbbbb"> </span>level_Tape<span style=
 <span style="color: #bbbbbb">      </span>String<span style="color: #bbbbbb"> </span>message<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>String(value);<span style="color: #bbbbbb"></span>
 <span style="color: #bbbbbb">      </span>message.trim();<span style="color: #bbbbbb"></span>
 <span style="color: #bbbbbb">      </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #bbbbbb"> </span>(message<span style="color: #bbbbbb"> </span><span style="color: #666666">==</span><span style="color: #bbbbbb"> </span><span style="color: #BA2121">&quot;ON&quot;</span>)<span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">        </span>ret<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>Job();<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">        </span>jobDuration<span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>Flood();<span style="color: #bbbbbb">      </span>
+<span style="color: #bbbbbb">        </span>Serial.println(<span style="color: #BA2121">&quot;publishing to /get&quot;</span>);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">        </span>onoff_get.publish((<span style="color: #B00040">int32_t</span>)jobDuration);<span style="color: #bbbbbb"></span>
 <span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">break</span>;<span style="color: #bbbbbb"></span>
 <span style="color: #bbbbbb">      </span>}<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">      </span><span style="color: #3D7B7B; font-style: italic">//if (message == &quot;OFF&quot;) {digitalWrite(switch_pin, HIGH);}</span>
-<span style="color: #bbbbbb">      </span>
 <span style="color: #bbbbbb">    </span>}<span style="color: #bbbbbb"></span>
-
 <span style="color: #bbbbbb">  </span>}<span style="color: #bbbbbb"></span>
-
 }<span style="color: #bbbbbb"></span>
 
 <span style="color: #3D7B7B; font-style: italic">// connect to adafruit io via MQTT</span>
@@ -454,18 +457,22 @@ Adafruit_MQTT_Publish<span style="color: #bbbbbb"> </span>level_Tape<span style=
 <span style="color: #3D7B7B; font-style: italic">  for the feed will be received almost immediately.</span>
 <span style="color: #3D7B7B; font-style: italic">  */</span><span style="color: #bbbbbb"></span>
 <span style="color: #bbbbbb">  </span>Serial.println(<span style="color: #BA2121">&quot;publishing to /get&quot;</span>);<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">  </span>onoff_get.publish(<span style="color: #666666">0</span>);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">  </span>onoff_get.publish((<span style="color: #B00040">int32_t</span>)<span style="color: #666666">0</span>);<span style="color: #bbbbbb"></span>
 }<span style="color: #bbbbbb"></span>
 
-<span style="color: #B00040">int8_t</span><span style="color: #bbbbbb"> </span><span style="color: #0000FF">Job</span>()<span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">    </span><span style="color: #B00040">int</span><span style="color: #bbbbbb"> </span>timer;<span style="color: #bbbbbb"></span>
+<span style="color: #B00040">int8_t</span><span style="color: #bbbbbb"> </span><span style="color: #0000FF">Flood</span>()<span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span><span style="color: #B00040">int</span><span style="color: #bbbbbb"> </span>timer<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #666666">0</span>;<span style="color: #bbbbbb"></span>
+
+<span style="color: #bbbbbb">    </span><span style="color: #3D7B7B; font-style: italic">// turn on air pump and close ARV</span>
+<span style="color: #bbbbbb">    </span>digitalWrite(switch_pin,<span style="color: #bbbbbb"> </span>LOW);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">    </span>
 <span style="color: #bbbbbb">    </span><span style="color: #B00040">float</span><span style="color: #bbbbbb"> </span>level_pressure_data;<span style="color: #bbbbbb"></span>
 <span style="color: #bbbbbb">    </span><span style="color: #B00040">float</span><span style="color: #bbbbbb"> </span>level_tape_data;<span style="color: #bbbbbb"></span>
 
 <span style="color: #bbbbbb">    </span><span style="color: #B00040">float</span><span style="color: #bbbbbb"> </span>last_level_pressure_data<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #666666">0</span>;<span style="color: #bbbbbb"></span>
 <span style="color: #bbbbbb">    </span><span style="color: #B00040">float</span><span style="color: #bbbbbb"> </span>last_level_tape_data<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #666666">0</span>;<span style="color: #bbbbbb"></span>
 <span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">while</span><span style="color: #bbbbbb"> </span>(<span style="color: #008000">true</span>)<span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">        </span>timer<span style="color: #bbbbbb"> </span><span style="color: #666666">+=</span><span style="color: #bbbbbb"> </span><span style="color: #666666">15</span>;<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">        </span>timer<span style="color: #bbbbbb"> </span><span style="color: #666666">+=</span><span style="color: #bbbbbb"> </span><span style="color: #666666">3</span>;<span style="color: #bbbbbb"></span>
 <span style="color: #bbbbbb">        </span>level_pressure_data<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #666666">0</span>;<span style="color: #bbbbbb"></span>
 <span style="color: #bbbbbb">        </span>level_tape_data<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #666666">0</span>;<span style="color: #bbbbbb"></span>
 <span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #bbbbbb"> </span>(<span style="color: #666666">!</span><span style="color: #bbbbbb"> </span>level_Pressure.publish(level_pressure_data))<span style="color: #bbbbbb"></span>
@@ -487,11 +494,12 @@ Adafruit_MQTT_Publish<span style="color: #bbbbbb"> </span>level_Tape<span style=
 <span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #bbbbbb"> </span>((level_pressure_data<span style="color: #bbbbbb"> </span><span style="color: #666666">&lt;</span><span style="color: #bbbbbb"> </span><span style="color: #666666">3</span>)<span style="color: #bbbbbb"> </span><span style="color: #666666">||</span><span style="color: #bbbbbb"> </span>(level_tape_data<span style="color: #bbbbbb"> </span><span style="color: #666666">&lt;</span><span style="color: #bbbbbb"> </span><span style="color: #666666">3</span>)){<span style="color: #bbbbbb"></span>
 <span style="color: #bbbbbb">            </span><span style="color: #3D7B7B; font-style: italic">//send alert</span>
 <span style="color: #bbbbbb">        </span>}<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #bbbbbb"> </span>(timer<span style="color: #bbbbbb"> </span><span style="color: #666666">&gt;</span><span style="color: #bbbbbb"> </span><span style="color: #666666">60</span>)<span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #bbbbbb"> </span>(timer<span style="color: #bbbbbb"> </span><span style="color: #666666">&gt;</span><span style="color: #bbbbbb"> </span><span style="color: #666666">20</span>)<span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"></span>
 <span style="color: #bbbbbb">            </span><span style="color: #3D7B7B; font-style: italic">//send alert</span>
-<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">continue</span>;<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">            </span>digitalWrite(switch_pin,<span style="color: #bbbbbb"> </span>HIGH);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">break</span>;<span style="color: #bbbbbb"></span>
 <span style="color: #bbbbbb">        </span>}<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">        </span>delay(<span style="color: #666666">30000</span>);<span style="color: #bbbbbb"></span>
+<span style="color: #bbbbbb">        </span>delay(<span style="color: #666666">3000</span>);<span style="color: #bbbbbb"></span>
 <span style="color: #bbbbbb">    </span>}<span style="color: #bbbbbb"></span>
 <span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #bbbbbb"> </span>timer;<span style="color: #bbbbbb"></span>
 }<span style="color: #bbbbbb"></span>
