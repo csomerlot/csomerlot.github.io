@@ -112,7 +112,9 @@ void loop() {
       String message = String(value);
       message.trim();
       if (message == "ON") {
-         jobDuration= Flood();      
+        jobDuration= Flood();      
+        Serial.println("publishing to /get");
+        onoff_get.publish((int32_t)jobDuration);
         break;
       }
     }
