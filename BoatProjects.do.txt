@@ -152,3 +152,10 @@ With the rise of electric outboards, a drive system is easier than ever when cou
 * Hull can take many forms, including houseboat, canalboat, internal docking barge, large trimaran
 * Lift points for loading onto rail flatbed for long-hauling
 * Use a pivoting gantry crane instead, like a log trailer?
+
+===== Hydrofoiling Buggy =====
+With the rise of hub motors, is an axle even required? If no axle, no through-hull? 
+* A sand-buggy or humvee style amphibious electric vehicle 
+* Aluminium unibody frame sporting 4 hub motors with wheels on parallel linkage, bolted outside of the frame
+* Then, hydrofoiled thrusters to go to "water mode": "https://candela.com/candela-c-8/"
+* Mechanical simplicity to deliver maximum range, stability, traction, with minimal weight, wake, maintenance
