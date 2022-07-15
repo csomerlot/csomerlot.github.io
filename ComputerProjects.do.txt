@@ -171,23 +171,24 @@ o Cross-use capable for skiing, hiking, trekking, and emergencies that are out o
 o Components that are cheap enough to keep spares of or available enough to find anywhere
 
 __Phasing:__
-o Purchase "radio unit": "https://www.baofengradio.com/products/gt-5r" (done)
+o Purchase "radio unit": "https://www.baofengradio.com/products/gt-5r" 
 o Start with wired connectivity, with phone and radio in tank bag (done):
+    o "Noise-cancelling earbuds": "https://www.youtube.com/watch?v=4U5ArX7J7ps" but mounting the microphone is the tricky bit
     o Build "stereo-line mixer": "https://www.monoprice.com/product?p_id=10146" to combine radio, phone, and earbuds 
     o Add "handlebar switch": "https://baofengtech.com/product/adapter-3-5mm/" to mic for PTT
 o Add wireless integration
     o Build radio mount with charge bracket
     o Build custom Bluetooth audio adapter to connect radio to phone
+    o Mount wifi AP for near-range comms a la "BearTooth": "https://beartooth.com/"?
 
 __BOM:__
 * Any GPRS/FRS radio
+* Earbuds
 * "BLE widget": "https://www.adafruit.com/product/2995"
 
 __Notes:__
-* "FortNine on earbuds": "https://www.youtube.com/watch?v=4U5ArX7J7ps"
-* "Bluetooth mixer": "https://hackaday.io/project/3488-universal-bluetooth-audio-adapter"
 * "Another hardware integration": "https://forums.radioreference.com/threads/would-a-gmrs-frs-radio-built-into-a-smartphone-or-battery-case-interest-you.394416/"
-* How about a LoRa or Wifi mesh tranceivers ala "BearTooth": "https://beartooth.com/"?
+* How about a LoRa or Wifi mesh tranceivers ala 
 
 !split
 ======= Track GDD =======

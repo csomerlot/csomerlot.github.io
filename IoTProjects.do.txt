@@ -389,7 +389,7 @@ __Phasing:__
 * IoT switch, meter, and main line valve
 * buried main line and gang valving
 * meteorological sensor pack
-* cistern with submersible pump
+* cistern with submersible pump (done)
 
 
 __BOM:__
