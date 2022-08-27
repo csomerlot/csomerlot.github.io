@@ -21,13 +21,14 @@ FIGURE: [./BookTopics, width=315 frac=0.8] Celtic Migration. label{fig:book1}
 ======= Backpacking Gear To Make =======
 - Chameleon Tent: Hammock - Bivy - all purpose tent
     * "Bridge hammock": "https://www.eurekatentscanada.com/products/view/494?s=section_4" (as opposed to gathered-ends hammock) because:
-      * I can't seem how to figure out "how to sleep comfortably": "https://www.treklightgear.com/blogs/trek-life/hammock-angle" in a gathered-ends hammock, and my legs stick out when at an angle
-      * I don't want to buy a underquilt (or do I: very light weight and can make myself?)
-      * I don't care about weight or needing poles
-    * Similar to "Eureka Solitaire": "https://eurekacamping.johnsonoutdoors.com/tents/backpacking/solitaire-al?id=21436", maybe even just figure out how to attach this into a "kit": "https://ripstopbytheroll.com/collections/diy-hammock-kits/products/pre-cut-bridge-hammock-kit?variant=7685978554416" hammock?
+      * I can't seem how to figure out "how to sleep comfortably on the diagonal": "https://www.treklightgear.com/blogs/trek-life/hammock-angle" in a gathered-ends hammock, and my legs stick out when at an angle
+      * I don't want to buy a underquilt (double-layer bottom makes a sleeve for an air pad!)
+      * I don't care about weight or needing poles or the increased hanging distance
+    * Similar to "Eureka Solitaire": "https://eurekacamping.johnsonoutdoors.com/tents/backpacking/solitaire-al?id=21436", with hoop ends and able to pitch on the ground
+    * Start with a "kit": "https://ripstopbytheroll.com/collections/diy-hammock-kits/products/pre-cut-bridge-hammock-kit?variant=7685978554416" hammock, add no-seeum netting
     * Rain flap "like this": "https://wingmanoftheroad.com/products/goose-1"
-    * Lots of "these": "https://www.amazon.com/ETROL-Mosquito-Lightweight-Portable-Hammocks/dp/B07M5SPH2Z/ref=sr_1_8?keywords=bridge%2Bhammock&qid=1650855264&sr=8-8&th=1" on Amazon these days...
-    * "Daisy chain": "https://hammockgear.com/ultralight-daisy-chain-per-foot/"
+    * Lots of "these": "https://www.amazon.com/ETROL-Mosquito-Lightweight-Portable-Hammocks/dp/B07M5SPH2Z/ref=sr_1_8?keywords=bridge%2Bhammock&qid=1650855264&sr=8-8&th=1" on Amazon these days but they all look cheap and short
+    * "Daisy chain": "https://hammockgear.com/ultralight-daisy-chain-per-foot/" for easy hanging
 * Fold-up wood burning grill with blower
     * Like "this": "https://www.amazon.com/dp/B012NHG1CS/?coliid=I32YFIHZ75Y1T&colid=LXYPR4UA5ISY&psc=1&ref_=lv_ov_lig_dp_it" but with the option of attaching a blower
     * stamp or cut myself and add disk vents and CPU fan?

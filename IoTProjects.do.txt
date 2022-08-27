@@ -387,16 +387,16 @@ o Main line plumbing hidden and removable for storage, freeze protection, repair
 __Phasing:__
 * indoor plumbing to hose cock (done)
 * IoT switch, meter, and main line valve
+    * Use wippersnapper and adafruit.io
 * buried main line and gang valving
 * meteorological sensor pack
 * cistern with submersible pump (done)
 
 
 __BOM:__
-o "Valve": "https://www.adafruit.com/product/997"
+o "Plumbing": "https://www.adafruit.com/wishlists?wid=554909"
 o "Controller": "https://www.adafruit.com/product/3619"
 o "Sensor": "https://www.adafruit.com/product/1298"
-o "Flow meter": "https://www.adafruit.com/product/828"
 
 FIGURE: [HappyHippieLifestyle/plumbing, width=900 frac=0.9] Plumbing Schematic. label{fig:plumbing}
 
