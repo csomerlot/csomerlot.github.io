@@ -394,9 +394,7 @@ __Phasing:__
 
 
 __BOM:__
-o "Plumbing": "https://www.adafruit.com/wishlists?wid=554909"
-o "Controller": "https://www.adafruit.com/product/3619"
-o "Sensor": "https://www.adafruit.com/product/1298"
+o "https://www.adafruit.com/wishlists?wid=554909"
 
 FIGURE: [HappyHippieLifestyle/plumbing, width=900 frac=0.9] Plumbing Schematic. label{fig:plumbing}
 
