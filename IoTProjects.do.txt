@@ -137,7 +137,10 @@ __Description:__
 A mobile mapping solution for use in car, boat, or bike
 
 __User Story:__
-A digital map has more to offer than hard-copy, but also, this is just my wheelhouse.
+A digital map has more to offer than hard-copy, but also, this is just my wheelhouse. BGM seems to have 
+largely captured the marine market, and android auto/apple car play for the automotive market, but these are 
+still proprietary and limited in scope. I want selective sesor integration from a variety of environments and
+COTS hardware.
 
 __Feature Set:__
 o Touchscreen
@@ -215,6 +218,7 @@ __Notes:__
 * https://learn.adafruit.com/make-it-data-log-spreadsheet-circuit-playground
 * https://thecavepearlproject.org/
 * https://learn.adafruit.com/remote-iot-environmental-sensor/overview
+* "WipperSnapper": "https://learn.adafruit.com/quickstart-adafruit-io-wippersnapper" greatly simplifies everything!
 
 __Logic:__
 o Controller:
@@ -382,15 +386,15 @@ o Flow meter used to activate alarm of valve failure and fine-tune water usage.
 o Rain, soil moisture, and localized temperature sensor pack to fine-tune water usage. Battery-powered and internet-connected for minimal wiring.
 o Gang valving and individual drippers in garden for easy access and fine control.
 o Main line plumbing hidden and removable for storage, freeze protection, repair, and protection.
+o SImple set up and, logging, and dashobarding via "WipperSnapper": "https://learn.adafruit.com/quickstart-adafruit-io-wippersnapper"
 
 
 __Phasing:__
 * indoor plumbing to hose cock (done)
-* IoT switch, meter, and main line valve
-    * Use wippersnapper and adafruit.io
-* buried main line and gang valving
-* meteorological sensor pack
 * cistern with submersible pump (done)
+* IoT switch, meter, and main line valve (done)
+* buried main line and gang valving
+* Soil moisture and flow sensors
 
 
 __BOM:__

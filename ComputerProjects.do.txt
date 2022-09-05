@@ -161,17 +161,17 @@ Also, I like to keep my phone in my jacket pocket so there are no dangling wires
 want to have to look at the radio to use it or worry about charging it before riding.
 
 __Feature Set:__
-o Custom FRS, GMRS integration
-    o GMRS appears to offer best cost-vs-performance, with usable range of a couple miles and cross-compatibility with FRS
+o Custom radio integration
+    o GMRS appears to offer best license-free cost-vs-performance, with usable range of a couple miles and cross-compatibility with FRS
     o "Custom-built HAM radio?": "http://projects.somerlot.net/._RoboticsProjects016.html#___sec15"
-o Integration with phone for multi-audio stream management
+    o Mesh wifi?
+o App-based mixer for phone for multi-audio stream management (GPS, music, and comms at once!)
 o Custom handlebar control to only activate mic during push-to-talk, or switch it to VOX for regular hands-free, or turn off music
 o Charging bracket
 o Cross-use capable for skiing, hiking, trekking, and emergencies that are out of cell range
 o Components that are cheap enough to keep spares of or available enough to find anywhere
 
 __Phasing:__
-o Purchase "radio unit": "https://www.baofengradio.com/products/gt-5r" 
 o Start with wired connectivity, with phone and radio in tank bag (done):
     o "Noise-cancelling earbuds": "https://www.youtube.com/watch?v=4U5ArX7J7ps" but mounting the microphone is the tricky bit
     o Build "stereo-line mixer": "https://www.monoprice.com/product?p_id=10146" to combine radio, phone, and earbuds 
@@ -179,16 +179,15 @@ o Start with wired connectivity, with phone and radio in tank bag (done):
 o Add wireless integration
     o Build radio mount with charge bracket
     o Build custom Bluetooth audio adapter to connect radio to phone
-    o Mount wifi AP for near-range comms a la "BearTooth": "https://beartooth.com/"?
 
 __BOM:__
-* Any GPRS/FRS radio
-* Earbuds
-* "BLE widget": "https://www.adafruit.com/product/2995"
+* TBD depending on radio
 
 __Notes:__
-* "Another hardware integration": "https://forums.radioreference.com/threads/would-a-gmrs-frs-radio-built-into-a-smartphone-or-battery-case-interest-you.394416/"
-* How about a LoRa or Wifi mesh tranceivers ala 
+* Commercial offerings:
+  * https://forums.radioreference.com/threads/would-a-gmrs-frs-radio-built-into-a-smartphone-or-battery-case-interest-you.394416/
+  * https://gotenna.com/
+  * https://beartooth.com
 
 !split
 ======= Track GDD =======

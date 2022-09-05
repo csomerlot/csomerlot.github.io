@@ -355,7 +355,7 @@ end of tocinfo -->
 <br>
 
 <p>
-<center><h4>Sep 3, 2022</h4></center> <!-- date -->
+<center><h4>Sep 5, 2022</h4></center> <!-- date -->
 <br>
 <p>
 I have a lot of ideas, and getting them jotted down helps me focus on other things. That, and I love to innovate and engineer anything I can.
@@ -2846,14 +2846,15 @@ want to have to look at the radio to use it or worry about charging it before ri
 <b>Feature Set:</b>
 
 <ol>
-<li> Custom FRS, GMRS integration
+<li> Custom radio integration
 
 <ol type="a"></li>
-   <li> GMRS appears to offer best cost-vs-performance, with usable range of a couple miles and cross-compatibility with FRS</li>
+   <li> GMRS appears to offer best license-free cost-vs-performance, with usable range of a couple miles and cross-compatibility with FRS</li>
    <li> <a href="http://projects.somerlot.net/RoboticsProjects016.html#___sec15" target="_self">Custom-built HAM radio?</a></li>
+   <li> Mesh wifi?</li>
 </ol>
 
-<li> Integration with phone for multi-audio stream management</li>
+<li> App-based mixer for phone for multi-audio stream management (GPS, music, and comms at once!)</li>
 <li> Custom handlebar control to only activate mic during push-to-talk, or switch it to VOX for regular hands-free, or turn off music</li>
 <li> Charging bracket</li>
 <li> Cross-use capable for skiing, hiking, trekking, and emergencies that are out of cell range</li>
@@ -2863,7 +2864,6 @@ want to have to look at the radio to use it or worry about charging it before ri
 <b>Phasing:</b>
 
 <ol>
-<li> Purchase <a href="https://www.baofengradio.com/products/gt-5r" target="_self">radio unit</a></li> 
 <li> Start with wired connectivity, with phone and radio in tank bag (done):
 
 <ol type="a"></li>
@@ -2877,7 +2877,6 @@ want to have to look at the radio to use it or worry about charging it before ri
 <ol type="a"></li>
    <li> Build radio mount with charge bracket</li>
    <li> Build custom Bluetooth audio adapter to connect radio to phone</li>
-   <li> Mount wifi AP for near-range comms a la <a href="https://beartooth.com/" target="_self">BearTooth</a>?</li>
 </ol>
 
 </ol>
@@ -2885,16 +2884,20 @@ want to have to look at the radio to use it or worry about charging it before ri
 <b>BOM:</b>
 
 <ul>
-<li> Any GPRS/FRS radio</li>
-<li> Earbuds</li>
-<li> <a href="https://www.adafruit.com/product/2995" target="_self">BLE widget</a></li>
+<li> TBD depending on radio</li>
 </ul>
 
 <b>Notes:</b>
 
 <ul>
-<li> <a href="https://forums.radioreference.com/threads/would-a-gmrs-frs-radio-built-into-a-smartphone-or-battery-case-interest-you.394416/" target="_self">Another hardware integration</a></li>
-<li> How about a LoRa or Wifi mesh tranceivers ala</li> 
+<li> Commercial offerings:</li>
+
+<ul>
+  <li> <a href="https://forums.radioreference.com/threads/would-a-gmrs-frs-radio-built-into-a-smartphone-or-battery-case-interest-you.394416/" target="_self"><tt>https://forums.radioreference.com/threads/would-a-gmrs-frs-radio-built-into-a-smartphone-or-battery-case-interest-you.394416/</tt></a></li>
+  <li> <a href="https://gotenna.com/" target="_self"><tt>https://gotenna.com/</tt></a></li>
+  <li> <a href="https://beartooth.com" target="_self"><tt>https://beartooth.com</tt></a></li>
+</ul>
+
 </ul>
 
 <!-- !split -->
@@ -3538,7 +3541,10 @@ A mobile mapping solution for use in car, boat, or bike
 
 <p>
 <b>User Story:</b>
-A digital map has more to offer than hard-copy, but also, this is just my wheelhouse.
+A digital map has more to offer than hard-copy, but also, this is just my wheelhouse. BGM seems to have 
+largely captured the marine market, and android auto/apple car play for the automotive market, but these are 
+still proprietary and limited in scope. I want selective sesor integration from a variety of environments and
+COTS hardware.
 
 <p>
 <b>Feature Set:</b>
@@ -3648,6 +3654,7 @@ provide alarms, or use it in more remote conditions and have it upload once wifi
 <li> <a href="https://learn.adafruit.com/make-it-data-log-spreadsheet-circuit-playground" target="_self"><tt>https://learn.adafruit.com/make-it-data-log-spreadsheet-circuit-playground</tt></a></li>
 <li> <a href="https://thecavepearlproject.org/" target="_self"><tt>https://thecavepearlproject.org/</tt></a></li>
 <li> <a href="https://learn.adafruit.com/remote-iot-environmental-sensor/overview" target="_self"><tt>https://learn.adafruit.com/remote-iot-environmental-sensor/overview</tt></a></li>
+<li> <a href="https://learn.adafruit.com/quickstart-adafruit-io-wippersnapper" target="_self">WipperSnapper</a> greatly simplifies everything!</li>
 </ul>
 
 <b>Logic:</b>
@@ -4402,21 +4409,17 @@ We leave the house for extended periods during hot dry weather and know that we 
 <li> Rain, soil moisture, and localized temperature sensor pack to fine-tune water usage. Battery-powered and internet-connected for minimal wiring.</li>
 <li> Gang valving and individual drippers in garden for easy access and fine control.</li>
 <li> Main line plumbing hidden and removable for storage, freeze protection, repair, and protection.</li>
+<li> SImple set up and, logging, and dashobarding via <a href="https://learn.adafruit.com/quickstart-adafruit-io-wippersnapper" target="_self">WipperSnapper</a></li>
 </ol>
 
 <b>Phasing:</b>
 
 <ul>
 <li> indoor plumbing to hose cock (done)</li>
-<li> IoT switch, meter, and main line valve</li>
-
-<ul>
-    <li> Use wippersnapper and adafruit.io</li>
-</ul>
-
-<li> buried main line and gang valving</li>
-<li> meteorological sensor pack</li>
 <li> cistern with submersible pump (done)</li>
+<li> IoT switch, meter, and main line valve (done)</li>
+<li> buried main line and gang valving</li>
+<li> Soil moisture and flow sensors</li>
 </ul>
 
 <b>BOM:</b>
