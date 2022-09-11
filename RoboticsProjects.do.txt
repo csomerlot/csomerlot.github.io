@@ -57,6 +57,7 @@ __Feature Set:__
     * ASPRS for global, daily logging of location, vital metrics
     * On-demand wifi for debugging
     * Low-power, long-range packet radio receiver for actuating beacons
+    * "Iridium sat comms": "https://www.adafruit.com/product/4521"
 * Fail-safes:
     * Coordinate with round-the-world sailing orgs for manual recovery
     * Emergency surfacing and diving

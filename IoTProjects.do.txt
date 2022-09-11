@@ -26,6 +26,9 @@ __BOM:__
 * Wifi:
   * "cheap option": "https://www.adafruit.com/product/1030"
   * "Long-range": "https://www.alfa.com.tw/products_detail/8.htm"
+* Location:
+  * "GPS": "https://www.adafruit.com/product/2324"
+  * "IMU": "https://www.adafruit.com/product/4754"
 
 __Notes:__
 * Similar to the "PiTop": "https://www.adafruit.com/product/3762", with a compact housing
@@ -139,7 +142,7 @@ A mobile mapping solution for use in car, boat, or bike
 __User Story:__
 A digital map has more to offer than hard-copy, but also, this is just my wheelhouse. BGM seems to have 
 largely captured the marine market, and android auto/apple car play for the automotive market, but these are 
-still proprietary and limited in scope. I want selective sesor integration from a variety of environments and
+still proprietary and limited in scope. I want selective sensor integration from a variety of environments and
 COTS hardware.
 
 __Feature Set:__
@@ -202,13 +205,10 @@ __Phasing:__
 * ruggedize
 
 __BOM:__
-* Base Unit: "Adafruit Feather M0 WiFi - ATSAMD21 + ATWINC1500": "https://www.adafruit.com/product/3010"
+* Base Unit: "Adafruit Feather0": "https://www.adafruit.com/product/5303"
 * Base Unit: "Lithium Ion Battery Pack - 3.7V 6600mAh": "https://www.adafruit.com/product/353"
 * Base Unit: "Adafruit FeatherWing OLED - 128x32 OLED Add-on For Feather": "https://www.adafruit.com/product/2900"
-* "Air Temperature, Humidity, Pressure and Gas Sensor": "https://www.adafruit.com/product/3660"
-* "Air Quality Sensor": "https://www.adafruit.com/product/3686"
-* "Air Quality Sensor Breakout - VOC and eCO2": "https://www.adafruit.com/product/3709"
-* "CO, Alcohol and VOC Gas Sensor": "https://www.adafruit.com/product/3199"
+* "Air Quality and Gas Sensor": "https://www.adafruit.com/product/3709"
 * "Water turbidity and temp": "https://www.digikey.com/products/en?keywords=165D6042P003"
 * "Water pressure": "https://www.digikey.com/products/en?keywords=480-6244-ND"
 * "Non-intrusive current sensors": "https://tinyurl.com/y4jmsg6z"
@@ -220,23 +220,6 @@ __Notes:__
 * https://learn.adafruit.com/remote-iot-environmental-sensor/overview
 * "WipperSnapper": "https://learn.adafruit.com/quickstart-adafruit-io-wippersnapper" greatly simplifies everything!
 
-__Logic:__
-o Controller:
-    o Read data
-    o Save data to data file
-    o If communications enabled:
-        o If MQTT feed not present, establish one
-    o Log everything
-    o Pause (vary time by event status or actively via MQTT)
-        o break if button is pressed
-    o loop back to step 2
-o Host:
-    o Check for alarm levels
-    o Log everything
-
-__Controller Arduino Code:__
-
-@@@CODE ./code/StreamDataLogger.ino envir=cpro
 
 !split
 ======= Micro Hydroponics =======
@@ -282,7 +265,7 @@ o triple-tote system:
 o Open-top cabinet on casters to hold everything and make pretty
 
 __BOM:__
-* "Adafruit Huzzah ESP8266": "https://www.adafruit.com/product/2471" or "Adafruit ESP32 Feather": "http://adafru.it/3619" or "Adafruit Feather m0 with WiFi": "https://www.adafruit.com/product/3010"
+* "Adafruit ESP32 Feather": "http://adafru.it/3619"
 * "12in Chemical eTape Liquid Level Sensor": "https://www.adafruit.com/product/464"
 * "Mini solenoid air valve": "https://www.adafruit.com/product/4663"
 * "Controllable Four Outlet Power Relay Module version 2": "https://www.adafruit.com/product/2935"
@@ -414,14 +397,12 @@ help, can be transmitted from any global location, for a variety of needs.
 
 __Feature Set:__
 o Handheld SDR
-o Uses APRS for tracking mode
+o Uses APRS+GPS for tracking mode
 o Can be modded to suit the locale and needs of a trip
-o Can be launched airborne via flare or rocket (and recovered) for visibility and reach
-o Can be used for personal messaging, way-point tacking, sharing progress
-o Provides a backup near-field communication device by integrating with a headset, antenna, and power source
+o Can be used for personal emergency messaging, way-point tacking, sharing progress
 o Ruggedize by potting in epoxy with heat sinks?
 o Cheap and small enough to carry spares
-o Optional yagi antenna to use as a directional beacon
+o Yagi antenna to use as a directional beacon?
 
 __Notes:__
 * Reference devices:
