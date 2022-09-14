@@ -268,7 +268,7 @@ __Notes:__
 # __Code:__
 # @@@CODE ./filepath envir=Xpro
 
-# FIGURE: [path, width=900 frac=0.9] Something. label{fig:tag}
+# FIGURE: [path, width=900 frac=0.9] Something. label{fig:temp}
 
 
 !split
