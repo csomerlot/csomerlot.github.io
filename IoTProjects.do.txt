@@ -379,6 +379,10 @@ __Phasing:__
 * buried main line and gang valving
 * Soil moisture and flow sensors
 
+__Iterations:__
+o Housed in outdoor electrical box, but leaked and destroyed board with moisture. 
+    o Use 3D printed enclosure that includes an oring?
+    o Forgo the combined electronics and just use a simple wifi-controlled outlet relay to drive the valve power supply?
 
 __BOM:__
 o "https://www.adafruit.com/wishlists?wid=554909"

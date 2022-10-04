@@ -143,7 +143,6 @@ __BOM:__
 ======= Invasive Species Patroller =======
 __Description:__ An outdoor version of a roomba-like crawler than can identify and deal with a targeted invasive species
 
-!split
 ======= Signal-Tracking Antenna Mount =======
 
 __Description:__
@@ -152,11 +151,22 @@ A mechanism to automate the pointing of recevier/transmitter sensors.
 __User Story:__
 If my awesome new FOS laser link at remote data IoT device can't communicate, its not nearly as useful.
 
+======= CAM Maker Frame =======
 
+__Description:__
+A frame that can house a variety of tools on a rack and pinion drive system, and a vacuum table to anchor pieces
 
+__User Story:__
+Why have separate machines for all the tools when they all can work with one...
 
-
-
+__Features:__
+o Tools:
+    o pens/markers
+    o router
+    o drag knife
+    o laser
+    o water jet
+    o metal torch
 
 # !split
 # ======= Template =======

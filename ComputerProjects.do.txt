@@ -26,6 +26,7 @@ o Dev Environment
             o DesignSpark Mechanical
               o Opens .skp!
               o But no linux
+            o Autodesk Fusion (but not free)
         o Blockly
         o Anaconda Python Env
         o Atom
@@ -245,30 +246,6 @@ o Usage
     o Output
         o This is the secret part, and will be filled in later.
 o "Download installer": "https://s3.amazonaws.com/projects.somerlot.net/Programming/setup.exe" (if you have permissions)
-
-!split
-======= Homemade Variable Frequency Drive =======
-
-__Description:__
-VFDs really help manage motor performance, and life span. A well pump works much better when on a VFD.
-
-# __User Story:__
-# __Feature Set:__
-o Open-source hardware, with spares parts
-
-# __Phasing:__
-# *
-
-# __BOM:__
-# o
-
-__Notes:__
-* https://www.homemade-circuits.com/3-phase-vfd-circuit/
-
-# __Code:__
-# @@@CODE ./filepath envir=Xpro
-
-# FIGURE: [path, width=900 frac=0.9] Something. label{fig:temp}
 
 
 !split
