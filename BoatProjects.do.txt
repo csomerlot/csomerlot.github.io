@@ -9,6 +9,37 @@ Cool options to consider:
 o "Removable thwart, like in Chesapeake Light Crafts version": "https://www.clcboats.com/modules/catalog/boat.php?category_qn=rowboats&code=chester-yawl-row-boat-kit&print=1"
 o "A tent like Roger Barnes' dinghy tent": "https://youtu.be/iDSEbhyIzX0"
 o dolly with bike wheels 
+  
+======= Skin-on-frame Kayak =======
+o greenland style
+o use traditional measurement system
+    o 3 fathom plus 1 cubit is length, etc
+o standard european paddle
+o Materials
+    o canvas as skin (for first one, at least)
+    o wood choices
+            o Black locust
+            o Douglas fir
+            o Ash
+
+FIGURE: [Boats/SOFkayak.png, width=900 frac=0.9] Skin on frame kayak. label{fig:sof}
+
+FIGURE: [Boats/WoodSteamer.png, width=700 frac=0.9] Wood steamer. label{fig:steamer}
+
+======= Nested Dinghy =======
+Should a first project be something more cookie cutter? It would certainly simplify (speed up) a build, and you can't get anythin
+more simplified than a kit dinghy, like the "PT11": "http://www.ptwatercraft.com/ptwatercraft/PT11Home.html"
+
+===== Specs =====
+Length: 11' 0"
+Hull Weight: 90 lbs.
+Beam: 50 in.
+Max Payload: 518 lbs.
+Rowing Draft: 4"
+Sailing Draft: 24"
+Sail Area: 54 sq ft.
+
+
 
 ======= Cruising Catamaran for Lake Ontario =======
 o a trailerable 25'-ish open deck multihull
@@ -33,21 +64,6 @@ o she'll probably do 20 knots downwind...
 o Study Plans:
   o http://www.sailingcatamarans.com/strider.htm
   o https://www.duckworksmagazine.com/r/plansindex/multihullsail.htm
-======= Skin-on-frame Kayak =======
-o greenland style
-o use traditional measurement system
-    o 3 fathom plus 1 cubit is length, etc
-o standard european paddle
-o Materials
-    o canvas as skin (for first one, at least)
-    o wood choices
-            o Black locust
-            o Douglas fir
-            o Ash
-
-FIGURE: [Boats/SOFkayak.png, width=900 frac=0.9] Skin on frame kayak. label{fig:sof}
-
-FIGURE: [Boats/WoodSteamer.png, width=700 frac=0.9] Wood steamer. label{fig:steamer}
 
 ======= Ultralight Trimaran Plans =======
 o Can be built in field with minimum of tools, in emergency

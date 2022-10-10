@@ -26,7 +26,7 @@ o Dev Environment
             o DesignSpark Mechanical
               o Opens .skp!
               o But no linux
-            o Autodesk Fusion (but not free)
+            o "Autodesk Fusion": "https://www.autodesk.com/campaigns/fusion-360/factory-experience" (but not free)
         o Blockly
         o Anaconda Python Env
         o Atom
