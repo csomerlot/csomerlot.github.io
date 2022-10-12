@@ -8,7 +8,7 @@ My first project in building a sailboat, for the someday I dream of... years ago
 Cool options to consider:
 o "Removable thwart, like in Chesapeake Light Crafts version": "https://www.clcboats.com/modules/catalog/boat.php?category_qn=rowboats&code=chester-yawl-row-boat-kit&print=1"
 o "A tent like Roger Barnes' dinghy tent": "https://youtu.be/iDSEbhyIzX0"
-o dolly with bike wheels 
+o Dolly with bike wheels for beach launching
   
 ======= Skin-on-frame Kayak =======
 o greenland style
@@ -27,59 +27,46 @@ FIGURE: [Boats/SOFkayak.png, width=900 frac=0.9] Skin on frame kayak. label{fig:
 FIGURE: [Boats/WoodSteamer.png, width=700 frac=0.9] Wood steamer. label{fig:steamer}
 
 ======= Nested Dinghy =======
-Should a first project be something more cookie cutter? It would certainly simplify (speed up) a build, and you can't get anythin
-more simplified than a kit dinghy, like the "PT11": "http://www.ptwatercraft.com/ptwatercraft/PT11Home.html"
+Should a first project be something more cookie cutter? It would certainly simplify (speed up) a build, and 
+you can't get anything more simplified than a kit dinghy, like the "PT11": "http://www.ptwatercraft.com/ptwatercraft/PT11Home.html"
 
 ===== Specs =====
-Length: 11' 0"
-Hull Weight: 90 lbs.
-Beam: 50 in.
-Max Payload: 518 lbs.
-Rowing Draft: 4"
-Sailing Draft: 24"
-Sail Area: 54 sq ft.
-
-
+o Length: 11' 0"
+o Hull Weight: 90 lbs.
+o Beam: 50 in.
+o Max Payload: 518 lbs.
+o Rowing Draft: 4"
+o Sailing Draft: 24"
+o Sail Area: 54 sq ft.
 
 ======= Cruising Catamaran for Lake Ontario =======
-o a trailerable 25'-ish open deck multihull
-o ample sail plan for light wind
+o A trailerable 25'-ish open deck multihull
+o Ample sail plan for light wind
     o Sloop rigged with Jennnaker (no pole needed)
     o Pirate-red sails!
-o 10hp OB in center wet well for propulsion
-o each hull self-serving for 1 couple with double berth
-    o hinged breeze-way hatches
-    o WC
-        o with composting toilets
-        o foot-pump operated sinks
-    o water tank
-    o fuel tank
-o stow-away galley and nav/lounge table on deck
-o deep-V hulls so no daggerboards
-o kick-up rudders
-o plywood stitch and glue home construction
-o can carry 3 or 4 kayaks up on trampoline
-o we'll call her the Glorious Anne-Marie (because there are 2 hulls! get it?)
-o she'll probably do 20 knots downwind...
+o Electric motors in each hull with regen props, backup generator
+o Each hull self-serving for 1 couple with double berth
+    o Breeze-way hatches
+    o Head
+        o Composting toilets
+        o Foot-pump operated sinks, small water tank below
+o Stow-away galley and nav/lounge table on deck
+o Deep-V hulls so no daggerboards
+o Plywood stitch and glue home construction
+o Carry 3 or 4 kayaks up on trampoline
+o We'll call her the Glorious Anne-Marie (because there are 2 hulls! get it?)
 o Study Plans:
   o http://www.sailingcatamarans.com/strider.htm
   o https://www.duckworksmagazine.com/r/plansindex/multihullsail.htm
 
-======= Ultralight Trimaran Plans =======
+======= Skin on Frame Ultralight Trimaran =======
 o Can be built in field with minimum of tools, in emergency
-    o Skin on Frame?
-o Uses kayaks as pontoons (amas)
-    o Uses inflatable bouancy bags
-    o Won't plane, though
-o Dual skegs
-o Very shallow draft
+o Baidrka-style kayaks as pontoons (amas)
+    o Inflatable bouancy bags for rigidity
+o Dual skegs for very shallow draft
 o Minimize gear, ground tackle, and trimming to keep ultralight to maximize speed
-o Sloop Rigged with Spinnaker
-o 20-30 feet
-o submersible mode
-    o Detach kayaks, demast, flip the boat over and load the trampolines with rocks to create a diving bell using the hull
-    o For hiding the boat while you are out kayaking or shelter from bad storms
-    o pedal-powered bilge pump doubles as air snorkel
+o Simplest field-buildable sail rig with most power:
+    o lateen?
 
 !split
 ======= Catamaran Daysailor =======
