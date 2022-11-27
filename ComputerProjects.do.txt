@@ -220,11 +220,30 @@ FIGURE: [./code/TartanDesigner.py.png, width=600 frac=0.8] Sample output. label{
 
 !split
 ======= Somerlot Shooting Support System (S4) =======
-o Basic ballistics calc to support F-Class gun (drop and windage)
+__Description:__
+Combination of hardware and software for calculations, capturing data, and visualizing shot placement
+__User Story:__
+Long range precision shooting requires accouting for many variables, as well as testing. Recording all this is
+cumbersome. Viewing the shot with a spotting scope is difficult. Waiting to go down-range and observe results 
+makes for a lot of wasted time. Unknown weather, distance, and load variables wastes a lot of ammo. Can a 
+bespoke computing platform simplify it all and make it more enjoyable, efficient, and cheap?
+__Feature Set:__
+o Computes and then measures ballistics
+  o Variables for load, wind, pressure, distance (via GPS with point averaging)
   o "Trajectory Science lib": "https://pypi.org/project/ballistics/"
-o Based on computed and measured ballistic performance
-  o Empirical test data to refine bullet drag and air density coefficients
-o Integrate with GPS, mapping, online weather stations, USB weather station
+  o stores data in a database
+o Long-range wifi for networking back to phone
+o Camera on target with webcam to phone, records placement in database
+o Integrates with a chronograph "like this one": "https://shop.opticsplanet.com/competition-electronics-prochrono-dlx-with-bluetooth.html?_iv_code=2PI-CRO-CEPCDLX-CEI-3820&gclsrc=aw.ds&gclid=Cj0KCQiAj4ecBhD3ARIsAM4Q_jHLQj0npmX-11q3qBX8V61-LgSasbzHsAETmwMLLr9fmUjKxUiL5wQaAtIiEALw_wcB"
+
+__Phasing:__
+* Get a ballistics algorithm figured out
+* Create web-based UI
+* Build out hardware
+
+__BOM:__
+o RPi 
+o Camera sensor with lens
 
 !split
 ======= Retail support tools =======

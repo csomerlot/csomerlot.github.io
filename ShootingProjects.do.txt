@@ -29,21 +29,6 @@ o new trigger
     o Timney
 o bipod
     o Harris HBLM-S swivel-mount
-o ballistics calcs
-    o parameters to measure in-field
-        o temperature
-        o humidity
-        o pressure
-        o wind
-        o altitiude
-    o subnotebook based custom software
-        o uses GPS to pull aerial photo, altitiude, and local pressure and humidity
-        o uses weatherdatadownloader script
-        o keeps log of loads and results
-        o webcam hooked up to spotting scope, digicam style
-    o laminated ballistic cards with handheld weather station
-        o Brunton Sherpa
-        o Kestrel 2500 (USB capable)
 o phasing
     o Get ahold of base unit and scope (done)
     o make stock ($50)
@@ -51,12 +36,14 @@ o phasing
     o send action and stock to Hart for rebarrel, bedding, and muzzle break install ($750)
 o references
     o "CheyTac": "https://en.wikipedia.org/wiki/CheyTac_Intervention"
+
 ======= Inline Muzzleloader =======
 Best hunting option for range, lethality, legality, season?
-o Thompson/Center
+o Custom bolt action
+o Custom hart barrel
 o Copper bullet
 o shotgun primers
-o pellet charges
+o pellet charges?
 o CVLIFE 6-24x50 Illuminated Scope
 ======= Handmade Recurve Bow =======
 o Specs

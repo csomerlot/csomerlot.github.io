@@ -140,21 +140,42 @@ end of tocinfo -->
 <!-- !split -->
 
 <h1 id="___sec6" class="anchor">Somerlot Shooting Support System (S4) </h1>
+<b>Description:</b>
+Combination of hardware and software for calculations, capturing data, and visualizing shot placement
+<b>User Story:</b>
+Long range precision shooting requires accouting for many variables, as well as testing. Recording all this is
+cumbersome. Viewing the shot with a spotting scope is difficult. Waiting to go down-range and observe results 
+makes for a lot of wasted time. Unknown weather, distance, and load variables wastes a lot of ammo. Can a 
+bespoke computing platform simplify it all and make it more enjoyable, efficient, and cheap?
+<b>Feature Set:</b>
 
 <ol>
-<li> Basic ballistics calc to support F-Class gun (drop and windage)
+<li> Computes and then measures ballistics
 
 <ol type="a"></li>
+ <li> Variables for load, wind, pressure, distance (via GPS with point averaging)</li>
  <li> <a href="https://pypi.org/project/ballistics/" target="_self">Trajectory Science lib</a></li>
+ <li> stores data in a database</li>
 </ol>
 
-<li> Based on computed and measured ballistic performance
-
-<ol type="a"></li>
- <li> Empirical test data to refine bullet drag and air density coefficients</li>
+<li> Long-range wifi for networking back to phone</li>
+<li> Camera on target with webcam to phone, records placement in database</li>
+<li> Integrates with a chronograph <a href="https://shop.opticsplanet.com/competition-electronics-prochrono-dlx-with-bluetooth.html?_iv_code=2PI-CRO-CEPCDLX-CEI-3820&gclsrc=aw.ds&gclid=Cj0KCQiAj4ecBhD3ARIsAM4Q_jHLQj0npmX-11q3qBX8V61-LgSasbzHsAETmwMLLr9fmUjKxUiL5wQaAtIiEALw_wcB" target="_self">like this one</a></li>
 </ol>
 
-<li> Integrate with GPS, mapping, online weather stations, USB weather station</li>
+<b>Phasing:</b>
+
+<ul>
+<li> Get a ballistics algorithm figured out</li>
+<li> Create web-based UI</li>
+<li> Build out hardware</li>
+</ul>
+
+<b>BOM:</b>
+
+<ol>
+<li> RPi</li> 
+<li> Camera sensor with lens</li>
 </ol>
 
 <p>

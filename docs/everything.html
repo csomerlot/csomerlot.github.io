@@ -363,7 +363,7 @@ end of tocinfo -->
 <br>
 
 <p>
-<center><h4>Oct 27, 2022</h4></center> <!-- date -->
+<center><h4>Nov 27, 2022</h4></center> <!-- date -->
 <br>
 <p>
 I have a lot of ideas, and getting them jotted down helps me focus on other things. That, and I love to innovate and engineer anything I can.
@@ -3068,21 +3068,42 @@ exitonclick()
 <!-- !split -->
 
 <h1 id="___sec70" class="anchor">Somerlot Shooting Support System (S4) </h1>
+<b>Description:</b>
+Combination of hardware and software for calculations, capturing data, and visualizing shot placement
+<b>User Story:</b>
+Long range precision shooting requires accouting for many variables, as well as testing. Recording all this is
+cumbersome. Viewing the shot with a spotting scope is difficult. Waiting to go down-range and observe results 
+makes for a lot of wasted time. Unknown weather, distance, and load variables wastes a lot of ammo. Can a 
+bespoke computing platform simplify it all and make it more enjoyable, efficient, and cheap?
+<b>Feature Set:</b>
 
 <ol>
-<li> Basic ballistics calc to support F-Class gun (drop and windage)
+<li> Computes and then measures ballistics
 
 <ol type="a"></li>
+ <li> Variables for load, wind, pressure, distance (via GPS with point averaging)</li>
  <li> <a href="https://pypi.org/project/ballistics/" target="_self">Trajectory Science lib</a></li>
+ <li> stores data in a database</li>
 </ol>
 
-<li> Based on computed and measured ballistic performance
-
-<ol type="a"></li>
- <li> Empirical test data to refine bullet drag and air density coefficients</li>
+<li> Long-range wifi for networking back to phone</li>
+<li> Camera on target with webcam to phone, records placement in database</li>
+<li> Integrates with a chronograph <a href="https://shop.opticsplanet.com/competition-electronics-prochrono-dlx-with-bluetooth.html?_iv_code=2PI-CRO-CEPCDLX-CEI-3820&gclsrc=aw.ds&gclid=Cj0KCQiAj4ecBhD3ARIsAM4Q_jHLQj0npmX-11q3qBX8V61-LgSasbzHsAETmwMLLr9fmUjKxUiL5wQaAtIiEALw_wcB" target="_self">like this one</a></li>
 </ol>
 
-<li> Integrate with GPS, mapping, online weather stations, USB weather station</li>
+<b>Phasing:</b>
+
+<ul>
+<li> Get a ballistics algorithm figured out</li>
+<li> Create web-based UI</li>
+<li> Build out hardware</li>
+</ul>
+
+<b>BOM:</b>
+
+<ol>
+<li> RPi</li> 
+<li> Camera sensor with lens</li>
 </ol>
 
 <!-- !split -->
@@ -4890,37 +4911,6 @@ With the rise of hub motors, is an axle even required? If no axle, no through-hu
    <li> Harris HBLM-S swivel-mount</li>
 </ol>
 
-<li> ballistics calcs
-
-<ol type="a"></li>
-   <li> parameters to measure in-field</li>
-
-<ol>
-       <li> temperature</li>
-       <li> humidity</li>
-       <li> pressure</li>
-       <li> wind</li>
-       <li> altitiude</li>
-</ol>
-
-   <li> subnotebook based custom software</li>
-
-<ol>
-       <li> uses GPS to pull aerial photo, altitiude, and local pressure and humidity</li>
-       <li> uses weatherdatadownloader script</li>
-       <li> keeps log of loads and results</li>
-       <li> webcam hooked up to spotting scope, digicam style</li>
-</ol>
-
-   <li> laminated ballistic cards with handheld weather station</li>
-
-<ol>
-       <li> Brunton Sherpa</li>
-       <li> Kestrel 2500 (USB capable)</li>
-</ol>
-
-</ol>
-
 <li> phasing
 
 <ol type="a"></li>
@@ -4942,10 +4932,11 @@ With the rise of hub motors, is an axle even required? If no axle, no through-hu
 Best hunting option for range, lethality, legality, season?
 
 <ol>
-<li> Thompson/Center</li>
+<li> Custom bolt action</li>
+<li> Custom hart barrel</li>
 <li> Copper bullet</li>
 <li> shotgun primers</li>
-<li> pellet charges</li>
+<li> pellet charges?</li>
 <li> CVLIFE 6-24x50 Illuminated Scope</li>
 </ol>
 
