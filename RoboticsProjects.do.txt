@@ -20,7 +20,7 @@ o Automated flights
 
 
 !split
-======= Submersible / Surface ROV =======
+======= Autonomous Underwater Vehicle  =======
 __Description:__ A long-range, long-duration, aquatic robotic sensor platform for locating and investigating underwater interests
 
 
@@ -62,7 +62,7 @@ __Feature Set:__
     * Coordinate with round-the-world sailing orgs for manual recovery
     * Emergency surfacing and diving
     * Beacons (event-driven)
-        * VHS
+        * Shortwave APRS
         * Lights
     * Packet radio for near-shore communication
     * 7-day reserve power
