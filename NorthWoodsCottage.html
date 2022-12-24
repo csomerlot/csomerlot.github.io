@@ -10,30 +10,31 @@ Automatically generated HTML file from DocOnce source
 
 <title></title>
 
-<!-- Bootstrap style: bootstrap_blue -->
-<link href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet">
-<link href="https://cdn.rawgit.com/hplgit/doconce/master/bundled/html_styles/style_bootstrap/css/bootstrap_blue.css" rel="stylesheet">
-<!-- not necessary
-<link href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
--->
 
 <style type="text/css">
+/* blueish style */
 
-/* Add scrollbar to dropdown menus in bootstrap navigation bar */
-.dropdown-menu {
-   height: auto;
-   max-height: 400px;
-   overflow-x: hidden;
-}
+/* Color definitions:  http://www.december.com/html/spec/color0.html
+   CSS examples:       http://www.w3schools.com/css/css_examples.asp */
 
-/* Adds an invisible element before each target to offset for the navigation
-   bar */
-.anchor::before {
-  content:"";
-  display:block;
-  height:50px;      /* fixed header height for style bootstrap_blue */
-  margin:-50px 0 0; /* negative fixed header height */
+body {
+  margin-top: 1.0em;
+  background-color: #ffffff;
+  font-family: Helvetica, Arial, FreeSans, san-serif;
+  color: #000000;
 }
+h1 { font-size: 1.8em; color: #1e36ce; }
+h2 { font-size: 1.6em; color: #1e36ce; }
+h3 { font-size: 1.4em; color: #1e36ce; }
+a { color: #1e36ce; text-decoration:none; }
+tt { font-family: "Courier New", Courier; }
+/* pre style removed because it will interfer with pygments */
+p { text-indent: 0px; }
+hr { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+p.caption { width: 80%; font-style: normal; text-align: left; }
+hr.figure { border: 0; width: 80%; border-bottom: 1px solid #aaa}
+
+div { text-align: justify; text-justify: inter-word; }
 </style>
 
 
@@ -51,14 +52,9 @@ end of tocinfo -->
 <body>
 
     
-<div class="container">
-
-<p>&nbsp;</p><p>&nbsp;</p><p>&nbsp;</p> <!-- add vertical space -->
-
-<a name="part0000"></a>
 <!-- ------------------- main content ---------------------- -->
 
-<h1 id="___sec0" class="anchor">North Woods Cottage </h1>
+<h1 id="___sec0">North Woods Cottage </h1>
 
 <ol>
 <li> idea came from discussions during New Year's get togethers (JoAnna calls it a commune)</li>
@@ -81,7 +77,7 @@ end of tocinfo -->
 <li> <a href="https://youtu.be/MsDTfWLLv3Y" target="_self">Great example design</a></li>
 </ol>
 
-<h2 id="___sec1" class="anchor">HayBaleHome </h2>
+<h2 id="___sec1">HayBaleHome </h2>
 
 <ol>
 <li> slab foundation
@@ -201,14 +197,14 @@ end of tocinfo -->
 <center> <!-- figure label: --> <div id="fig:cottage"></div> <!-- FIGURE -->
 <hr class="figure">
 <center><p class="caption">Figure 1:  <a href="./HappyHippieLifestyle/cottage.png" target="_self">Hay Bale House</a>.  <!-- caption label: fig:cottage --> </p></center>
-<p><img src="https://raw.githubusercontent.com/csomerlot/csomerlot.github.io/master/./HappyHippieLifestyle/cottage.png" align="bottom" width=500></p>
+<p><img src="./HappyHippieLifestyle/cottage.png" align="bottom" width=500></p>
 </center>
 
 <p>
 <center> <!-- figure label: --> <div id="fig:cottage_4vw"></div> <!-- FIGURE -->
 <hr class="figure">
 <center><p class="caption">Figure 2:  <a href="./HappyHippieLifestyle/cottage_4w.png" target="_self">Hay Bale House</a>.  <!-- caption label: fig:cottage_4vw --> </p></center>
-<p><img src="https://raw.githubusercontent.com/csomerlot/csomerlot.github.io/master/./HappyHippieLifestyle/cottage_4vw.png" align="bottom" width=800></p>
+<p><img src="./HappyHippieLifestyle/cottage_4vw.png" align="bottom" width=800></p>
 </center>
 
 <p>
@@ -217,7 +213,7 @@ end of tocinfo -->
 
 <p><em>A-Frame. <div id="fig:cottage_vid"></div></em></p>
 
-<h2 id="___sec2" class="anchor">A-Frame Tiny House </h2>
+<h2 id="___sec2">A-Frame Tiny House </h2>
 Same basic ideas and mechanicals as the HayBaleHome, but:
 
 <ul>
@@ -241,7 +237,7 @@ Same basic ideas and mechanicals as the HayBaleHome, but:
 <center> <!-- figure label: --> <div id="fig:AFrameplans"></div> <!-- FIGURE -->
 <hr class="figure">
 <center><p class="caption">Figure 3:  <a href="./HappyHippieLifestyle/A Frame Half Loft.png" target="_self">A Frame plans</a>.  <!-- caption label: fig:AFrameplans --> </p></center>
-<p><img src="https://raw.githubusercontent.com/csomerlot/csomerlot.github.io/master/./HappyHippieLifestyle/AFrameHalfLoft.png" align="bottom" width=800></p>
+<p><img src="./HappyHippieLifestyle/AFrameHalfLoft.png" align="bottom" width=800></p>
 </center>
 
 <p>
@@ -250,7 +246,7 @@ Same basic ideas and mechanicals as the HayBaleHome, but:
 
 <p><em>A-Frame. <div id="fig:AFrame"></div></em></p>
 
-<h2 id="___sec3" class="anchor">Off-grid Mechanicals Vault </h2>
+<h2 id="___sec3">Off-grid Mechanicals Vault </h2>
 Every camp-type structure would benefit from a temporary and small electricity supply and running hot water. A 
 minimalistic vault design can help simplify the setup, maintenance, and constructability of this. Obviously, 
 every design parameter depends on conservation and reduction of need. A dry temp-stable space is also a great spot 
@@ -314,31 +310,28 @@ for emergency supplies.
 
 </ol>
 
-<p>
-<!-- navigation buttons at the bottom of the page -->
-<ul class="pager">
+<!-- !split -->
 
-  <li class="next">
-    <a href="NorthWoodsCottage001.html">Next &rarr;</a>
-  </li>
+<h2 id="___sec4">Off-Grid Mobile Ski Chalet </h2>
+A cozy, trailered, home away from home
+
+<ul>
+<li> Off grid for maximum siting flexibility</li>
+<li> Framed in 1x6 with 1/4" ply walls, rock wool insulation, and cedar shingling exterior</li>
+<li> Custom steel trailer with engineered hardwood flooring over foam</li>
+<li> <a href="https://a360.co/3I3GbV9" target="_self">BIM model</a></li>
+<li> <a href="https://docs.google.com/spreadsheets/d/1ZGdyqQvb-uPeDFhHy7mNM82vWml4nQ6JEDqOIUkit6Y/edit?usp=sharing" target="_self">BOM and costs</a></li>
 </ul>
-<!-- ------------------- end of main content --------------- -->
 
-</div>  <!-- end container -->
-<!-- include javascript, jQuery *first* -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-<script src="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
-
-<!-- Bootstrap footer
-<footer>
-<a href="http://..."><img width="250" align=right src="http://..."></a>
-</footer>
--->
-
-
-<center style="font-size:80%">
-<!-- copyright -->  Made with <a href="https://github.com/hplgit/doconce">DocOnce</a>
+<center> <!-- figure label: --> <div id="fig:skichalet1"></div> <!-- FIGURE -->
+<hr class="figure">
+<center><p class="caption">Figure 4:  <a href="./Tiny_House_Drawing_v3.png" target="_self">Mobile Ski Chalet</a>.  <!-- caption label: fig:skichalet1 --> </p></center>
+<p><img src="./Tiny_House_Drawing_v3.png" align="bottom" width=500></p>
 </center>
+
+<p>
+
+<!-- ------------------- end of main content --------------- -->
 
 
 </body>
