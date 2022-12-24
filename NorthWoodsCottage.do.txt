@@ -139,4 +139,4 @@ A cozy, trailered, home away from home
 * "BIM model": "https://a360.co/3I3GbV9"
 * "BOM and costs": "https://docs.google.com/spreadsheets/d/1ZGdyqQvb-uPeDFhHy7mNM82vWml4nQ6JEDqOIUkit6Y/edit?usp=sharing"
 
-FIGURE: ["./Tiny House Drawing v3", width=500 frac=0.8] "Mobile Ski Chalet": "./Tiny House Drawing v3". label{fig:skichalet1}
+FIGURE: ["./Tiny_House_Drawing_v3", width=500 frac=0.8] "Mobile Ski Chalet": "./Tiny_House_Drawing_v3". label{fig:skichalet1}
