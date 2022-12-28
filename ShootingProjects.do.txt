@@ -45,6 +45,8 @@ o Copper bullet
 o shotgun primers
 o pellet charges?
 o CVLIFE 6-24x50 Illuminated Scope
+o .50 caliber ballistics very "similar to .300BLK": "https://www.snipercountry.com/300-blackout-vs-308/"
+
 ======= Handmade Recurve Bow =======
 o Specs
     o takedown
@@ -60,13 +62,7 @@ o Curved barrel provides backspin for stability and distance
 o Long ported barrel for sound suppression
 o Looks same as F-class rifle
 o Compressed air tank built into stock
-======= Support Electronics =======
-o Acoustic ear protection
-    o hands-free full duplex FRS?
-o RC target
-    o Car/half track for shooting over frozen lakes
-    o Blimp for shooting against mountainsides
-    o Furling target
+
 ======= Ballistic Sgian Dubh =======
 o paired set with armpit sheaths
 o forged from solid one piece spring steel

@@ -222,11 +222,13 @@ FIGURE: [./code/TartanDesigner.py.png, width=600 frac=0.8] Sample output. label{
 ======= Somerlot Shooting Support System (S4) =======
 __Description:__
 Combination of hardware and software for calculations, capturing data, and visualizing shot placement
+
 __User Story:__
 Long range precision shooting requires accouting for many variables, as well as testing. Recording all this is
 cumbersome. Viewing the shot with a spotting scope is difficult. Waiting to go down-range and observe results 
 makes for a lot of wasted time. Unknown weather, distance, and load variables wastes a lot of ammo. Can a 
 bespoke computing platform simplify it all and make it more enjoyable, efficient, and cheap?
+
 __Feature Set:__
 o Computes and then measures ballistics
   o Variables for load, wind, pressure, distance (via GPS with point averaging)

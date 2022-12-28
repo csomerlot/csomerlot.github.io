@@ -162,3 +162,4 @@ With the rise of hub motors, is an axle even required? If no axle, no through-hu
 * Aluminium unibody frame sporting 4 hub motors with wheels on parallel linkage, bolted outside of the frame
 * Then, hydrofoiled thrusters to go to "water mode": "https://candela.com/candela-c-8/"
 * Mechanical simplicity to deliver maximum range, stability, traction, with minimal weight, wake, maintenance
+* https://www.thewilcraft.com/
