@@ -52,7 +52,8 @@ __Feature Set:__
     * Evasion
 * Locomotion
     * Low-speed/power, mostly currents
-    * Impeller with vent clearing
+    * Impeller side tubes with vent clearing
+    * Emergency front bounacy and copmressed air jet
 * Communications/data link
     * ASPRS for global, daily logging of location, vital metrics
     * On-demand wifi for debugging
@@ -87,6 +88,8 @@ __BOM:__
 __Notes:__
 * https://www.raspberrypi.org/blog/fish-pi/
 * http://cma.soton.ac.uk/research/black-sea-map/
+
+FIGURE: [.\Model_A_Drawing_v1.png, width=900 frac=0.9] An AUV: Model A. label{fig:AUV}
 
 !split
 ======= Pool Octobot =======
