@@ -93,7 +93,7 @@ __Notes:__
 * https://www.raspberrypi.org/blog/fish-pi/
 * http://cma.soton.ac.uk/research/black-sea-map/
 
-FIGURE: [.\Model_A_Drawing_v1, width=900 frac=0.9] An AUV: Model A. label{fig:AUV}
+FIGURE: [./Model_A_Drawing_v1, width=900 frac=0.9] An AUV: Model A. label{fig:AUV}
 
 !split
 ======= Pool Octobot =======
