@@ -42,14 +42,15 @@ __Feature Set:__
         * Event-driven
             * Sudden light change
             * Proximity alert
+            * AI
         * 360-degree FOV
         * Low-light
         * Mission-based
             * Wrecks
             * Reefs
-    * Metal detection
-    * Bathymetric scans
-    * Evasion
+    * Metal detection?
+    * Bathymetric scans?
+    * Evasion?
 * Locomotion
     * Low-speed/power, mostly currents
     * Impeller side tubes with vent clearing
@@ -69,7 +70,8 @@ __Feature Set:__
     * 7-day reserve power
     * Hibernation mode
     * Warning labeling in many languages
-    * Claws for getting unstuck from tight places and fishing lines
+    * Claws for getting unstuck from tight places and fishing lines??
+    * Impellers can generate power?
 
 __Phasing:__
 o Build manual prototype with goPro
@@ -79,17 +81,19 @@ o Mission programming and data logging
 o 24 hr Otisco test
 o 30 day Ontario test
 o 180 day Gulf Stream mission (launch in Ft Pierce in Feb, recover in Iceland)
-o Re-engineer into a small remora-style package to find and attach to large animals
+o Re-engineer into a small remora-style package to find and attach to large animals??
 
 
 __BOM:__
-1.
+1. Big ass battery
+2. Flexible solar panels
+3. 300 psi rated enclosure
 
 __Notes:__
 * https://www.raspberrypi.org/blog/fish-pi/
 * http://cma.soton.ac.uk/research/black-sea-map/
 
-FIGURE: [.\Model_A_Drawing_v1.png, width=900 frac=0.9] An AUV: Model A. label{fig:AUV}
+FIGURE: [.\Model_A_Drawing_v1, width=900 frac=0.9] An AUV: Model A. label{fig:AUV}
 
 !split
 ======= Pool Octobot =======
