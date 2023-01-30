@@ -281,14 +281,14 @@ end of tocinfo -->
 
 <center> <!-- figure label: --> <div id="fig:cottage"></div> <!-- FIGURE -->
 <hr class="figure">
-<center><p class="caption">Figure 4:  <a href="./HappyHippieLifestyle/cottage.png" target="_self">Hay Bale House</a>.  <!-- caption label: fig:cottage --> </p></center>
+<center><p class="caption">Figure 4:  <a href="https://raw.githubusercontent.com/csomerlot/csomerlot.github.io/master/HappyHippieLifestyle/cottage.png" target="_self">Hay Bale House</a>.  <!-- caption label: fig:cottage --> </p></center>
 <p><img src="https://raw.githubusercontent.com/csomerlot/csomerlot.github.io/master/./HappyHippieLifestyle/cottage.png" align="bottom" width=500></p>
 </center>
 
 <p>
 <center> <!-- figure label: --> <div id="fig:cottage_4vw"></div> <!-- FIGURE -->
 <hr class="figure">
-<center><p class="caption">Figure 5:  <a href="./HappyHippieLifestyle/cottage_4w.png" target="_self">Hay Bale House</a>.  <!-- caption label: fig:cottage_4vw --> </p></center>
+<center><p class="caption">Figure 5:  <a href="https://raw.githubusercontent.com/csomerlot/csomerlot.github.io/master/HappyHippieLifestyle/cottage_4w.png" target="_self">Hay Bale House</a>.  <!-- caption label: fig:cottage_4vw --> </p></center>
 <p><img src="https://raw.githubusercontent.com/csomerlot/csomerlot.github.io/master/./HappyHippieLifestyle/cottage_4vw.png" align="bottom" width=800></p>
 </center>
 
@@ -332,47 +332,58 @@ Same basic ideas and mechanicals as the HayBaleHome, but:
 <p><em>A-Frame. <div id="fig:AFrame"></div></em></p>
 
 <h2 id="___sec16" class="anchor">Off-grid Mechanicals Vault </h2>
-Every camp-type structure would benefit from a temporary and small electricity supply and running hot water. A 
+Every camp-type structure would benefit from a temporary and small electricity supply and running water. A 
 minimalistic vault design can help simplify the setup, maintenance, and constructability of this. Obviously, 
-every design parameter depends on conservation and reduction of need. A dry temp-stable space is also a great spot 
-for emergency supplies.
+every design parameter depends on conservation, reduction of need, usage patterns, etc. A dry temp-stable space 
+is also a great spot for emergency supplies. Avoid storage of any type of fuel though.
 
 <ol>
 <li> Structure:
 
 <ol type="a"></li>
-   <li> Constructability: 4 ft cube built of double-layer waterproof plywood, with spray foam in between</li>
+   <li> Constructability: Modular size cube built from ICF</li>
    <li> 95% buried for thermal efficiency, low noise, and security</li>
    <li> Accessible and visible top (so no one runs it over) yet protected from the elements and vandalism. Could also site structure on top of it, and size it for lock-box usage as well.</li>
-   <li> insulated and heated for consistent temp and low humidity</li>
+   <li> insulated and dehumidified/heated for consistent temp and low humidity</li>
 </ol>
 
 <li> Mechanicals
 
 <ol type="a"></li>
-   <li> Battery bank: lithium</li>
    <li> Well: some people <a href="https://www.drillyourownwell.com/" target="_self">do this</a> but a lot depends on siting for soil type and depth to water table</li>
-   <li> Pump: 12v, need not be large capacity</li>
-   <li> Pressure Tank</li>
+   <li> Pump:</li>  
 
 <ol>
-       <li> this shouldn't be large, as a portable water tower should be used for increased capacity</li>
+       <li> 12v</li>
+       <li> positive dispacement for high pressure, low volume, no priming</li>
+       <li> replaceable</li>
+       <li> can be multiplied in series or parallel for flow or pressure</li>
+       <li> COTS <a href="https://www.amazon.com/OSIAS-Universal-Replacement-VOLKSWAGEN-0580464070/dp/B073TY5VBV/ref=asc_df_B073TY5VBV/" target="_self">automotive fuel pump</a></li>
 </ol>
 
-   <li> Filter: 50 micron fiber followed by 5 micron charcoal to remove sediment, chemicals, and protozoa</li>
-   <li> UV: to remove bacteria and viruses</li>
-   <li> Propane tankless water heater:</li>
+   <li> Storage:</li>
 
 <ol>
-       <li> if its a long pipe run, may want to move inside</li>
-       <li> solar preheat coils?</li>
+       <li> Gravity option: Bulk storage ie IBC tote tank</li>
+       <li> Pressure Tank: this shouldn't be large, as a portable water tower should be used for increased capacity</li>
+       <li> Manual (from external) and power-actuated ball valves</li>
+       <li> Overflow</li>
+</ol>
+
+   <li> Potable treatment:</li>
+
+<ol>
+       <li> Filter: 50 micron fiber followed by 5 micron charcoal to remove sediment, chemicals, and protozoa AND</li>
+       <li> UV to remove bacteria and viruses OR</li>
+       <li> <a href="https://www.amazon.com/Alberts-Filter-Membrane-Replacement-Connector/dp/B07H2ZCFFR/ref=sr_1_17_sspa" target="_self">RO unit</a></li>
 </ol>
 
    <li> Power:</li>
 
 <ol>
        <li> 12v for safety and convenience</li>
-       <li> charger that can handle solar, genset, alternator, or wind turbine inputs</li>
+       <li> Battery bank</li>
+       <li> Charger that can handle solar, alternator, generator or line inputs</li>
 </ol>
 
 </ol>
@@ -380,17 +391,14 @@ for emergency supplies.
 <li> Monitoring:
 
 <ol type="a"></li>
-   <li> power level and charge rates</li>
-   <li> filter pressure drop</li>
-   <li> UV beam strength</li>
-   <li> vault temp and humidity</li>
-   <li> telemetery: wifi? feather LoRa?</li>
-   <li> pressure tank back pressure</li>
+   <li> pressure between all components</li>
+   <li> storage level and overflow</li>
+   <li> well level and temp</li>
+   <li> vault humidity and temp</li>
+   <li> battery voltage, charge rate, and temp</li>
+   <li> pump current draw, flow rate, and temp</li>
    <li> vault door alarm</li>
-   <li> propane and CO monitors</li>
-   <li> well and dry-well levels and temp</li>
-  <li> pump draw, flow rate, and pressure</li>
-  <li> propane tank pressure</li>
+   <li> local display and telemetry</li>
 </ol>
 
 </ol>
