@@ -143,5 +143,5 @@ A cozy, trailered, home away from home
 * "BIM model": "https://a360.co/3I3GbV9"
 * "BOM and costs": "https://docs.google.com/spreadsheets/d/1ZGdyqQvb-uPeDFhHy7mNM82vWml4nQ6JEDqOIUkit6Y/edit?usp=sharing"
 
-FIGURE: [./HappyHippieLifestyle/Tiny_House_Drawing_v3, width=500 frac=0.8] "Mobile Ski Chalet": "https://raw.githubusercontent.com/csomerlot/csomerlot.github.io/master/HappyHippieLifestyle/TinyHousePlans.pdf". label{fig:skichalet1}
+FIGURE: [./HappyHippieLifestyle/Tiny_House_Drawing_v3, width=800 frac=0.8] "Mobile Ski Chalet": "https://raw.githubusercontent.com/csomerlot/csomerlot.github.io/master/HappyHippieLifestyle/TinyHousePlans.pdf". label{fig:skichalet1}
 

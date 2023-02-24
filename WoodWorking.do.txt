@@ -19,7 +19,7 @@ o For around the house:
 o For the kitchen:
     * Spatualas and spoons
     * Rolling pin
-    * Tortilla press
+    * Tortilla press (done)
     * Cider press
     * Cutting board
       * with detachable bread slicer combs?
@@ -29,25 +29,26 @@ o For the kitchen:
     * Pasta Tines
     * Mandolin
 o For the barn:
-    * Chicken coop
+    * Chicken coop (done)
     * Carrying tote
     * Yoke
     * Shepherds Crook
 o For fiber projects:
     * Wool combs
-    * Darning egg/mushroom
+    * Darning egg/mushroom (done)
     * Sewing machine case with "collapsible project table": "https://www.instructables.com/id/How-to-Make-a-Custom-Sewing-Machine-Case/"
 o For outdoors:
     * "Camping yurt": "https://www.campingyurts.com/" (done)
 
-
 MOVIE: [https://www.youtube.com/watch?v=0BQT9I4qAYk, width=600 frac=0.8] Yurt Setup. label{fig:yurt}
 
 
-    * Adirondack Chairs
-      * "Regular version": "http://pop.h-cdn.co/assets/cm/15/06/54d112e5a5fd4_-_PMX0706Adiron.pdf"
-      * "folding version": "https://www.rockler.com/folding-adirondack-chair-templates-with-plan-and-hardware-packs"
-      * "simple version": "https://www.popularmechanics.com/home/how-to-plans/a30655985/diy-lounge-chair/"
+    * "Adirondack Chairs": "https://raw.githubusercontent.com/csomerlot/csomerlot.github.io/master/HappyHippieLifestyle/ADK_chairs.pdf" (done)
+
+
+MOVIE: [https://www.youtube.com/watch?v=WmO74zjw3k8, width=600 frac=0.8] Foldng ADK Chairs. label{fig:adk_chairs}
+
+
     * "Marcy field cot": "https://www.google.com/url?sa=t&source=web&rct=j&url=http://ajhamler.com/yahoo_site_admin/assets/docs/Field_Cot_from_CWW-II.21112127.pdf&ved=2ahUKEwiKhveYtovmAhWxiOAKHfxXCnIQFjAKegQIAhAB&usg=AOvVaw2yUrp_O4La2HmkB5D521xg"
     * Buckets
     * Rosin bird whistle
@@ -65,7 +66,7 @@ o Bed (done)
 o Trestle table
 o Coat tree
 o Night stand/TV tray
-o Adirondack chair
+o Adirondack chair (done)
 ===== Hand-made tools =====
     * Scrub plane
     * Shooting board

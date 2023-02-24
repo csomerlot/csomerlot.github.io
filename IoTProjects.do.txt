@@ -401,8 +401,10 @@ help, can be transmitted from any global location, for a variety of needs.
 
 __Feature Set:__
 o Handheld SDR
-o Uses APRS+GPS for tracking mode
+o Use APRS+GPS for tracking mode?
+o Use FT8 for long-distance messaging?
 o Can be modded to suit the locale and needs of a trip
+o Has a base station/ repeater mode
 o Can be used for personal emergency messaging, way-point tacking, sharing progress
 o Ruggedize by potting in epoxy with heat sinks?
 o Cheap and small enough to carry spares
