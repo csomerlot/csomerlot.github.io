@@ -29,6 +29,9 @@ __BOM:__
 * Location:
   * "GPS": "https://www.adafruit.com/product/2324"
   * "IMU": "https://www.adafruit.com/product/4754"
+* Sensor controllers: 
+    * "STEMMA Qt/ Qwiic": "https://www.adafruit.com/product/4463"
+    * "ADC": "https://learn.adafruit.com/reading-a-analog-in-and-controlling-audio-volume-with-the-raspberry-pi?view=all" and a "voltage reference": "https://www.adafruit.com/product/2200"
 
 __Notes:__
 * Similar to the "PiTop": "https://www.adafruit.com/product/3762", with a compact housing
@@ -245,7 +248,8 @@ o Attractive as office decor
 __Phasing:__
 o Build sensor and ARV mechanicals
     o Mount tape and air feed and pressure feed to stick, with ARV and pressure sensor at top
-    o Assemble and encase feather near power supply
+    o Assemble microcontroller
+    o Assemble relay-integrated power supply
 o Install base controller logic
 o Build server script that runs flood routine based on MQTT events
 o Build flood tank with rock wool planting cells
@@ -265,7 +269,7 @@ o triple-tote system:
 o Open-top cabinet on casters to hold everything and make pretty
 
 __BOM:__
-* "Adafruit ESP32 Feather": "http://adafru.it/3619"
+* "Adafruit PyPortal": "https://www.adafruit.com/product/4116"
 * "12in Chemical eTape Liquid Level Sensor": "https://www.adafruit.com/product/464"
 * "Mini solenoid air valve": "https://www.adafruit.com/product/4663"
 * "Controllable Four Outlet Power Relay Module version 2": "https://www.adafruit.com/product/2935"
@@ -276,7 +280,7 @@ __BOM:__
 * Silicone tubing
 
 __Notes:__
-* https://learn.adafruit.com/home-automation-in-the-cloud-with-the-esp8266-and-adafruit-io/introduction
+* https://learn.adafruit.com/adafruit-pyportal/overview
 * Needs some type of anchoring for media in top container for replacing plants and rock wool easily
 * Flood chamber must be securely anchored against flotation
 * "First iteration": "./PlantWaterer/PlantWaterer.html" of the design was a simple Trinket-based timer that controlled a "mini peristaltic pump": "https://www.adafruit.com/product/1150". It worked if the water source was elevated to deal with the limits of the pump curve.

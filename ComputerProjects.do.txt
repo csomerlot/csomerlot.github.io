@@ -7,6 +7,7 @@ __Maker kits:__
 o Tools
     o Build tray/mat (with edges, for roll-y parts)
     o ESC bracelet
+    o Connector kits (JST PH) and crimpers for making cables
 o Parts warehousing
     o Tackle box with baggie system
 o Documentation
