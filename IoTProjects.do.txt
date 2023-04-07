@@ -252,6 +252,7 @@ o Build sensor and ARV mechanicals
     o Assemble relay-integrated power supply
 o Install base controller logic
 o Build server script that runs flood routine based on MQTT events
+    o Make a dashboard interface in "DisplayIO": "https://learn.adafruit.com/making-a-pyportal-user-interface-displayio?view=all"
 o Build flood tank with rock wool planting cells
 o triple-tote system:
     o Media tray
@@ -285,24 +286,21 @@ __Notes:__
 * Flood chamber must be securely anchored against flotation
 * "First iteration": "./PlantWaterer/PlantWaterer.html" of the design was a simple Trinket-based timer that controlled a "mini peristaltic pump": "https://www.adafruit.com/product/1150". It worked if the water source was elevated to deal with the limits of the pump curve.
 
-
 __Logic:__
-o Server scheduling:
-    o Repeat Daily:
-        o Fire client event
-        o If no completion signal in 60 minutes, report
-o Client event:
+o Start flood event:
     o turn on air pump and close air release valve for until level has stabilized to within 0.25" for 5 minutes
-        o Report time to complete
-        o Repeat every 15 seconds: 
-            o report solution level from both sensors
-            o if it has been more than 20 minutes, terminate on cycle and alert
+        o Report solution level from both sensors every 15 seconds
+    o if it has been more than 20 minutes, terminate on cycle and alert
+    o if water detected in overflow tank, terminate on cycle and alert
     o if sensors do not agree on level, alert
     o if solution level falls below 3", alert
-
+o Alert:
+    o flash the built-in light
+    o play noise
+    o send text message
 
 __CODE:__
-@@@CODE ./code/microHydroponics/microHydroponics.ino envir=cpro
+@@@CODE ./code/microHydroponics/code.py
 
 
 
