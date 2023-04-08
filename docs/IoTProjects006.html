@@ -164,7 +164,12 @@ Offices are great places for plants, with ample windows and beneficial effects f
 </ol>
 
 <li> Install base controller logic</li>
-<li> Build server script that runs flood routine based on MQTT events</li>
+<li> Build server script that runs flood routine based on MQTT events
+
+<ol type="a"></li>
+   <li> Make a dashboard interface in <a href="https://learn.adafruit.com/making-a-pyportal-user-interface-displayio?view=all" target="_self">DisplayIO</a></li>
+</ol>
+
 <li> Build flood tank with rock wool planting cells</li>
 <li> triple-tote system:
 
@@ -232,36 +237,27 @@ Offices are great places for plants, with ample windows and beneficial effects f
 <b>Logic:</b>
 
 <ol>
-<li> Server scheduling:
-
-<ol type="a"></li>
-   <li> Repeat Daily:</li>
-
-<ol>
-       <li> Fire client event</li>
-       <li> If no completion signal in 60 minutes, report</li>
-</ol>
-
-</ol>
-
-<li> Client event:
+<li> Start flood event:
 
 <ol type="a"></li>
    <li> turn on air pump and close air release valve for until level has stabilized to within 0.25" for 5 minutes</li>
 
 <ol>
-       <li> Report time to complete</li>
-       <li> Repeat every 15 seconds: 
-
-<ol type="a"></li>
-           <li> report solution level from both sensors</li>
-           <li> if it has been more than 20 minutes, terminate on cycle and alert</li>
+       <li> Report solution level from both sensors every 15 seconds</li>
 </ol>
 
-</ol>
-
+   <li> if it has been more than 20 minutes, terminate on cycle and alert</li>
+   <li> if water detected in overflow tank, terminate on cycle and alert</li>
    <li> if sensors do not agree on level, alert</li>
    <li> if solution level falls below 3", alert</li>
+</ol>
+
+<li> Alert:
+
+<ol type="a"></li>
+   <li> flash the built-in light</li>
+   <li> play noise</li>
+   <li> send text message</li>
 </ol>
 
 </ol>
@@ -269,209 +265,436 @@ Offices are great places for plants, with ample windows and beneficial effects f
 <b>CODE:</b>
 <p>
 
-<!-- code=c (!bc cpro) typeset with pygments style "default" -->
-<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><span style="color: #3D7B7B; font-style: italic">/***************************************************</span>
-<span style="color: #3D7B7B; font-style: italic">  Adapted primarily from:</span>
-<span style="color: #3D7B7B; font-style: italic">  Adafruit ESP8266 onoffbutton Controller Module</span>
+<!-- code=python (!bc pypro) typeset with pygments style "default" -->
+<div class="highlight" style="background: #f8f8f8"><pre style="line-height: 125%;"><span></span><span style="color: #3D7B7B; font-style: italic"># SPDX-FileCopyrightText: 2020 Richard Albritton for Adafruit Industries</span>
+<span style="color: #3D7B7B; font-style: italic">#</span>
+<span style="color: #3D7B7B; font-style: italic"># SPDX-License-Identifier: MIT</span>
+<span style="color: #3D7B7B; font-style: italic">#</span>
+<span style="color: #3D7B7B; font-style: italic"># https://learn.adafruit.com/making-a-pyportal-user-interface-displayio?view=all</span>
 
-<span style="color: #3D7B7B; font-style: italic">  Must use ESP8266 Arduino from:</span>
-<span style="color: #3D7B7B; font-style: italic">    https://github.com/esp8266/Arduino</span>
-<span style="color: #3D7B7B; font-style: italic">  Works great with Adafruit&#39;s Huzzah ESP board:</span>
-<span style="color: #3D7B7B; font-style: italic">  ----&gt; https://www.adafruit.com/product/2471</span>
-<span style="color: #3D7B7B; font-style: italic">  Adafruit invests time and resources providing this open source code,</span>
-<span style="color: #3D7B7B; font-style: italic">  please support Adafruit and open-source hardware by purchasing</span>
-<span style="color: #3D7B7B; font-style: italic">  products from Adafruit!</span>
-<span style="color: #3D7B7B; font-style: italic">  Written by Tony DiCola for Adafruit Industries.</span>
-<span style="color: #3D7B7B; font-style: italic">  Adafruit IO example additions by Todd Treece.</span>
-<span style="color: #3D7B7B; font-style: italic">  MIT license, all text above must be included in any redistribution</span>
-<span style="color: #3D7B7B; font-style: italic"> ****************************************************/</span><span style="color: #bbbbbb"></span>
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">os</span>
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">time</span>
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">board</span>
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">microcontroller</span>
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">displayio</span>
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">busio</span>
+<span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">analogio</span> <span style="color: #008000; font-weight: bold">import</span> AnalogIn
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">neopixel</span>
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">adafruit_adt7410</span>
+<span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">adafruit_bitmap_font</span> <span style="color: #008000; font-weight: bold">import</span> bitmap_font
+<span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">adafruit_display_text.label</span> <span style="color: #008000; font-weight: bold">import</span> Label
+<span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">adafruit_button</span> <span style="color: #008000; font-weight: bold">import</span> Button
+<span style="color: #008000; font-weight: bold">import</span> <span style="color: #0000FF; font-weight: bold">adafruit_touchscreen</span>
+<span style="color: #008000; font-weight: bold">from</span> <span style="color: #0000FF; font-weight: bold">adafruit_pyportal</span> <span style="color: #008000; font-weight: bold">import</span> PyPortal
 
-<span style="color: #9C6500">#include</span><span style="color: #bbbbbb"> </span><span style="color: #3D7B7B; font-style: italic">&lt;WiFi101.h&gt; // for Feather M0 ATWINC1500</span><span style="color: #9C6500"></span>
-<span style="color: #3D7B7B; font-style: italic">//#include &lt;WiFi.h&gt; // for Feather HUZZAH32 ESP32</span>
-<span style="color: #3D7B7B; font-style: italic">//#include &lt;ESP8266WiFi.h&gt;</span>
-<span style="color: #9C6500">#include</span><span style="color: #bbbbbb"> </span><span style="color: #3D7B7B; font-style: italic">&quot;Adafruit_MQTT.h&quot;</span><span style="color: #9C6500"></span>
-<span style="color: #9C6500">#include</span><span style="color: #bbbbbb"> </span><span style="color: #3D7B7B; font-style: italic">&quot;Adafruit_MQTT_Client.h&quot;</span><span style="color: #9C6500"></span>
-<span style="color: #9C6500">#include</span><span style="color: #bbbbbb"> </span><span style="color: #3D7B7B; font-style: italic">&quot;keysandstuff.h&quot;</span><span style="color: #9C6500"></span>
+<span style="color: #3D7B7B; font-style: italic"># ------------- Constants ------------- #</span>
+<span style="color: #3D7B7B; font-style: italic"># Sound Effects</span>
+soundDemo <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;/sounds/sound.wav&quot;</span>
+soundBeep <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;/sounds/beep.wav&quot;</span>
+soundTab <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;/sounds/tab.wav&quot;</span>
+
+<span style="color: #3D7B7B; font-style: italic"># Hex Colors</span>
+WHITE <span style="color: #666666">=</span> <span style="color: #666666">0xFFFFFF</span>
+RED <span style="color: #666666">=</span> <span style="color: #666666">0xFF0000</span>
+YELLOW <span style="color: #666666">=</span> <span style="color: #666666">0xFFFF00</span>
+GREEN <span style="color: #666666">=</span> <span style="color: #666666">0x00FF00</span>
+BLUE <span style="color: #666666">=</span> <span style="color: #666666">0x0000FF</span>
+PURPLE <span style="color: #666666">=</span> <span style="color: #666666">0xFF00FF</span>
+BLACK <span style="color: #666666">=</span> <span style="color: #666666">0x000000</span>
+
+<span style="color: #3D7B7B; font-style: italic"># Default Label styling</span>
+TABS_X <span style="color: #666666">=</span> <span style="color: #666666">8</span>
+TABS_Y <span style="color: #666666">=</span> <span style="color: #666666">15</span>
+TABS_chars <span style="color: #666666">=</span> <span style="color: #666666">40</span>
+
+<span style="color: #3D7B7B; font-style: italic"># Default button styling:</span>
+BUTTON_HEIGHT <span style="color: #666666">=</span> <span style="color: #666666">40</span>
+BUTTON_WIDTH <span style="color: #666666">=</span> <span style="color: #666666">132</span>
+
+<span style="color: #3D7B7B; font-style: italic"># Default State</span>
+view_live <span style="color: #666666">=</span> <span style="color: #666666">1</span>
+button_mode <span style="color: #666666">=</span> <span style="color: #666666">1</span>
+flood_state <span style="color: #666666">=</span> <span style="color: #666666">0</span>
+
+<span style="color: #3D7B7B; font-style: italic"># ------------- Functions ------------- #</span>
+
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">flood</span>():
+    <span style="color: #008000; font-weight: bold">global</span> flood_state
+    <span style="color: #008000; font-weight: bold">if</span> flood_state:
+        <span style="color: #008000">print</span>(<span style="color: #BA2121">&quot;Turning off the flood&quot;</span>)
+        flood_state <span style="color: #666666">=</span> <span style="color: #666666">0</span>
+    <span style="color: #008000; font-weight: bold">else</span>:
+        <span style="color: #008000">print</span>(<span style="color: #BA2121">&quot;Starting the flood mechanism&quot;</span>)
+        flood_state <span style="color: #666666">=</span> <span style="color: #666666">1</span>
+
+<span style="color: #3D7B7B; font-style: italic"># Backlight function</span>
+<span style="color: #3D7B7B; font-style: italic"># Value between 0 and 1 where 0 is OFF, 0.5 is 50% and 1 is 100% brightness.</span>
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">set_backlight</span>(val):
+    val <span style="color: #666666">=</span> <span style="color: #008000">max</span>(<span style="color: #666666">0</span>, <span style="color: #008000">min</span>(<span style="color: #666666">1.0</span>, val))
+    <span style="color: #008000; font-weight: bold">try</span>:
+        board<span style="color: #666666">.</span>DISPLAY<span style="color: #666666">.</span>auto_brightness <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">False</span>
+    <span style="color: #008000; font-weight: bold">except</span> <span style="color: #CB3F38; font-weight: bold">AttributeError</span>:
+        <span style="color: #008000; font-weight: bold">pass</span>
+    board<span style="color: #666666">.</span>DISPLAY<span style="color: #666666">.</span>brightness <span style="color: #666666">=</span> val
 
 
-<span style="color: #3D7B7B; font-style: italic">// onoffbutton pin</span>
-<span style="color: #008000; font-weight: bold">const</span><span style="color: #bbbbbb"> </span><span style="color: #B00040">int</span><span style="color: #bbbbbb"> </span>switch_pin<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #666666">0</span>;<span style="color: #bbbbbb"></span>
+<span style="color: #3D7B7B; font-style: italic"># Helper for cycling through a number set of 1 to x.</span>
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">numberUP</span>(num, max_val):
+    num <span style="color: #666666">+=</span> <span style="color: #666666">1</span>
+    <span style="color: #008000; font-weight: bold">if</span> num <span style="color: #666666">&lt;=</span> max_val:
+        <span style="color: #008000; font-weight: bold">return</span> num
+    <span style="color: #008000; font-weight: bold">else</span>:
+        <span style="color: #008000; font-weight: bold">return</span> <span style="color: #666666">1</span>
 
-<span style="color: #3D7B7B; font-style: italic">// Functions</span>
-<span style="color: #3D7B7B; font-style: italic">//void MQTT_connect();</span>
 
-WiFiClient<span style="color: #bbbbbb"> </span>client;<span style="color: #bbbbbb"></span>
+<span style="color: #3D7B7B; font-style: italic"># Set visibility of layer</span>
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">layerVisibility</span>(state, layer, target):
+    <span style="color: #008000; font-weight: bold">try</span>:
+        <span style="color: #008000; font-weight: bold">if</span> state <span style="color: #666666">==</span> <span style="color: #BA2121">&quot;show&quot;</span>:
+            time<span style="color: #666666">.</span>sleep(<span style="color: #666666">0.1</span>)
+            layer<span style="color: #666666">.</span>append(target)
+        <span style="color: #008000; font-weight: bold">elif</span> state <span style="color: #666666">==</span> <span style="color: #BA2121">&quot;hide&quot;</span>:
+            layer<span style="color: #666666">.</span>remove(target)
+    <span style="color: #008000; font-weight: bold">except</span> <span style="color: #CB3F38; font-weight: bold">ValueError</span>:
+        <span style="color: #008000; font-weight: bold">pass</span>
 
-<span style="color: #3D7B7B; font-style: italic">// Setup the MQTT client class by passing in the WiFi client and MQTT server and login details.</span>
-Adafruit_MQTT_Client<span style="color: #bbbbbb"> </span><span style="color: #0000FF">mqtt</span>(<span style="color: #666666">&amp;</span>client,<span style="color: #bbbbbb"> </span>AIO_SERVER,<span style="color: #bbbbbb"> </span>AIO_SERVERPORT,<span style="color: #bbbbbb"> </span>AIO_USERNAME,<span style="color: #bbbbbb"> </span>AIO_KEY);<span style="color: #bbbbbb"></span>
 
-<span style="color: #3D7B7B; font-style: italic">/****************************** Feeds ***************************************/</span><span style="color: #bbbbbb"></span>
+<span style="color: #3D7B7B; font-style: italic"># This will handle switching Images and Icons</span>
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">set_image</span>(group, filename):
+    <span style="color: #BA2121; font-style: italic">&quot;&quot;&quot;Set the image file for a given goup for display.</span>
+<span style="color: #BA2121; font-style: italic">    This is most useful for Icons or image slideshows.</span>
+<span style="color: #BA2121; font-style: italic">        :param group: The chosen group</span>
+<span style="color: #BA2121; font-style: italic">        :param filename: The filename of the chosen image</span>
+<span style="color: #BA2121; font-style: italic">    &quot;&quot;&quot;</span>
+    <span style="color: #008000">print</span>(<span style="color: #BA2121">&quot;Set image to &quot;</span>, filename)
+    <span style="color: #008000; font-weight: bold">if</span> group:
+        group<span style="color: #666666">.</span>pop()
 
-<span style="color: #3D7B7B; font-style: italic">// Setup a feed called &#39;onoffbutton&#39; for subscribing to changes.</span>
-<span style="color: #3D7B7B; font-style: italic">// Notice MQTT paths for AIO follow the form: &lt;username&gt;/feeds/&lt;feedname&gt;</span>
-Adafruit_MQTT_Subscribe<span style="color: #bbbbbb"> </span>onoffbutton<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>Adafruit_MQTT_Subscribe(<span style="color: #666666">&amp;</span>mqtt,<span style="color: #bbbbbb"> </span>AIO_USERNAME<span style="color: #bbbbbb"> </span><span style="color: #BA2121">&quot;/feeds/onoff&quot;</span>);<span style="color: #bbbbbb"></span>
-Adafruit_MQTT_Publish<span style="color: #bbbbbb"> </span>onoff_get<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>Adafruit_MQTT_Publish(<span style="color: #666666">&amp;</span>mqtt,<span style="color: #bbbbbb"> </span>AIO_USERNAME<span style="color: #bbbbbb"> </span><span style="color: #BA2121">&quot;/feeds/onoff/get&quot;</span>);<span style="color: #bbbbbb"></span>
+    <span style="color: #008000; font-weight: bold">if</span> <span style="color: #AA22FF; font-weight: bold">not</span> filename:
+        <span style="color: #008000; font-weight: bold">return</span>  <span style="color: #3D7B7B; font-style: italic"># we&#39;re done, no icon desired</span>
 
-<span style="color: #3D7B7B; font-style: italic">// Setup feeds for sensors</span>
-Adafruit_MQTT_Publish<span style="color: #bbbbbb"> </span>level_Pressure<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>Adafruit_MQTT_Publish(<span style="color: #666666">&amp;</span>mqtt,<span style="color: #bbbbbb"> </span>AIO_USERNAME<span style="color: #bbbbbb"> </span><span style="color: #BA2121">&quot;/feeds/level_pressure&quot;</span>);<span style="color: #bbbbbb"></span>
-Adafruit_MQTT_Publish<span style="color: #bbbbbb"> </span>level_Tape<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>Adafruit_MQTT_Publish(<span style="color: #666666">&amp;</span>mqtt,<span style="color: #bbbbbb"> </span>AIO_USERNAME<span style="color: #bbbbbb"> </span><span style="color: #BA2121">&quot;/feeds/level_tape&quot;</span>);<span style="color: #bbbbbb"></span>
+    <span style="color: #3D7B7B; font-style: italic"># CircuitPython 6 &amp; 7 compatible</span>
+    image_file <span style="color: #666666">=</span> <span style="color: #008000">open</span>(filename, <span style="color: #BA2121">&quot;rb&quot;</span>)
+    image <span style="color: #666666">=</span> displayio<span style="color: #666666">.</span>OnDiskBitmap(image_file)
+    image_sprite <span style="color: #666666">=</span> displayio<span style="color: #666666">.</span>TileGrid(
+        image, pixel_shader<span style="color: #666666">=</span><span style="color: #008000">getattr</span>(image, <span style="color: #BA2121">&quot;pixel_shader&quot;</span>, displayio<span style="color: #666666">.</span>ColorConverter())
+    )
 
-<span style="color: #3D7B7B; font-style: italic">/*************************** Sketch Code ************************************/</span><span style="color: #bbbbbb"></span>
+    <span style="color: #3D7B7B; font-style: italic"># # CircuitPython 7+ compatible</span>
+    <span style="color: #3D7B7B; font-style: italic"># image = displayio.OnDiskBitmap(filename)</span>
+    <span style="color: #3D7B7B; font-style: italic"># image_sprite = displayio.TileGrid(image, pixel_shader=image.pixel_shader)</span>
 
-<span style="color: #B00040">void</span><span style="color: #bbbbbb"> </span><span style="color: #0000FF">setup</span>()<span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">  </span><span style="color: #3D7B7B; font-style: italic">//Configure pins for Adafruit ATWINC1500 Feather</span>
-<span style="color: #bbbbbb">  </span>WiFi.setPins(<span style="color: #666666">8</span>,<span style="color: #666666">7</span>,<span style="color: #666666">4</span>,<span style="color: #666666">2</span>);<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">  </span>
-<span style="color: #bbbbbb">  </span>pinMode(switch_pin,<span style="color: #bbbbbb"> </span>OUTPUT);<span style="color: #bbbbbb"></span>
+    group<span style="color: #666666">.</span>append(image_sprite)
 
-<span style="color: #bbbbbb">  </span>Serial.begin(<span style="color: #666666">115200</span>);<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">while</span><span style="color: #bbbbbb"> </span>(<span style="color: #666666">!</span>Serial)<span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"> </span>;<span style="color: #bbbbbb"> </span>}<span style="color: #bbbbbb"> </span><span style="color: #3D7B7B; font-style: italic">// wait for serial port to connect. Needed for debugging with serial monitor only</span>
-<span style="color: #bbbbbb">  </span>
-<span style="color: #bbbbbb">  </span>delay(<span style="color: #666666">10</span>);<span style="color: #bbbbbb"></span>
 
-<span style="color: #bbbbbb">  </span><span style="color: #3D7B7B; font-style: italic">// Connect to WiFi access point.</span>
-<span style="color: #bbbbbb">  </span>Serial.println();<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">  </span>Serial.println();<span style="color: #bbbbbb"></span>
+<span style="color: #3D7B7B; font-style: italic"># return a reformatted string with word wrapping using PyPortal.wrap_nicely</span>
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">text_box</span>(target, top, string, max_chars<span style="color: #666666">=</span>TABS_chars):
+    text <span style="color: #666666">=</span> pyportal<span style="color: #666666">.</span>wrap_nicely(string, max_chars)
+    new_text <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;&quot;</span>
+    test <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;&quot;</span>
 
-<span style="color: #bbbbbb">  </span>Serial.print(<span style="color: #BA2121">&quot;Connecting to &quot;</span>);<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">  </span>Serial.println(WLAN_SSID);<span style="color: #bbbbbb"></span>
+    <span style="color: #008000; font-weight: bold">for</span> w <span style="color: #AA22FF; font-weight: bold">in</span> text:
+        new_text <span style="color: #666666">+=</span> <span style="color: #BA2121">&quot;</span><span style="color: #AA5D1F; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span> <span style="color: #666666">+</span> w
+        test <span style="color: #666666">+=</span> <span style="color: #BA2121">&quot;M</span><span style="color: #AA5D1F; font-weight: bold">\n</span><span style="color: #BA2121">&quot;</span>
 
-<span style="color: #bbbbbb">  </span>WiFi.begin(WLAN_SSID,<span style="color: #bbbbbb"> </span>WLAN_PASS);<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">while</span><span style="color: #bbbbbb"> </span>(WiFi.status()<span style="color: #bbbbbb"> </span><span style="color: #666666">!=</span><span style="color: #bbbbbb"> </span>WL_CONNECTED)<span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">    </span>delay(<span style="color: #666666">500</span>);<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">    </span>Serial.print(F(<span style="color: #BA2121">&quot;.&quot;</span>));<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">  </span>}<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">  </span>Serial.println();<span style="color: #bbbbbb"></span>
+    text_height <span style="color: #666666">=</span> Label(font, text<span style="color: #666666">=</span><span style="color: #BA2121">&quot;M&quot;</span>, color<span style="color: #666666">=0x03AD31</span>)
+    text_height<span style="color: #666666">.</span>text <span style="color: #666666">=</span> test  <span style="color: #3D7B7B; font-style: italic"># Odd things happen without this</span>
+    glyph_box <span style="color: #666666">=</span> text_height<span style="color: #666666">.</span>bounding_box
+    target<span style="color: #666666">.</span>text <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;&quot;</span>  <span style="color: #3D7B7B; font-style: italic"># Odd things happen without this</span>
+    target<span style="color: #666666">.</span>y <span style="color: #666666">=</span> <span style="color: #008000">int</span>(glyph_box[<span style="color: #666666">3</span>] <span style="color: #666666">/</span> <span style="color: #666666">2</span>) <span style="color: #666666">+</span> top
+    target<span style="color: #666666">.</span>text <span style="color: #666666">=</span> new_text
 
-<span style="color: #bbbbbb">  </span>Serial.println(F(<span style="color: #BA2121">&quot;WiFi connected&quot;</span>));<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">  </span>Serial.println(F(<span style="color: #BA2121">&quot;IP address: &quot;</span>));<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">  </span>Serial.println(WiFi.localIP());<span style="color: #bbbbbb"></span>
 
-<span style="color: #bbbbbb">  </span><span style="color: #3D7B7B; font-style: italic">// listen for events on the onoffbutton feed</span>
-<span style="color: #bbbbbb">  </span>mqtt.subscribe(<span style="color: #666666">&amp;</span>onoffbutton);<span style="color: #bbbbbb"></span>
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">get_Temperature</span>(source):
+    <span style="color: #008000; font-weight: bold">if</span> source:  <span style="color: #3D7B7B; font-style: italic"># Only if we have the temperature sensor</span>
+        celsius <span style="color: #666666">=</span> source<span style="color: #666666">.</span>temperature
+    <span style="color: #008000; font-weight: bold">else</span>:  <span style="color: #3D7B7B; font-style: italic"># No temperature sensor</span>
+        celsius <span style="color: #666666">=</span> microcontroller<span style="color: #666666">.</span>cpu<span style="color: #666666">.</span>temperature
+    <span style="color: #008000; font-weight: bold">return</span> (celsius <span style="color: #666666">*</span> <span style="color: #666666">1.8</span>) <span style="color: #666666">+</span> <span style="color: #666666">32</span>
 
-<span style="color: #bbbbbb">  </span><span style="color: #3D7B7B; font-style: italic">// connect to adafruit io</span>
-<span style="color: #bbbbbb">  </span>MQTT_connect();<span style="color: #bbbbbb"></span>
+<span style="color: #3D7B7B; font-style: italic"># ------------- Inputs and Outputs Setup ------------- #</span>
+light_sensor <span style="color: #666666">=</span> AnalogIn(board<span style="color: #666666">.</span>LIGHT)
+<span style="color: #008000; font-weight: bold">try</span>:
+    <span style="color: #3D7B7B; font-style: italic"># attempt to init. the temperature sensor</span>
+    i2c_bus <span style="color: #666666">=</span> busio<span style="color: #666666">.</span>I2C(board<span style="color: #666666">.</span>SCL, board<span style="color: #666666">.</span>SDA)
+    adt <span style="color: #666666">=</span> adafruit_adt7410<span style="color: #666666">.</span>ADT7410(i2c_bus, address<span style="color: #666666">=0x48</span>)
+    adt<span style="color: #666666">.</span>high_resolution <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">True</span>
+<span style="color: #008000; font-weight: bold">except</span> <span style="color: #CB3F38; font-weight: bold">ValueError</span>:
+    <span style="color: #3D7B7B; font-style: italic"># Did not find ADT7410. Probably running on Titano or Pynt</span>
+    adt <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">None</span>
 
-}<span style="color: #bbbbbb"></span>
+<span style="color: #3D7B7B; font-style: italic"># ------------- Screen Setup ------------- #</span>
+pyportal <span style="color: #666666">=</span> PyPortal()
+pyportal<span style="color: #666666">.</span>set_background(<span style="color: #BA2121">&quot;/images/loading.bmp&quot;</span>)  <span style="color: #3D7B7B; font-style: italic"># Display an image until the loop starts</span>
+pixel <span style="color: #666666">=</span> neopixel<span style="color: #666666">.</span>NeoPixel(board<span style="color: #666666">.</span>NEOPIXEL, <span style="color: #666666">1</span>, brightness<span style="color: #666666">=1</span>)
 
-<span style="color: #B00040">void</span><span style="color: #bbbbbb"> </span><span style="color: #0000FF">loop</span>()<span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">  </span><span style="color: #B00040">int8_t</span><span style="color: #bbbbbb"> </span>jobDuration;<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">  </span>Adafruit_MQTT_Subscribe<span style="color: #bbbbbb"> </span><span style="color: #666666">*</span>subscription;<span style="color: #bbbbbb"></span>
+<span style="color: #3D7B7B; font-style: italic"># Touchscreen setup  [ Rotate 270 ]</span>
+display <span style="color: #666666">=</span> board<span style="color: #666666">.</span>DISPLAY
+display<span style="color: #666666">.</span>rotation <span style="color: #666666">=</span> <span style="color: #666666">0</span>
 
-<span style="color: #bbbbbb">  </span><span style="color: #3D7B7B; font-style: italic">// ping adafruit io a few times to make sure we remain connected</span>
-<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">if</span>(<span style="color: #666666">!</span><span style="color: #bbbbbb"> </span>mqtt.ping(<span style="color: #666666">3</span>))<span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">    </span><span style="color: #3D7B7B; font-style: italic">// reconnect to adafruit io</span>
-<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">if</span>(<span style="color: #666666">!</span><span style="color: #bbbbbb"> </span>mqtt.connected())<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">      </span>MQTT_connect();<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">  </span>}<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">  </span><span style="color: #3D7B7B; font-style: italic">//</span>
-<span style="color: #bbbbbb">  </span>
-<span style="color: #bbbbbb">  </span><span style="color: #3D7B7B; font-style: italic">// this is our &#39;wait for incoming subscription packets&#39; busy subloop</span>
+<span style="color: #008000; font-weight: bold">if</span> board<span style="color: #666666">.</span>board_id <span style="color: #666666">==</span> <span style="color: #BA2121">&quot;pyportal_titano&quot;</span>:
+    screen_width <span style="color: #666666">=</span> <span style="color: #666666">320</span>
+    screen_height <span style="color: #666666">=</span> <span style="color: #666666">480</span>
+    set_backlight(
+        <span style="color: #666666">1</span>
+    )  <span style="color: #3D7B7B; font-style: italic"># 0.3 brightness does not cause the display to be visible on the Titano</span>
+<span style="color: #008000; font-weight: bold">else</span>:
+    screen_width <span style="color: #666666">=</span> <span style="color: #666666">320</span>
+    screen_height <span style="color: #666666">=</span> <span style="color: #666666">240</span>
+    set_backlight(<span style="color: #666666">0.3</span>)
 
-<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">while</span><span style="color: #bbbbbb"> </span>(subscription<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>mqtt.readSubscription(<span style="color: #666666">1000</span>))<span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"></span>
+<span style="color: #3D7B7B; font-style: italic"># We want three buttons across the top of the screen</span>
+TAB_BUTTON_Y <span style="color: #666666">=</span> <span style="color: #666666">0</span>
+TAB_BUTTON_HEIGHT <span style="color: #666666">=</span> <span style="color: #666666">40</span>
+TAB_BUTTON_WIDTH <span style="color: #666666">=</span> <span style="color: #008000">int</span>(screen_width <span style="color: #666666">/</span> <span style="color: #666666">3</span>)
 
-<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #bbbbbb"> </span>(subscription<span style="color: #bbbbbb"> </span><span style="color: #666666">==</span><span style="color: #bbbbbb"> </span><span style="color: #666666">&amp;</span>onoffbutton)<span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">      </span>Serial.print(F(<span style="color: #BA2121">&quot;On-Off button: &quot;</span>));<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">      </span>Serial.println((<span style="color: #B00040">char</span><span style="color: #bbbbbb"> </span><span style="color: #666666">*</span>)onoffbutton.lastread);<span style="color: #bbbbbb"></span>
+<span style="color: #3D7B7B; font-style: italic"># We want two big buttons at the bottom of the screen</span>
+<span style="color: #3D7B7B; font-style: italic"># BIG_BUTTON_HEIGHT = int(screen_height / 3.2)</span>
+<span style="color: #3D7B7B; font-style: italic"># BIG_BUTTON_WIDTH = int(screen_width / 2)</span>
+<span style="color: #3D7B7B; font-style: italic"># BIG_BUTTON_Y = int(screen_height - BIG_BUTTON_HEIGHT)</span>
 
-<span style="color: #bbbbbb">      </span><span style="color: #3D7B7B; font-style: italic">// convert mqtt ascii payload to int</span>
-<span style="color: #bbbbbb">      </span><span style="color: #B00040">char</span><span style="color: #bbbbbb"> </span><span style="color: #666666">*</span>value<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>(<span style="color: #B00040">char</span><span style="color: #bbbbbb"> </span><span style="color: #666666">*</span>)onoffbutton.lastread;<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">      </span>Serial.print(F(<span style="color: #BA2121">&quot;Received: &quot;</span>));<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">      </span>Serial.println(value);<span style="color: #bbbbbb"></span>
+<span style="color: #3D7B7B; font-style: italic"># Initializes the display touch screen area</span>
+ts <span style="color: #666666">=</span> adafruit_touchscreen<span style="color: #666666">.</span>Touchscreen(
+    board<span style="color: #666666">.</span>TOUCH_XL,
+    board<span style="color: #666666">.</span>TOUCH_XR,
+    board<span style="color: #666666">.</span>TOUCH_YD,
+    board<span style="color: #666666">.</span>TOUCH_YU,
+    calibration<span style="color: #666666">=</span>((<span style="color: #666666">5200</span>, <span style="color: #666666">59000</span>), (<span style="color: #666666">5800</span>, <span style="color: #666666">57000</span>)),
+    size<span style="color: #666666">=</span>(screen_width, screen_height)
+)
 
-<span style="color: #bbbbbb">      </span><span style="color: #3D7B7B; font-style: italic">// Apply message to onoffbutton</span>
-<span style="color: #bbbbbb">      </span>String<span style="color: #bbbbbb"> </span>message<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>String(value);<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">      </span>message.trim();<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">      </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #bbbbbb"> </span>(message<span style="color: #bbbbbb"> </span><span style="color: #666666">==</span><span style="color: #bbbbbb"> </span><span style="color: #BA2121">&quot;ON&quot;</span>)<span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">        </span>jobDuration<span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>Flood();<span style="color: #bbbbbb">      </span>
-<span style="color: #bbbbbb">        </span>Serial.println(<span style="color: #BA2121">&quot;publishing to /get&quot;</span>);<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">        </span>onoff_get.publish((<span style="color: #B00040">int32_t</span>)jobDuration);<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">break</span>;<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">      </span>}<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">    </span>}<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">  </span>}<span style="color: #bbbbbb"></span>
-}<span style="color: #bbbbbb"></span>
+<span style="color: #3D7B7B; font-style: italic"># ------------- Display Groups ------------- #</span>
+splash <span style="color: #666666">=</span> displayio<span style="color: #666666">.</span>Group()  <span style="color: #3D7B7B; font-style: italic"># The Main Display Group</span>
+viewStatus <span style="color: #666666">=</span> displayio<span style="color: #666666">.</span>Group()  <span style="color: #3D7B7B; font-style: italic"># Group for Status objects</span>
+viewGraph <span style="color: #666666">=</span> displayio<span style="color: #666666">.</span>Group()  <span style="color: #3D7B7B; font-style: italic"># Group for Graph objects</span>
+viewLog <span style="color: #666666">=</span> displayio<span style="color: #666666">.</span>Group()  <span style="color: #3D7B7B; font-style: italic"># Group for Log objects</span>
 
-<span style="color: #3D7B7B; font-style: italic">// connect to adafruit io via MQTT</span>
+<span style="color: #3D7B7B; font-style: italic"># ------------- Setup for Images ------------- #</span>
+bg_group <span style="color: #666666">=</span> displayio<span style="color: #666666">.</span>Group()
+splash<span style="color: #666666">.</span>append(bg_group)
+set_image(bg_group, <span style="color: #BA2121">&quot;/images/BGimage.bmp&quot;</span>)
 
-<span style="color: #B00040">void</span><span style="color: #bbbbbb"> </span><span style="color: #0000FF">MQTT_connect</span>()<span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">  </span><span style="color: #B00040">int8_t</span><span style="color: #bbbbbb"> </span>ret;<span style="color: #bbbbbb"></span>
+icon_group <span style="color: #666666">=</span> displayio<span style="color: #666666">.</span>Group()
+icon_group<span style="color: #666666">.</span>x <span style="color: #666666">=</span> <span style="color: #666666">180</span>
+icon_group<span style="color: #666666">.</span>y <span style="color: #666666">=</span> <span style="color: #666666">120</span>
+icon_group<span style="color: #666666">.</span>scale <span style="color: #666666">=</span> <span style="color: #666666">1</span>
+viewGraph<span style="color: #666666">.</span>append(icon_group)
 
-<span style="color: #bbbbbb">  </span><span style="color: #008000; font-weight: bold">while</span><span style="color: #bbbbbb"> </span>((ret<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>mqtt.connect())<span style="color: #bbbbbb"> </span><span style="color: #666666">!=</span><span style="color: #bbbbbb"> </span><span style="color: #666666">0</span>)<span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"></span>
+<span style="color: #3D7B7B; font-style: italic"># ---------- Text Boxes ------------- #</span>
+<span style="color: #3D7B7B; font-style: italic"># Set the font and preload letters</span>
+font <span style="color: #666666">=</span> bitmap_font<span style="color: #666666">.</span>load_font(<span style="color: #BA2121">&quot;/fonts/Helvetica-Bold-16.bdf&quot;</span>)
+font<span style="color: #666666">.</span>load_glyphs(<span style="color: #BA2121">b&quot;abcdefghjiklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890- ()&quot;</span>)
 
-<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">switch</span><span style="color: #bbbbbb"> </span>(ret)<span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">      </span><span style="color: #008000; font-weight: bold">case</span><span style="color: #bbbbbb"> </span><span style="color: #666666">1:</span><span style="color: #bbbbbb"> </span>Serial.println(F(<span style="color: #BA2121">&quot;Wrong protocol&quot;</span>));<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">break</span>;<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">      </span><span style="color: #008000; font-weight: bold">case</span><span style="color: #bbbbbb"> </span><span style="color: #666666">2:</span><span style="color: #bbbbbb"> </span>Serial.println(F(<span style="color: #BA2121">&quot;ID rejected&quot;</span>));<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">break</span>;<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">      </span><span style="color: #008000; font-weight: bold">case</span><span style="color: #bbbbbb"> </span><span style="color: #666666">3:</span><span style="color: #bbbbbb"> </span>Serial.println(F(<span style="color: #BA2121">&quot;Server unavail&quot;</span>));<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">break</span>;<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">      </span><span style="color: #008000; font-weight: bold">case</span><span style="color: #bbbbbb"> </span><span style="color: #666666">4:</span><span style="color: #bbbbbb"> </span>Serial.println(F(<span style="color: #BA2121">&quot;Bad user/pass&quot;</span>));<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">break</span>;<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">      </span><span style="color: #008000; font-weight: bold">case</span><span style="color: #bbbbbb"> </span><span style="color: #666666">5:</span><span style="color: #bbbbbb"> </span>Serial.println(F(<span style="color: #BA2121">&quot;Not authed&quot;</span>));<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">break</span>;<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">      </span><span style="color: #008000; font-weight: bold">case</span><span style="color: #bbbbbb"> </span><span style="color: #666666">6:</span><span style="color: #bbbbbb"> </span>Serial.println(F(<span style="color: #BA2121">&quot;Failed to subscribe&quot;</span>));<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">break</span>;<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">      </span><span style="color: #008000; font-weight: bold">default</span><span style="color: #666666">:</span><span style="color: #bbbbbb"> </span>Serial.println(F(<span style="color: #BA2121">&quot;Connection failed&quot;</span>));<span style="color: #bbbbbb"> </span><span style="color: #008000; font-weight: bold">break</span>;<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">    </span>}<span style="color: #bbbbbb"></span>
+<span style="color: #3D7B7B; font-style: italic"># Text Label Objects</span>
+feed1_label <span style="color: #666666">=</span> Label(font, text<span style="color: #666666">=</span><span style="color: #BA2121">&quot;Text Window 1&quot;</span>, color<span style="color: #666666">=0xE39300</span>)
+feed1_label<span style="color: #666666">.</span>x <span style="color: #666666">=</span> TABS_X
+feed1_label<span style="color: #666666">.</span>y <span style="color: #666666">=</span> TABS_Y
+viewStatus<span style="color: #666666">.</span>append(feed1_label)
 
-<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">if</span>(ret<span style="color: #bbbbbb"> </span><span style="color: #666666">&gt;=</span><span style="color: #bbbbbb"> </span><span style="color: #666666">0</span>)<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">      </span>mqtt.disconnect();<span style="color: #bbbbbb"></span>
+sensors_label <span style="color: #666666">=</span> Label(font, text<span style="color: #666666">=</span><span style="color: #BA2121">&quot;Data View&quot;</span>, color<span style="color: #666666">=0x03AD31</span>)
+sensors_label<span style="color: #666666">.</span>x <span style="color: #666666">=</span> TABS_X
+sensors_label<span style="color: #666666">.</span>y <span style="color: #666666">=</span> TABS_Y <span style="color: #666666">+</span> <span style="color: #666666">50</span>
+viewStatus<span style="color: #666666">.</span>append(sensors_label)
 
-<span style="color: #bbbbbb">    </span>Serial.println(F(<span style="color: #BA2121">&quot;Retrying MQTT connection in 5 seconds...&quot;</span>));<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">    </span>delay(<span style="color: #666666">5000</span>);<span style="color: #bbbbbb"></span>
+sensor_data <span style="color: #666666">=</span> Label(font, text<span style="color: #666666">=</span><span style="color: #BA2121">&quot;Data View&quot;</span>, color<span style="color: #666666">=</span>GREEN)
+sensor_data<span style="color: #666666">.</span>x <span style="color: #666666">=</span> TABS_X <span style="color: #666666">+</span> <span style="color: #666666">16</span>  <span style="color: #3D7B7B; font-style: italic"># Indents the text layout</span>
+sensor_data<span style="color: #666666">.</span>y <span style="color: #666666">=</span> TABS_Y <span style="color: #666666">+</span> <span style="color: #666666">150</span>
+viewStatus<span style="color: #666666">.</span>append(sensor_data)
 
-<span style="color: #bbbbbb">  </span>}<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">  </span>Serial.println(F(<span style="color: #BA2121">&quot;MQTT Connected to Adafruit IO!&quot;</span>));<span style="color: #bbbbbb"></span>
+<span style="color: #3D7B7B; font-style: italic"># ---------- Display Buttons ------------- #</span>
+<span style="color: #3D7B7B; font-style: italic"># This group will make it easy for us to read a button press later.</span>
+buttons <span style="color: #666666">=</span> []
 
-<span style="color: #bbbbbb">  </span><span style="color: #3D7B7B; font-style: italic">/*</span>
-<span style="color: #3D7B7B; font-style: italic">  Publishing to {username}/feeds/onoff/get will trigger the last</span>
-<span style="color: #3D7B7B; font-style: italic">  value to be resent. Putting this call inside the MQTT_connect</span>
-<span style="color: #3D7B7B; font-style: italic">  function means that whenever MQTT reconnects, the latest value</span>
-<span style="color: #3D7B7B; font-style: italic">  for the feed will be received almost immediately.</span>
-<span style="color: #3D7B7B; font-style: italic">  */</span><span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">  </span>Serial.println(<span style="color: #BA2121">&quot;publishing to /get&quot;</span>);<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">  </span>onoff_get.publish((<span style="color: #B00040">int32_t</span>)<span style="color: #666666">0</span>);<span style="color: #bbbbbb"></span>
-}<span style="color: #bbbbbb"></span>
+<span style="color: #3D7B7B; font-style: italic"># Main User Interface Buttons</span>
+button_status <span style="color: #666666">=</span> Button(
+    x<span style="color: #666666">=0</span>,  <span style="color: #3D7B7B; font-style: italic"># Start at furthest left</span>
+    y<span style="color: #666666">=0</span>,  <span style="color: #3D7B7B; font-style: italic"># Start at top</span>
+    width<span style="color: #666666">=</span>TAB_BUTTON_WIDTH,  <span style="color: #3D7B7B; font-style: italic"># Calculated width</span>
+    height<span style="color: #666666">=</span>TAB_BUTTON_HEIGHT,  <span style="color: #3D7B7B; font-style: italic"># Static height</span>
+    label<span style="color: #666666">=</span><span style="color: #BA2121">&quot;STATUS&quot;</span>,
+    label_font<span style="color: #666666">=</span>font,
+    label_color<span style="color: #666666">=0xFF7E00</span>,
+    fill_color<span style="color: #666666">=0x5C5B5C</span>,
+    outline_color<span style="color: #666666">=0x767676</span>,
+    selected_fill<span style="color: #666666">=0x1A1A1A</span>,
+    selected_outline<span style="color: #666666">=0x2E2E2E</span>,
+    selected_label<span style="color: #666666">=0x525252</span>,
+)
+buttons<span style="color: #666666">.</span>append(button_status)  <span style="color: #3D7B7B; font-style: italic"># adding this button to the buttons group</span>
 
-<span style="color: #B00040">int8_t</span><span style="color: #bbbbbb"> </span><span style="color: #0000FF">Flood</span>()<span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">    </span><span style="color: #B00040">int</span><span style="color: #bbbbbb"> </span>timer<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #666666">0</span>;<span style="color: #bbbbbb"></span>
+button_graph <span style="color: #666666">=</span> Button(
+    x<span style="color: #666666">=</span>TAB_BUTTON_WIDTH,  <span style="color: #3D7B7B; font-style: italic"># Start after width of a button</span>
+    y<span style="color: #666666">=0</span>,
+    width<span style="color: #666666">=</span>TAB_BUTTON_WIDTH,
+    height<span style="color: #666666">=</span>TAB_BUTTON_HEIGHT,
+    label<span style="color: #666666">=</span><span style="color: #BA2121">&quot;GRAPH&quot;</span>,
+    label_font<span style="color: #666666">=</span>font,
+    label_color<span style="color: #666666">=0xFF7E00</span>,
+    fill_color<span style="color: #666666">=0x5C5B5C</span>,
+    outline_color<span style="color: #666666">=0x767676</span>,
+    selected_fill<span style="color: #666666">=0x1A1A1A</span>,
+    selected_outline<span style="color: #666666">=0x2E2E2E</span>,
+    selected_label<span style="color: #666666">=0x525252</span>,
+)
+buttons<span style="color: #666666">.</span>append(button_graph)  <span style="color: #3D7B7B; font-style: italic"># adding this button to the buttons group</span>
 
-<span style="color: #bbbbbb">    </span><span style="color: #3D7B7B; font-style: italic">// turn on air pump and close ARV</span>
-<span style="color: #bbbbbb">    </span>digitalWrite(switch_pin,<span style="color: #bbbbbb"> </span>LOW);<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">    </span>
-<span style="color: #bbbbbb">    </span><span style="color: #B00040">float</span><span style="color: #bbbbbb"> </span>level_pressure_data;<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">    </span><span style="color: #B00040">float</span><span style="color: #bbbbbb"> </span>level_tape_data;<span style="color: #bbbbbb"></span>
+button_log <span style="color: #666666">=</span> Button(
+    x<span style="color: #666666">=</span>TAB_BUTTON_WIDTH <span style="color: #666666">*</span> <span style="color: #666666">2</span>,  <span style="color: #3D7B7B; font-style: italic"># Start after width of 2 buttons</span>
+    y<span style="color: #666666">=0</span>,
+    width<span style="color: #666666">=</span>TAB_BUTTON_WIDTH,
+    height<span style="color: #666666">=</span>TAB_BUTTON_HEIGHT,
+    label<span style="color: #666666">=</span><span style="color: #BA2121">&quot;LOG&quot;</span>,
+    label_font<span style="color: #666666">=</span>font,
+    label_color<span style="color: #666666">=0xFF7E00</span>,
+    fill_color<span style="color: #666666">=0x5C5B5C</span>,
+    outline_color<span style="color: #666666">=0x767676</span>,
+    selected_fill<span style="color: #666666">=0x1A1A1A</span>,
+    selected_outline<span style="color: #666666">=0x2E2E2E</span>,
+    selected_label<span style="color: #666666">=0x525252</span>,
+)
+buttons<span style="color: #666666">.</span>append(button_log)  <span style="color: #3D7B7B; font-style: italic"># adding this button to the buttons group</span>
 
-<span style="color: #bbbbbb">    </span><span style="color: #B00040">float</span><span style="color: #bbbbbb"> </span>last_level_pressure_data<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #666666">0</span>;<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">    </span><span style="color: #B00040">float</span><span style="color: #bbbbbb"> </span>last_level_tape_data<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #666666">0</span>;<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">while</span><span style="color: #bbbbbb"> </span>(<span style="color: #008000">true</span>)<span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">        </span>timer<span style="color: #bbbbbb"> </span><span style="color: #666666">+=</span><span style="color: #bbbbbb"> </span><span style="color: #666666">3</span>;<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">        </span>level_pressure_data<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #666666">0</span>;<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">        </span>level_tape_data<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span><span style="color: #666666">0</span>;<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #bbbbbb"> </span>(<span style="color: #666666">!</span><span style="color: #bbbbbb"> </span>level_Pressure.publish(level_pressure_data))<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">          </span>Serial.println(F(<span style="color: #BA2121">&quot;Failed to publish level_pressure&quot;</span>));<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">else</span><span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">          </span>Serial.println(F(<span style="color: #BA2121">&quot;Level_pressure published!&quot;</span>));<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">         </span>
-<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #bbbbbb"> </span>(<span style="color: #666666">!</span><span style="color: #bbbbbb"> </span>level_Tape.publish(level_tape_data))<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">          </span>Serial.println(F(<span style="color: #BA2121">&quot;Failed to publish level_tape&quot;</span>));<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">else</span><span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">          </span>Serial.println(F(<span style="color: #BA2121">&quot;Level_tape published!&quot;</span>));<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">        </span>
-<span style="color: #bbbbbb">        </span>last_level_pressure_data<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>level_pressure_data;<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">        </span>last_level_tape_data<span style="color: #bbbbbb"> </span><span style="color: #666666">=</span><span style="color: #bbbbbb"> </span>level_tape_data;<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">        </span>
-<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #bbbbbb"> </span>(abs(level_pressure_data<span style="color: #bbbbbb"> </span><span style="color: #666666">-</span><span style="color: #bbbbbb"> </span>level_tape_data)<span style="color: #bbbbbb"> </span><span style="color: #666666">&gt;</span><span style="color: #bbbbbb"> </span><span style="color: #666666">1</span>)<span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">            </span><span style="color: #3D7B7B; font-style: italic">//send alert</span>
-<span style="color: #bbbbbb">        </span>}<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #bbbbbb"> </span>((level_pressure_data<span style="color: #bbbbbb"> </span><span style="color: #666666">&lt;</span><span style="color: #bbbbbb"> </span><span style="color: #666666">3</span>)<span style="color: #bbbbbb"> </span><span style="color: #666666">||</span><span style="color: #bbbbbb"> </span>(level_tape_data<span style="color: #bbbbbb"> </span><span style="color: #666666">&lt;</span><span style="color: #bbbbbb"> </span><span style="color: #666666">3</span>)){<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">            </span><span style="color: #3D7B7B; font-style: italic">//send alert</span>
-<span style="color: #bbbbbb">        </span>}<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">        </span><span style="color: #008000; font-weight: bold">if</span><span style="color: #bbbbbb"> </span>(timer<span style="color: #bbbbbb"> </span><span style="color: #666666">&gt;</span><span style="color: #bbbbbb"> </span><span style="color: #666666">20</span>)<span style="color: #bbbbbb"> </span>{<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">            </span><span style="color: #3D7B7B; font-style: italic">//send alert</span>
-<span style="color: #bbbbbb">            </span>digitalWrite(switch_pin,<span style="color: #bbbbbb"> </span>HIGH);<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">            </span><span style="color: #008000; font-weight: bold">break</span>;<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">        </span>}<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">        </span>delay(<span style="color: #666666">3000</span>);<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">    </span>}<span style="color: #bbbbbb"></span>
-<span style="color: #bbbbbb">    </span><span style="color: #008000; font-weight: bold">return</span><span style="color: #bbbbbb"> </span>timer;<span style="color: #bbbbbb"></span>
-}<span style="color: #bbbbbb"></span>
+<span style="color: #3D7B7B; font-style: italic"># Add all of the main buttons to the splash Group</span>
+<span style="color: #008000; font-weight: bold">for</span> b <span style="color: #AA22FF; font-weight: bold">in</span> buttons:
+    splash<span style="color: #666666">.</span>append(b)
+
+<span style="color: #3D7B7B; font-style: italic"># Make a button to play a sound on viewStatus</span>
+button_flood <span style="color: #666666">=</span> Button(
+    x<span style="color: #666666">=180</span>,
+    y<span style="color: #666666">=180</span>,
+    width<span style="color: #666666">=</span>BUTTON_WIDTH,
+    height<span style="color: #666666">=</span>BUTTON_HEIGHT,
+    label<span style="color: #666666">=</span><span style="color: #BA2121">&quot;FLOOD NOW&quot;</span>,
+    label_font<span style="color: #666666">=</span>font,
+    label_color<span style="color: #666666">=0xFFFFFF</span>,
+    fill_color<span style="color: #666666">=0x8900FF</span>,
+    outline_color<span style="color: #666666">=0xBC55FD</span>,
+    selected_fill<span style="color: #666666">=0x5A5A5A</span>,
+    selected_outline<span style="color: #666666">=0xFF6600</span>,
+    selected_label<span style="color: #666666">=0x525252</span>,
+    style<span style="color: #666666">=</span>Button<span style="color: #666666">.</span>ROUNDRECT,
+)
+buttons<span style="color: #666666">.</span>append(button_flood)  <span style="color: #3D7B7B; font-style: italic"># adding this button to the buttons group</span>
+
+<span style="color: #3D7B7B; font-style: italic"># Add this button to viewGraph Group</span>
+viewStatus<span style="color: #666666">.</span>append(button_flood)
+
+<span style="color: #3D7B7B; font-style: italic"># pylint: disable=global-statement</span>
+<span style="color: #008000; font-weight: bold">def</span> <span style="color: #0000FF">switch_view</span>(what_view):
+    <span style="color: #008000; font-weight: bold">global</span> view_live
+    <span style="color: #008000; font-weight: bold">if</span> what_view <span style="color: #666666">==</span> <span style="color: #666666">1</span>:
+        button_status<span style="color: #666666">.</span>selected <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">False</span>
+        button_graph<span style="color: #666666">.</span>selected <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">True</span>
+        button_log<span style="color: #666666">.</span>selected <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">True</span>
+        layerVisibility(<span style="color: #BA2121">&quot;hide&quot;</span>, splash, viewGraph)
+        layerVisibility(<span style="color: #BA2121">&quot;hide&quot;</span>, splash, viewLog)
+        layerVisibility(<span style="color: #BA2121">&quot;show&quot;</span>, splash, viewStatus)
+    <span style="color: #008000; font-weight: bold">elif</span> what_view <span style="color: #666666">==</span> <span style="color: #666666">2</span>:
+        <span style="color: #3D7B7B; font-style: italic"># global icon</span>
+        button_status<span style="color: #666666">.</span>selected <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">True</span>
+        button_graph<span style="color: #666666">.</span>selected <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">False</span>
+        button_log<span style="color: #666666">.</span>selected <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">True</span>
+        layerVisibility(<span style="color: #BA2121">&quot;hide&quot;</span>, splash, viewStatus)
+        layerVisibility(<span style="color: #BA2121">&quot;hide&quot;</span>, splash, viewLog)
+        layerVisibility(<span style="color: #BA2121">&quot;show&quot;</span>, splash, viewGraph)
+    <span style="color: #008000; font-weight: bold">else</span>:
+        button_status<span style="color: #666666">.</span>selected <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">True</span>
+        button_graph<span style="color: #666666">.</span>selected <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">True</span>
+        button_log<span style="color: #666666">.</span>selected <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">False</span>
+        layerVisibility(<span style="color: #BA2121">&quot;hide&quot;</span>, splash, viewStatus)
+        layerVisibility(<span style="color: #BA2121">&quot;hide&quot;</span>, splash, viewGraph)
+        layerVisibility(<span style="color: #BA2121">&quot;show&quot;</span>, splash, viewLog)
+
+    <span style="color: #3D7B7B; font-style: italic"># Set global button state</span>
+    view_live <span style="color: #666666">=</span> what_view
+    <span style="color: #008000">print</span>(<span style="color: #BA2121">&quot;View </span><span style="color: #A45A77; font-weight: bold">{view_num:.0f}</span><span style="color: #BA2121"> On&quot;</span><span style="color: #666666">.</span>format(view_num<span style="color: #666666">=</span>what_view))
+
+
+<span style="color: #3D7B7B; font-style: italic"># pylint: enable=global-statement</span>
+
+<span style="color: #3D7B7B; font-style: italic"># Set veriables and startup states</span>
+button_status<span style="color: #666666">.</span>selected <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">False</span>
+button_graph<span style="color: #666666">.</span>selected <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">True</span>
+button_log<span style="color: #666666">.</span>selected <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">True</span>
+
+layerVisibility(<span style="color: #BA2121">&quot;show&quot;</span>, splash, viewStatus)
+layerVisibility(<span style="color: #BA2121">&quot;hide&quot;</span>, splash, viewGraph)
+layerVisibility(<span style="color: #BA2121">&quot;hide&quot;</span>, splash, viewLog)
+
+<span style="color: #3D7B7B; font-style: italic"># Update out Labels with display text.</span>
+text_box(
+    feed1_label,
+    TABS_Y,
+    <span style="color: #BA2121">&quot;This device controls the irrigation of this planter via flood events.&quot;</span>
+)
+
+text_box(
+    sensors_label,
+    TABS_Y <span style="color: #666666">+</span> <span style="color: #666666">90</span>,
+    <span style="color: #BA2121">&quot;Sensor readings:&quot;</span>
+)
+
+board<span style="color: #666666">.</span>DISPLAY<span style="color: #666666">.</span>show(splash)
+
+
+<span style="color: #3D7B7B; font-style: italic"># ------------- Code Loop ------------- #</span>
+<span style="color: #008000; font-weight: bold">while</span> <span style="color: #008000; font-weight: bold">True</span>:
+    touch <span style="color: #666666">=</span> ts<span style="color: #666666">.</span>touch_point
+    light <span style="color: #666666">=</span> light_sensor<span style="color: #666666">.</span>value
+    sensor_data<span style="color: #666666">.</span>text <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;Touch: </span><span style="color: #A45A77; font-weight: bold">{}</span><span style="color: #AA5D1F; font-weight: bold">\n</span><span style="color: #BA2121">Light: </span><span style="color: #A45A77; font-weight: bold">{}</span><span style="color: #AA5D1F; font-weight: bold">\n</span><span style="color: #BA2121">Temp: </span><span style="color: #A45A77; font-weight: bold">{:.0f}</span><span style="color: #BA2121">°F&quot;</span><span style="color: #666666">.</span>format(
+        touch, light, get_Temperature(adt)
+    )
+
+    <span style="color: #3D7B7B; font-style: italic"># Will also cause screen to dim when hand is blocking sensor to touch screen</span>
+    <span style="color: #3D7B7B; font-style: italic">#    # Adjust backlight</span>
+    <span style="color: #3D7B7B; font-style: italic">#    if light &lt; 1500:</span>
+    <span style="color: #3D7B7B; font-style: italic">#        set_backlight(0.1)</span>
+    <span style="color: #3D7B7B; font-style: italic">#    elif light &lt; 3000:</span>
+    <span style="color: #3D7B7B; font-style: italic">#        set_backlight(0.5)</span>
+    <span style="color: #3D7B7B; font-style: italic">#    else:</span>
+    <span style="color: #3D7B7B; font-style: italic">#        set_backlight(1)</span>
+
+    <span style="color: #3D7B7B; font-style: italic"># ------------- Handle Button Press Detection  ------------- #</span>
+    <span style="color: #008000; font-weight: bold">if</span> touch:  <span style="color: #3D7B7B; font-style: italic"># Only do this if the screen is touched</span>
+        <span style="color: #3D7B7B; font-style: italic"># loop with buttons using enumerate() to number each button group as i</span>
+        <span style="color: #008000; font-weight: bold">for</span> i, b <span style="color: #AA22FF; font-weight: bold">in</span> <span style="color: #008000">enumerate</span>(buttons):
+            <span style="color: #008000; font-weight: bold">if</span> b<span style="color: #666666">.</span>contains(touch):  <span style="color: #3D7B7B; font-style: italic"># Test each button to see if it was pressed</span>
+                <span style="color: #008000">print</span>(<span style="color: #BA2121">&quot;button</span><span style="color: #A45A77; font-weight: bold">{}</span><span style="color: #BA2121"> pressed&quot;</span><span style="color: #666666">.</span>format(i))
+                <span style="color: #008000; font-weight: bold">if</span> i <span style="color: #666666">==</span> <span style="color: #666666">0</span> <span style="color: #AA22FF; font-weight: bold">and</span> view_live <span style="color: #666666">!=</span> <span style="color: #666666">1</span>:  <span style="color: #3D7B7B; font-style: italic"># only if viewStatus is visible</span>
+                    pyportal<span style="color: #666666">.</span>play_file(soundTab)
+                    switch_view(<span style="color: #666666">1</span>)
+                    <span style="color: #008000; font-weight: bold">while</span> ts<span style="color: #666666">.</span>touch_point:
+                        <span style="color: #008000; font-weight: bold">pass</span>
+                <span style="color: #008000; font-weight: bold">if</span> i <span style="color: #666666">==</span> <span style="color: #666666">1</span> <span style="color: #AA22FF; font-weight: bold">and</span> view_live <span style="color: #666666">!=</span> <span style="color: #666666">2</span>:  <span style="color: #3D7B7B; font-style: italic"># only if viewGraph is visible</span>
+                    pyportal<span style="color: #666666">.</span>play_file(soundTab)
+                    switch_view(<span style="color: #666666">2</span>)
+                    <span style="color: #008000; font-weight: bold">while</span> ts<span style="color: #666666">.</span>touch_point:
+                        <span style="color: #008000; font-weight: bold">pass</span>
+                <span style="color: #008000; font-weight: bold">if</span> i <span style="color: #666666">==</span> <span style="color: #666666">2</span> <span style="color: #AA22FF; font-weight: bold">and</span> view_live <span style="color: #666666">!=</span> <span style="color: #666666">3</span>:  <span style="color: #3D7B7B; font-style: italic"># only if viewLog is visible</span>
+                    pyportal<span style="color: #666666">.</span>play_file(soundTab)
+                    switch_view(<span style="color: #666666">3</span>)
+                    <span style="color: #008000; font-weight: bold">while</span> ts<span style="color: #666666">.</span>touch_point:
+                        <span style="color: #008000; font-weight: bold">pass</span>
+                <span style="color: #008000; font-weight: bold">if</span> i <span style="color: #666666">==</span> <span style="color: #666666">3</span>:
+                    pyportal<span style="color: #666666">.</span>play_file(soundBeep)
+                    <span style="color: #3D7B7B; font-style: italic"># Toggle switch button type</span>
+                    flood()
+                    <span style="color: #008000; font-weight: bold">if</span> flood_state <span style="color: #666666">==</span> <span style="color: #666666">0</span>:
+                        b<span style="color: #666666">.</span>label <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;STOP&quot;</span>
+                        b<span style="color: #666666">.</span>selected <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">True</span>
+                        b<span style="color: #666666">.</span>label_color <span style="color: #666666">=</span> RED
+                        pixel<span style="color: #666666">.</span>fill(WHITE)
+                    <span style="color: #008000; font-weight: bold">else</span>:
+                        b<span style="color: #666666">.</span>label <span style="color: #666666">=</span> <span style="color: #BA2121">&quot;FLOOD NOW&quot;</span>
+                        b<span style="color: #666666">.</span>selected <span style="color: #666666">=</span> <span style="color: #008000; font-weight: bold">False</span>
+                        b<span style="color: #666666">.</span>label_color <span style="color: #666666">=</span> WHITE
+                        pixel<span style="color: #666666">.</span>fill(BLACK)
+                        
+                        
+                    <span style="color: #3D7B7B; font-style: italic"># for debounce</span>
+                    <span style="color: #008000; font-weight: bold">while</span> ts<span style="color: #666666">.</span>touch_point:
+                        <span style="color: #008000; font-weight: bold">pass</span>
+                    <span style="color: #008000">print</span>(<span style="color: #BA2121">&quot;Switch Pressed&quot;</span>)
 </pre></div>
 <p>
 <p>

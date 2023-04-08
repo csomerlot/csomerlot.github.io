@@ -47,7 +47,7 @@ o Sensors
     o Interior
         o Temperature and humidity of each room
         o nonintrusive appliance load monitor
-            o Current sensors
+            o "Current sensors": "https://www.digikey.com/en/products/detail/seeed-technology-co-ltd/101990029/5488226"
             o Voltage Sensors
             o Circuit design
                 o Conceptual description = voltage and current translated to correct range for ADC, goes to ADC, ADC interface with GPIO I2C or SPI bus via isolation
@@ -300,7 +300,7 @@ o Alert:
     o send text message
 
 __CODE:__
-@@@CODE ./code/microHydroponics/code.py
+@@@CODE ./code/microHydroponics/main.py
 
 
 
