@@ -4,6 +4,7 @@
 #
 # https://learn.adafruit.com/making-a-pyportal-user-interface-displayio?view=all
 
+import os
 import time
 import board
 import microcontroller
@@ -34,22 +35,30 @@ PURPLE = 0xFF00FF
 BLACK = 0x000000
 
 # Default Label styling
-TABS_X = 2
+TABS_X = 8
 TABS_Y = 15
-TABS_width = 38
+TABS_chars = 40
 
 # Default button styling:
 BUTTON_HEIGHT = 40
-BUTTON_WIDTH = 80
+BUTTON_WIDTH = 132
 
 # Default State
 view_live = 1
-icon = 1
-icon_name = "Ruby"
 button_mode = 1
-switch_state = 0
+flood_state = 0
 
 # ------------- Functions ------------- #
+
+def flood():
+    global flood_state
+    if flood_state:
+        print("Turning off the flood")
+        flood_state = 0
+    else:
+        print("Starting the flood mechanism")
+        flood_state = 1
+
 # Backlight function
 # Value between 0 and 1 where 0 is OFF, 0.5 is 50% and 1 is 100% brightness.
 def set_backlight(val):
@@ -111,7 +120,7 @@ def set_image(group, filename):
 
 
 # return a reformatted string with word wrapping using PyPortal.wrap_nicely
-def text_box(target, top, string, max_chars):
+def text_box(target, top, string, max_chars=TABS_chars):
     text = pyportal.wrap_nicely(string, max_chars)
     new_text = ""
     test = ""
@@ -134,7 +143,6 @@ def get_Temperature(source):
     else:  # No temperature sensor
         celsius = microcontroller.cpu.temperature
     return (celsius * 1.8) + 32
-
 
 # ------------- Inputs and Outputs Setup ------------- #
 light_sensor = AnalogIn(board.LIGHT)
@@ -173,20 +181,11 @@ TAB_BUTTON_HEIGHT = 40
 TAB_BUTTON_WIDTH = int(screen_width / 3)
 
 # We want two big buttons at the bottom of the screen
-BIG_BUTTON_HEIGHT = int(screen_height / 3.2)
-BIG_BUTTON_WIDTH = int(screen_width / 2)
-BIG_BUTTON_Y = int(screen_height - BIG_BUTTON_HEIGHT)
+# BIG_BUTTON_HEIGHT = int(screen_height / 3.2)
+# BIG_BUTTON_WIDTH = int(screen_width / 2)
+# BIG_BUTTON_Y = int(screen_height - BIG_BUTTON_HEIGHT)
 
 # Initializes the display touch screen area
-ts = adafruit_touchscreen.Touchscreen(
-    board.TOUCH_YD,
-    board.TOUCH_YU,
-    board.TOUCH_XR,
-    board.TOUCH_XL,
-    calibration=((5200, 59000), (5800, 57000)),
-    size=(screen_height, screen_width),
-)
-
 ts = adafruit_touchscreen.Touchscreen(
     board.TOUCH_XL,
     board.TOUCH_XR,
@@ -198,9 +197,9 @@ ts = adafruit_touchscreen.Touchscreen(
 
 # ------------- Display Groups ------------- #
 splash = displayio.Group()  # The Main Display Group
-view1 = displayio.Group()  # Group for View 1 objects
-view2 = displayio.Group()  # Group for View 2 objects
-view3 = displayio.Group()  # Group for View 3 objects
+viewStatus = displayio.Group()  # Group for Status objects
+viewGraph = displayio.Group()  # Group for Graph objects
+viewLog = displayio.Group()  # Group for Log objects
 
 # ------------- Setup for Images ------------- #
 bg_group = displayio.Group()
@@ -211,7 +210,7 @@ icon_group = displayio.Group()
 icon_group.x = 180
 icon_group.y = 120
 icon_group.scale = 1
-view2.append(icon_group)
+viewGraph.append(icon_group)
 
 # ---------- Text Boxes ------------- #
 # Set the font and preload letters
@@ -222,34 +221,29 @@ font.load_glyphs(b"abcdefghjiklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ123456789
 feed1_label = Label(font, text="Text Window 1", color=0xE39300)
 feed1_label.x = TABS_X
 feed1_label.y = TABS_Y
-view1.append(feed1_label)
-
-feed2_label = Label(font, text="Text Window 2", color=0xFFFFFF)
-feed2_label.x = TABS_X
-feed2_label.y = TABS_Y
-view2.append(feed2_label)
+viewStatus.append(feed1_label)
 
 sensors_label = Label(font, text="Data View", color=0x03AD31)
 sensors_label.x = TABS_X
-sensors_label.y = TABS_Y
-view3.append(sensors_label)
+sensors_label.y = TABS_Y + 50
+viewStatus.append(sensors_label)
 
-sensor_data = Label(font, text="Data View", color=0x03AD31)
+sensor_data = Label(font, text="Data View", color=GREEN)
 sensor_data.x = TABS_X + 16  # Indents the text layout
-sensor_data.y = 100
-view3.append(sensor_data)
+sensor_data.y = TABS_Y + 150
+viewStatus.append(sensor_data)
 
 # ---------- Display Buttons ------------- #
 # This group will make it easy for us to read a button press later.
 buttons = []
 
 # Main User Interface Buttons
-button_view1 = Button(
+button_status = Button(
     x=0,  # Start at furthest left
     y=0,  # Start at top
     width=TAB_BUTTON_WIDTH,  # Calculated width
     height=TAB_BUTTON_HEIGHT,  # Static height
-    label="View 1",
+    label="STATUS",
     label_font=font,
     label_color=0xFF7E00,
     fill_color=0x5C5B5C,
@@ -258,14 +252,14 @@ button_view1 = Button(
     selected_outline=0x2E2E2E,
     selected_label=0x525252,
 )
-buttons.append(button_view1)  # adding this button to the buttons group
+buttons.append(button_status)  # adding this button to the buttons group
 
-button_view2 = Button(
+button_graph = Button(
     x=TAB_BUTTON_WIDTH,  # Start after width of a button
     y=0,
     width=TAB_BUTTON_WIDTH,
     height=TAB_BUTTON_HEIGHT,
-    label="View 2",
+    label="GRAPH",
     label_font=font,
     label_color=0xFF7E00,
     fill_color=0x5C5B5C,
@@ -274,14 +268,14 @@ button_view2 = Button(
     selected_outline=0x2E2E2E,
     selected_label=0x525252,
 )
-buttons.append(button_view2)  # adding this button to the buttons group
+buttons.append(button_graph)  # adding this button to the buttons group
 
-button_view3 = Button(
+button_log = Button(
     x=TAB_BUTTON_WIDTH * 2,  # Start after width of 2 buttons
     y=0,
     width=TAB_BUTTON_WIDTH,
     height=TAB_BUTTON_HEIGHT,
-    label="View 3",
+    label="LOG",
     label_font=font,
     label_color=0xFF7E00,
     fill_color=0x5C5B5C,
@@ -290,51 +284,19 @@ button_view3 = Button(
     selected_outline=0x2E2E2E,
     selected_label=0x525252,
 )
-buttons.append(button_view3)  # adding this button to the buttons group
-
-button_switch = Button(
-    x=0,  # Start at furthest left
-    y=BIG_BUTTON_Y,
-    width=BIG_BUTTON_WIDTH,
-    height=BIG_BUTTON_HEIGHT,
-    label="Light Switch",
-    label_font=font,
-    label_color=0xFF7E00,
-    fill_color=0x5C5B5C,
-    outline_color=0x767676,
-    selected_fill=0x1A1A1A,
-    selected_outline=0x2E2E2E,
-    selected_label=0x525252,
-)
-buttons.append(button_switch)  # adding this button to the buttons group
-
-button_2 = Button(
-    x=BIG_BUTTON_WIDTH,  # Starts just after button 1 width
-    y=BIG_BUTTON_Y,
-    width=BIG_BUTTON_WIDTH,
-    height=BIG_BUTTON_HEIGHT,
-    label="Light Color",
-    label_font=font,
-    label_color=0xFF7E00,
-    fill_color=0x5C5B5C,
-    outline_color=0x767676,
-    selected_fill=0x1A1A1A,
-    selected_outline=0x2E2E2E,
-    selected_label=0x525252,
-)
-buttons.append(button_2)  # adding this button to the buttons group
+buttons.append(button_log)  # adding this button to the buttons group
 
 # Add all of the main buttons to the splash Group
 for b in buttons:
     splash.append(b)
 
-# Make a button to change the icon image on view2
-button_icon = Button(
-    x=150,
-    y=60,
+# Make a button to play a sound on viewStatus
+button_flood = Button(
+    x=180,
+    y=180,
     width=BUTTON_WIDTH,
     height=BUTTON_HEIGHT,
-    label="Icon",
+    label="FLOOD NOW",
     label_font=font,
     label_color=0xFFFFFF,
     fill_color=0x8900FF,
@@ -344,57 +306,36 @@ button_icon = Button(
     selected_label=0x525252,
     style=Button.ROUNDRECT,
 )
-buttons.append(button_icon)  # adding this button to the buttons group
+buttons.append(button_flood)  # adding this button to the buttons group
 
-# Add this button to view2 Group
-view2.append(button_icon)
-
-# Make a button to play a sound on view2
-button_sound = Button(
-    x=150,
-    y=170,
-    width=BUTTON_WIDTH,
-    height=BUTTON_HEIGHT,
-    label="Sound",
-    label_font=font,
-    label_color=0xFFFFFF,
-    fill_color=0x8900FF,
-    outline_color=0xBC55FD,
-    selected_fill=0x5A5A5A,
-    selected_outline=0xFF6600,
-    selected_label=0x525252,
-    style=Button.ROUNDRECT,
-)
-buttons.append(button_sound)  # adding this button to the buttons group
-
-# Add this button to view2 Group
-view3.append(button_sound)
+# Add this button to viewGraph Group
+viewStatus.append(button_flood)
 
 # pylint: disable=global-statement
 def switch_view(what_view):
     global view_live
     if what_view == 1:
-        button_view1.selected = False
-        button_view2.selected = True
-        button_view3.selected = True
-        layerVisibility("hide", splash, view2)
-        layerVisibility("hide", splash, view3)
-        layerVisibility("show", splash, view1)
+        button_status.selected = False
+        button_graph.selected = True
+        button_log.selected = True
+        layerVisibility("hide", splash, viewGraph)
+        layerVisibility("hide", splash, viewLog)
+        layerVisibility("show", splash, viewStatus)
     elif what_view == 2:
         # global icon
-        button_view1.selected = True
-        button_view2.selected = False
-        button_view3.selected = True
-        layerVisibility("hide", splash, view1)
-        layerVisibility("hide", splash, view3)
-        layerVisibility("show", splash, view2)
+        button_status.selected = True
+        button_graph.selected = False
+        button_log.selected = True
+        layerVisibility("hide", splash, viewStatus)
+        layerVisibility("hide", splash, viewLog)
+        layerVisibility("show", splash, viewGraph)
     else:
-        button_view1.selected = True
-        button_view2.selected = True
-        button_view3.selected = False
-        layerVisibility("hide", splash, view1)
-        layerVisibility("hide", splash, view2)
-        layerVisibility("show", splash, view3)
+        button_status.selected = True
+        button_graph.selected = True
+        button_log.selected = False
+        layerVisibility("hide", splash, viewStatus)
+        layerVisibility("hide", splash, viewGraph)
+        layerVisibility("show", splash, viewLog)
 
     # Set global button state
     view_live = what_view
@@ -404,34 +345,25 @@ def switch_view(what_view):
 # pylint: enable=global-statement
 
 # Set veriables and startup states
-button_view1.selected = False
-button_view2.selected = True
-button_view3.selected = True
-button_switch.label = "OFF"
-button_switch.selected = True
+button_status.selected = False
+button_graph.selected = True
+button_log.selected = True
 
-layerVisibility("show", splash, view1)
-layerVisibility("hide", splash, view2)
-layerVisibility("hide", splash, view3)
+layerVisibility("show", splash, viewStatus)
+layerVisibility("hide", splash, viewGraph)
+layerVisibility("hide", splash, viewLog)
 
 # Update out Labels with display text.
 text_box(
     feed1_label,
     TABS_Y,
-    "The text on this screen is wrapped so that all of it fits nicely into a "
-    "text box that is {} x {}.".format(
-        feed1_label.bounding_box[2], feed1_label.bounding_box[3] * 2
-    ),
-    TABS_width,
+    "This device controls the irrigation of this planter via flood events."
 )
-
-text_box(feed2_label, TABS_Y, "Tap on the Icon button to meet a new friend.", 18)
 
 text_box(
     sensors_label,
-    TABS_Y,
-    "This screen can display sensor readings and tap Sound to play a WAV file.",
-    TABS_width,
+    TABS_Y + 90,
+    "Sensor readings:"
 )
 
 board.DISPLAY.show(splash)
@@ -460,17 +392,17 @@ while True:
         for i, b in enumerate(buttons):
             if b.contains(touch):  # Test each button to see if it was pressed
                 print("button{} pressed".format(i))
-                if i == 0 and view_live != 1:  # only if view1 is visible
+                if i == 0 and view_live != 1:  # only if viewStatus is visible
                     pyportal.play_file(soundTab)
                     switch_view(1)
                     while ts.touch_point:
                         pass
-                if i == 1 and view_live != 2:  # only if view2 is visible
+                if i == 1 and view_live != 2:  # only if viewGraph is visible
                     pyportal.play_file(soundTab)
                     switch_view(2)
                     while ts.touch_point:
                         pass
-                if i == 2 and view_live != 3:  # only if view3 is visible
+                if i == 2 and view_live != 3:  # only if viewLog is visible
                     pyportal.play_file(soundTab)
                     switch_view(3)
                     while ts.touch_point:
@@ -478,72 +410,20 @@ while True:
                 if i == 3:
                     pyportal.play_file(soundBeep)
                     # Toggle switch button type
-                    if switch_state == 0:
-                        switch_state = 1
-                        b.label = "ON"
-                        b.selected = False
-                        pixel.fill(WHITE)
-                        print("Switch ON")
-                    else:
-                        switch_state = 0
-                        b.label = "OFF"
+                    flood()
+                    if flood_state == 0:
+                        b.label = "STOP"
                         b.selected = True
+                        b.label_color = RED
+                        pixel.fill(WHITE)
+                    else:
+                        b.label = "FLOOD NOW"
+                        b.selected = False
+                        b.label_color = WHITE
                         pixel.fill(BLACK)
-                        print("Switch OFF")
+                        
+                        
                     # for debounce
                     while ts.touch_point:
                         pass
                     print("Switch Pressed")
-                if i == 4:
-                    pyportal.play_file(soundBeep)
-                    # Momentary button type
-                    b.selected = True
-                    print("Button Pressed")
-                    button_mode = numberUP(button_mode, 5)
-                    if button_mode == 1:
-                        pixel.fill(RED)
-                    elif button_mode == 2:
-                        pixel.fill(YELLOW)
-                    elif button_mode == 3:
-                        pixel.fill(GREEN)
-                    elif button_mode == 4:
-                        pixel.fill(BLUE)
-                    elif button_mode == 5:
-                        pixel.fill(PURPLE)
-                    switch_state = 1
-                    button_switch.label = "ON"
-                    button_switch.selected = False
-                    # for debounce
-                    while ts.touch_point:
-                        pass
-                    print("Button released")
-                    b.selected = False
-                if i == 5 and view_live == 2:  # only if view2 is visible
-                    pyportal.play_file(soundBeep)
-                    b.selected = True
-                    while ts.touch_point:
-                        pass
-                    print("Icon Button Pressed")
-                    icon = numberUP(icon, 3)
-                    if icon == 1:
-                        icon_name = "Ruby"
-                    elif icon == 2:
-                        icon_name = "Gus"
-                    elif icon == 3:
-                        icon_name = "Billie"
-                    b.selected = False
-                    text_box(
-                        feed2_label,
-                        TABS_Y,
-                        "Every time you tap the Icon button the icon image will "
-                        "change. Say hi to {}!".format(icon_name),
-                        18,
-                    )
-                    set_image(icon_group, "/images/" + icon_name + ".bmp")
-                if i == 6 and view_live == 3:  # only if view3 is visible
-                    b.selected = True
-                    while ts.touch_point:
-                        pass
-                    print("Sound Button Pressed")
-                    pyportal.play_file(soundDemo)
-                    b.selected = False
