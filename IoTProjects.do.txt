@@ -10,10 +10,10 @@ A toolbox platform for sensors and communications built around the venerable RPi
 
 __BOM:__
 * "RPi": "https://www.adafruit.com/category/1000" with SD card and power supply. 3b+ is best model while v4 gets debugged.
-* Power
+* Remote Power:
   * "Battery": "https://www.adafruit.com/product/3196"
   * "PoE": "https://www.adafruit.com/product/3953"
-* Interface
+* HMI:
   * "Tiny touchscreen": "https://www.adafruit.com/product/2441"
   * "Minimal OLED": "https://www.adafruit.com/product/3527"
   * "LCD": "https://www.adafruit.com/product/1115"
@@ -30,8 +30,14 @@ __BOM:__
   * "GPS": "https://www.adafruit.com/product/2324"
   * "IMU": "https://www.adafruit.com/product/4754"
 * Sensor controllers: 
-    * "STEMMA Qt/ Qwiic": "https://www.adafruit.com/product/4463"
-    * "ADC": "https://learn.adafruit.com/reading-a-analog-in-and-controlling-audio-volume-with-the-raspberry-pi?view=all" and a "voltage reference": "https://www.adafruit.com/product/2200"
+    * "STEMMA Qt/ Qwiic": "https://www.adafruit.com/product/4463" with a couple "ADCs": "https://www.adafruit.com/product/1083"
+    * "cheap option": "https://learn.adafruit.com/reading-a-analog-in-and-controlling-audio-volume-with-the-raspberry-pi?view=all" and a "voltage reference": "https://www.adafruit.com/product/2200"
+* Power controllers:
+    * "Power tail": "https://www.adafruit.com/product/2935"
+    * 2 "Relay controllers": "https://www.adafruit.com/product/3191" in a double-wide box
+    * "Cheap option": fig:relay
+
+# FIGURE: ['.\Robotics\Ks7mv.png', width=900 frac=0.9] Relay control circuit. label{fig:relay}
 
 __Notes:__
 * Similar to the "PiTop": "https://www.adafruit.com/product/3762", with a compact housing
@@ -55,9 +61,8 @@ o Sensors
         o Water pressure and flow
         o Propane level via pressure sensor
         o Air cleaner
-        o Smoke / CO / Propane
-        o Forced entry (pressure change)
-        o Family presence (RFID)
+        o Smoke / CO / Propane detectors
+        o Entry (pressure change)
         o Woodstove temp
         o Roomba status
     o Exterior
@@ -82,11 +87,8 @@ o Controls
     o Wood Stove blower
         o Stepper motor-controled rheostat
 o Server
-    o Integrations
-        o Thermostat interface with LCD hat
-        o NILM data logger
-        o Wifi Router and print server
-    o https://www.home-assistant.io/
+    o "Historian": "https://github.com/GridProtectionAlliance/openhistorian-python"
+    o "Dashboard": "https://www.home-assistant.io/"
 
 __BOM:__
     * "Common Mobile Compute Platform": "/._ComputerProjects010.html#___sec10"
@@ -190,7 +192,7 @@ provide alarms, or use it in more remote conditions and have it upload once wifi
 * Marine Chartplotter
 * Indoor air quality
 * Energy Monitor
-* Domotics, solar, or hydroponics controller
+* Hydroponics controller
 
 __Feature Set:__
 * Internet connection discovery and automatic frequent communication
@@ -250,34 +252,30 @@ o Build sensor and ARV mechanicals
     o Mount tape and air feed and pressure feed to stick, with ARV and pressure sensor at top
     o Assemble microcontroller
     o Assemble relay-integrated power supply
-o Install base controller logic
-o Build server script that runs flood routine based on MQTT events
-    o Make a dashboard interface in "DisplayIO": "https://learn.adafruit.com/making-a-pyportal-user-interface-displayio?view=all"
-o Build flood tank with rock wool planting cells
-o triple-tote system:
-    o Media tray
-        o Notches in bottom edge for drainage
-        o Anchoring for rock wool cubes
-            o brass screws along rim, to strech rubber bands over?
-    o Solution tank
-        o Air line running into 1 large ballon
-          o multiple balloons make multiple points of failure, plus don't inflate equally
-        o Latch media tray in place to avoid flotation
-        o Thru-hole for overflow port
-    o Overflow tank
-        o Captures leaks or overflows
-        o Removal with handle for general purpose use
-o Open-top cabinet on casters to hold everything and make pretty
+o Determine base controller logic
+o Make a dashboard interface in "DisplayIO": "https://learn.adafruit.com/making-a-pyportal-user-interface-displayio?view=all"
+o Build flood tank:
+    o Triple-tote system:
+        o Rock wool media tray
+            o Notches in bottom edge for drainage
+            o Anchoring for rock wool cubes
+                o brass screws along rim, to strech rubber bands over?
+                o wooden castellation torun string through?
+                o holes for bamboo skewers?
+        o Solution tank
+            o Air line running into 1 large upside-down air chamber
+            o Latch media tray in place to avoid flotation
+            o Thru-hole for overflow port
+        o Overflow tank
+            o Captures leaks or overflows
+            o Removal with handle for general purpose use
+    o Open-top cabinet on casters to hold everything and make pretty
 
 __BOM:__
-* "Adafruit PyPortal": "https://www.adafruit.com/product/4116"
-* "12in Chemical eTape Liquid Level Sensor": "https://www.adafruit.com/product/464"
-* "Mini solenoid air valve": "https://www.adafruit.com/product/4663"
-* "Controllable Four Outlet Power Relay Module version 2": "https://www.adafruit.com/product/2935"
-* Separate 5v 1.5A power supply for solenoid and connectors to 
-* "growing media": "https://www.sunsethydro.com/collections/growing-media/products/grodan-delta-hugo-6in-block-6in-x-6in-x-6in-w-hole-individual-single-blocks"
-* "totes": "https://www.truevalue.com/latch-carry-tote-clear-base-18-gallons"
-* "MPVZ5004GW PRESSURE SENSOR by NXP": "https://www.digikey.com/product-detail/en/nxp-usa-inc/MPVZ5004GW7U/MPVZ5004GW7U-ND/1168374"
+* "Adafruit parts list": "https://www.adafruit.com/wishlists/487490"
+* "Growing media": "https://www.sunsethydro.com/collections/growing-media/products/grodan-delta-hugo-6in-block-6in-x-6in-x-6in-w-hole-individual-single-blocks"
+* "Totes": "https://www.truevalue.com/latch-carry-tote-clear-base-18-gallons"
+* Aquarium air pump
 * Silicone tubing
 
 __Notes:__
