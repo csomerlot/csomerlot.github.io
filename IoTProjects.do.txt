@@ -193,6 +193,7 @@ provide alarms, or use it in more remote conditions and have it upload once wifi
 * Indoor air quality
 * Energy Monitor
 * Hydroponics controller
+* Dye tank controller
 
 __Feature Set:__
 * Internet connection discovery and automatic frequent communication
