@@ -11,6 +11,7 @@ import microcontroller
 import displayio
 import busio
 from analogio import AnalogIn
+import digitalio
 import neopixel
 import adafruit_adt7410
 from adafruit_bitmap_font import bitmap_font
@@ -18,6 +19,9 @@ from adafruit_display_text.label import Label
 from adafruit_button import Button
 import adafruit_touchscreen
 from adafruit_pyportal import PyPortal
+
+import adafruit_ads1x15.ads1015 as ADS
+from adafruit_ads1x15.analog_in import AnalogIn as ADS_AnalogIn
 
 # ------------- Constants ------------- #
 # Sound Effects
@@ -51,14 +55,15 @@ flood_state = 0
 # ------------- Functions ------------- #
 
 def flood():
-    global flood_state
+    global flood_state, switch
     if flood_state:
         print("Turning off the flood")
         flood_state = 0
+        switch.value = 1
     else:
         print("Starting the flood mechanism")
         flood_state = 1
-
+        switch.value = 0
 # Backlight function
 # Value between 0 and 1 where 0 is OFF, 0.5 is 50% and 1 is 100% brightness.
 def set_backlight(val):
@@ -144,16 +149,31 @@ def get_Temperature(source):
         celsius = microcontroller.cpu.temperature
     return (celsius * 1.8) + 32
 
+def get_Pressure(source):
+    return source
+
+def get_Level(source):
+    return source
+
 # ------------- Inputs and Outputs Setup ------------- #
 light_sensor = AnalogIn(board.LIGHT)
+switch = digitalio.DigitalInOut(board.D4)
+switch.direction = digitalio.Direction.OUTPUT
+
 try:
     # attempt to init. the temperature sensor
     i2c_bus = busio.I2C(board.SCL, board.SDA)
+    
     adt = adafruit_adt7410.ADT7410(i2c_bus, address=0x48)
     adt.high_resolution = True
+
 except ValueError:
     # Did not find ADT7410. Probably running on Titano or Pynt
     adt = None
+
+ads = ADS.ADS1015(i2c_bus, address=0x4A)
+pressure_sensor = ADS_AnalogIn(ads, ADS.P2)
+level_sensor = ADS_AnalogIn(ads, ADS.P1)
 
 # ------------- Screen Setup ------------- #
 pyportal = PyPortal()
@@ -230,7 +250,7 @@ viewStatus.append(sensors_label)
 
 sensor_data = Label(font, text="Data View", color=GREEN)
 sensor_data.x = TABS_X + 16  # Indents the text layout
-sensor_data.y = TABS_Y + 150
+sensor_data.y = TABS_Y + 130
 viewStatus.append(sensor_data)
 
 # ---------- Display Buttons ------------- #
@@ -362,7 +382,7 @@ text_box(
 
 text_box(
     sensors_label,
-    TABS_Y + 90,
+    TABS_Y + 70,
     "Sensor readings:"
 )
 
@@ -373,9 +393,13 @@ board.DISPLAY.show(splash)
 while True:
     touch = ts.touch_point
     light = light_sensor.value
-    sensor_data.text = "Touch: {}\nLight: {}\nTemp: {:.0f}°F".format(
-        touch, light, get_Temperature(adt)
+    pressure = get_Pressure(pressure_sensor.value)
+    level = get_Level(level_sensor.value)
+    temp = get_Temperature(adt)
+    sensor_data.text = "Level: {}\nPressure: {}\nLight: {}\nTemp: {:.0f}°F".format(
+        level, pressure, light, temp
     )
+
 
     # Will also cause screen to dim when hand is blocking sensor to touch screen
     #    # Adjust backlight
@@ -411,6 +435,7 @@ while True:
                     pyportal.play_file(soundBeep)
                     # Toggle switch button type
                     flood()
+                    print("{:>5}\t{:>5.3f}".format(pressure_sensor.value, pressure_sensor.voltage))
                     if flood_state == 0:
                         b.label = "STOP"
                         b.selected = True

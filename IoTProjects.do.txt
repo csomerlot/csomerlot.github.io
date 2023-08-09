@@ -225,6 +225,7 @@ __Notes:__
 * https://thecavepearlproject.org/
 * https://learn.adafruit.com/remote-iot-environmental-sensor/overview
 * "WipperSnapper": "https://learn.adafruit.com/quickstart-adafruit-io-wippersnapper" greatly simplifies everything!
+* "Fastest way to log data": "https://www.linkedin.com/pulse/comparative-study-among-csv-feather-pickle-parquet-loyola-gonz%C3%A1lez/"
 
 
 !split
