@@ -1,6 +1,0 @@
-TITLE: A Big List of Ideas and Projects
-AUTHOR: Chris Somerlot
-TOC: off
-DATE: today
-
-I have a lot of ideas, and getting them jotted down helps me focus on other things. That, and I love to innovate and engineer anything I can.
