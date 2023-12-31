@@ -1,71 +1,78 @@
-TITLE: Shooting Projects
-TOC: on
 
-======= F-class 1000+yarder =======
-o Base
-    o "Howa 1500": "https://www.thetruthaboutguns.com/2017/11/chris-heuss/howa-1500-gun-review/"
-    o Bighorn TL3 (multi-caliber!)
-o barrel
-    o rebarrel from Hart (includes the action work)
-    o .308 Winchester
-    o 30" to develop max velocity?
-    o Contour to make barrel same diameter as muzzle brake, but keep heavy
-o optics
-    o Osprey International 10-40x50 mil dot illuminated (for now)
-    o anti-cant level
-    o Picatinny 20 MOA scope mount
-o load
-    o 185gr max but maybe only 175gr max? Better find out to determine twist
-    o M velocity should end up ~ 2900 fps to stay supersonic out to 1500 yds
-o muzzle brake
-o custom laminate stock? Or a chassis instead?
-    o Rem700 footprint
-    o free float / aluminum pillars
-    o glass bed the action
-    o laminate and carve myself
-    o Pachmayr Decelerator recoil pad on large butt plate
-o new trigger
-    o pull ~ 2#
-    o Timney
-o bipod
-    o Harris HBLM-S swivel-mount
-o phasing
-    o Get ahold of base unit and scope (done)
-    o make stock ($50)
-    o get muzzle break ($200), trigger ($50), recoil pad ($25), and bipod ($75)
-    o send action and stock to Hart for rebarrel, bedding, and muzzle break install ($750)
-o references
-    o "CheyTac": "https://en.wikipedia.org/wiki/CheyTac_Intervention"
+# Shooting Projects
 
-======= Inline Muzzleloader =======
+
+
+
+##  F-class 1000+yarder 
+1. Base
+1. [Howa 1500](https://www.thetruthaboutguns.com/2017/11/chris-heuss/howa-1500-gun-review/)
+    1. Bighorn TL3 (multi-caliber!)
+1. barrel
+    1. rebarrel from Hart (includes the action work)
+    1. .308 Winchester
+    1. 30" to develop max velocity?
+    1. Contour to make barrel same diameter as muzzle brake, but keep heavy
+1. optics
+    1. Osprey International 10-40x50 mil dot illuminated (for now)
+    1. anti-cant level
+    1. Picatinny 20 MOA scope mount
+1. load
+    1. 185gr max but maybe only 175gr max? Better find out to determine twist
+    1. M velocity should end up ~ 2900 fps to stay supersonic out to 1500 yds
+1. muzzle brake
+1. custom laminate stock? Or a chassis instead?
+    1. Rem700 footprint
+    1. free float / aluminum pillars
+    1. glass bed the action
+    1. laminate and carve myself
+    1. Pachmayr Decelerator recoil pad on large butt plate
+1. new trigger
+    1. pull ~ 2#
+    1. Timney
+1. bipod
+    1. Harris HBLM-S swivel-mount
+1. phasing
+    1. Get ahold of base unit and scope (done)
+    1. make stock ($50)
+    1. get muzzle break ($200), trigger ($50), recoil pad ($25), and bipod ($75)
+    1. send action and stock to Hart for rebarrel, bedding, and muzzle break install ($750)
+1. references
+1. [CheyTac](https://en.wikipedia.org/wiki/CheyTac_Intervention)
+
+
+##  Inline Muzzleloader 
 Best hunting option for range, lethality, legality, season?
-o Custom bolt action
-o Custom hart barrel
-o Copper bullet
-o shotgun primers
-o pellet charges?
-o CVLIFE 6-24x50 Illuminated Scope
-o .50 caliber ballistics very "similar to .300BLK": "https://www.snipercountry.com/300-blackout-vs-308/"
+1. Custom bolt action
+1. Custom hart barrel
+1. Copper bullet
+1. shotgun primers
+1. pellet charges?
+1. CVLIFE 6-24x50 Illuminated Scope
+1. .50 caliber ballistics very [similar to .300BLK](https://www.snipercountry.com/300-blackout-vs-308/)
 
-======= Handmade Recurve Bow =======
-o Specs
-    o takedown
-    o PVC or laminated wood
-o References
-    o "Nick Tomihama's builds": "https://www.youtube.com/playlist?list=PLGRzZMpVk2Hr66k2BwTQjO2IBW9D4ptDA"
-    o Books
-        o The Traditional Bowyer's Bible, Volume 2
-        o Traditional Bowyers of America
+
+##  Handmade Recurve Bow 
+1. Specs
+    1. takedown
+    1. PVC or laminated wood
+1. References
+1. [Nick Tomihama's builds](https://www.youtube.com/playlist?list=PLGRzZMpVk2Hr66k2BwTQjO2IBW9D4ptDA)
+    1. Books
+        1. The Traditional Bowyer's Bible, Volume 2
+        1. Traditional Bowyers of America
         
-======= Long distance paintball marker =======
-o Curved barrel provides backspin for stability and distance
-o Long ported barrel for sound suppression
-o Looks same as F-class rifle
-o Compressed air tank built into stock
 
-======= Ballistic Sgian Dubh =======
-o paired set with armpit sheaths
-o forged from solid one piece spring steel
-o reciever and hilt turned on a metal lathe
-o black blade and hilt finish
-o 50# compression coil spring
+##  Long distance paintball marker 
+1. Curved barrel provides backspin for stability and distance
+1. Long ported barrel for sound suppression
+1. Looks same as F-class rifle
+1. Compressed air tank built into stock
+
+
+##  Ballistic Sgian Dubh 
+1. paired set with armpit sheaths
+1. forged from solid one piece spring steel
+1. reciever and hilt turned on a metal lathe
+1. black blade and hilt finish
+1. 50# compression coil spring

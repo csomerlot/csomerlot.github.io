@@ -1,98 +1,102 @@
-======= Emergency Plans =======
-===== 3 day (Evacuation) =====
+
+##  Emergency Plans 
+
+###  3 day (Evacuation) 
 Grab and go:
-o Water
-o Non-perishable food (and dog food)
-o Toiletries
-o Bug-out bags
-o Booze (for bartering)
-o Extra gas
-o Backpacking camping gear
-o 2-way radios
-o Camouflage tarps
-o Take-down bow
-o Bleach
+1. Water
+1. Non-perishable food (and dog food)
+1. Toiletries
+1. Bug-out bags
+1. Booze (for bartering)
+1. Extra gas
+1. Backpacking camping gear
+1. 2-way radios
+1. Camouflage tarps
+1. Take-down bow
+1. Bleach
 Lives in the Car:
-o Tow rope w/ hooks
-o Change of clothes for everyone
-o TP
-o Road maps
-o Basic Car toolkit:
-    o Channel locks
-    o Vice grips
-    o Pliers
-    o Tire gauge
-    o Epoxy putty
-    o Bailing wire
-    o Hose clamps
-    o Voltmeter
-    o Screwdrivers
-    o Portable battery/jumper/air compressor
-    o Inverter
-    o Starting fluid
-    o Socket set
-o Communications:
-    o "PLB": "./._RoboticsProjects016.html#___sec15"
-    o Flares
-    o Cell phone chargers
-    o Sharpie and white plastic bags
-o Blanket and towels
-o Fire extinguisher
-o \$300 in Cash and Coin
+1. Tow rope w/ hooks
+1. Change of clothes for everyone
+1. TP
+1. Road maps
+1. Basic Car toolkit:
+    1. Channel locks
+    1. Vice grips
+    1. Pliers
+    1. Tire gauge
+    1. Epoxy putty
+    1. Bailing wire
+    1. Hose clamps
+    1. Voltmeter
+    1. Screwdrivers
+    1. Portable battery/jumper/air compressor
+    1. Inverter
+    1. Starting fluid
+    1. Socket set
+1. Communications:
+1. [PLB](./._RoboticsProjects016.html#___sec15)
+    1. Flares
+    1. Cell phone chargers
+    1. Sharpie and white plastic bags
+1. Blanket and towels
+1. Fire extinguisher
+1. \$300 in Cash and Coin
 
-===== 3 week (Power failure) =====
-o Genset run from tractor
-  o Refrigeration
-  o Water pump
-  o Electronics
-  o Lights
-o Woodstove for heat - always keep 5 face cord on hand
-o Solar hot water heater
-o Canned food
-o Propane heater
-o Chainsaw
-o Crank Radio
-o Plastic sheeting
 
-===== 3 year (Plan A) =====
-o Tools
-o Weapons
-    o Bow
-    o Crossbow
-    o "Sniper rifle": "./ShootingProjects.html#___sec0"
-    o Sawed-off and hunting shotguns
-        o Reload kits
-o Textiles
-    o Rope machine
-    o Foot powered sewing machine
-    o Portable Spinning wheel
-    o Backstrap Loom
-o Mechanical
-    o Forge tools, blower
-    o Files, grinding wheel
-o Navigation
-    o Sextant
-    o Star charts
-    o Mechanical watches
-    o Map library
-        o Nautical
-            o free NOAA charts
-        o Terrestrial
-            o Delorme atlas books
-    o "Night vision": "https://www.amazon.com/SiOnyx-Aurora-Sport-Vision-Camera/dp/B07XJ86Q8G/ref=pd_rhf_ee_s_bmx_0_3/142-5274756-4662861?_encoding=UTF8&pd_rd_i=B07XJ86Q8G&pd_rd_r=e0fb48b6-9c51-46e9-80d1-be21e37fa6ac&pd_rd_w=ylhoM&pd_rd_wg=4JJNT&pf_rd_p=8b7e22e9-af4c-4b2f-89c8-2bbe22eb41bf&pf_rd_r=XKNKGYTC2JV5BACFA5Y8&psc=1&refRID=XKNKGYTC2JV5BACFA5Y8"
-o Fishing gear
-o Water
-    o Distiller
-    o Peracetic acid
-    o Activated carbon
-o Medical
-  o Antibiotics
-  o Anesthetics
-  o Suture materials
-o Options
-    o Migrate to more secluded location and take up simple farming
-    o Head North, away from population centers and become marine migratory hunters
-o Food
-    o Seed stash
-    o Can stash
-    o Booze stash
+###  3 week (Power failure) 
+1. Genset run from tractor
+  1. Refrigeration
+  1. Water pump
+  1. Electronics
+  1. Lights
+1. Woodstove for heat - always keep 5 face cord on hand
+1. Solar hot water heater
+1. Canned food
+1. Propane heater
+1. Chainsaw
+1. Crank Radio
+1. Plastic sheeting
+
+
+###  3 year (Plan A) 
+1. Tools
+1. Weapons
+    1. Bow
+    1. Crossbow
+1. [Sniper rifle](./ShootingProjects.html#___sec0)
+    1. Sawed-off and hunting shotguns
+        1. Reload kits
+1. Textiles
+    1. Rope machine
+    1. Foot powered sewing machine
+    1. Portable Spinning wheel
+    1. Backstrap Loom
+1. Mechanical
+    1. Forge tools, blower
+    1. Files, grinding wheel
+1. Navigation
+    1. Sextant
+    1. Star charts
+    1. Mechanical watches
+    1. Map library
+        1. Nautical
+            1. free NOAA charts
+        1. Terrestrial
+            1. Delorme atlas books
+1. [Night vision](https://www.amazon.com/SiOnyx-Aurora-Sport-Vision-Camera/dp/B07XJ86Q8G/ref=pd_rhf_ee_s_bmx_0_3/142-5274756-4662861?_encoding=UTF8&pd_rd_i=B07XJ86Q8G&pd_rd_r=e0fb48b6-9c51-46e9-80d1-be21e37fa6ac&pd_rd_w=ylhoM&pd_rd_wg=4JJNT&pf_rd_p=8b7e22e9-af4c-4b2f-89c8-2bbe22eb41bf&pf_rd_r=XKNKGYTC2JV5BACFA5Y8&psc=1&refRID=XKNKGYTC2JV5BACFA5Y8)
+1. Fishing gear
+1. Water
+    1. Distiller
+    1. Peracetic acid
+    1. Activated carbon
+1. Medical
+  1. Antibiotics
+  1. Anesthetics
+  1. Suture materials
+1. Options
+    1. Migrate to more secluded location and take up simple farming
+    1. Head North, away from population centers and become marine migratory hunters
+1. Food
+    1. Seed stash
+    1. Can stash
+    1. Booze stash

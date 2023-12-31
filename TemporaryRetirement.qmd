@@ -1,6 +1,8 @@
-======= Temporary Retirement =======
 
-===== Locations =====
+##  Temporary Retirement 
+
+
+###  Locations 
 
 * Newfoundland
 * Shetland or Orkney Islands
@@ -11,32 +13,34 @@
 * Faroe Islands or Iceland
 * Norway
 
-===== Prep Timeline =====
 
-o Year -5
-  o finish house projects
-  o Save
-  o Research
-o Year -4
-  o finish house projects
-  o Save
-  o Research
-o Year -3
-  o finish house projects
-  o Save
-  o Research
-o Year -2
-  o Learn new skills 
-  o start planning at work
-  o study ecosystem
-  o finish house projects
-  o Save
-o Year -1
-  o Purchase equipment
-  o Setup lodging
-  o Setup schooling
+###  Prep Timeline 
 
-===== Logistics =====
+1. Year -5
+  1. finish house projects
+  1. Save
+  1. Research
+1. Year -4
+  1. finish house projects
+  1. Save
+  1. Research
+1. Year -3
+  1. finish house projects
+  1. Save
+  1. Research
+1. Year -2
+  1. Learn new skills 
+  1. start planning at work
+  1. study ecosystem
+  1. finish house projects
+  1. Save
+1. Year -1
+  1. Purchase equipment
+  1. Setup lodging
+  1. Setup schooling
+
+
+###  Logistics 
 
 * Financial
     * Income
@@ -52,14 +56,16 @@ o Year -1
 * Equipment
 * Food
 
-===== Reference ===== 
 
-* "TED Talk": "https://www.ted.com/talks/stefan_sagmeister_the_power_of_time_off"
-* "NPR Article": "https://www.npr.org/2013/05/20/183910777/seeing-the-northern-light-a-temporary-arctic-retirement"
+###  Reference  
+
+* [TED Talk](https://www.ted.com/talks/stefan_sagmeister_the_power_of_time_off)
+* [NPR Article](https://www.npr.org/2013/05/20/183910777/seeing-the-northern-light-a-temporary-arctic-retirement)
 * Lonely Planet guides
 * Movie: The Way
 
-===== Opportunities =====
+
+###  Opportunities 
 
 * Sidetrips
 * Learning/Growth

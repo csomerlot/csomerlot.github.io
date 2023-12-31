@@ -1,7 +1,10 @@
-TITLE: Happy Hippie Lifestyle Projects
-TOC: on
 
-======= Custom Fish Tank =======
+# Happy Hippie Lifestyle Projects
+
+
+
+
+##  Custom Fish Tank 
 * Made from Clear PVC Pipe with welded Bottom Cap
 - Dimensions: 12" dia by 6.5' tall
 - Volume: 35 gallons
@@ -10,33 +13,37 @@ TOC: on
 * Integral water heater
 * Stored on top of tank to prevent leaks
 
-======= Tree House =======
 
-FIGURE: [./HappyHippieLifestyle/BlueForest_Treehouse_Amberley_Castle_1_gallery-image, width=900 frac=0.8] The kids picked this design. label{fig:treehouse}
+##  Tree House 
 
-======= Books to publish from Wikipedia =======
+![ The kids picked this design.](./HappyHippieLifestyle/BlueForest_Treehouse_Amberley_Castle_1_gallery-image)
 
-FIGURE: [./BookTopics, width=315 frac=0.8] Celtic Migration. label{fig:book1}
 
-======= Backpacking Gear To Make =======
+##  Books to publish from Wikipedia 
+
+![ Celtic Migration.](./BookTopics)
+
+
+##  Backpacking Gear To Make 
 - Chameleon Tent: Hammock - Bivy - all purpose tent
-    * "Bridge hammock": "https://www.eurekatentscanada.com/products/view/494?s=section_4" (as opposed to gathered-ends hammock) because:
-      * I can't seem how to figure out "how to sleep comfortably on the diagonal": "https://www.treklightgear.com/blogs/trek-life/hammock-angle" in a gathered-ends hammock, and my legs stick out when at an angle
+* [Bridge hammock](https://www.eurekatentscanada.com/products/view/494?s=section_4) (as opposed to gathered-ends hammock) because:
+* I can't seem how to figure out [how to sleep comfortably on the diagonal](https://www.treklightgear.com/blogs/trek-life/hammock-angle) in a gathered-ends hammock, and my legs stick out when at an angle
       * I don't want to buy a underquilt (double-layer bottom makes a sleeve for an air pad!)
       * I don't care about weight or needing poles or the increased hanging distance
-    * Similar to "Eureka Solitaire": "https://eurekacamping.johnsonoutdoors.com/tents/backpacking/solitaire-al?id=21436", with hoop ends and able to pitch on the ground
-    * Start with a "kit": "https://ripstopbytheroll.com/collections/diy-hammock-kits/products/pre-cut-bridge-hammock-kit?variant=7685978554416" hammock, add no-seeum netting
-    * Rain flap "like this": "https://wingmanoftheroad.com/products/goose-1"
-    * Lots of "these": "https://www.amazon.com/ETROL-Mosquito-Lightweight-Portable-Hammocks/dp/B07M5SPH2Z/ref=sr_1_8?keywords=bridge%2Bhammock&qid=1650855264&sr=8-8&th=1" on Amazon these days but they all look cheap and short
-    * "Daisy chain": "https://hammockgear.com/ultralight-daisy-chain-per-foot/" for easy hanging
+* Similar to [Eureka Solitaire](https://eurekacamping.johnsonoutdoors.com/tents/backpacking/solitaire-al?id=21436), with hoop ends and able to pitch on the ground
+* Start with a [kit](https://ripstopbytheroll.com/collections/diy-hammock-kits/products/pre-cut-bridge-hammock-kit?variant=7685978554416) hammock, add no-seeum netting
+* Rain flap [like this](https://wingmanoftheroad.com/products/goose-1)
+* Lots of [these](https://www.amazon.com/ETROL-Mosquito-Lightweight-Portable-Hammocks/dp/B07M5SPH2Z/ref=sr_1_8?keywords=bridge%2Bhammock&qid=1650855264&sr=8-8&th=1) on Amazon these days but they all look cheap and short
+* [Daisy chain](https://hammockgear.com/ultralight-daisy-chain-per-foot/) for easy hanging
 * Fold-up wood burning grill with blower
-    * Like "this": "https://www.amazon.com/dp/B012NHG1CS/?coliid=I32YFIHZ75Y1T&colid=LXYPR4UA5ISY&psc=1&ref_=lv_ov_lig_dp_it" but with the option of attaching a blower
+* Like [this](https://www.amazon.com/dp/B012NHG1CS/?coliid=I32YFIHZ75Y1T&colid=LXYPR4UA5ISY&psc=1&ref_=lv_ov_lig_dp_it) but with the option of attaching a blower
     * stamp or cut myself and add disk vents and CPU fan?
     * Wide enough on top to use a wok
 * Pressure cooker, to use less energy and time to cook light-weight foods like dried veggies and mushrooms, beans and rice, etc
 
-======= Wishing Well Grill =======
-- Historical Design: "Schwenker": "https://en.wikipedia.org/wiki/Schwenker"
+
+##  Wishing Well Grill 
+- Historical Design: [Schwenker](https://en.wikipedia.org/wiki/Schwenker)
 * Uses
   * Wood grill
   * Smoker
@@ -50,16 +57,18 @@ FIGURE: [./BookTopics, width=315 frac=0.8] Celtic Migration. label{fig:book1}
   * Filled 50% with sand (for luao) or gravel
   * Air-tight door
   * Winch
-* "Mobile version": "https://www.schwenktheworld.com/schwenker"
+* [Mobile version](https://www.schwenktheworld.com/schwenker)
 
-======= Birdhouse Cam =======
+
+##  Birdhouse Cam 
 * Use off-the-shelf color wireless camera
 * Solar panel and latern battery for power
 * Retransmit signal via power line ethernet
 * board lens and IR leds for night vision
 * remote A/V switch or multiple input PCI card
 
-======= Glamping/Gypsy/Travellers =======
+
+##  Glamping/Gypsy/Travellers 
 * Teardrop trailer
 * Yurt
 * Campaign furniture:
@@ -68,7 +77,7 @@ FIGURE: [./BookTopics, width=315 frac=0.8] Celtic Migration. label{fig:book1}
   * Oil lamps
   * Cube mini woodstove
   * Mobile schwenker grill
-  * "C-head": "http://c-head.com/"
+* [C-head](http://c-head.com/)
   * Knockdown ADK chairs
   * Inflatable hot tub
   * Dry-laid masonry oven
@@ -79,14 +88,20 @@ FIGURE: [./BookTopics, width=315 frac=0.8] Celtic Migration. label{fig:book1}
   * Lamps
 * Water heating coil for the fire
 
-!split
-# #include "WoodWorking.do.txt"
 
-!split
+---
+
+[Link to subsection](WoodWorking.do.txt)
+
+
+---
 # # include "NorthWoodsCottage.do.txt"
 
-!split
+
+---
 # # include "EmergencyPlans.do.txt"
 
-!split
-# #include "TemporaryRetirement.do.txt"
+
+---
+
+[Link to subsection](TemporaryRetirement.do.txt)

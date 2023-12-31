@@ -1,186 +1,217 @@
-TITLE: Internet-of-Things Projects
-TOC: on
+
+# Internet-of-Things Projects
+
+
 
 CircuitPython rules! Arduino drools! Let them eat RaspberryPi!
 
-!split
-======= Common Mobile Compute Platform =======
-__Description:__
+
+---
+
+##  Common Mobile Compute Platform 
+
+#### Description:
 A toolbox platform for sensors and communications built around the venerable RPi.
 
-__BOM:__
-* "RPi": "https://www.adafruit.com/category/1000" with SD card and power supply. 3b+ is best model while v4 gets debugged.
+
+#### BOM:
+* [RPi](https://www.adafruit.com/category/1000) with SD card and power supply. 3b+ is best model while v4 gets debugged.
 * Remote Power:
-  * "Battery": "https://www.adafruit.com/product/3196"
-  * "PoE": "https://www.adafruit.com/product/3953"
+* [Battery](https://www.adafruit.com/product/3196)
+* [PoE](https://www.adafruit.com/product/3953)
 * HMI:
-  * "Tiny touchscreen": "https://www.adafruit.com/product/2441"
-  * "Minimal OLED": "https://www.adafruit.com/product/3527"
-  * "LCD": "https://www.adafruit.com/product/1115"
+* [Tiny touchscreen](https://www.adafruit.com/product/2441)
+* [Minimal OLED](https://www.adafruit.com/product/3527)
+* [LCD](https://www.adafruit.com/product/1115)
 * RTC: without this logs and data collection is useless
-  * "cheap option": "https://www.adafruit.com/product/3386"
-  * "good option": "https://www.adafruit.com/product/4282"
+* [cheap option](https://www.adafruit.com/product/3386)
+* [good option](https://www.adafruit.com/product/4282)
 * SDR:
-  * "cheap option": "https://www.adafruit.com/product/1497"
-  * "plan B option": "https://www.adafruit.com/product/3583"
+* [cheap option](https://www.adafruit.com/product/1497)
+* [plan B option](https://www.adafruit.com/product/3583)
 * Wifi:
-  * "cheap option": "https://www.adafruit.com/product/1030"
-  * "Long-range": "https://www.alfa.com.tw/products_detail/8.htm"
+* [cheap option](https://www.adafruit.com/product/1030)
+* [Long-range](https://www.alfa.com.tw/products_detail/8.htm)
 * Location:
-  * "GPS": "https://www.adafruit.com/product/2324"
-  * "IMU": "https://www.adafruit.com/product/4754"
+* [GPS](https://www.adafruit.com/product/2324)
+* [IMU](https://www.adafruit.com/product/4754)
 * Sensor controllers: 
-    * "STEMMA Qt/ Qwiic": "https://www.adafruit.com/product/4463" with a couple "ADCs": "https://www.adafruit.com/product/1083"
-    * "cheap option": "https://learn.adafruit.com/reading-a-analog-in-and-controlling-audio-volume-with-the-raspberry-pi?view=all" and a "voltage reference": "https://www.adafruit.com/product/2200"
+* [STEMMA Qt/ Qwiic](https://www.adafruit.com/product/4463) with a couple [ADCs](https://www.adafruit.com/product/1083)
+* [cheap option](https://learn.adafruit.com/reading-a-analog-in-and-controlling-audio-volume-with-the-raspberry-pi?view=all) and a [voltage reference](https://www.adafruit.com/product/2200)
 * Power controllers:
-    * "Power tail": "https://www.adafruit.com/product/2935"
-    * 2 "Relay controllers": "https://www.adafruit.com/product/3191" in a double-wide box
+* [Power tail](https://www.adafruit.com/product/2935)
+* 2 [Relay controllers](https://www.adafruit.com/product/3191) in a double-wide box
     * "Cheap option": fig:relay
 
 # FIGURE: ['.\Robotics\Ks7mv.png', width=900 frac=0.9] Relay control circuit. label{fig:relay}
 
-__Notes:__
-* Similar to the "PiTop": "https://www.adafruit.com/product/3762", with a compact housing
 
-!split
-======= Domotics =======
-__Description:__ Living in a house of the future is either a great idea or a terrible idea...
-
-__User Story:__ So many touch-points of our environment involve mechanical systems in our dwellings, it seems both obvious and inevitable to connect these systems to a computing platform to live a less impactful life.
-
-__Feature Set:__
-o Sensors
-    o Interior
-        o Temperature and humidity of each room
-        o nonintrusive appliance load monitor
-            o "Current sensors": "https://www.digikey.com/en/products/detail/seeed-technology-co-ltd/101990029/5488226"
-            o Voltage Sensors
-            o Circuit design
-                o Conceptual description = voltage and current translated to correct range for ADC, goes to ADC, ADC interface with GPIO I2C or SPI bus via isolation
-        o Salt level
-        o Water pressure and flow
-        o Propane level via pressure sensor
-        o Air cleaner
-        o Smoke / CO / Propane detectors
-        o Entry (pressure change)
-        o Woodstove temp
-        o Roomba status
-    o Exterior
-        o Rain
-        o Soil moisture
-        o Sunshine
-        o Wind
-        o Temp
-        o Snowfall
-        o Humidity
-        o Motion detectors
-        o Water table depth
-o Controls
-    o Heat pump
-    o Window Fans
-    o Lights
-    o Power failure
-    o Patio snow melter
-    o Humidifier / dehumidifier
-    o Irrigation
-    o Access (electric door strike)
-    o Wood Stove blower
-        o Stepper motor-controled rheostat
-o Server
-    o "Historian": "https://github.com/GridProtectionAlliance/openhistorian-python"
-    o "Dashboard": "https://www.home-assistant.io/"
-
-__BOM:__
-    * "Common Mobile Compute Platform": "/._ComputerProjects010.html#___sec10"
+#### Notes:
+* Similar to the [PiTop](https://www.adafruit.com/product/3762), with a compact housing
 
 
-!split
-======= Automotive Media System =======
-__Description:__ a simple media system to stream movies and provide Android auto connectivity
+---
 
-__User Story:__ Car audio has become increasingly complex when it doesn't need to be. Android Auto
+##  Domotics 
+
+#### Description: Living in a house of the future is either a great idea or a terrible idea...
+
+
+#### User Story: So many touch-points of our environment involve mechanical systems in our dwellings, it seems both obvious and inevitable to connect these systems to a computing platform to live a less impactful life.
+
+
+#### Feature Set:
+1. Sensors
+    1. Interior
+        1. Temperature and humidity of each room
+        1. nonintrusive appliance load monitor
+1. [Current sensors](https://www.digikey.com/en/products/detail/seeed-technology-co-ltd/101990029/5488226)
+            1. Voltage Sensors
+            1. Circuit design
+                1. Conceptual description = voltage and current translated to correct range for ADC, goes to ADC, ADC interface with GPIO I2C or SPI bus via isolation
+        1. Salt level
+        1. Water pressure and flow
+        1. Propane level via pressure sensor
+        1. Air cleaner
+        1. Smoke / CO / Propane detectors
+        1. Entry (pressure change)
+        1. Woodstove temp
+        1. Roomba status
+    1. Exterior
+        1. Rain
+        1. Soil moisture
+        1. Sunshine
+        1. Wind
+        1. Temp
+        1. Snowfall
+        1. Humidity
+        1. Motion detectors
+        1. Water table depth
+1. Controls
+    1. Heat pump
+    1. Window Fans
+    1. Lights
+    1. Power failure
+    1. Patio snow melter
+    1. Humidifier / dehumidifier
+    1. Irrigation
+    1. Access (electric door strike)
+    1. Wood Stove blower
+        1. Stepper motor-controled rheostat
+1. Server
+1. [Historian](https://github.com/GridProtectionAlliance/openhistorian-python)
+1. [Dashboard](https://www.home-assistant.io/)
+
+
+#### BOM:
+* [Common Mobile Compute Platform](/._ComputerProjects010.html#___sec10)
+
+
+
+---
+
+##  Automotive Media System 
+
+#### Description: a simple media system to stream movies and provide Android auto connectivity
+
+
+#### User Story: Car audio has become increasingly complex when it doesn't need to be. Android Auto
 can provide a great in-car experience, but all the 3rd-party AA receivers are expensive.
 
-__Feature Set:__
-o Android Auto
-o Media network share
-o SDR for radio (and everything else RF):
-    o FM radio with station/song info
-    o Weather Band/Fax
-    o Police scanner
-    o SSB
-o ODBII integration:
-    o Logging
-    o Alternate dashboard displays
-o UI/Controls:
-    o Macro and micro tuner wheels: for quickly moving through either the spectrum or file list selection sets
-    o Touchscreen for configurable selection controls
-o External:
-    o Engine start?
-    o GPS tracking
 
-__Phasing:__
-o Build RPi software stack
-o Integrate touch screen, push buttons, and dials
-o Integrate peripheral hardware: SDR, HD, microphone
-o Integrate 6-channel amplifier and stereo hat
-o Build housing
-o Build wiring harness
-o Install
+#### Feature Set:
+1. Android Auto
+1. Media network share
+1. SDR for radio (and everything else RF):
+    1. FM radio with station/song info
+    1. Weather Band/Fax
+    1. Police scanner
+    1. SSB
+1. ODBII integration:
+    1. Logging
+    1. Alternate dashboard displays
+1. UI/Controls:
+    1. Macro and micro tuner wheels: for quickly moving through either the spectrum or file list selection sets
+    1. Touchscreen for configurable selection controls
+1. External:
+    1. Engine start?
+    1. GPS tracking
 
-__BOM:__
-* "Common Mobile Compute Platform": "/._ComputerProjects010.html#___sec10"
-* https://www.adafruit.com/product/1752
 
-__Notes:__
-* https://www.zdnet.com/article/raspberry-pi-goes-android-auto-now-you-can-build-your-own-cheap-car-head-unit/
-* http://i-carus.com/
-* https://learn.adafruit.com/freq-show-raspberry-pi-rtl-sdr-scanner/overview
-* https://othernet.is/
-* https://magpi.raspberrypi.org/articles/android-auto-openauto
+#### Phasing:
+1. Build RPi software stack
+1. Integrate touch screen, push buttons, and dials
+1. Integrate peripheral hardware: SDR, HD, microphone
+1. Integrate 6-channel amplifier and stereo hat
+1. Build housing
+1. Build wiring harness
+1. Install
 
-!split
-======= GPS Chartplotter =======
-__Description:__
+
+#### BOM:
+* [Common Mobile Compute Platform](/._ComputerProjects010.html#___sec10)
+* <https://www.adafruit.com/product/1752>
+
+
+#### Notes:
+* <https://www.zdnet.com/article/raspberry-pi-goes-android-auto-now-you-can-build-your-own-cheap-car-head-unit/>
+* <http://i-carus.com/>
+* <https://learn.adafruit.com/freq-show-raspberry-pi-rtl-sdr-scanner/overview>
+* <https://othernet.is/>
+* <https://magpi.raspberrypi.org/articles/android-auto-openauto>
+
+
+---
+
+##  GPS Chartplotter 
+
+#### Description:
 A mobile mapping solution for use in car, boat, or bike
 
-__User Story:__
+
+#### User Story:
 A digital map has more to offer than hard-copy, but also, this is just my wheelhouse. BGM seems to have 
 largely captured the marine market, and android auto/apple car play for the automotive market, but these are 
 still proprietary and limited in scope. I want selective sensor integration from a variety of environments and
 COTS hardware.
 
-__Feature Set:__
-o Touchscreen
-o Ruggedized:
-  o Pot into silicone
-  o Shock abosrbing case
-  o Mineral oil bath
-o Multi-domain navigational integration:
-  o aGPS w/ WAAS
-  o inertial
-  o LORAN/beacon
-o Sensors:
-  o sidescan sonar
-  o depth finder
-  o radar
+
+#### Feature Set:
+1. Touchscreen
+1. Ruggedized:
+  1. Pot into silicone
+  1. Shock abosrbing case
+  1. Mineral oil bath
+1. Multi-domain navigational integration:
+  1. aGPS w/ WAAS
+  1. inertial
+  1. LORAN/beacon
+1. Sensors:
+  1. sidescan sonar
+  1. depth finder
+  1. radar
 
 # __Phasing:__
 # *
 
-__BOM:__
-* "Common Mobile Compute Platform": "/._ComputerProjects010.html#___sec10"
+
+#### BOM:
+* [Common Mobile Compute Platform](/._ComputerProjects010.html#___sec10)
 
 # __Notes:__
 # *
 
 
-!split
-======= Common Sensor and Datalogger Platform =======
-__Description:__
+
+---
+
+##  Common Sensor and Datalogger Platform 
+
+#### Description:
 Portable and wireless environmental IoT sensor and datalogger
 
-__User Story:__
+
+#### User Story:
 We want to be able measure a variety of environmental conditions, without hooking up wiring. We can place a sensor indoors or outdoors just for
 spot checks or leave it for several weeks or add a solar power pack for permanent power. We can hook it up to a dashboard to monitor and
 provide alarms, or use it in more remote conditions and have it upload once wifi is available, or use a cell modem. Some possible applications include:
@@ -195,7 +226,8 @@ provide alarms, or use it in more remote conditions and have it upload once wifi
 * Hydroponics controller
 * Dye tank controller
 
-__Feature Set:__
+
+#### Feature Set:
 * Internet connection discovery and automatic frequent communication
 * Plenty of digital and analog inputs
 * LCD Screen and a few buttons for basic status and config
@@ -205,150 +237,177 @@ __Feature Set:__
 * ports for display, antenna, power, and USB
 * Wifi as base networking capability, with CDMA, Ham (APRS transmitter) and LoRa communications as options
 
-__Phasing:__
+
+#### Phasing:
 * Base unit build-out and config
 * develop ports
 * ruggedize
 
-__BOM:__
-* Base Unit: "Adafruit Feather0": "https://www.adafruit.com/product/5303"
-* Base Unit: "Lithium Ion Battery Pack - 3.7V 6600mAh": "https://www.adafruit.com/product/353"
-* Base Unit: "Adafruit FeatherWing OLED - 128x32 OLED Add-on For Feather": "https://www.adafruit.com/product/2900"
-* "Air Quality and Gas Sensor": "https://www.adafruit.com/product/3709"
-* "Water turbidity and temp": "https://www.digikey.com/products/en?keywords=165D6042P003"
-* "Water pressure": "https://www.digikey.com/products/en?keywords=480-6244-ND"
-* "Non-intrusive current sensors": "https://tinyurl.com/y4jmsg6z"
 
-__Notes:__
-* "Adafruit.io": "https://io.adafruit.com/" for dashboard and short-term data warehousing
-* https://learn.adafruit.com/make-it-data-log-spreadsheet-circuit-playground
-* https://thecavepearlproject.org/
-* https://learn.adafruit.com/remote-iot-environmental-sensor/overview
-* "WipperSnapper": "https://learn.adafruit.com/quickstart-adafruit-io-wippersnapper" greatly simplifies everything!
-* "Fastest way to log data": "https://www.linkedin.com/pulse/comparative-study-among-csv-feather-pickle-parquet-loyola-gonz%C3%A1lez/"
+#### BOM:
+* Base Unit: [Adafruit Feather0](https://www.adafruit.com/product/5303)
+* Base Unit: [Lithium Ion Battery Pack - 3.7V 6600mAh](https://www.adafruit.com/product/353)
+* Base Unit: [Adafruit FeatherWing OLED - 128x32 OLED Add-on For Feather](https://www.adafruit.com/product/2900)
+* [Air Quality and Gas Sensor](https://www.adafruit.com/product/3709)
+* [Water turbidity and temp](https://www.digikey.com/products/en?keywords=165D6042P003)
+* [Water pressure](https://www.digikey.com/products/en?keywords=480-6244-ND)
+* [Non-intrusive current sensors](https://tinyurl.com/y4jmsg6z)
 
 
-!split
-======= Micro Hydroponics =======
-__Description:__ Small air pump-based flood irrigation system for office plants
+#### Notes:
+* [Adafruit.io](https://io.adafruit.com/) for dashboard and short-term data warehousing
+* <https://learn.adafruit.com/make-it-data-log-spreadsheet-circuit-playground>
+* <https://thecavepearlproject.org/>
+* <https://learn.adafruit.com/remote-iot-environmental-sensor/overview>
+* [WipperSnapper](https://learn.adafruit.com/quickstart-adafruit-io-wippersnapper) greatly simplifies everything!
+* [Fastest way to log data](https://www.linkedin.com/pulse/comparative-study-among-csv-feather-pickle-parquet-loyola-gonz%C3%A1lez/)
 
-__User Story:__ Offices are great places for plants, with ample windows and beneficial effects for workers. But, regular watering can be an issue.
 
-__Feature Set:__
-o Flood-based system of irrigation with emergency overflow
-    o Air pump inflates bladder, raises solution level, opens ARV to deflate and drop level
-    o 16" max head = 0.6 PSI
-o Planting cells to allow co-planting but easy replacement/management
-    o Pre-made rock wool blocks available locally
-o 14 day hands-off and quiet operation
-    o Water uptake/usage increases air volume needed to achieve same fluid level, requiring level sensors
-o Water level and quality sensors, media moisture for SmartUtility demonstration via dashboard
-    o Water and energy usage, solution level and nutrient strength
-    o Back-calculate media moisture based on the timing of flooding and the drain-back volume?
-o Low voltage and redundant level sensor
-    o Pressure sensor for full range and eTape for top 12"
-o Attractive as office decor
 
-__Phasing:__
-o Build sensor and ARV mechanicals
-    o Mount tape and air feed and pressure feed to stick, with ARV and pressure sensor at top
-    o Assemble microcontroller
-    o Assemble relay-integrated power supply
-o Determine base controller logic
-o Make a dashboard interface in "DisplayIO": "https://learn.adafruit.com/making-a-pyportal-user-interface-displayio?view=all"
-o Build flood tank:
-    o Triple-tote system:
-        o Rock wool media tray
-            o Notches in bottom edge for drainage
-            o Anchoring for rock wool cubes
-                o brass screws along rim, to strech rubber bands over?
-                o wooden castellation torun string through?
-                o holes for bamboo skewers?
-        o Solution tank
-            o Air line running into 1 large upside-down air chamber
-            o Latch media tray in place to avoid flotation
-            o Thru-hole for overflow port
-        o Overflow tank
-            o Captures leaks or overflows
-            o Removal with handle for general purpose use
-    o Open-top cabinet on casters to hold everything and make pretty
+---
 
-__BOM:__
-* "Adafruit parts list": "https://www.adafruit.com/wishlists/487490"
-* "Growing media": "https://www.sunsethydro.com/collections/growing-media/products/grodan-delta-hugo-6in-block-6in-x-6in-x-6in-w-hole-individual-single-blocks"
-* "Totes": "https://www.truevalue.com/latch-carry-tote-clear-base-18-gallons"
+##  Micro Hydroponics 
+
+#### Description: Small air pump-based flood irrigation system for office plants
+
+
+#### User Story: Offices are great places for plants, with ample windows and beneficial effects for workers. But, regular watering can be an issue.
+
+
+#### Feature Set:
+1. Flood-based system of irrigation with emergency overflow
+    1. Air pump inflates bladder, raises solution level, opens ARV to deflate and drop level
+    1. 16" max head = 0.6 PSI
+1. Planting cells to allow co-planting but easy replacement/management
+    1. Pre-made rock wool blocks available locally
+1. 14 day hands-off and quiet operation
+    1. Water uptake/usage increases air volume needed to achieve same fluid level, requiring level sensors
+1. Water level and quality sensors, media moisture for SmartUtility demonstration via dashboard
+    1. Water and energy usage, solution level and nutrient strength
+    1. Back-calculate media moisture based on the timing of flooding and the drain-back volume?
+1. Low voltage and redundant level sensor
+    1. Pressure sensor for full range and eTape for top 12"
+1. Attractive as office decor
+
+
+#### Phasing:
+1. Build sensor and ARV mechanicals
+    1. Mount tape and air feed and pressure feed to stick, with ARV and pressure sensor at top
+    1. Assemble microcontroller
+    1. Assemble relay-integrated power supply
+1. Determine base controller logic
+1. Make a dashboard interface in [DisplayIO](https://learn.adafruit.com/making-a-pyportal-user-interface-displayio?view=all)
+1. Build flood tank:
+    1. Triple-tote system:
+        1. Rock wool media tray
+            1. Notches in bottom edge for drainage
+            1. Anchoring for rock wool cubes
+                1. brass screws along rim, to strech rubber bands over?
+                1. wooden castellation torun string through?
+                1. holes for bamboo skewers?
+        1. Solution tank
+            1. Air line running into 1 large upside-down air chamber
+            1. Latch media tray in place to avoid flotation
+            1. Thru-hole for overflow port
+        1. Overflow tank
+            1. Captures leaks or overflows
+            1. Removal with handle for general purpose use
+    1. Open-top cabinet on casters to hold everything and make pretty
+
+
+#### BOM:
+* [Adafruit parts list](https://www.adafruit.com/wishlists/487490)
+* [Growing media](https://www.sunsethydro.com/collections/growing-media/products/grodan-delta-hugo-6in-block-6in-x-6in-x-6in-w-hole-individual-single-blocks)
+* [Totes](https://www.truevalue.com/latch-carry-tote-clear-base-18-gallons)
 * Aquarium air pump
 * Silicone tubing
 
-__Notes:__
-* https://learn.adafruit.com/adafruit-pyportal/overview
+
+#### Notes:
+* <https://learn.adafruit.com/adafruit-pyportal/overview>
 * Needs some type of anchoring for media in top container for replacing plants and rock wool easily
 * Flood chamber must be securely anchored against flotation
-* "First iteration": "./PlantWaterer/PlantWaterer.html" of the design was a simple Trinket-based timer that controlled a "mini peristaltic pump": "https://www.adafruit.com/product/1150". It worked if the water source was elevated to deal with the limits of the pump curve.
-
-__Logic:__
-o Start flood event:
-    o turn on air pump and close air release valve for until level has stabilized to within 0.25" for 5 minutes
-        o Report solution level from both sensors every 15 seconds
-    o if it has been more than 20 minutes, terminate on cycle and alert
-    o if water detected in overflow tank, terminate on cycle and alert
-    o if sensors do not agree on level, alert
-    o if solution level falls below 3", alert
-o Alert:
-    o flash the built-in light
-    o play noise
-    o send text message
-
-__CODE:__
-@@@CODE ./code/microHydroponics/main.py
+* [First iteration](./PlantWaterer/PlantWaterer.html) of the design was a simple Trinket-based timer that controlled a [mini peristaltic pump](https://www.adafruit.com/product/1150). It worked if the water source was elevated to deal with the limits of the pump curve.
 
 
+#### Logic:
+1. Start flood event:
+    1. turn on air pump and close air release valve for until level has stabilized to within 0.25" for 5 minutes
+        1. Report solution level from both sensors every 15 seconds
+    1. if it has been more than 20 minutes, terminate on cycle and alert
+    1. if water detected in overflow tank, terminate on cycle and alert
+    1. if sensors do not agree on level, alert
+    1. if solution level falls below 3", alert
+1. Alert:
+    1. flash the built-in light
+    1. play noise
+    1. send text message
 
-!split
-======= Technology as Art =======
-===== Wood Burning Plotter =====
-__Description:__
+
+#### CODE:
+[Link to the code](./code/microHydroponics/main.py)
+
+
+
+
+---
+
+##  Technology as Art 
+
+###  Wood Burning Plotter 
+
+#### Description:
 A polar coordinate-based dual axis large-format plotter that uses solar power to maneuver a magnifying
 lens over a wooden canvas vertically to burn an image.
 
-__User Story:__
+
+#### User Story:
 Plotters are simple output devices, but can require a large amount of track and
 infrastructure; using 2 motors to control location of marker via line in/out in a polar coordinate
 fashion will allow the device to scale up to billboard size for a giant art display, say along a
 major north/south interstate highway. For example.
 
-__Feature Set:__
-o Weatherproof and hidden controller, motor, and spindle housing
-o Solar-powered
-o Spool capacity of 50' of 30# braided fishing line
-o Spooling speed control from 1mm/min - 25mm/min
-o Optical sensor for darkness of burn
-o Removable controller, for image and software update
-o Calibration process
-o Fire suppression
 
-__Notes:__
-o https://www.raspberrypi.org/blog/we-love-a-good-pen-plotter/
-
-__Phasing:__
-
-__BOM:__
-
-===== Lightning Catcher =====
-__Description:__ Rocket-based micro-wire launch system to direct a lightning strike to a specific location
+#### Feature Set:
+1. Weatherproof and hidden controller, motor, and spindle housing
+1. Solar-powered
+1. Spool capacity of 50' of 30# braided fishing line
+1. Spooling speed control from 1mm/min - 25mm/min
+1. Optical sensor for darkness of burn
+1. Removable controller, for image and software update
+1. Calibration process
+1. Fire suppression
 
 
-__User Story:__ Lightning is one of the most powerful forces of nature, and I want to catch it. Plus, it could be a great learning opportunity.
+#### Notes:
+1. <https://www.raspberrypi.org/blog/we-love-a-good-pen-plotter/>
 
 
-__Feature Set:__
-o Fully enclosed silo system
-o Internet or phone activated
-o Hi-speed photography?
-o 2000m altitude
+#### Phasing:
 
 
-__Phasing:__
+#### BOM:
+
+
+###  Lightning Catcher 
+
+#### Description: Rocket-based micro-wire launch system to direct a lightning strike to a specific location
+
+
+
+#### User Story: Lightning is one of the most powerful forces of nature, and I want to catch it. Plus, it could be a great learning opportunity.
+
+
+
+#### Feature Set:
+1. Fully enclosed silo system
+1. Internet or phone activated
+1. Hi-speed photography?
+1. 2000m altitude
+
+
+
+#### Phasing:
 * Research where/how this has been done before
 * Find a wide-open enough area that someone will allow this to happen in
 * Build launch system in test silo
@@ -357,67 +416,81 @@ __Phasing:__
 * Track weather
 
 
-!split
-======= Irrigation Remote =======
-__Description:__ Simple SCADA to drive drip irrigation.
+
+---
+
+##  Irrigation Remote 
+
+#### Description: Simple SCADA to drive drip irrigation.
 
 
-__User Story:__ We leave the house for extended periods during hot dry weather and know that we won't lose plants. When we harvest, we can turn off drippers by plant. Plumbing and electrical are unobtrusive and dependable. Water is conserved as much as possible. We can use rain water if desired.
+
+#### User Story: We leave the house for extended periods during hot dry weather and know that we won't lose plants. When we harvest, we can turn off drippers by plant. Plumbing and electrical are unobtrusive and dependable. Water is conserved as much as possible. We can use rain water if desired.
 
 
-__Feature Set:__
-o Main line valves actuated by internet-connected IoT switch, on schedule with manual overrides.
-o Flow meter used to activate alarm of valve failure and fine-tune water usage.
-o Rain, soil moisture, and localized temperature sensor pack to fine-tune water usage. Battery-powered and internet-connected for minimal wiring.
-o Gang valving and individual drippers in garden for easy access and fine control.
-o Main line plumbing hidden and removable for storage, freeze protection, repair, and protection.
-o SImple set up and, logging, and dashobarding via "WipperSnapper": "https://learn.adafruit.com/quickstart-adafruit-io-wippersnapper"
+
+#### Feature Set:
+1. Main line valves actuated by internet-connected IoT switch, on schedule with manual overrides.
+1. Flow meter used to activate alarm of valve failure and fine-tune water usage.
+1. Rain, soil moisture, and localized temperature sensor pack to fine-tune water usage. Battery-powered and internet-connected for minimal wiring.
+1. Gang valving and individual drippers in garden for easy access and fine control.
+1. Main line plumbing hidden and removable for storage, freeze protection, repair, and protection.
+1. SImple set up and, logging, and dashobarding via [WipperSnapper](https://learn.adafruit.com/quickstart-adafruit-io-wippersnapper)
 
 
-__Phasing:__
+
+#### Phasing:
 * indoor plumbing to hose cock (done)
 * cistern with submersible pump (done)
 * IoT switch, meter, and main line valve (done)
 * buried main line and gang valving
 * Soil moisture and flow sensors
 
-__Iterations:__
-o Housed in outdoor electrical box, but leaked and destroyed board with moisture. 
-    o Use 3D printed enclosure that includes an oring?
-    o Forgo the combined electronics and just use a simple wifi-controlled outlet relay to drive the valve power supply?
 
-__BOM:__
-o "https://www.adafruit.com/wishlists?wid=554909"
+#### Iterations:
+1. Housed in outdoor electrical box, but leaked and destroyed board with moisture. 
+    1. Use 3D printed enclosure that includes an oring?
+    1. Forgo the combined electronics and just use a simple wifi-controlled outlet relay to drive the valve power supply?
 
-FIGURE: [HappyHippieLifestyle/plumbing, width=900 frac=0.9] Plumbing Schematic. label{fig:plumbing}
 
-!split
-======= The Best Damn Radio System =======
+#### BOM:
+1. "https://www.adafruit.com/wishlists?wid=554909"
 
-__Description:__ Tiny HAM radio that can be used anywhere
+![ Plumbing Schematic.](HappyHippieLifestyle/plumbing)
 
-__User Story:__ The world is still a big place and to explore certain parts in safety, we need a way to broadcast an emergency.
+
+---
+
+##  The Best Damn Radio System 
+
+
+#### Description: Tiny HAM radio that can be used anywhere
+
+
+#### User Story: The world is still a big place and to explore certain parts in safety, we need a way to broadcast an emergency.
 PLBS are really only domestic, not hackable (or even able to replace batteries), and for emergency only. Sat messengers have
 not-insignificant subscription fees, and varying coverage. HAM remains the most ubiquitous global radio infrastructure, and with
 help, can be transmitted from any global location, for a variety of needs.
 
-__Feature Set:__
-o Handheld SDR
-o Use APRS+GPS for tracking mode?
-o Use FT8 for long-distance messaging?
-o Can be modded to suit the locale and needs of a trip
-o Has a base station/ repeater mode
-o Can be used for personal emergency messaging, way-point tacking, sharing progress
-o Ruggedize by potting in epoxy with heat sinks?
-o Cheap and small enough to carry spares
-o Yagi antenna to use as a directional beacon?
 
-__Notes:__
+#### Feature Set:
+1. Handheld SDR
+1. Use APRS+GPS for tracking mode?
+1. Use FT8 for long-distance messaging?
+1. Can be modded to suit the locale and needs of a trip
+1. Has a base station/ repeater mode
+1. Can be used for personal emergency messaging, way-point tacking, sharing progress
+1. Ruggedize by potting in epoxy with heat sinks?
+1. Cheap and small enough to carry spares
+1. Yagi antenna to use as a directional beacon?
+
+
+#### Notes:
 * Reference devices:
-    * "Tiny tracker": "https://www.byonics.com/tinytrak4"
-    * "Inreach Explorer": "https://www.garmin.com/en-US/p/561269"
-    * "PortableSDR on Hackaday": "https://hackaday.io/project/1538-portablesdr"
-    * "Great Scott base unit": "https://www.adafruit.com/product/3583?gclid=CjwKCAiAsNKQBhAPEiwAB-I5zUZdGPTO1cpWq1uvHynsPHWheqFeQ6TxZsp3_P-s2Zo4jjYT4xDFMhoCwPQQAvD_BwE"
+* [Tiny tracker](https://www.byonics.com/tinytrak4)
+* [Inreach Explorer](https://www.garmin.com/en-US/p/561269)
+* [PortableSDR on Hackaday](https://hackaday.io/project/1538-portablesdr)
+* [Great Scott base unit](https://www.adafruit.com/product/3583?gclid=CjwKCAiAsNKQBhAPEiwAB-I5zUZdGPTO1cpWq1uvHynsPHWheqFeQ6TxZsp3_P-s2Zo4jjYT4xDFMhoCwPQQAvD_BwE)
 
 
 # !split

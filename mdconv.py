@@ -1,4 +1,4 @@
-import re, glob
+import sys, re, glob
 
 swap = (
   ("TITLE:", "#"),
@@ -11,9 +11,11 @@ swap = (
   ("!split", "---"),
  )
 
+for f in glob.glob("*.do.txt"):
+    print(f"git mv {f} {f[:-7]}.qmd")
+
 for f in glob.glob("*.qmd"):
-    # print(f"git mv {f} {f[:-7]}.qmd")
-    if f.endswith("test.qmd"): continue
+    # if f.endswith("test.qmd"): continue
     newfile = ""
     for l in open(f).readlines():
         newline = l
@@ -60,5 +62,8 @@ for f in glob.glob("*.qmd"):
         
         newfile += newline
                 
-    with open(f[:-3]+"test.qmd", 'w') as outf: 
+    # with open(f[:-3]+"test.qmd", 'w') as outf: 
+    with open(f, 'w') as outf: 
         outf.write(newfile)
+        
+        
