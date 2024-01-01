@@ -1,0 +1,92 @@
+
+##  Traditional Wood Craft 
+
+###  Workbench 
+* British/Scandinavian style
+* Bench Screws for vises (shoulder vise too)
+
+![](./HappyHippieLifestyle/workbench)
+
+
+###  Projects 
+* For around the house:
+    * Cellar doors
+    * Picture frames
+    * Shaving brushes
+    * Nutcracker (threaded)
+    * Carpenter bee traps
+    * Teabox
+    * Bird boxes (done)
+    * Boot jack (done)
+    * Coat tree (done)
+* For the kitchen:
+    * Spatualas and spoons
+    * Rolling pin
+    * Tortilla press (done)
+    * Cider press
+    * Cutting board
+         * with detachable bread slicer combs?
+    * Knife block
+    * Mortar w/ pestle
+    * Picnic basket
+    * Pasta Tines
+    * Mandolin
+* For the barn:
+    * Chicken coop (done)
+    * Carrying tote
+    * Yoke
+    * Shepherds Crook
+* For fiber projects:
+    * Wool combs
+    * Darning egg/mushroom (done)
+* Sewing machine case with [collapsible project table](https://www.instructables.com/id/How-to-Make-a-Custom-Sewing-Machine-Case/)
+* For outdoors:
+    * [Camping yurt](https://www.campingyurts.com/) (done)
+        *{{< video https://www.youtube.com/watch?v=0BQT9I4qAYk width=600 height=400 >}}
+    * [Adirondack Chairs](https://raw.githubusercontent.com/csomerlot/csomerlot.github.io/master/HappyHippieLifestyle/ADK_chairs.pdf) (done)
+        *{{< video https://www.youtube.com/watch?v=WmO74zjw3k8 width=400 height=300 >}}
+    * [Marcy field cot](https://www.google.com/url?sa=t&source=web&rct=j&url=http://ajhamler.com/yahoo_site_admin/assets/docs/Field_Cot_from_CWW-II.21112127.pdf&ved=2ahUKEwiKhveYtovmAhWxiOAKHfxXCnIQFjAKegQIAhAB&usg=AOvVaw2yUrp_O4La2HmkB5D521xg)
+    * Buckets
+    * Rosin bird whistle
+    * Canoe paddles
+    * Fishing poles
+    * Recurve bows
+    * Arrows
+    * Pack baskets
+* Misc:
+    * Cane
+    * Dulcimers
+
+###  Mission Furniture Ideas 
+* Standing desk (done)
+* Bed (done)
+* Trestle table
+* Coat tree
+* Night stand/TV tray
+* Adirondack chair (done)
+
+###  Hand-made tools 
+* Scrub plane
+* Shooting board
+* Router plane
+* Frame saw
+* Shaving Horse
+* Gauge
+* Toolbox
+* Spoke shave
+* Knife
+* Timber dogs
+* [Adze](http://www.kestreltool.com/adzes/)
+* Mallet (done)
+* Oiler can
+* Card scrapers
+
+###  References 
+* Roy Underhill (Woodwrights Workshop) books
+* Foxfire books
+* Paul Sellers ([blog](https://paulsellers.com/)) ([YouTube](https://www.youtube.com/channel/UCc3EpWncNq5QL0QhwUNQb7w))
+* Mr. Chickadee ([blog](https://mrchickadee.com/blog/)) ([YouTube](https://www.youtube.com/playlist?list=UUHkYrJ2Fbe7pBjEZvkFzi3A))
+* Nick Engler ([store](https://workshopcompanionstore.com/)) ([YouTube](https://www.youtube.com/@WorkshopCompanion))
+* [A Wikipedia compendium](./HappyHippieLifestyle/WoodCraft_wikipedia.pdf)
+* [Wood material properties by species](https://docs.google.com/spreadsheets/d/1_zjI1vGxCtmsbH69QjpMYNBPJ468HVjOvgf4P3YOeug/edit?usp=sharing)
+* [The wood database](https://www.wood-database.com/)

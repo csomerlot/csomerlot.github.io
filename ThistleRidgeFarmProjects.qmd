@@ -1,0 +1,304 @@
+
+# Thistle Ridge Farm Projects
+
+
+
+
+##  Animals 
+1. Sheep
+    1. Romneys have great fleece, low-maintenance feet
+1. Goats
+    1. Boers, Kikos, and Cashmere are low maintenance
+1. Livestock costs
+1. Breeds
+1. Fencing
+    1. Drive posts in spring (soft ground) with bucket of backhoe, use metal post cap welded up to keep bucket from sliding on the top of the post as it pushes
+    1. 6 1/2' cedar posts off craigslist?
+    1. Perimeter fence layout
+    1. Use 16' Cattle welded-wire panels?
+        1. Does not need corners (no tension)
+        1. Start fencing for both E and W pasture by installing permanent N-S fences near barn, several panels of E-W fencing, and movable back line, to allow progressive fence installation
+            1. Every 2 panels deep in both directions = 1/4 acre
+            1. Start with 1 acre, which is ~75 panels
+    1. Portable electric mesh for pasture management
+    1. Cut locust from backyard for posts
+        1. Cut in may-june when sap is running, so they can be debarked easily
+1. [Pasture Map](./Farm/Pasture.kml)
+
+
+##  Rain Water Cistern 
+1. Provides irrigation water to gardens
+1. Collects runoff from Barn roof
+    1. 2500 sf
+        1. 1/4" event yields almost 400 gallons
+    1. secondary benefit = keeps ground around outside of barn from getting marshy
+1. Main Storage tanks
+    1. elevated to provide head to fill transport tank
+    1. Discharge header
+        1. Connect to inline transfer pump for filling transport tank
+        1. Flex hose at one end allows control of fill level, overflow protection, and winter drain
+1. Field storage tanks (65 gall x 2)
+    1. located upslope of gardens
+        1. needs low pressure emitters
+    1. kept inside ply "doghouse" to avoid algal growth and for appearance
+    1. main shutoff valve and hose quick-connects
+    1. open top for filling
+1. Transport tank (65 gall)
+    1. strapped into tractor trailer bed
+    1. filled via gravity from main storage tanks
+    1. fills field storage tank via gravity
+        1. park tractor upslope
+        1. large diameter fill hose
+    1. fills field storage tank via pump
+        1. use tractor to power 12V transfer pump
+
+##  Tractor 
+1. What it needs to do
+    1. manage manure and compost
+        1. attachment
+            1. bucket (at least 4' wide)
+    1. minor row cropping
+        1. attachments
+            1. disk tiller
+            1. harvester
+            1. plow
+    1. pasture management
+        1. attachments
+            1. bush hog
+            1. mower
+    1. backup to snowplow
+        1. attachment
+            1. plow blade
+    1. backup generator
+        1. attachment
+            1. hydraulic motor & genset head
+    1. log splitter
+        1. attachment
+            1. ram
+1. options
+    1. Buying a used tractor with a front end loader
+        - cost: ~18K
+    1. Riding mower upgrade
+        1. Can only do about half of the things I need
+        - cost: ~2K
+    1. Fix up an antique
+        1. Antique tractors are easy to repair and get parts/attachments for
+        1. Small, so:
+            1. replace and sell riding mower
+            1. will fit in barn better
+        1. Bucket attachment not easy
+            1. can't mount on front
+            1. rear end loader perfect solution but not easy to find
+                1. need to fabricate one
+        1. cost: ~2.5K (but -1K from selling rider mower?)
+        1. Models
+            1. Farmall H, B, C, cub
+            1. Case V or VC
+            1. Allis Chalmers WD
+    1. [Build one](https://cadplans.com/products/cadtrac-1500)
+        - cost: ~$5-9K?
+        
+
+##  Composting 
+
+![ Composting Bin.](./Farm/CompostPanel)
+
+
+##  Chicken Tractor 
+1. Wheels for moving with tractor
+1. lightweight run
+1. light-sensitive door
+
+![ Chicken Coop.](./Farm/ChickenCoop)
+
+
+##  Making Food 
+1. Equipment
+    1. Food press
+        1. multifunction
+            1. cider
+            1. cheese
+            1. grapes (wine)
+            1. sunflower oil
+        1. Built of wood
+            1. Start with press frame from Jeff's basement?
+        1. powered by hydraulic bottle jack
+        1. Homemade Plans
+    1. Food mills
+        1. multifunction
+            1. cider
+            1. grapes (wine)
+            1. Sunflower seeds
+        1. Marathon Uni-mill (stone grinders)
+    1. Dryer
+        1. multifunction
+            1. hops
+            1. barley
+        1. homemade
+            1. old bee boxes
+            1. old hair dryer
+            1. Reference
+                1. Homebrew gardening book has plans
+    1. Grinder
+        1. grandma's old table-clamp unit good for relish, nuts, meats
+            1. needs new cutter?
+            1. attachment for making sausage?
+    1. Dough mixer
+        1. pasta
+        1. stretch bread
+    1. Turkey fryer
+        1. fried turkey, duck, chicken
+        1. New england boiled dinner
+        1. Boil wort for beermaking?
+    1. Smoker
+        1. sausages
+        1. fish
+        1. cheese
+1. Cheesemaking
+    1. References
+        1. Cheese Chronicles - Liz Thorpe
+        1. Jasper Hill Farm, Greensboro VT
+        1. Lively Run Goat Dairy, Interlaken NY
+    1. Raw Milk Sources
+    1. Mozzarella
+    1. Queso Blanco
+    1. Creme Fraiche
+    1. Jack
+1. Maple Sugaring
+    1. Collection
+        1. plastic taps
+        1. 5-gal buckets
+        1. Store in buckets with lids
+    1. Boil
+        1. Stainless chafing pans over cinder block wood fire pit
+        1. Turkey fryer run on propane
+    1. Log
+        1. 2007
+            1. Tapped all 5 trees, one tap apiece
+            1. About a gallon of syrup
+        1. 2008
+            1. Tapped all 5 trees, one tap apiece
+            1. Interrupted by vacation
+            1. Tried a straw bale fire pit with blower, almost had to call fire dept.
+            1. About a gallon of syrup
+        1. 2010
+            1. Tapped 3 northern trees
+    1. References
+        1. Equipment supplier
+1. [Gardening records](https://docs.google.com/spreadsheets/d/189Td1nhGW3Vrj0CtqKAWVy8kJlys1NEx5la_6wacGrw/edit?usp=sharing)
+
+    
+
+---
+
+##  Yarn Farm 
+
+###  home made equipment 
+
+####  Drum Carder 
+1. motorized
+    1. guts from an old electric drill
+        1. put trigger into foot pedal
+    1. bi-directional
+    1. allows 2-handed fiber management
+1. main drum
+    1. size
+        1. 12" wide by 15.25" diameter
+            1. 48" circumference
+        1. 576 sq. in.
+    1. laminated plywood
+1. roving guide
+    1. diz?
+    1. doffing netting strip
+    1. maybe just skip the whole roving thing
+1. chain driven
+    1. front bike cassette sprokets for multiple carding ratios
+    1. small tension sproket
+        1. motorized
+    1. small sproket outside of chain loop for main drum
+1. cloth
+    1. 1/2" deep
+        1. can use netting for doffing
+            1. netting attached at one end under groove guide
+    1. ~100 PSI
+    1. find a manufacturer who gives samples
+        1. too expensive from fiber dealers
+        1. need about 50' of 1" tape
+
+####  Loom 
+1. counter-balance style (overhead)
+1. 48"
+1. 4 harnesses
+    1. simplest possible to make tartan with
+1. 6 treadles
+1. string heddles
+    1. may be better to purchase some steel ones
+1. ball bearings on beater and counter balances
+1. sectional warp winder
+    1. counter on warp beam or warp roller
+        1. use 18" circumference rollers for ease of counting?
+1. collapsable
+1. uses standard purchased reeds
+1. needs a clever brake system
+    1. equal size warp and cloth rollers w/ chain & sprokets?
+        1. keeps tension equal throughout cloth
+    1. foot brake to adjust tension
+1. References
+    1. Paula Simmon's books
+
+####  References 
+1. David Bryant's book "wheels and Looms"
+
+####  Spinning Wheel 
+1. quill spindle style
+    1. simplicity of construction
+    1. flexibility in yarn type
+    1. can also wind shuttle bobbins and make center pull balls
+    1. speed
+    1. no orifice threading
+1. single treadle
+    1. simplicity
+    1. dual action
+    1. Can be set at any angle from wheel, to adjust position of wheel relative to spinner
+1. Primary drive wheel
+    1. 20" diameter
+    1. Solid laminated wood
+        1. Dimensionally stable
+    1. Axis position is adjustable
+1. Quill Drive
+    1. Driven by direct contact with drive wheel
+    1. Held in place between drive wheel and roller bearings
+    1. 80:1 ratio for quill speed of ~250rpm
+1. References
+    1. Peguin wheel
+    
+![](./Fiber/Wheel.png)
+
+![](./Fiber/Wheel2.1.png)
+
+![](./Fiber/Wheel2.2.png)
+
+
+####  warping board 
+1. two 1x2s 4' long with 3" nails every 8", nailed to wall 5' apart
+
+###  References 
+1. Paula Simmon's books
+1. Book of wheel and loom plans
+
+###  shearing done in-house 
+1. need classes and about $500 in equipment to get started
+
+###  Time saving shortcuts 
+1. washing and dyeing done in one step
+    1. washfast acid dyes (G & K? RIT?)
+        1. safety
+        1. simplicity
+        1. color-fastness
+1. weave with singles
+1. sectional warping
+
+![](./Fiber/PICT2608_T)
+
+
+

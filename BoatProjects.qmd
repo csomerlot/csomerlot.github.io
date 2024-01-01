@@ -1,0 +1,183 @@
+# Boat Projects
+
+##  Building a Whitehall 
+My first project in building a sailboat, for the someday I dream of... years ago I received [this book](https://books.google.com/books?id=6RKdTOWGYjoC&printsec=frontcover&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false) on building a [whitehall](https://en.wikipedia.org/wiki/Whitehall_rowboat), and it is perhaps the most perfect representation of a boat that I can find.
+
+Cool options to consider:
+
+1. [Removable thwart, like in Chesapeake Light Crafts version](https://www.clcboats.com/modules/catalog/boat.php?category_qn=rowboats&code=chester-yawl-row-boat-kit&print=1)
+1. [A tent like Roger Barnes' dinghy tent](https://youtu.be/iDSEbhyIzX0)
+1. Dolly with bike wheels for beach launching
+  
+
+##  Skin-on-frame Kayak 
+
+1. greenland style
+1. use traditional measurement system
+    1. 3 fathom plus 1 cubit is length, etc
+1. standard european paddle
+1. Materials
+    1. canvas as skin (for first one, at least)
+    1. wood choices
+            1. Black locust
+            1. Douglas fir
+            1. Ash
+
+![ Skin on frame kayak.](Boats/SOFkayak.png)
+
+![ Wood steamer.](Boats/WoodSteamer.png)
+
+
+##  Nested Dinghy 
+Should a first project be something more cookie cutter? It would certainly simplify (speed up) a build, and 
+you can't get anything more simplified than a kit dinghy, like the [PT11](http://www.ptwatercraft.com/ptwatercraft/PT11Home.html)
+
+
+###  Specs 
+1. Length: 11' 0"
+1. Hull Weight: 90 lbs.
+1. Beam: 50 in.
+1. Max Payload: 518 lbs.
+1. Rowing Draft: 4"
+1. Sailing Draft: 24"
+1. Sail Area: 54 sq ft.
+
+
+##  Cruising Catamaran for Lake Ontario 
+1. A trailerable 25'-ish open deck multihull
+1. Ample sail plan for light wind
+    1. Sloop rigged with Jennnaker (no pole needed)
+    1. Pirate-red sails!
+1. Electric motors in each hull with regen props, backup generator
+1. Each hull self-serving for 1 couple with double berth
+    1. Breeze-way hatches
+    1. Head
+        1. Composting toilets
+        1. Foot-pump operated sinks, small water tank below
+1. Stow-away galley and nav/lounge table on deck
+1. Deep-V hulls so no daggerboards
+1. Plywood stitch and glue home construction
+1. Carry 3 or 4 kayaks up on trampoline
+1. We'll call her the Glorious Anne-Marie (because there are 2 hulls! get it?)
+1. Study Plans:
+1. <http://www.sailingcatamarans.com/strider.htm>
+1. <https://www.duckworksmagazine.com/r/plansindex/multihullsail.htm>
+
+
+##  Skin on Frame Ultralight Trimaran 
+1. Can be built in field with minimum of tools, in emergency
+1. Baidrka-style kayaks as pontoons (amas)
+    1. Inflatable bouancy bags for rigidity
+1. Dual skegs for very shallow draft
+1. Minimize gear, ground tackle, and trimming to keep ultralight to maximize speed
+1. Simplest field-buildable sail rig with most power:
+    1. lateen?
+
+
+---
+
+##  Catamaran Daysailor 
+Jon and I inherited one from his childhood.
+
+###  Cal Cat 
+1. Specs:
+  1. LOA:
+  1. LWL:
+  1. Beam:
+  1. Sail area:
+1. Similar designs (for parts):
+  1. Hobie Inspiration
+1. [Aqua Cat 14](https://www.americansail.com/products/boats/aqua-cat-14-catamaran)
+1. [Paper tiger](http://www.papertigercatamaran.org/)
+
+###  Repair Work 
+1. Hulls
+    1. Powerwash
+    1. Spot epoxy repair, fiberglass repair under aft starboard support junction
+    1. Redo gelcoat
+    1. Stablize / Replace foam? There is a bunch of loose stuff in there
+    1. Replace drain plugs, for good measure
+1. Trampoline
+    1. Clean
+    1. Replace 3/8" line in seam?
+1. Standing rigging
+    1. Need four 316SS clevis pins for forward turnbuckles
+    1. Replace all stays with 1/8" UHMWPE (40 ft)
+1. Need 1/8 [UHMWPE](https://usarope.net/product/18-spectra-12-strand/), 20 ft, to lash trampoline to rear cross member
+    1. Sail dry lube for tracks
+1. Running Rigging
+    1. Replace halyard (1/8" UHMWPE, 40 ft )
+1. [New steering assembly](https://www.storerboatplans.com/boatplans/viola-sailing-canoe-plan-cartop-sailing-dinghy/rigging-details-for-the-viola-14-sailing-canoe/make-simple-canoe-rudder-rudderbox-sailing/)
+    1. Avoids expensive pintles, and more secure
+    1. Simpler and better steering than kick-up rudders
+    1. Tillers: aluminum tube
+    1. Rudder
+        1. 3mm sheet aluminum for box
+        1. Fabricate blade from wood
+1. Pittsford Lumber has sheets of [Marine Okaume-Joubert plywood](https://www.pittsfordlumber.com/Pittsford-Lumber/Marine-Okoume-Plywood-Rochester-NY.html) in 6mm
+            1. Epoxy and then gelcoat
+1. Sail: Tear near foot
+1. Misc Hardware
+    1. Need 4 clevis pins to attach cross members to hulls: 1/4"-2 1/2" 316SS
+    1. Pins for center boards are missing: fabricate from SS bolts with acrylic tubing
+1. Mast
+  1. Mast step missing: fabricate from 316SS plate and a high-strength pin
+  1. Float missing (but forums say do without)
+  1. Spray-foam ends to seal
+
+![ Transom.](Boats/transom.jpg)
+
+![ Mainsheet hardware.](Boats/mainsheet.jpg)
+
+![ Replacement Mast step.](Boats/MastStep)
+
+![ Where the mast step goes.](Boats/calcat3.jpg)
+
+
+###  Pictures 
+
+![ The Cal Cat in all its glory.](Boats/Cat.jpg)
+
+![ The Cal Cat in all its glory.](Boats/calcat2.jpg)
+
+
+---
+
+##  Amphibious Vehicle System 
+What nerd hasn't tried to figure this one out? I think the reason that we don't have a commercial product like this is that a break-away, auto-positioning, self-launching hull system is very hard.
+
+
+###  Electric Hatch-back 
+With the rise of electric outboards, a drive system is easier than ever when coupled to a high-output alternator. Or at least, would be fun to experiment with!
+
+* Split hull stored on roof on land mode
+* Hull gets placed for drive-on at boat launch and has rollers for transition into water
+* Dual electric thrust pods are coupled to the wheels somehow for directional control via the steering wheel
+
+
+###  Amphibious Truck/Camper Van 
+* Pontoons swing from overhead down under truck by hydraulics
+* Dual hydraulic jet drives in pontoons
+* Belt-driven hydraulic pump off motor for hydraulic power
+
+
+###  Car Barge 
+* High-displacement, low draft drive-on LST-style carrier that stays behind when transitioning to land
+* Hydraulic drive-on or roll-off deck to completely isolate the vehicle from touching water when transitioning dockside, boat launch, or even from beach
+* Deck uses turn table for loading from an angle and for forward on and off. Also, incorporates a lift to raise/lower and keep COG low when onboard
+* Electric propulsion driven from on-board batteries, recharged via high-output alternator on the car, shore power and/or solar PV panels
+* back of the envelope math: a 20hp [electric outboard](https://www.torqeedo.com/us/en-us/products/outboards/cruise/cruise-10.0-r/M-1240-00.html) draws 10kW peak (15 mph), 1.5 kW at cruise (5 mph), and a [high-output alternator](https://www.nationsstarteralternator.com/270-Amp-XP-High-Output-Alternator-for-Subaru-p/13645-270-xp.htm) on a small hatchback car (4.25 ton) can produce 3.5kW at 2500 rpm.
+* Remote or auto-piloting of barge from slip or mooring allows user to remain in vehicle through transition
+* Hull can take many forms, including houseboat, canalboat, internal docking barge, large trimaran
+* Lift points for loading onto rail flatbed for long-hauling
+* Use a pivoting gantry crane instead, like a log trailer?
+
+
+###  Hydrofoiling Buggy 
+With the rise of hub motors, is an axle even required? If no axle, no through-hull? 
+
+* A sand-buggy or humvee style amphibious electric vehicle 
+* Aluminium unibody frame sporting 4 hub motors with wheels on parallel linkage, bolted outside of the frame
+* Then, hydrofoiled thrusters to go to [water mode](https://candela.com/candela-c-8/)
+* Mechanical simplicity to deliver maximum range, stability, traction, with minimal weight, wake, maintenance
+* <https://www.thewilcraft.com/>

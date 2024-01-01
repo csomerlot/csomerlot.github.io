@@ -1,0 +1,156 @@
+
+##  North Woods Cottage 
+1. idea came from discussions during New Year's get togethers (JoAnna calls it a commune)
+1. we want a place of our own that is in a remote location (no motor access), on the water, that will give us access to the (state) woods for
+    1. New Year's hangout
+    1. skiiing
+    1. canoeing
+    1. biking
+    1. hiking
+1. Brantingham area seems good location for proximity, snowfall, biking and skiing on tug hill plateau, hiking in Thendara, and general proximity to Canoe Wilderness. Or Cape Breton.
+1. Easy (cheap) to own
+1. ideally, is teardown/rebuild of existing structure
+1. keep a low investment and carry no insurance or utility costs
+1. keep the tax assessor away with blair-witch stick-piles, boooby traps, scary dogs, yellin', and gun fire (in that order)
+1. Architecural style should maximize use of simple, renewable, recyclable, biodegradable materials
+1. [Great example design](https://youtu.be/MsDTfWLLv3Y)
+
+
+###  HayBaleHome 
+1. slab foundation
+    1. concrete floor colored and grooved to look like tiles
+    1. gravel substrate, but need foam for insulation?
+1. straw bale walls (excellent thermal qualities)
+1. thatched roof (excellent thermal qualities)
+1. rubble trench foundation footer (will need to go down to 5')
+1. simple floorplan for easy construction
+1. 1.5 bathrooms
+1. loft for sleeping space
+1. beds for 8
+1. single-pane windows with inner and outer shutters for security, cost, strength, and warmth
+1. screen doors downstairs and in loft for ventilation
+1. suspend gear (canoes, bikes, etc) from rafters
+1. Mechanicals should be off-grid, minimalistic (see below)
+    1. heat
+        1. masonry wood stove
+    1. light
+        1. battery and/or oil, candles
+    1. water
+        1. overhead tank for pressure
+            1. 30" pipe in roof apex will hold 1000 gallons (but weigh 4 tons)
+        1. low-power electric pump operated by solar panel
+        1. hand pump in kitchen sink (also backs up electric pump)
+        1. hand-augered well
+        1. low-flow shower head
+    1. waste
+        1. composting toilets
+        1. kitchen and shower grey-water system
+    1. hot water
+1. [propane on-demand](https://www.amazon.com/dp/B002JLSH5S/?coliid=I3NOBK27OJ5OOF&colid=LXYPR4UA5ISY&psc=1&ref_=lv_ov_lig_dp_it)
+        1. a 20lb tank will give 8hrs of shower hot water (overhead tank is already room temp!)
+    1. electricity
+        1. use a deep cycle battery and inverter, charged from solar cell
+        1. really should just be used for lights, charging devices, using speakers, etc.
+1. kitchen
+    1. small propane fridge and cooking stove
+    1. grilling in summer
+    1. wood stove in winter
+1. wine cave built into the side of a hill somewhere nearby (they can burn the house but they cain't have the booze! Keep guns and a chainsaw and some cans of food in there too)
+1. Construction phasing
+    1. find and acquire property and site building
+    1. construct yurt, hand pumped well, and outhouse for temporary housing
+    1. build foundation and slab
+    1. build walls, roof ridgepole with temp roofing
+    1. put mechanicals in place
+    1. roof
+    1. furnish
+1. materials estimates (we have to carry everything in by canoe!)
+    - concrete: 10 yds (~400 80lb bags)
+    - rebar: 2 ton
+    - straw: ?
+    - stone: ?
+    - gravel: ?
+1. References
+    1. Jon's natural construction book
+
+![ [Hay Bale House](https://raw.githubusercontent.com/csomerlot/csomerlot.github.io/master/HappyHippieLifestyle/cottage.png).](./HappyHippieLifestyle/cottage)
+
+![ [Hay Bale House](https://raw.githubusercontent.com/csomerlot/csomerlot.github.io/master/HappyHippieLifestyle/cottage_4w.png).](./HappyHippieLifestyle/cottage_4vw)
+
+{{< video https://youtu.be/_KIqC9HkQ_0 width=700 height=400 >}}
+
+###  A-Frame Tiny House 
+
+
+
+Same basic ideas and mechanicals as the HayBaleHome, but:
+
+* Smaller; sleeps only 4 but far easier to site
+* Simpler construction:
+    * Minimal footprint: No foundation, just 4 or 5 concrete tube pilings
+* [SIP](https://www.sips.org/about/what-are-sips)
+* [high insulation](http://www.coloradoenergy.org/procorner/stuff/r-values.htm)
+        * modular construction
+        * no beams
+
+![ [A Frame plans](./HappyHippieLifestyle/A Frame Half Loft.png).](./HappyHippieLifestyle/AFrameHalfLoft.png)
+
+{{< video https://youtu.be/ZeePDz_ej8M width=700 height=400 >}}
+
+
+###  Off-grid Mechanicals Vault 
+Every camp-type structure would benefit from a temporary and small electricity supply and running water. A 
+minimalistic vault design can help simplify the setup, maintenance, and constructability of this. Obviously, 
+every design parameter depends on conservation, reduction of need, usage patterns, etc. A dry temp-stable space 
+is also a great spot for emergency supplies. Avoid storage of any type of fuel though.
+
+1. Structure:
+    1. Constructability: Modular size cube built from ICF
+    1. 95% buried for thermal efficiency, low noise, and security
+    1. Accessible and visible top (so no one runs it over) yet protected from the elements and vandalism. Could also site structure on top of it, and size it for lock-box usage as well.
+    1. insulated and dehumidified/heated for consistent temp and low humidity
+1. Mechanicals
+1. Well: some people [do this](https://www.drillyourownwell.com/) but a lot depends on siting for soil type and depth to water table
+    1. Pump:  
+        1. 12v
+        1. positive dispacement for high pressure, low volume, no priming
+        1. replaceable
+        1. can be multiplied in series or parallel for flow or pressure
+1. COTS [automotive fuel pump](https://www.amazon.com/OSIAS-Universal-Replacement-VOLKSWAGEN-0580464070/dp/B073TY5VBV/ref=asc_df_B073TY5VBV/)
+    1. Storage:
+        1. Gravity option: Bulk storage ie IBC tote tank
+        1. Pressure Tank: this shouldn't be large, as a portable water tower should be used for increased capacity
+        1. Manual (from external) and power-actuated ball valves
+        1. Overflow
+    1. Potable treatment:
+        1. Filter: 50 micron fiber followed by 5 micron charcoal to remove sediment, chemicals, and protozoa AND
+        1. UV to remove bacteria and viruses OR
+1. [RO unit](https://www.amazon.com/Alberts-Filter-Membrane-Replacement-Connector/dp/B07H2ZCFFR/ref=sr_1_17_sspa)
+    1. Power:
+        1. 12v for safety and convenience
+        1. Battery bank
+        1. Charger that can handle solar, alternator, generator or line inputs
+1. Monitoring:
+    1. pressure between all components
+    1. storage level and overflow
+    1. well level and temp
+    1. vault humidity and temp
+    1. battery voltage, charge rate, and temp
+    1. pump current draw, flow rate, and temp
+    1. vault door alarm
+    1. local display and telemetry
+    
+
+---
+
+###  Off-Grid Mobile Ski Chalet 
+A cozy, trailered, home away from home
+
+* Off grid for maximum siting flexibility
+* Framed in 1x6 with 1/4" ply walls, rock wool insulation, and cedar shingling exterior
+* Custom steel trailer with engineered hardwood flooring over foam
+* [BIM model](https://a360.co/3I3GbV9)
+* [BOM and costs](https://docs.google.com/spreadsheets/d/1ZGdyqQvb-uPeDFhHy7mNM82vWml4nQ6JEDqOIUkit6Y/edit?usp=sharing)
+
+![ [Mobile Ski Chalet](https://raw.githubusercontent.com/csomerlot/csomerlot.github.io/master/HappyHippieLifestyle/TinyHousePlans.pdf).](./HappyHippieLifestyle/Tiny_House_Drawing_v3)
+

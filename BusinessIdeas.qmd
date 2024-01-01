@@ -1,0 +1,428 @@
+
+# Business Ideas
+
+##  Technology 
+
+In General:
+1. Minimize startup costs
+1. Find a woman to own the business
+1. Use local gov't IT business incentives
+1. Avoid brick and mortar type of business
+
+###  POS 
+
+####  A FOSS-based Point of Sale system 
+
+1. Business model basics
+    1. Inexpensive POS systems for small businesses
+    1. Services
+        1. Hardware setup
+            1. Specialize in custom-built registers
+            1. Provide for access for remote management over iPhone/Droid/WindowsMobile
+            1. Maximize cloud computing usage to allow for minimal hardware
+        1. Software setup
+            1. Specialize in FOSS implementations
+            1. Growth options for other IT services
+                1.  web presence
+                    1. Mail server
+                    1. Web storefront
+                        1. use blog for specials updates?
+                            1. allows RSS feeds of specials
+                1. payroll management
+                1. asset lifecycle management
+                1. electronic document management
+                1. Customer account management
+                    1. Biometric payment system?
+                1. Energy audits
+                    1. Non-intrusive load monitoring
+                1. Integration with Purchase Order system
+        1. Support
+            1. Use helpdesk solution for efficient management
+    1. Startup Costs
+        1. Hardware
+            1. $2500 / emp / year
+        1. Phones
+            1. $1500 / emp / year
+        1. Cloud acct
+            1. $1000 / yr
+        1. Advertising
+            1. $3000 / yr
+        1. Insurance
+            1. $1000 / yr?
+        1. Misc (travel, fees, manuals, certifications, etc)
+            1. round up 10%
+        1. PCI DSS compliance audit
+    1. Comparable companies
+        1. Truserv affiliate
+            1. $900 / month, forced upgrades, fully managed, small IT overhead
+        1. Odoo
+            1. $35 / user month, no forced upgrades, SaaS, some IT overhead
+        1. Locals
+            1. Onondaga Cash Register
+                1. Uses KeyStroke POS
+                    1. $2500 + $500 per year maintenance/upgrades
+                1. $3000 for terminal hardware, installation, and training
+                1. $110 per hour support
+            1. DUMAC
+    1. Hourly Rates
+        1. Setup
+            1. $60
+            1. alternatively $2500 per terminal excluding hardware
+        1. Maintenance/Support
+            1. $30
+        1. Development
+            1. $45
+        1. Ancillary
+            1. APC of $20.00 / hr to cover IT costs
+            1. Multiplier of 2.0 to cover business costs, 10% profit, benefits
+    1. Requirements
+        1. PCI compliance
+    1. Business Name
+        1. requirements
+            1. Easy to pronounce and remember
+            1. Invokes thought of IT for retail
+            1. Invokes core business ideals: Simplicity
+            1. Unique
+            1. Avoid service or location lockin
+        1. Simple Ledger Systems
+        1. Intelligible Accounting Software
+    1. Propaganda
+        1. <http://www.informationweek.com/news/global-cio/interviews/showArticle.jhtml?articleID=225200154&cid=RSSfeed_IWK_All>
+1. hardware
+    1. build small form-factor CPUs as registers
+        1. touch screen
+        1. wireless barcode scanner
+            1. works for inventory as well as checkout
+        1. RFID logon
+        1. Solid state hard drive
+        1. USB receipt printer
+        1. USB credit card scanner
+        1. USB barcode scanner
+            1. cheap
+        1. Security webcams
+        1. Cash drawer
+        1. Bluetooth barcode scanner
+    1. Uses any OS preferred by customer
+    1. Vendors
+        1. <http://www.posonlinestore.com/>
+1. software
+    1. cloud-based
+        1. allows remote access for administration and management from any platform
+        1. use local cache at register for network outages coupled with disconnected DB editing
+        1. Minimizes IT overhead effort
+            1. no need for backup
+            1. no need for power management
+            1. no need for uptime monitoring
+            1. maximizes security
+        1. Minimizes hardware costs
+    1. RDBMS backend
+        1. Care needed to make sure you can hook into any retail DB needed by the client!
+    1. Client interface
+        1. front-end requirements
+            1. Can be customized to any customer, for simplest possible interface
+            1. Can run on any platform (including phones)
+            1. Includes custom report generators for management
+            1. Skinnable
+            1. python based
+        1. Candidates
+            1. OpenERP
+            1. POSTerita
+            1. Imonggo
+            1. OpenBravo
+            1. LemonPOS
+            1. Roll my own
+                1. Python \ Django \ Google Gears
+            1. Micro$oft
+
+
+###  SIV 
+
+####  Sharki Image Vending 
+
+Anagram of **chris and kevin imaging**
+
+1. Business Model Basics
+    1. low cost, high-res, multi-temporal aerial and IR imagery and LIDAR data with automated post processing
+    1. target clients
+        1. vegetation condition assessment
+            1. forests
+            1. golf courses
+            1. agriculture
+        1. pollution / spill mapping emergency response
+        1. site mapping / topographic surveying
+        1. flood plain / stream channel mapping
+    1. initial R&D funding
+        1. $10K
+1. Software
+    1. A set of image and vector processing tools to implement machine learning using genetic algorithms and neural networks to classify images
+    1. roll into MapWindows GIS?
+    1. Operations
+        1. gdal_translate
+            1. does inital mask, format conversion, separation of bands, and reprojection
+        1. classify
+            1. Can perform supervised or unsupervised classifications
+            1. Use an artificial neural network based on the concept of identifying decriptors to classify
+                1. each sweep finds descriptors then asks training questions
+                1. uses genetic algorithm or multi-variate linear regression analysis for initial training
+                    1. sweep 1
+                        1. find major contrasting areas based on rough unsupervised classification using rough resample of larger pixels
+                        1. analyze vectors and rasters for each poly to get descriptors
+                    1. sweep 2 thru n
+                        1. tighten up the unsupervised rules and resampling of pixels until sufficient detail is had for accurate description
+        1. clump
+            1. algorithm
+                1. conduct clockwise sweep to find all identical values
+                1. number each clump sequentially
+                1. ignore any clumps smaller than specified
+            1. prerequisites
+                1. classify
+
+        1. vectorize
+            1. algorithm
+                1. conduct clockwise sweep to find all cells in each clump and output points of polygon
+                1. create linework from polys
+            1. prerequisites
+                1. clump
+
+        1. register
+            1. Algorithm
+                1. guess inital match
+                    1. based on best match from previous image set
+                1. find difference between overlapping cells
+                    1. raster absolute diff
+                    1. minimum number of cells to overlap to ensure quality of match
+                1. guess new match
+                    1. genetic alg for global min
+                    1. steepest curve for local min
+                1. iterate until best match found
+        1. orthorectify
+            1. algorithm
+                1. create an array of vectors that point from one cell to matching cell on image pair
+            1. prerequisites
+                1. register
+        1. image recognition (OCR, handwriting, etc)
+            1. use vector and raster qualities to create a set of identifiers, or genes, and let neural network make decisions
+            1. reinforcement learning algorithms
+                1. raster descriptors
+                    1. statistical histogram descriptors for each band for each polygon
+                    1. pattern id
+                1. vector descriptors
+                    1. area / perimeter
+                        1. closeness to circle
+                    1. centroid
+                    1. major and minor axis orientation
+                    1. neighboring vectors
+            1. Uses an artificial neural network based on the concept of identifying decriptors to classify
+                1. each sweep finds descriptors then asks training questions
+                1. uses genetic algorithm or multi-variate linear regression analysis for initial training
+                    1. sweep 1
+                        1. find major contrasting areas based on rough unsupervised classification using rough resample of larger pixels
+                        1. analyze vectors and rasters for each poly to get descriptors
+                    1. sweep 2 thru n
+                        1. tighten up the unseupervised rules and resmapling of pixels until sufficient detail is had for accurate description
+    1. Ancillary Applications
+        1. reading hand writing
+        1. OCR
+        1. recreating parcels layer from raster images
+        1. LULC (eCognition)
+    1. development
+        1. python for rapid algorithm dev
+        1. C for processing speed and parallelization
+        1. rebuild in C python modules to standalone exe's in C# to make cleaner and simpler installs (dump swig, NumPtr, and Mingw32)
+1. Platform and Hardware
+    1. UAV drone
+        1. form
+            1. rcmugi delta-wing
+            1. scale up to ~10ft wingspan for looong flight time
+            1. dual brushless motors
+        1. onboard CPU
+            1. pico ITX motherboard
+            1. memcard storage for data
+                1. 500GB?
+            1. serial communications
+                1. sensors
+            1. Digital Signal Processor
+                1. radio modem
+                1. speed controller
+            1. flight controls
+                1. fly-by-wire
+                1. can run automated flight plan out of controller range, then fly back into range
+        1. onboard sensors
+            1. hyperspectral camera
+            1. low-res TV camera
+            1. LIDAR
+            1. GPS
+            1. fluxgate compass w/ dual axis inclinometer
+            1. 3 axis accelerometer/gyro to compliment GPS?
+        1. communications
+            1. digital packet radio modem for flight and sensor controls
+                1. VHF RF front end
+                    1. looong range
+                        1. 3-5 miles
+                    1. bandwidth
+                        1. 9600 baud = 1.2 kB/s symetric
+                    1. need HAM license
+                1. references
+                    1. Software Radio
+                    1. GNU Radio
+                    1. VHF front end
+                    1. ADC
+                1. transmit data
+                    1. position and altitiude
+                        1. GPS
+                            1. 16 bit x 3 coordinates
+                    1. bearing
+                        1. fluxgate compass
+                            1. 8 bit
+                    1. bandwidth needed
+                        1. 7 bytes x 10 SPS = 0.070 kB/s
+                1. receive data
+                    1. elevators
+                        1. digital servo position
+                            1. 8 bit x 2 elevators
+                    1. thrust vector
+                        1. speed controller
+                            1. 8 bit
+                    1. sensors control
+                        1. sampling frequency
+                            1. 4 bit x 4 sensors
+                    1. bandwidth needed
+                        1. 5 bytes x 20 SPS = 0.100 kB/s
+            1. low-res TV transmitter for real-time visual guidance
+                1. UHF RF front end
+                    1. shorter range than VHF controls, ubt more bandwidth
+                    1. Black and white 10 fps 100 x 100 pixels
+    1. laptop base station
+        1. joystick to run flight plan as fly-by-wire or manually
+        1. USRP
+            1. receives GPS for base station real-time corrections
+            1. receives TV signal
+            1. transmits control signals
+            1. daughterboards = ?
+
+
+###  CFD 
+
+####  Computational Fluid Dynamics modeling and consulting 
+1. Business Model Basics
+    1. Liability management
+        1. Insurance: $1mil Umbrella policy
+        1. Caution: Conservative models backed up by physical modeling
+        1. Training: PE license, advanced courses in fluid dynamics
+    1. Capabilities
+        1. 3D
+        1. Mulit-phase
+        1. Thermodynamics (including combustion?)
+    1. Laboratory
+        1. Bench-scale physical modeling to support models
+    1. Selling
+        1. Conferences
+    1. Marketing
+        1. Canned presentation of resources, capabilities, performance goals
+        1. Do business development freebies using single-dimension modeling
+1. Hardware
+    1. Cloud-based VM for meshing and simulations
+        1. Amazon EC2 (slower, cheaper, lots of features)
+        1. GoGrid (faster, more expensive, less options)
+    1. Laptop for 3D cad and post processing
+        1. Is a netbook good enough? Because those are very cheap
+1. Software
+    1. OpenFOAM for mesh and simulations
+    1. Sketchup for 3D cad
+    1. Paraview for post processing
+1. Performance Goals
+    1. Accuracy
+        1. 95% confidence level
+    1. Speed
+        1. Use parrallel processing to cut scenario runs to 24hrs
+    1. Flexibility
+        1. Wide array of capabilities
+        1. Use any type of client data
+    1. Costs
+        1. Software costs minimized by using OpenFOAM (free) and Sketchup ($400)
+        1. Hardware costs minimized by using cloud computing ($1-$5 per hour of simulation)
+        1. Physical modeling costs minimized by using only bench-scale models in home-based lab
+        1. Insurance costs minimized by getting $1mil policy instead of $2mil
+
+
+
+---
+
+##  Food 
+
+###  OMM 
+
+####  Old Mill Microbrews: Ales, Ciders, Wines and Mead 
+1. Pitch (get it?):
+    1. With barley, hops, honey and apples organically grown in rich CNY soils, using water from the pristine headwaters of Otisco lake, brewed under the power of Nine Mile Creek, and aged to perfection, comes local ales, ciders, fruit wines and meades of world-class quality.
+1. grow hops up silo
+    1. Need a trellis system for easy harvesting
+    1. Need a platform on top
+        1. Wood beam platform
+1. grow barley in 20 x 40 plot
+1. build homemade dryers
+1. Organic Honey
+1. signature recipes
+    1. Bitter Ale
+    1. Stout Ale
+    1. Belgian White Ale
+    1. Cherry Wine
+    1. Blackberry Wine
+    1. Honey Crisp Wine and Cider
+    1. Ruby Frost Hard Cider
+    1. Sweet and Dry Mead
+1. Value added products
+    1. cheeses, sodas, art, smoked salt, and barrels
+1. use old mill building for brewing?
+1. can use micro-turbine for hydropower?
+1. bring water back from bucktail falls?
+1. get organic apples from McLusky's, Elderberry pond?
+1. Liquor licenses
+1. Forms
+1. Fees
+    1. Wholesale
+        1. $900/yr microbrewery, $500/yr NYS farm winery, $600/yr ciders
+    1. Retail
+        1. $1000/yr for all
+    1. Lawyer
+1. need business plan
+1. secret to success
+    1. Lots of inventory! Ample testing!
+
+![ Hops Hanger.](./Farm/HopsHanger)
+
+![ Barrel Geometry.](./Farm/Barrel)
+
+
+###  SFT 
+
+####  Schwenker Food Truck 
+Mobile [Wishing-well grill](http://projects.somerlot.net/HappyHippieLifestyleProjects.html#___sec5) set-up with French-German fusion small plates based on traditional Schwenker BBQ with a modern spin. And also, a smoker. Beechwood for fuel. Great for hanging out at a brewery (or hardware store).
+
+1. Beer-marinated beef on a stick
+1. Reisling-marinated chicken sandwiches
+1. [Choucroute](https://www.instagram.com/p/ByOBlF1FFP9fePwHqDFncSu3Op7USdpZYCnuvM0/)
+1. Flammekuchen
+1. Sausage and white beans and brown rice (Josh's recipe)
+1. Bean burgers (Josh's recipe)
+1. Potato salad
+    1. Musgrave recipe, with egg, pickles, and onion
+1. Fennel kraut
+    1. Hank Shaw-inspired recipe?
+1. Quiche
+    1. ham and cheese, and roasted veg
+1. Spaetzle pasta salad
+    1. made in the style of german potato salad, with bacon and vinegar dressing
+1. Smoked wings (Josh's recipe)
+1. Scotch egg/sausage bread/bierock thingy
+1. Spinach Salad
+1. Smoked cabbage wedge salad
+1. PICKLES
+1. German chocolate cake
+1. [Food permit ($130)](http://www.ongov.net/health/documents/TemporaryFoodPermit.pdf)
+
+
+###  SSS 
+
+####  Syracuse Smoked Salt 
+Using traditional (well-vetted) Syracuse brine sources, we dry it in evaporators and smoke it!
