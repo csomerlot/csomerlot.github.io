@@ -77,12 +77,14 @@
 
 ![ [Hay Bale House](https://raw.githubusercontent.com/csomerlot/csomerlot.github.io/master/HappyHippieLifestyle/cottage_4w.png).](./HappyHippieLifestyle/cottage_4vw)
 
-MOVIE: [https://youtu.be/_KIqC9HkQ_0, width=600 frac=0.8] A-Frame. label{fig:cottage_vid}
-
-
+{{< video https://youtu.be/_KIqC9HkQ_0 width=700 height=400 >}}
 
 ###  A-Frame Tiny House 
+
+
+
 Same basic ideas and mechanicals as the HayBaleHome, but:
+
 * Smaller; sleeps only 4 but far easier to site
 * Simpler construction:
     * Minimal footprint: No foundation, just 4 or 5 concrete tube pilings
@@ -93,7 +95,7 @@ Same basic ideas and mechanicals as the HayBaleHome, but:
 
 ![ [A Frame plans](./HappyHippieLifestyle/A Frame Half Loft.png).](./HappyHippieLifestyle/AFrameHalfLoft.png)
 
-MOVIE: [https://youtu.be/ZeePDz_ej8M, width=600 frac=0.8] A-Frame. label{fig:AFrame}
+{{< video https://youtu.be/ZeePDz_ej8M width=700 height=400 >}}
 
 
 ###  Off-grid Mechanicals Vault 
@@ -143,6 +145,7 @@ is also a great spot for emergency supplies. Avoid storage of any type of fuel t
 
 ###  Off-Grid Mobile Ski Chalet 
 A cozy, trailered, home away from home
+
 * Off grid for maximum siting flexibility
 * Framed in 1x6 with 1/4" ply walls, rock wool insulation, and cedar shingling exterior
 * Custom steel trailer with engineered hardwood flooring over foam

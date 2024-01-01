@@ -32,7 +32,7 @@
             1. DesignSpark Mechanical
               1. Opens .skp!
               1. But no linux
-1. [Autodesk Fusion](https://www.autodesk.com/campaigns/fusion-360/factory-experience) (but not free)
+        1. [Autodesk Fusion](https://www.autodesk.com/campaigns/fusion-360/factory-experience) (but not free)
         1. Blockly
         1. Anaconda Python Env
         1. Atom
@@ -65,10 +65,11 @@
 
 ##  Home Internet Gateway 
 
-#### Description: Cable modem, IoT gateway, wifi router/repeater, and firewall device.
+#### Description: 
+Cable modem, IoT gateway, wifi router/repeater, and firewall device.
 
-
-#### User Story: I just want the internet to work. I also want to protect my family and house, integrate with Domotics and IoT, and give the internet company their crap hardware back. Maybe I can even eventually dump the internet company completely for community-based wifi or a free-space optical link.
+#### User Story: 
+I just want the internet to work. I also want to protect my family and house, integrate with Domotics and IoT, and give the internet company their crap hardware back. Maybe I can even eventually dump the internet company completely for community-based wifi or a free-space optical link.
 
 
 #### Feature Set:
@@ -109,7 +110,7 @@
 * add external storage with media library
 * install othernet
 * build FSO tranceivers
-* Laser:https://www.adafruit.com/product/1056 transmitter coupled to a [photo transister](https://www.adafruit.com/product/2831) receiver mounted on a [spotting scope](https://www.amazon.com/BARSKA-15-40x50-Colorado-Spotting-Scope/dp/B0049IZMUW/ref=sr_1_16?dchild=1&keywords=spotting+scope&qid=1578058031&sr=8-16), with fiber optic modulators
+* [Laser](https://www.adafruit.com/product/1056) transmitter coupled to a [photo transister](https://www.adafruit.com/product/2831) receiver mounted on a [spotting scope](https://www.amazon.com/BARSKA-15-40x50-Colorado-Spotting-Scope/dp/B0049IZMUW/ref=sr_1_16?dchild=1&keywords=spotting+scope&qid=1578058031&sr=8-16), with fiber optic modulators
 
 
 #### BOM:
@@ -125,41 +126,32 @@
 
 ![ Line of sight between office and home.](./Programming/AP_Viewshed)
 
-
+#### CODE:
+[Link to the DNS code](./code/route53update.py)
 
 #### CODE:
-[Link to the code](./code/route53update.py)
-
-
-
-#### CODE:
-[Link to the code](./code/watcher.py)
-
-
+[Link to the watcher code](./code/watcher.py)
 
 ---
 
 ##  Arduino Wind Instrument 
 
-#### Description: an inexpensive and simple electronic wind instrument to learn digital music programming
+#### Description: 
+An inexpensive and simple electronic wind instrument to learn digital music programming
 
-
-#### User Story: Real instruments are expensive, and you can only learn to play music...
-
+#### User Story: 
+Real instruments are expensive, and you can only learn to play music...
 
 #### Feature Set:
-1. Breath and bite sensors
-1. Sax fingering
-1. Wireless midi port
-1. FOSS full synth with effects
-
-
+* Breath and bite sensors
+* Sax fingering
+* Wireless midi port
+* FOSS full synth with effects
 
 #### Phasing:
 * Pick up an Akai EWI
 * Make a portable sound system
 * Pick up the Zynthian kit parts
-
 
 #### BOM:
 * <https://www.hifiberry.com/products/dacplus/>
@@ -167,7 +159,6 @@
 * <https://www.amazon.com/Antigravity-Batteries-Battery-Starter-Charger/dp/B01L0F6K5C/ref=pd_aw_vtph_263_lp_tr_2/130-0236497-8146456?_encoding=UTF8&pd_rd_i=B01L0F6K5C&pd_rd_r=34b75632-85a1-11e9-9b09-4f16de09a724&pd_rd_w=rGCZ0&pd_rd_wg=hu7To&pf_rd_p=33304d62-e1a9-4538-a43c-b1d2dc49800d&pf_rd_r=1A8SNTZPHAMESVH6QJ0N&psc=1&refRID=1A8SNTZPHAMESVH6QJ0N>
 * <https://www.adafruit.com/product/1601>
 * <https://us.seeedstudio.com/5-inch-800x480-Capacitive-TouchScreen-p-2923.html?utm_source=Bazaar+%EF%BC%88%E7%94%B5%E5%95%86%EF%BC%89&utm_campaign=9162fdf13c-September+campaign+%E2%80%94%E2%80%94+1%24_9.21_Japanese_COPY_01&utm_medium=email&utm_term=0_4b071a49e3-9162fdf13c-49714817&ct=t()&mc_cid=9162fdf13c&mc_eid=3012c69022>
-
 
 #### Notes:
 * <https://hackaday.com/2014/09/18/a-diy-midi-wind-controller/>
@@ -183,16 +174,13 @@
 #### Description:
 A simple and mostly off-the-shelf communication and audio system for helmets
 
-
 #### User Story:
-helmet comm units are stupid expensive and sound terrible. And are additive to road
-noise. And clumsy to control and link. And vendor specific. And another thing to keep charged.
-And dumb in concept: who's wants a 5 hr running conversation when we just need to communicate
-when stopped at an intersection about which way to turn? I want a way to use my noise-reducing
-earbuds with an off the shelf radio through my phone so that I can also hear music or GPS.
-Also, I like to keep my phone in my jacket pocket so there are no dangling wires. But I don't
-want to have to look at the radio to use it or worry about charging it before riding.
 
+Helmet comm units are stupid expensive and sound terrible. And are additive to road noise. And clumsy to control and link. And vendor specific. And another thing to keep charged. And dumb in concept: who's wants a 5 hr running conversation when we just need to communicate when stopped at an intersection about which way to turn? 
+
+I want a way to use my noise-reducing earbuds with an off the shelf radio through my phone so that I can also hear music or GPS.
+
+Also, I like to keep my phone in my jacket pocket so there are no dangling wires. But I don't want to have to look at the radio to use it or worry about charging it before riding.
 
 #### Feature Set:
 1. Custom radio integration
@@ -220,8 +208,7 @@ want to have to look at the radio to use it or worry about charging it before ri
 * TBD depending on radio
 
 
-#### Notes:
-* Commercial offerings:
+#### Commercial offerings:
 * <https://forums.radioreference.com/threads/would-a-gmrs-frs-radio-built-into-a-smartphone-or-battery-case-interest-you.394416/>
 * <https://gotenna.com/>
 * <https://beartooth.com>
@@ -300,7 +287,7 @@ bespoke computing platform simplify it all and make it more enjoyable, efficient
 ##  Retail support tools 
 
 ###  Scheduler 
-1. Rule-based genetic algorithm optimizer
+Basic example of a rule-based genetic algorithm optimizer for finding optimal group schedules
 
 [Link to the code](./code/Scheduler.py)
 
@@ -317,15 +304,4 @@ bespoke computing platform simplify it all and make it more enjoyable, efficient
         for each customer, as well as mailing info. If the application can't find the necessary data, it should let you know.
     1. Output
         1. This is the secret part, and will be filled in later.
-1. [Download installer](https://s3.amazonaws.com/projects.somerlot.net/Programming/setup.exe) (if you have permissions)
 
-
-
----
-
-[Link to subsection](IoTProjects.do.txt)
-
-
----
-
-[Link to subsection](RoboticsProjects.do.txt)

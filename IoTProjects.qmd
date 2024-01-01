@@ -41,23 +41,22 @@ A toolbox platform for sensors and communications built around the venerable RPi
 * Power controllers:
 * [Power tail](https://www.adafruit.com/product/2935)
 * 2 [Relay controllers](https://www.adafruit.com/product/3191) in a double-wide box
-    * "Cheap option": fig:relay
-
-# FIGURE: ['.\Robotics\Ks7mv.png', width=900 frac=0.9] Relay control circuit. label{fig:relay}
-
+* [Relay control circuit]('.\Robotics\Ks7mv.png')
 
 #### Notes:
-* Similar to the [PiTop](https://www.adafruit.com/product/3762), with a compact housing
+* Start with a [Raspberry Pi 400 Desktop](https://www.adafruit.com/product/3762)
 
 
 ---
 
 ##  Domotics 
 
-#### Description: Living in a house of the future is either a great idea or a terrible idea...
+#### Description: 
+Living in a house of the future is either a great idea or a terrible idea...
 
 
-#### User Story: So many touch-points of our environment involve mechanical systems in our dwellings, it seems both obvious and inevitable to connect these systems to a computing platform to live a less impactful life.
+#### User Story: 
+So many touch-points of our environment involve mechanical systems in our dwellings, it seems both obvious and inevitable to connect these systems to a computing platform to live a less impactful life.
 
 
 #### Feature Set:
@@ -112,11 +111,12 @@ A toolbox platform for sensors and communications built around the venerable RPi
 
 ##  Automotive Media System 
 
-#### Description: a simple media system to stream movies and provide Android auto connectivity
+#### Description: 
+A simple media system to stream media and provide Android auto connectivity
 
 
-#### User Story: Car audio has become increasingly complex when it doesn't need to be. Android Auto
-can provide a great in-car experience, but all the 3rd-party AA receivers are expensive.
+#### User Story: 
+Car audio has become increasingly complex when it doesn't need to be. Android Auto can provide a great in-car experience, but all the 3rd-party AA receivers are expensive.
 
 
 #### Feature Set:
@@ -191,16 +191,10 @@ COTS hardware.
   1. depth finder
   1. radar
 
-# __Phasing:__
-# *
-
+#### Phasing:
 
 #### BOM:
-* [Common Mobile Compute Platform](/._ComputerProjects010.html#___sec10)
-
-# __Notes:__
-# *
-
+* [Common Mobile Compute Platform](./IoTProjects.html#common-mobile-compute-platform)
 
 
 ---
@@ -212,9 +206,10 @@ Portable and wireless environmental IoT sensor and datalogger
 
 
 #### User Story:
-We want to be able measure a variety of environmental conditions, without hooking up wiring. We can place a sensor indoors or outdoors just for
-spot checks or leave it for several weeks or add a solar power pack for permanent power. We can hook it up to a dashboard to monitor and
-provide alarms, or use it in more remote conditions and have it upload once wifi is available, or use a cell modem. Some possible applications include:
+We want to be able measure a variety of environmental conditions, without hooking up wiring. We can place a sensor indoors or outdoors just for spot checks or leave it for several weeks or add a solar power pack for permanent power. We can hook it up to a dashboard to monitor and provide alarms, or use it in more remote conditions and have it upload once wifi is available, or use a cell modem. 
+
+Some possible applications include:
+
 * Dive computer
 * Bike computer
 * Drone computer
@@ -268,10 +263,12 @@ provide alarms, or use it in more remote conditions and have it upload once wifi
 
 ##  Micro Hydroponics 
 
-#### Description: Small air pump-based flood irrigation system for office plants
+#### Description: 
+Small air pump-based flood irrigation system for office plants
 
 
-#### User Story: Offices are great places for plants, with ample windows and beneficial effects for workers. But, regular watering can be an issue.
+#### User Story: 
+Offices are great places for plants, with ample windows and beneficial effects for workers. But, regular watering can be an issue.
 
 
 #### Feature Set:
@@ -383,29 +380,19 @@ major north/south interstate highway. For example.
 1. <https://www.raspberrypi.org/blog/we-love-a-good-pen-plotter/>
 
 
-#### Phasing:
-
-
-#### BOM:
-
-
 ###  Lightning Catcher 
 
-#### Description: Rocket-based micro-wire launch system to direct a lightning strike to a specific location
+#### Description: 
+Rocket-based micro-wire launch system to direct a lightning strike to a specific location
 
-
-
-#### User Story: Lightning is one of the most powerful forces of nature, and I want to catch it. Plus, it could be a great learning opportunity.
-
-
+#### User Story: 
+Lightning is one of the most powerful forces of nature, and I want to catch it. Plus, it could be a great learning opportunity.
 
 #### Feature Set:
 1. Fully enclosed silo system
 1. Internet or phone activated
 1. Hi-speed photography?
 1. 2000m altitude
-
-
 
 #### Phasing:
 * Research where/how this has been done before
@@ -415,19 +402,15 @@ major north/south interstate highway. For example.
 * Install silo
 * Track weather
 
-
-
 ---
 
 ##  Irrigation Remote 
 
-#### Description: Simple SCADA to drive drip irrigation.
+#### Description: 
+Simple SCADA to drive drip irrigation.
 
-
-
-#### User Story: We leave the house for extended periods during hot dry weather and know that we won't lose plants. When we harvest, we can turn off drippers by plant. Plumbing and electrical are unobtrusive and dependable. Water is conserved as much as possible. We can use rain water if desired.
-
-
+#### User Story: 
+We leave the house for extended periods during hot dry weather and know that we won't lose plants. When we harvest, we can turn off drippers by plant. Plumbing and electrical are unobtrusive and dependable. Water is conserved as much as possible. We can use rain water if desired.
 
 #### Feature Set:
 1. Main line valves actuated by internet-connected IoT switch, on schedule with manual overrides.
@@ -435,9 +418,7 @@ major north/south interstate highway. For example.
 1. Rain, soil moisture, and localized temperature sensor pack to fine-tune water usage. Battery-powered and internet-connected for minimal wiring.
 1. Gang valving and individual drippers in garden for easy access and fine control.
 1. Main line plumbing hidden and removable for storage, freeze protection, repair, and protection.
-1. SImple set up and, logging, and dashobarding via [WipperSnapper](https://learn.adafruit.com/quickstart-adafruit-io-wippersnapper)
-
-
+1. Simple set up and, logging, and dashobarding via [WipperSnapper](https://learn.adafruit.com/quickstart-adafruit-io-wippersnapper)
 
 #### Phasing:
 * indoor plumbing to hose cock (done)
@@ -446,12 +427,10 @@ major north/south interstate highway. For example.
 * buried main line and gang valving
 * Soil moisture and flow sensors
 
-
 #### Iterations:
 1. Housed in outdoor electrical box, but leaked and destroyed board with moisture. 
     1. Use 3D printed enclosure that includes an oring?
     1. Forgo the combined electronics and just use a simple wifi-controlled outlet relay to drive the valve power supply?
-
 
 #### BOM:
 1. "https://www.adafruit.com/wishlists?wid=554909"
@@ -463,15 +442,11 @@ major north/south interstate highway. For example.
 
 ##  The Best Damn Radio System 
 
+#### Description: 
+Tiny HAM radio that can be used anywhere
 
-#### Description: Tiny HAM radio that can be used anywhere
-
-
-#### User Story: The world is still a big place and to explore certain parts in safety, we need a way to broadcast an emergency.
-PLBS are really only domestic, not hackable (or even able to replace batteries), and for emergency only. Sat messengers have
-not-insignificant subscription fees, and varying coverage. HAM remains the most ubiquitous global radio infrastructure, and with
-help, can be transmitted from any global location, for a variety of needs.
-
+#### User Story: 
+The world is still a big place and to explore certain parts in safety, we need a way to broadcast an emergency. PLBS are really only domestic, not hackable (or even able to replace batteries), and for emergency only. Sat messengers have not-insignificant subscription fees, and varying coverage. HAM remains the most ubiquitous global radio infrastructure, and with help, can be transmitted from any global location, for a variety of needs.
 
 #### Feature Set:
 1. Handheld SDR
@@ -484,35 +459,8 @@ help, can be transmitted from any global location, for a variety of needs.
 1. Cheap and small enough to carry spares
 1. Yagi antenna to use as a directional beacon?
 
-
-#### Notes:
-* Reference devices:
+#### Notes: Reference devices:
 * [Tiny tracker](https://www.byonics.com/tinytrak4)
 * [Inreach Explorer](https://www.garmin.com/en-US/p/561269)
 * [PortableSDR on Hackaday](https://hackaday.io/project/1538-portablesdr)
 * [Great Scott base unit](https://www.adafruit.com/product/3583?gclid=CjwKCAiAsNKQBhAPEiwAB-I5zUZdGPTO1cpWq1uvHynsPHWheqFeQ6TxZsp3_P-s2Zo4jjYT4xDFMhoCwPQQAvD_BwE)
-
-
-# !split
-# ======= Template =======
-
-# __Description:__
-# __User Story:__
-# __Feature Set:__
-# o
-
-# __Phasing:__
-# *
-
-# __BOM:__
-# o
-
-# __Notes:__
-# *
-
-# __Logic:__
-
-# __Code:__
-# @@@CODE ./filepath envir=Xpro
-
-# FIGURE: [path, width=900 frac=0.9] Something. label{fig:tag1}

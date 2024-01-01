@@ -31,11 +31,13 @@ batteries and many flights to capture site imagery used for mapping. They are al
 
 ##  Autonomous Underwater Vehicle  
 
-#### Description: A long-range, long-duration, aquatic robotic sensor platform for locating and investigating underwater interests
+#### Description: 
+A long-range, long-duration, aquatic robotic sensor platform for locating and investigating underwater interests
 
 
 
-#### User Story: Many things are down there in the deep, waiting discovery. Metal, habitat, species...
+#### User Story: 
+Many things are down there in the deep, waiting discovery. Metal, habitat, species...
 many things, in many places, some very remote. I want a platform that can travel the world with any sensor I can dream of, and deliver itself back to me.
 
 
@@ -115,13 +117,11 @@ many things, in many places, some very remote. I want a platform that can travel
 
 ##  Pool Octobot 
 
-#### Description: a multi-armed, multi-sensored robot for cleaning pools
+#### Description: 
+A multi-armed, multi-sensored robot for cleaning pools
 
-
-
-#### User Story: Cleaning pools involves scrubbing algal growth from surfaces, and sucking up debris. What better format of robot to do this but something with 8 arms, a beak mouth, and a bag to hold debris?
-
-
+#### User Story: 
+Cleaning pools involves scrubbing algal growth from surfaces, and sucking up debris. What better format of robot to do this but something with 8 arms, a beak mouth, and a bag to hold debris?
 
 #### Feature Set:
 1. Color sensors for detecting growth, brushes for removing
@@ -130,24 +130,18 @@ many things, in many places, some very remote. I want a platform that can travel
 1. Expandable debris bag
 1. Skin color changing - for fun. And camoflage
 
-
-
 #### Phasing:
 * Research sensors
-
-
 
 ---
 
 ##  Scarecrow Targeting System 
 
-#### Description: a camera-based object tracking software system
+#### Description: 
+A camera-based object tracking software system
 
-
-
-#### User Story: In the suburban warfare environment, its our ability to grow food versus mother nature's ability to provide - gardens versus wildlife - me versus the creatures - fencing versus projectile-based discouragement. I want to defend my many hours of invested effort from the random and sneaky browsing of deer and dog.
-
-
+#### User Story: 
+In the suburban warfare environment, its our ability to grow food versus mother nature's ability to provide - gardens versus wildlife - me versus the creatures - fencing versus projectile-based discouragement. I want to defend my many hours of invested effort from the random and sneaky browsing of deer and dog.
 
 #### Feature Set:
 1. Intelligent and real-time image tracking during day or night, based on sample images
@@ -160,8 +154,6 @@ many things, in many places, some very remote. I want a platform that can travel
 1. 130-degree FOV, 90-degree firing field
 1. Time-lapse photography built-in
 
-
-
 #### Phasing:
 * Software build of single-lens object tracker
 * Hardware build of multiple trackers
@@ -169,68 +161,36 @@ many things, in many places, some very remote. I want a platform that can travel
 * UAT
 * Build out of targeting and firing
 
-
-
 #### BOM:
 * RPi3 w/ Camera x 4
-
 
 ---
 
 ##  Invasive Species Patroller 
 
-#### Description: An outdoor version of a roomba-like crawler than can identify and deal with a targeted invasive species
-
+#### Description: 
+An outdoor version of a roomba-like crawler than can identify and deal with a targeted invasive species
 
 ##  Signal-Tracking Antenna Mount 
-
 
 #### Description:
 A mechanism to automate the pointing of recevier/transmitter sensors.
 
-
 #### User Story:
 If my awesome new FOS laser link at remote data IoT device can't communicate, its not nearly as useful.
 
-
 ##  CAM Maker Frame 
-
 
 #### Description:
 A frame that can house a variety of tools on a rack and pinion drive system, and a vacuum table to anchor pieces
 
-
 #### User Story:
 Why have separate machines for all the tools when they all can work with one...
 
-
-#### Features:
-1. Tools:
-    1. pens/markers
-    1. router
-    1. drag knife
-    1. laser
-    1. water jet
-    1. metal torch
-
-# !split
-# ======= Template =======
-
-# __Description:__
-# __User Story:__
-# __Feature Set:__
-# o
-
-# __Phasing:__
-# *
-
-# __BOM:__
-# o
-
-# __Notes:__
-# *
-
-# __Code:__
-# @@@CODE ./filepath envir=Xpro
-
-# FIGURE: [path, width=900 frac=0.9] Something. label{fig:tag}
+#### Features (Tools):
+1. pens/markers
+1. router
+1. drag knife
+1. laser
+1. water jet
+1. metal torch

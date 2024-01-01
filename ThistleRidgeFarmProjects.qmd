@@ -77,26 +77,26 @@
             1. ram
 1. options
     1. Buying a used tractor with a front end loader
-        - cost: ~8K
+        - cost: ~18K
     1. Riding mower upgrade
         1. Can only do about half of the things I need
         - cost: ~2K
     1. Fix up an antique
         1. Antique tractors are easy to repair and get parts/attachments for
-        1. small
+        1. Small, so:
             1. replace and sell riding mower
             1. will fit in barn better
-        1. bucket attachment not easy
+        1. Bucket attachment not easy
             1. can't mount on front
             1. rear end loader perfect solution but not easy to find
                 1. need to fabricate one
-        1. cost: ~2.5K (but -1K from selling rider mower)
+        1. cost: ~2.5K (but -1K from selling rider mower?)
         1. Models
             1. Farmall H, B, C, cub
             1. Case V or VC
             1. Allis Chalmers WD
-1. [Build one](https://www.cadplans.com/cadtrac.html)
-        - cost: ~$3K
+    1. [Build one](https://cadplans.com/products/cadtrac-1500)
+        - cost: ~$5-9K?
         
 
 ##  Composting 
@@ -272,11 +272,11 @@
 1. References
     1. Peguin wheel
     
-![](./Fiber/Wheel)
+![](./Fiber/Wheel.png)
 
-![](./Fiber/Wheel2.1)
+![](./Fiber/Wheel2.1.png)
 
-![](./Fiber/Wheel2.2)
+![](./Fiber/Wheel2.2.png)
 
 
 ####  warping board 
@@ -301,8 +301,4 @@
 ![](./Fiber/PICT2608_T)
 
 
----
-
-
-[Link to subsection](Apiary.do.txt)
 

@@ -32,7 +32,7 @@ and inspiration, though I have found [local beekeeper clubs](https://syracusebee
     1. top bars use triangular comb guide, nailed on
 1. baggie feeding of honey to get them started
 
-![ Made from basic dimensional lumber, nailed.](./Farm/ktbh2, width=600 frac=0.8] Made from basic dimensional lumber)
+![ Made from basic dimensional lumber, nailed.](./Farm/ktbh2)
 
 ![ Simplicity in design.](./Farm/ktbh1)
 
@@ -114,9 +114,9 @@ and inspiration, though I have found [local beekeeper clubs](https://syracusebee
 * tape measure for checking cells sizes
 * a camera (don't use cell phone! Ack!)
 * mite sticky boards
-* Lang hive t* TBH conversion frames
+* Lang hive to TBH conversion frames
 * More TBHs and frames (but a sturdier design and simpler stand)
-* Black cloth t* cover some frames
+* Black cloth to cover some frames
 -----------
 
 ---
@@ -146,20 +146,37 @@ and inspiration, though I have found [local beekeeper clubs](https://syracusebee
     * Died winter 2007 (not enough stores)
 
 ####  Seasonal Summaries 
-1. 2006 season
-  1. Good yield, probably no swarms, got out to inspect infrequently.
-1. 2007 season
-  1. Despite a great honey year, poor yield, what I did get crystallized very quickly. Bees were viscious. I think they swarmed early and often, and the new queens picked up bad genetics. Top Bar hive and many candles were good points. Tried many new management scenarios, and some worked (feeding honey, TBH, shakedowns), some didn't (foundationless frames, nuc boxes for capturing swarms, frame harvester)
-1. 2008 season
-  1. Pulled about 15# from Hive 3, but they are mean. Need to figure out how to find queens so I can replace them, need a better way of harvesting frames and clearing bees out, need to reduce number of lang hives, and d* a shakedown to get another Top Bar Hive. Need to move all hives somewhere I don't have to mow and is not so exposed (woods?)
-1. 2009 season
-  1. Never got called back by Mike from Honey Hill Orchard, so never got new nucs. After some knocking on Hive 2 early in the season, I decided it was dead, but got a pleasant surprise in October when I opened it up to look at what was left. Not only a very strong 3 boxes of bees, but they were not hot anymore, so I was able to pull 5 frames for a 20# harvest.
-  1. Foundationless frames work well as long as they are placed between drawn frames. Still working on regressing bee size, need to pull frames out of other 2 boxes next year and get everthing switched over to foundationless frames. Also need to make some to bars to g* in place of frames to start bars for the TBHs.
-  1. Hive 3 had a small cluster of bees in it. so I took the bottom 2 boxes full of detritus off, and gave them a new screened bottom board and reduced bottom entrance to see if they can pull through. I should have given them 3 of the frames of honey I harvested.
-  1. Turns out that side of the barn is a good spot for keeping hives, gets early sun and protection from wind, good access to water and forage, and is out of path of people. to set this up right, though, I need to pull the hives away from the barn a little more so I can work from any side and snow and rain won't hit it from the roof above. Also need some plastic and gravel down to keep weeds down.
-  1. I tossed the remnants of Hive 1 and 3 onto the burn pile, they were looking pretty nasty. Hive 4 needs g* get burned, too, it has collapsed on itself.
-  1. Things that worked this year: regressing to small cell size, foundationless frames, cracking top for better winter ventilation.
-  1. Things needing work: storing equipment better, doing mite counts, switching over to TBH.
-1. 2010 season
-  1. I thought Hive 2 was going to make it, but they ran out of honey in April, and it was a cold spring. so Close. I meant to try bee-lining, but never got the chance. I got a call in late season (October) to come get a swarm, but by the weekend they had froze out.
-  1. Things needing work: clear the brush out of the bee spot next to the barn, get a bee-lining box.
+##### 2006 season
+ Good yield, probably no swarms, got out to inspect infrequently.
+
+##### 2007 season
+ Despite a great honey year, poor yield, what I did get crystallized very quickly. Bees were viscious. I think they swarmed early and often, and the new queens picked up bad genetics. 
+ 
+ Top Bar hive and many candles were good points. 
+ 
+ Tried many new management scenarios, and some worked (feeding honey, TBH, shakedowns), some didn't (foundationless frames, nuc boxes for capturing swarms, frame harvester)
+
+##### 2008 season
+ Pulled about 15# from Hive 3, but they are mean. Need to figure out how to find queens so I can replace them, need a better way of harvesting frames and clearing bees out, need to reduce number of lang hives, and do a shakedown to get another Top Bar Hive. 
+ 
+ Need to move all hives somewhere I don't have to mow and is not so exposed (woods?)
+
+##### 2009 season
+ Never got called back by Mike from Honey Hill Orchard, so never got new nucs. After some knocking on Hive 2 early in the season, I decided it was dead, but got a pleasant surprise in October when I opened it up to look at what was left. Not only a very strong 3 boxes of bees, but they were not hot anymore, so I was able to pull 5 frames for a 20# harvest.
+ 
+ Foundationless frames work well as long as they are placed between drawn frames. Still working on regressing bee size, need to pull frames out of other 2 boxes next year and get everthing switched over to foundationless frames. Also need to make some to bars to go in place of frames to start bars for the TBHs.
+ Hive 3 had a small cluster of bees in it. so I took the bottom 2 boxes full of detritus off, and gave them a new screened bottom board and reduced bottom entrance to see if they can pull through. I should have given them 3 of the frames of honey I harvested.
+ 
+ Turns out that side of the barn is a good spot for keeping hives, gets early sun and protection from wind, good access to water and forage, and is out of path of people. to set this up right, though, I need to pull the hives away from the barn a little more so I can work from any side and snow and rain won't hit it from the roof above. Also need some plastic and gravel down to keep weeds down.
+ 
+ I tossed the remnants of Hive 1 and 3 onto the burn pile, they were looking pretty nasty. Hive 4 needs to get burned, too, it has collapsed on itself.
+ Things that worked this year: regressing to small cell size, foundationless frames, cracking top for better winter ventilation.
+ 
+ Things needing work: storing equipment better, doing mite counts, switching over to TBH.
+
+##### 2010 season
+ I thought Hive 2 was going to make it, but they ran out of honey in April, and it was a cold spring. so Close. 
+ 
+ I meant to try bee-lining, but never got the chance. I got a call in late season (October) to come get a swarm, but by the weekend they had froze out.
+ 
+ Things needing work: clear the brush out of the bee spot next to the barn, get a bee-lining box.

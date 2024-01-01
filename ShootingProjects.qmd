@@ -43,6 +43,7 @@
 
 ##  Inline Muzzleloader 
 Best hunting option for range, lethality, legality, season?
+
 1. Custom bolt action
 1. Custom hart barrel
 1. Copper bullet

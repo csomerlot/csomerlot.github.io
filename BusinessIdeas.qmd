@@ -1,23 +1,18 @@
 
 # Business Ideas
 
-
-
-
-
----
-
 ##  Technology 
+
 In General:
 1. Minimize startup costs
 1. Find a woman to own the business
 1. Use local gov't IT business incentives
 1. Avoid brick and mortar type of business
 
-
 ###  POS 
 
 ####  A FOSS-based Point of Sale system 
+
 1. Business model basics
     1. Inexpensive POS systems for small businesses
     1. Services
@@ -92,7 +87,7 @@ In General:
         1. Simple Ledger Systems
         1. Intelligible Accounting Software
     1. Propaganda
-1. <http://www.informationweek.com/news/global-cio/interviews/showArticle.jhtml?articleID=225200154&cid=RSSfeed_IWK_All>
+        1. <http://www.informationweek.com/news/global-cio/interviews/showArticle.jhtml?articleID=225200154&cid=RSSfeed_IWK_All>
 1. hardware
     1. build small form-factor CPUs as registers
         1. touch screen
@@ -109,7 +104,7 @@ In General:
         1. Bluetooth barcode scanner
     1. Uses any OS preferred by customer
     1. Vendors
-1. <http://www.posonlinestore.com/>
+        1. <http://www.posonlinestore.com/>
 1. software
     1. cloud-based
         1. allows remote access for administration and management from any platform
@@ -143,7 +138,9 @@ In General:
 ###  SIV 
 
 ####  Sharki Image Vending 
-anagram of ``chris and kevin imaging''
+
+Anagram of **chris and kevin imaging**
+
 1. Business Model Basics
     1. low cost, high-res, multi-temporal aerial and IR imagery and LIDAR data with automated post processing
     1. target clients
@@ -172,7 +169,6 @@ anagram of ``chris and kevin imaging''
                         1. analyze vectors and rasters for each poly to get descriptors
                     1. sweep 2 thru n
                         1. tighten up the unsupervised rules and resampling of pixels until sufficient detail is had for accurate description
-
         1. clump
             1. algorithm
                 1. conduct clockwise sweep to find all identical values
@@ -319,8 +315,8 @@ anagram of ``chris and kevin imaging''
         1. Thermodynamics (including combustion?)
     1. Laboratory
         1. Bench-scale physical modeling to support models
-    1. Client base
-        1. ??? From Jeff
+    1. Selling
+        1. Conferences
     1. Marketing
         1. Canned presentation of resources, capabilities, performance goals
         1. Do business development freebies using single-dimension modeling
@@ -402,30 +398,28 @@ anagram of ``chris and kevin imaging''
 
 ####  Schwenker Food Truck 
 Mobile [Wishing-well grill](http://projects.somerlot.net/HappyHippieLifestyleProjects.html#___sec5) set-up with French-German fusion small plates based on traditional Schwenker BBQ with a modern spin. And also, a smoker. Beechwood for fuel. Great for hanging out at a brewery (or hardware store).
+
 1. Beer-marinated beef on a stick
 1. Reisling-marinated chicken sandwiches
 1. [Choucroute](https://www.instagram.com/p/ByOBlF1FFP9fePwHqDFncSu3Op7USdpZYCnuvM0/)
-1. Flammkuchen
-1. Sausage and white beans and brown rice
-  1. Josh's recipe
-1. Bean burgers
-  1. Josh's recipe
+1. Flammekuchen
+1. Sausage and white beans and brown rice (Josh's recipe)
+1. Bean burgers (Josh's recipe)
 1. Potato salad
-  1. Musgrave recipe, with egg, pickles, and onion
+    1. Musgrave recipe, with egg, pickles, and onion
 1. Fennel kraut
-  1. Hank Shaw-inspired recipe?
+    1. Hank Shaw-inspired recipe?
 1. Quiche
-  1. ham and cheese, and roasted veg
+    1. ham and cheese, and roasted veg
 1. Spaetzle pasta salad
-  1. made in the style of german potato salad, with bacon and vinegar dressing
-1. Smoked wings
-  1. Josh's recipe
+    1. made in the style of german potato salad, with bacon and vinegar dressing
+1. Smoked wings (Josh's recipe)
 1. Scotch egg/sausage bread/bierock thingy
 1. Spinach Salad
 1. Smoked cabbage wedge salad
 1. PICKLES
 1. German chocolate cake
-[Food permit ($130)](http://www.ongov.net/health/documents/TemporaryFoodPermit.pdf)
+1. [Food permit ($130)](http://www.ongov.net/health/documents/TemporaryFoodPermit.pdf)
 
 
 ###  SSS 

@@ -1,9 +1,6 @@
 
 # Happy Hippie Lifestyle Projects
 
-
-
-
 ##  Custom Fish Tank 
 * Made from Clear PVC Pipe with welded Bottom Cap
 - Dimensions: 12" dia by 6.5' tall
@@ -16,13 +13,11 @@
 
 ##  Tree House 
 
-![ The kids picked this design.](./HappyHippieLifestyle/BlueForest_Treehouse_Amberley_Castle_1_gallery-image)
-
+![ The kids picked this design.](./HappyHippieLifestyle/BlueForest_Treehouse_Amberley_Castle_1_gallery-image.jpg)
 
 ##  Books to publish from Wikipedia 
 
-![ Celtic Migration.](./BookTopics)
-
+![ Interesting Wikipedia Stuff ](./BookTopics)
 
 ##  Backpacking Gear To Make 
 - Chameleon Tent: Hammock - Bivy - all purpose tent
@@ -77,7 +72,7 @@
   * Oil lamps
   * Cube mini woodstove
   * Mobile schwenker grill
-* [C-head](http://c-head.com/)
+  * [C-head](http://c-head.com/)
   * Knockdown ADK chairs
   * Inflatable hot tub
   * Dry-laid masonry oven
@@ -87,21 +82,3 @@
   * Griddle
   * Lamps
 * Water heating coil for the fire
-
-
----
-
-[Link to subsection](WoodWorking.do.txt)
-
-
----
-# # include "NorthWoodsCottage.do.txt"
-
-
----
-# # include "EmergencyPlans.do.txt"
-
-
----
-
-[Link to subsection](TemporaryRetirement.do.txt)

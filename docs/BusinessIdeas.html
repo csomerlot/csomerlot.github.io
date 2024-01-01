@@ -237,7 +237,6 @@ ul.task-list li input[type="checkbox"] {
 
 <section id="business-ideas" class="level1">
 <h1>Business Ideas</h1>
-<hr>
 <section id="technology" class="level2">
 <h2 class="anchored" data-anchor-id="technology">Technology</h2>
 <p>In General: 1. Minimize startup costs 1. Find a woman to own the business 1. Use local gov’t IT business incentives 1. Avoid brick and mortar type of business</p>
@@ -382,9 +381,11 @@ ul.task-list li input[type="checkbox"] {
 <li>Simple Ledger Systems</li>
 <li>Intelligible Accounting Software</li>
 </ol></li>
-<li>Propaganda</li>
-</ol></li>
+<li>Propaganda
+<ol type="1">
 <li><a href="http://www.informationweek.com/news/global-cio/interviews/showArticle.jhtml?articleID=225200154&amp;cid=RSSfeed_IWK_All" class="uri">http://www.informationweek.com/news/global-cio/interviews/showArticle.jhtml?articleID=225200154&amp;cid=RSSfeed_IWK_All</a></li>
+</ol></li>
+</ol></li>
 <li>hardware
 <ol type="1">
 <li>build small form-factor CPUs as registers
@@ -407,9 +408,11 @@ ul.task-list li input[type="checkbox"] {
 <li>Bluetooth barcode scanner</li>
 </ol></li>
 <li>Uses any OS preferred by customer</li>
-<li>Vendors</li>
-</ol></li>
+<li>Vendors
+<ol type="1">
 <li><a href="http://www.posonlinestore.com/" class="uri">http://www.posonlinestore.com/</a></li>
+</ol></li>
+</ol></li>
 <li>software
 <ol type="1">
 <li>cloud-based
@@ -461,68 +464,168 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="siv">SIV</h3>
 <section id="sharki-image-vending" class="level4">
 <h4 class="anchored" data-anchor-id="sharki-image-vending">Sharki Image Vending</h4>
-<p>anagram of ``chris and kevin imaging’’ 1. Business Model Basics 1. low cost, high-res, multi-temporal aerial and IR imagery and LIDAR data with automated post processing 1. target clients 1. vegetation condition assessment 1. forests 1. golf courses 1. agriculture 1. pollution / spill mapping emergency response 1. site mapping / topographic surveying 1. flood plain / stream channel mapping 1. initial R&amp;D funding 1. $10K 1. Software 1. A set of image and vector processing tools to implement machine learning using genetic algorithms and neural networks to classify images 1. roll into MapWindows GIS? 1. Operations 1. gdal_translate 1. does inital mask, format conversion, separation of bands, and reprojection 1. classify 1. Can perform supervised or unsupervised classifications 1. Use an artificial neural network based on the concept of identifying decriptors to classify 1. each sweep finds descriptors then asks training questions 1. uses genetic algorithm or multi-variate linear regression analysis for initial training 1. sweep 1 1. find major contrasting areas based on rough unsupervised classification using rough resample of larger pixels 1. analyze vectors and rasters for each poly to get descriptors 1. sweep 2 thru n 1. tighten up the unsupervised rules and resampling of pixels until sufficient detail is had for accurate description</p>
-<pre><code>    1. clump
-        1. algorithm
-            1. conduct clockwise sweep to find all identical values
-            1. number each clump sequentially
-            1. ignore any clumps smaller than specified
-        1. prerequisites
-            1. classify
-
-    1. vectorize
-        1. algorithm
-            1. conduct clockwise sweep to find all cells in each clump and output points of polygon
-            1. create linework from polys
-        1. prerequisites
-            1. clump
-
-    1. register
-        1. Algorithm
-            1. guess inital match
-                1. based on best match from previous image set
-            1. find difference between overlapping cells
-                1. raster absolute diff
-                1. minimum number of cells to overlap to ensure quality of match
-            1. guess new match
-                1. genetic alg for global min
-                1. steepest curve for local min
-            1. iterate until best match found
-    1. orthorectify
-        1. algorithm
-            1. create an array of vectors that point from one cell to matching cell on image pair
-        1. prerequisites
-            1. register
-    1. image recognition (OCR, handwriting, etc)
-        1. use vector and raster qualities to create a set of identifiers, or genes, and let neural network make decisions
-        1. reinforcement learning algorithms
-            1. raster descriptors
-                1. statistical histogram descriptors for each band for each polygon
-                1. pattern id
-            1. vector descriptors
-                1. area / perimeter
-                    1. closeness to circle
-                1. centroid
-                1. major and minor axis orientation
-                1. neighboring vectors
-        1. Uses an artificial neural network based on the concept of identifying decriptors to classify
-            1. each sweep finds descriptors then asks training questions
-            1. uses genetic algorithm or multi-variate linear regression analysis for initial training
-                1. sweep 1
-                    1. find major contrasting areas based on rough unsupervised classification using rough resample of larger pixels
-                    1. analyze vectors and rasters for each poly to get descriptors
-                1. sweep 2 thru n
-                    1. tighten up the unseupervised rules and resmapling of pixels until sufficient detail is had for accurate description
-1. Ancillary Applications
-    1. reading hand writing
-    1. OCR
-    1. recreating parcels layer from raster images
-    1. LULC (eCognition)
-1. development
-    1. python for rapid algorithm dev
-    1. C for processing speed and parallelization
-    1. rebuild in C python modules to standalone exe's in C# to make cleaner and simpler installs (dump swig, NumPtr, and Mingw32)</code></pre>
+<p>Anagram of <strong>chris and kevin imaging</strong></p>
 <ol type="1">
+<li>Business Model Basics
+<ol type="1">
+<li>low cost, high-res, multi-temporal aerial and IR imagery and LIDAR data with automated post processing</li>
+<li>target clients
+<ol type="1">
+<li>vegetation condition assessment
+<ol type="1">
+<li>forests</li>
+<li>golf courses</li>
+<li>agriculture</li>
+</ol></li>
+<li>pollution / spill mapping emergency response</li>
+<li>site mapping / topographic surveying</li>
+<li>flood plain / stream channel mapping</li>
+</ol></li>
+<li>initial R&amp;D funding
+<ol type="1">
+<li>$10K</li>
+</ol></li>
+</ol></li>
+<li>Software
+<ol type="1">
+<li>A set of image and vector processing tools to implement machine learning using genetic algorithms and neural networks to classify images</li>
+<li>roll into MapWindows GIS?</li>
+<li>Operations
+<ol type="1">
+<li>gdal_translate
+<ol type="1">
+<li>does inital mask, format conversion, separation of bands, and reprojection</li>
+</ol></li>
+<li>classify
+<ol type="1">
+<li>Can perform supervised or unsupervised classifications</li>
+<li>Use an artificial neural network based on the concept of identifying decriptors to classify
+<ol type="1">
+<li>each sweep finds descriptors then asks training questions</li>
+<li>uses genetic algorithm or multi-variate linear regression analysis for initial training
+<ol type="1">
+<li>sweep 1
+<ol type="1">
+<li>find major contrasting areas based on rough unsupervised classification using rough resample of larger pixels</li>
+<li>analyze vectors and rasters for each poly to get descriptors</li>
+</ol></li>
+<li>sweep 2 thru n
+<ol type="1">
+<li>tighten up the unsupervised rules and resampling of pixels until sufficient detail is had for accurate description</li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol></li>
+<li>clump
+<ol type="1">
+<li>algorithm
+<ol type="1">
+<li>conduct clockwise sweep to find all identical values</li>
+<li>number each clump sequentially</li>
+<li>ignore any clumps smaller than specified</li>
+</ol></li>
+<li>prerequisites
+<ol type="1">
+<li>classify</li>
+</ol></li>
+</ol></li>
+<li>vectorize
+<ol type="1">
+<li>algorithm
+<ol type="1">
+<li>conduct clockwise sweep to find all cells in each clump and output points of polygon</li>
+<li>create linework from polys</li>
+</ol></li>
+<li>prerequisites
+<ol type="1">
+<li>clump</li>
+</ol></li>
+</ol></li>
+<li>register
+<ol type="1">
+<li>Algorithm
+<ol type="1">
+<li>guess inital match
+<ol type="1">
+<li>based on best match from previous image set</li>
+</ol></li>
+<li>find difference between overlapping cells
+<ol type="1">
+<li>raster absolute diff</li>
+<li>minimum number of cells to overlap to ensure quality of match</li>
+</ol></li>
+<li>guess new match
+<ol type="1">
+<li>genetic alg for global min</li>
+<li>steepest curve for local min</li>
+</ol></li>
+<li>iterate until best match found</li>
+</ol></li>
+</ol></li>
+<li>orthorectify
+<ol type="1">
+<li>algorithm
+<ol type="1">
+<li>create an array of vectors that point from one cell to matching cell on image pair</li>
+</ol></li>
+<li>prerequisites
+<ol type="1">
+<li>register</li>
+</ol></li>
+</ol></li>
+<li>image recognition (OCR, handwriting, etc)
+<ol type="1">
+<li>use vector and raster qualities to create a set of identifiers, or genes, and let neural network make decisions</li>
+<li>reinforcement learning algorithms
+<ol type="1">
+<li>raster descriptors
+<ol type="1">
+<li>statistical histogram descriptors for each band for each polygon</li>
+<li>pattern id</li>
+</ol></li>
+<li>vector descriptors
+<ol type="1">
+<li>area / perimeter
+<ol type="1">
+<li>closeness to circle</li>
+</ol></li>
+<li>centroid</li>
+<li>major and minor axis orientation</li>
+<li>neighboring vectors</li>
+</ol></li>
+</ol></li>
+<li>Uses an artificial neural network based on the concept of identifying decriptors to classify
+<ol type="1">
+<li>each sweep finds descriptors then asks training questions</li>
+<li>uses genetic algorithm or multi-variate linear regression analysis for initial training
+<ol type="1">
+<li>sweep 1
+<ol type="1">
+<li>find major contrasting areas based on rough unsupervised classification using rough resample of larger pixels</li>
+<li>analyze vectors and rasters for each poly to get descriptors</li>
+</ol></li>
+<li>sweep 2 thru n
+<ol type="1">
+<li>tighten up the unseupervised rules and resmapling of pixels until sufficient detail is had for accurate description</li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol></li>
+</ol></li>
+<li>Ancillary Applications
+<ol type="1">
+<li>reading hand writing</li>
+<li>OCR</li>
+<li>recreating parcels layer from raster images</li>
+<li>LULC (eCognition)</li>
+</ol></li>
+<li>development
+<ol type="1">
+<li>python for rapid algorithm dev</li>
+<li>C for processing speed and parallelization</li>
+<li>rebuild in C python modules to standalone exe’s in C# to make cleaner and simpler installs (dump swig, NumPtr, and Mingw32)</li>
+</ol></li>
+</ol></li>
 <li>Platform and Hardware
 <ol type="1">
 <li>UAV drone
@@ -685,9 +788,9 @@ ul.task-list li input[type="checkbox"] {
 <ol type="1">
 <li>Bench-scale physical modeling to support models</li>
 </ol></li>
-<li>Client base
+<li>Selling
 <ol type="1">
-<li>??? From Jeff</li>
+<li>Conferences</li>
 </ol></li>
 <li>Marketing
 <ol type="1">
@@ -820,7 +923,38 @@ ul.task-list li input[type="checkbox"] {
 <h3 class="anchored" data-anchor-id="sft">SFT</h3>
 <section id="schwenker-food-truck" class="level4">
 <h4 class="anchored" data-anchor-id="schwenker-food-truck">Schwenker Food Truck</h4>
-<p>Mobile <a href="http://projects.somerlot.net/HappyHippieLifestyleProjects.html#___sec5">Wishing-well grill</a> set-up with French-German fusion small plates based on traditional Schwenker BBQ with a modern spin. And also, a smoker. Beechwood for fuel. Great for hanging out at a brewery (or hardware store). 1. Beer-marinated beef on a stick 1. Reisling-marinated chicken sandwiches 1. <a href="https://www.instagram.com/p/ByOBlF1FFP9fePwHqDFncSu3Op7USdpZYCnuvM0/">Choucroute</a> 1. Flammkuchen 1. Sausage and white beans and brown rice 1. Josh’s recipe 1. Bean burgers 1. Josh’s recipe 1. Potato salad 1. Musgrave recipe, with egg, pickles, and onion 1. Fennel kraut 1. Hank Shaw-inspired recipe? 1. Quiche 1. ham and cheese, and roasted veg 1. Spaetzle pasta salad 1. made in the style of german potato salad, with bacon and vinegar dressing 1. Smoked wings 1. Josh’s recipe 1. Scotch egg/sausage bread/bierock thingy 1. Spinach Salad 1. Smoked cabbage wedge salad 1. PICKLES 1. German chocolate cake <a href="http://www.ongov.net/health/documents/TemporaryFoodPermit.pdf">Food permit ($130)</a></p>
+<p>Mobile <a href="http://projects.somerlot.net/HappyHippieLifestyleProjects.html#___sec5">Wishing-well grill</a> set-up with French-German fusion small plates based on traditional Schwenker BBQ with a modern spin. And also, a smoker. Beechwood for fuel. Great for hanging out at a brewery (or hardware store).</p>
+<ol type="1">
+<li>Beer-marinated beef on a stick</li>
+<li>Reisling-marinated chicken sandwiches</li>
+<li><a href="https://www.instagram.com/p/ByOBlF1FFP9fePwHqDFncSu3Op7USdpZYCnuvM0/">Choucroute</a></li>
+<li>Flammekuchen</li>
+<li>Sausage and white beans and brown rice (Josh’s recipe)</li>
+<li>Bean burgers (Josh’s recipe)</li>
+<li>Potato salad
+<ol type="1">
+<li>Musgrave recipe, with egg, pickles, and onion</li>
+</ol></li>
+<li>Fennel kraut
+<ol type="1">
+<li>Hank Shaw-inspired recipe?</li>
+</ol></li>
+<li>Quiche
+<ol type="1">
+<li>ham and cheese, and roasted veg</li>
+</ol></li>
+<li>Spaetzle pasta salad
+<ol type="1">
+<li>made in the style of german potato salad, with bacon and vinegar dressing</li>
+</ol></li>
+<li>Smoked wings (Josh’s recipe)</li>
+<li>Scotch egg/sausage bread/bierock thingy</li>
+<li>Spinach Salad</li>
+<li>Smoked cabbage wedge salad</li>
+<li>PICKLES</li>
+<li>German chocolate cake</li>
+<li><a href="http://www.ongov.net/health/documents/TemporaryFoodPermit.pdf">Food permit ($130)</a></li>
+</ol>
 </section>
 </section>
 <section id="sss" class="level3">

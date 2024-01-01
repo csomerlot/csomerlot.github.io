@@ -1,20 +1,17 @@
-
-
 # Boat Projects
-
-
-
 
 ##  Building a Whitehall 
 My first project in building a sailboat, for the someday I dream of... years ago I received [this book](https://books.google.com/books?id=6RKdTOWGYjoC&printsec=frontcover&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false) on building a [whitehall](https://en.wikipedia.org/wiki/Whitehall_rowboat), and it is perhaps the most perfect representation of a boat that I can find.
 
 Cool options to consider:
+
 1. [Removable thwart, like in Chesapeake Light Crafts version](https://www.clcboats.com/modules/catalog/boat.php?category_qn=rowboats&code=chester-yawl-row-boat-kit&print=1)
 1. [A tent like Roger Barnes' dinghy tent](https://youtu.be/iDSEbhyIzX0)
 1. Dolly with bike wheels for beach launching
   
 
 ##  Skin-on-frame Kayak 
+
 1. greenland style
 1. use traditional measurement system
     1. 3 fathom plus 1 cubit is length, etc
@@ -128,20 +125,20 @@ Jon and I inherited one from his childhood.
   1. Float missing (but forums say do without)
   1. Spray-foam ends to seal
 
-![ Transom.](Boats/transom)
+![ Transom.](Boats/transom.jpg)
 
-![ Mainsheet hardware.](Boats/mainsheet)
+![ Mainsheet hardware.](Boats/mainsheet.jpg)
 
 ![ Replacement Mast step.](Boats/MastStep)
 
-![ Where the mast step goes.](Boats/calcat3)
+![ Where the mast step goes.](Boats/calcat3.jpg)
 
 
 ###  Pictures 
 
-![ The Cal Cat in all its glory.](Boats/Cat)
+![ The Cal Cat in all its glory.](Boats/Cat.jpg)
 
-![ The Cal Cat in all its glory.](Boats/calcat2)
+![ The Cal Cat in all its glory.](Boats/calcat2.jpg)
 
 
 ---
@@ -152,6 +149,7 @@ What nerd hasn't tried to figure this one out? I think the reason that we don't 
 
 ###  Electric Hatch-back 
 With the rise of electric outboards, a drive system is easier than ever when coupled to a high-output alternator. Or at least, would be fun to experiment with!
+
 * Split hull stored on roof on land mode
 * Hull gets placed for drive-on at boat launch and has rollers for transition into water
 * Dual electric thrust pods are coupled to the wheels somehow for directional control via the steering wheel
@@ -177,6 +175,7 @@ With the rise of electric outboards, a drive system is easier than ever when cou
 
 ###  Hydrofoiling Buggy 
 With the rise of hub motors, is an axle even required? If no axle, no through-hull? 
+
 * A sand-buggy or humvee style amphibious electric vehicle 
 * Aluminium unibody frame sporting 4 hub motors with wheels on parallel linkage, bolted outside of the frame
 * Then, hydrofoiled thrusters to go to [water mode](https://candela.com/candela-c-8/)

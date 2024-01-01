@@ -2,14 +2,10 @@
 
 # Alternative Energy Projects
 
-
-
 We currently use about 18000 kWh per year (avg 50 kWh per day), with electric heat (25%) and hot water (50%), and 5 face cord of firewood for alternative heat. Better basement sealing could probably reduce this 10%. If we put solar panels on the barn roof, [a 6 kW unit would pay for itself in 5 years](https://docs.google.com/spreadsheets/d/189Td1nhGW3Vrj0CtqKAWVy8kJlys1NEx5la_6wacGrw/edit#gid=1167446425).
-
 
 ##  Concrete Silo Retrofits 
 This structure isn't going anywhere, so use it
-
 
 ###  Wind Mill Generator 
 1. Use old silo for base structure, but otherwise [follow a historical build](http://www.yorktown-windmill.org/)
@@ -25,7 +21,6 @@ This structure isn't going anywhere, so use it
     1. compressed air
     1. water pump
 1. [Calcs](http://zebu.uoregon.edu/1996/ph162/l14.html)
-
 
 ###  Stirling Engine Solar Powerplant 
 1. retrofit the old silo for
@@ -47,20 +42,17 @@ This structure isn't going anywhere, so use it
 1. [Performance calculations](http://www.bekkoame.ne.jp/~khirata/academic/simple/simplee.htm)
 1. [Wikipedia entry](https://en.wikipedia.org/wiki/Stirling_engine)
 
-![ Linkages.](HappyHippieLifestyle/stirling)
-
+![Stirling Engine Linkages.](HappyHippieLifestyle/stirling)
 
 ##  Hydrogen Generator 
 1. Electrolysis of water
-1. Use deeply submerged tanks to collect the gas, to minimize compression
-
+1. Use deeply submerged tanks to collect the gas, to minimize compression?? Does this work?
 
 ##  Wood gasification using high biomass willows 
 1. For powering IC engines
 1. References
 1. [UN doc](http://www.fao.org/3/a-t0512e.pdf)
 1. [World Bank](http://documents.worldbank.org/curated/en/936651468740985551/Energy-from-biomass-a-review-of-combustion-and-gasification-technologies)
-
 
 ##  Solar water heater 
 1. For preheating hot water supply
@@ -77,10 +69,8 @@ This structure isn't going anywhere, so use it
     1. Collector fluid runs through replacable copper coil inside tank
     1. pressure/heat relief valve
 
-
 ##  Wood Stove 
 1. Set furnace fan to run on timer to distribute heat and run air cleaner
-
 
 ##  Tractor GenSet 
 1. 24 hp can power a 15kw Genset head
