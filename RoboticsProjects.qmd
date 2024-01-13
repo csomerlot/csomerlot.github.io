@@ -68,7 +68,7 @@ many things, in many places, some very remote. I want a platform that can travel
 * Locomotion
     * Low-speed/power, mostly currents
     * Impeller side tubes with vent clearing
-    * Emergency front bounacy and copmressed air jet
+    * Emergency front bouancy and compressed air jet
 * Communications/data link
     * ASPRS for global, daily logging of location, vital metrics
     * On-demand wifi for debugging
