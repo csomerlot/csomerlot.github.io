@@ -69,6 +69,7 @@ many things, in many places, some very remote. I want a platform that can travel
     * Low-speed/power, mostly currents
     * Impeller side tubes with vent clearing
     * Emergency front bouancy and compressed air jet
+    * Emergency balloon inflation 
 * Communications/data link
     * ASPRS for global, daily logging of location, vital metrics
     * On-demand wifi for debugging
@@ -146,7 +147,7 @@ In the suburban warfare environment, its our ability to grow food versus mother 
 #### Feature Set:
 1. Intelligent and real-time image tracking during day or night, based on sample images
 1. Housed in a scarecrow, with duplicate, stereo single-lens object trackers
-1. Detection alarms - audible, visible, and internet
+1. Detection warning alarms - audible, visible, and internet
 1. Directional actuator for firing projectiles, spray, flame, etc at the real-time coordinate of target
 1. 90% accurate against false-falses, 75% accurate against false-positives
 1. Video recording with target boxing
@@ -162,7 +163,12 @@ In the suburban warfare environment, its our ability to grow food versus mother 
 * Build out of targeting and firing
 
 #### BOM:
-* RPi3 w/ Camera x 4
+* RPi5 w/ Camera x 4
+
+#### Notes:
+Best option for python library appears to be OpenCV-based options.
+
+Need a library of images of deer in the yard to train, maybe deploy a wildlife camera?
 
 ---
 
