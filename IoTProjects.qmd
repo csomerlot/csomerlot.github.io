@@ -17,31 +17,31 @@ A toolbox platform for sensors and communications built around the venerable RPi
 #### BOM:
 * [RPi](https://www.adafruit.com/category/1000) with SD card and power supply. 3b+ is best model while v4 gets debugged.
 * Remote Power:
-* [Battery](https://www.adafruit.com/product/3196)
-* [PoE](https://www.adafruit.com/product/3953)
+    * [Battery](https://www.adafruit.com/product/3196)
+    * [PoE](https://www.adafruit.com/product/3953)
 * HMI:
-* [Tiny touchscreen](https://www.adafruit.com/product/2441)
-* [Minimal OLED](https://www.adafruit.com/product/3527)
-* [LCD](https://www.adafruit.com/product/1115)
+    * [Tiny touchscreen](https://www.adafruit.com/product/2441)
+    * [Minimal OLED](https://www.adafruit.com/product/3527)
+    * [LCD](https://www.adafruit.com/product/1115)
 * RTC: without this logs and data collection is useless
-* [cheap option](https://www.adafruit.com/product/3386)
-* [good option](https://www.adafruit.com/product/4282)
+    * [cheap option](https://www.adafruit.com/product/3386)
+    * [good option](https://www.adafruit.com/product/4282)
 * SDR:
-* [cheap option](https://www.adafruit.com/product/1497)
-* [plan B option](https://www.adafruit.com/product/3583)
+    * [cheap option](https://www.adafruit.com/product/1497)
+    * [plan B option](https://www.adafruit.com/product/3583)
 * Wifi:
-* [cheap option](https://www.adafruit.com/product/1030)
-* [Long-range](https://www.alfa.com.tw/products_detail/8.htm)
+    * [cheap option](https://www.adafruit.com/product/1030)
+    * [Long-range](https://www.alfa.com.tw/products_detail/8.htm)
 * Location:
-* [GPS](https://www.adafruit.com/product/2324)
-* [IMU](https://www.adafruit.com/product/4754)
+    * [GPS](https://www.adafruit.com/product/2324)
+    * [IMU](https://www.adafruit.com/product/4754)
 * Sensor controllers: 
-* [STEMMA Qt/ Qwiic](https://www.adafruit.com/product/4463) with a couple [ADCs](https://www.adafruit.com/product/1083)
-* [cheap option](https://learn.adafruit.com/reading-a-analog-in-and-controlling-audio-volume-with-the-raspberry-pi?view=all) and a [voltage reference](https://www.adafruit.com/product/2200)
+    * [STEMMA Qt/ Qwiic](https://www.adafruit.com/product/4463) with a couple [ADCs](https://www.adafruit.com/product/1083)
+    * [cheap option](https://learn.adafruit.com/reading-a-analog-in-and-controlling-audio-volume-with-the-raspberry-pi?view=all) and a [voltage reference](https://www.adafruit.com/product/2200)
 * Power controllers:
-* [Power tail](https://www.adafruit.com/product/2935)
-* 2 [Relay controllers](https://www.adafruit.com/product/3191) in a double-wide box
-* [Relay control circuit]('.\Robotics\Ks7mv.png')
+    * [Power tail](https://www.adafruit.com/product/2935)
+    * 2 [Relay controllers](https://www.adafruit.com/product/3191) in a double-wide box
+    * [Relay control circuit]('.\Robotics\Ks7mv.png')
 
 #### Notes:
 * Start with a [Raspberry Pi 400 Desktop](https://www.adafruit.com/product/3762)
@@ -63,29 +63,23 @@ So many touch-points of our environment involve mechanical systems in our dwelli
 1. Sensors
     1. Interior
         1. Temperature and humidity of each room
-        1. nonintrusive appliance load monitor
-1. [Current sensors](https://www.digikey.com/en/products/detail/seeed-technology-co-ltd/101990029/5488226)
-            1. Voltage Sensors
-            1. Circuit design
-                1. Conceptual description = voltage and current translated to correct range for ADC, goes to ADC, ADC interface with GPIO I2C or SPI bus via isolation
+        1. Non-intrusive appliance load monitor
         1. Salt level
         1. Water pressure and flow
-        1. Propane level via pressure sensor
         1. Air cleaner
-        1. Smoke / CO / Propane detectors
-        1. Entry (pressure change)
+        1. Smoke / CO 
         1. Woodstove temp
-        1. Roomba status
     1. Exterior
-        1. Rain
-        1. Soil moisture
-        1. Sunshine
-        1. Wind
-        1. Temp
-        1. Snowfall
-        1. Humidity
-        1. Motion detectors
-        1. Water table depth
+        1. Weather
+            1. Rain & Snowfall
+            1. Sunshine
+            1. Wind
+            1. Temp
+            1. Humidity
+            1. Pressure
+        1. Water
+            1. Soil moisture
+            1. Well & Water table depth
 1. Controls
     1. Heat pump
     1. Window Fans
@@ -98,14 +92,14 @@ So many touch-points of our environment involve mechanical systems in our dwelli
     1. Wood Stove blower
         1. Stepper motor-controled rheostat
 1. Server
-1. [Historian](https://github.com/GridProtectionAlliance/openhistorian-python)
-1. [Dashboard](https://www.home-assistant.io/)
+    1. [Historian](https://github.com/GridProtectionAlliance/openhistorian-python)
+    1. [Dashboard](https://www.home-assistant.io/)
 
 
 #### BOM:
-* [Common Mobile Compute Platform](/._ComputerProjects010.html#___sec10)
-
-
+* [Common Mobile Compute Platform](./IoTProjects.html#common-mobile-compute-platform)
+* [Weather Sensors]([https://www.adafruit.com/wishlists/586590])
+* [Current sensors](https://www.digikey.com/en/products/detail/seeed-technology-co-ltd/101990029/5488226)
 
 ---
 
