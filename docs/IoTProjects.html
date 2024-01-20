@@ -250,32 +250,48 @@ ul.task-list li input[type="checkbox"] {
 <h4 class="anchored" data-anchor-id="bom">BOM:</h4>
 <ul>
 <li><a href="https://www.adafruit.com/category/1000">RPi</a> with SD card and power supply. 3b+ is best model while v4 gets debugged.</li>
-<li>Remote Power:</li>
+<li>Remote Power:
+<ul>
 <li><a href="https://www.adafruit.com/product/3196">Battery</a></li>
 <li><a href="https://www.adafruit.com/product/3953">PoE</a></li>
-<li>HMI:</li>
+</ul></li>
+<li>HMI:
+<ul>
 <li><a href="https://www.adafruit.com/product/2441">Tiny touchscreen</a></li>
 <li><a href="https://www.adafruit.com/product/3527">Minimal OLED</a></li>
 <li><a href="https://www.adafruit.com/product/1115">LCD</a></li>
-<li>RTC: without this logs and data collection is useless</li>
+</ul></li>
+<li>RTC: without this logs and data collection is useless
+<ul>
 <li><a href="https://www.adafruit.com/product/3386">cheap option</a></li>
 <li><a href="https://www.adafruit.com/product/4282">good option</a></li>
-<li>SDR:</li>
+</ul></li>
+<li>SDR:
+<ul>
 <li><a href="https://www.adafruit.com/product/1497">cheap option</a></li>
 <li><a href="https://www.adafruit.com/product/3583">plan B option</a></li>
-<li>Wifi:</li>
+</ul></li>
+<li>Wifi:
+<ul>
 <li><a href="https://www.adafruit.com/product/1030">cheap option</a></li>
 <li><a href="https://www.alfa.com.tw/products_detail/8.htm">Long-range</a></li>
-<li>Location:</li>
+</ul></li>
+<li>Location:
+<ul>
 <li><a href="https://www.adafruit.com/product/2324">GPS</a></li>
 <li><a href="https://www.adafruit.com/product/4754">IMU</a></li>
-<li>Sensor controllers:</li>
+</ul></li>
+<li>Sensor controllers:
+<ul>
 <li><a href="https://www.adafruit.com/product/4463">STEMMA Qt/ Qwiic</a> with a couple <a href="https://www.adafruit.com/product/1083">ADCs</a></li>
 <li><a href="https://learn.adafruit.com/reading-a-analog-in-and-controlling-audio-volume-with-the-raspberry-pi?view=all">cheap option</a> and a <a href="https://www.adafruit.com/product/2200">voltage reference</a></li>
-<li>Power controllers:</li>
+</ul></li>
+<li>Power controllers:
+<ul>
 <li><a href="https://www.adafruit.com/product/2935">Power tail</a></li>
 <li>2 <a href="https://www.adafruit.com/product/3191">Relay controllers</a> in a double-wide box</li>
 <li><a href="'.\Robotics\Ks7mv.png'">Relay control circuit</a></li>
+</ul></li>
 </ul>
 </section>
 <section id="notes" class="level4">
@@ -304,22 +320,29 @@ ul.task-list li input[type="checkbox"] {
 <li>Interior
 <ol type="1">
 <li>Temperature and humidity of each room</li>
-<li>nonintrusive appliance load monitor</li>
+<li>Non-intrusive appliance load monitor</li>
+<li>Salt level</li>
+<li>Water pressure and flow</li>
+<li>Air cleaner</li>
+<li>Smoke / CO</li>
+<li>Woodstove temp</li>
 </ol></li>
-</ol></li>
-<li><a href="https://www.digikey.com/en/products/detail/seeed-technology-co-ltd/101990029/5488226">Current sensors</a> 1. Voltage Sensors 1. Circuit design 1. Conceptual description = voltage and current translated to correct range for ADC, goes to ADC, ADC interface with GPIO I2C or SPI bus via isolation 1. Salt level 1. Water pressure and flow 1. Propane level via pressure sensor 1. Air cleaner 1. Smoke / CO / Propane detectors 1. Entry (pressure change) 1. Woodstove temp 1. Roomba status
-<ol type="1">
 <li>Exterior
 <ol type="1">
-<li>Rain</li>
-<li>Soil moisture</li>
+<li>Weather
+<ol type="1">
+<li>Rain &amp; Snowfall</li>
 <li>Sunshine</li>
 <li>Wind</li>
 <li>Temp</li>
-<li>Snowfall</li>
 <li>Humidity</li>
-<li>Motion detectors</li>
-<li>Water table depth</li>
+<li>Pressure</li>
+</ol></li>
+<li>Water
+<ol type="1">
+<li>Soil moisture</li>
+<li>Well &amp; Water table depth</li>
+</ol></li>
 </ol></li>
 </ol></li>
 <li>Controls
@@ -337,15 +360,19 @@ ul.task-list li input[type="checkbox"] {
 <li>Stepper motor-controled rheostat</li>
 </ol></li>
 </ol></li>
-<li>Server</li>
+<li>Server
+<ol type="1">
 <li><a href="https://github.com/GridProtectionAlliance/openhistorian-python">Historian</a></li>
 <li><a href="https://www.home-assistant.io/">Dashboard</a></li>
+</ol></li>
 </ol>
 </section>
 <section id="bom-1" class="level4">
 <h4 class="anchored" data-anchor-id="bom-1">BOM:</h4>
 <ul>
-<li><a href="./._ComputerProjects010.html#___sec10">Common Mobile Compute Platform</a></li>
+<li><a href="./IoTProjects.html#common-mobile-compute-platform">Common Mobile Compute Platform</a></li>
+<li><a href="https://www.adafruit.com/wishlists/586590">Weather Sensors</a></li>
+<li><a href="https://www.digikey.com/en/products/detail/seeed-technology-co-ltd/101990029/5488226">Current sensors</a></li>
 </ul>
 <hr>
 </section>

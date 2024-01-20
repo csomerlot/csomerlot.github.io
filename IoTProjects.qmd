@@ -98,7 +98,7 @@ So many touch-points of our environment involve mechanical systems in our dwelli
 
 #### BOM:
 * [Common Mobile Compute Platform](./IoTProjects.html#common-mobile-compute-platform)
-* [Weather Sensors]([https://www.adafruit.com/wishlists/586590])
+* [Weather Sensors](https://www.adafruit.com/wishlists/586590)
 * [Current sensors](https://www.digikey.com/en/products/detail/seeed-technology-co-ltd/101990029/5488226)
 
 ---
