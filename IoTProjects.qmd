@@ -15,7 +15,7 @@ A toolbox platform for sensors and communications built around the venerable RPi
 
 
 #### BOM:
-* [RPi](https://www.adafruit.com/category/1000) with SD card and power supply. 3b+ is best model while v4 gets debugged.
+* [RPi](https://www.adafruit.com/category/1000) with SD card and power supply.
 * Remote Power:
     * [Battery](https://www.adafruit.com/product/3196)
     * [PoE](https://www.adafruit.com/product/3953)
@@ -143,7 +143,7 @@ Car audio has become increasingly complex when it doesn't need to be. Android Au
 
 
 #### BOM:
-* [Common Mobile Compute Platform](/._ComputerProjects010.html#___sec10)
+* [Common Mobile Compute Platform](./IoTProjects.html#common-mobile-compute-platform)
 * <https://www.adafruit.com/product/1752>
 
 
@@ -162,13 +162,8 @@ Car audio has become increasingly complex when it doesn't need to be. Android Au
 #### Description:
 A mobile mapping solution for use in car, boat, or bike
 
-
 #### User Story:
-A digital map has more to offer than hard-copy, but also, this is just my wheelhouse. BGM seems to have 
-largely captured the marine market, and android auto/apple car play for the automotive market, but these are 
-still proprietary and limited in scope. I want selective sensor integration from a variety of environments and
-COTS hardware.
-
+A digital map has more to offer than hard-copy, but also, this is just my wheelhouse. BGM seems to have largely captured the marine market, and android auto/apple car play for the automotive market, but these are still proprietary and limited in scope. I want selective sensor integration from a variety of environments and COTS hardware.
 
 #### Feature Set:
 1. Touchscreen
