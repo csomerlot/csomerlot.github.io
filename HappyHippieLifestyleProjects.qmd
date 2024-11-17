@@ -20,22 +20,32 @@
 ![ Interesting Wikipedia Stuff ](./BookTopics)
 
 ##  Backpacking Gear To Make 
-- Chameleon Tent: Hammock - Bivy - all purpose tent
-* [Bridge hammock](https://www.eurekatentscanada.com/products/view/494?s=section_4) (as opposed to gathered-ends hammock) because:
-* I can't seem how to figure out [how to sleep comfortably on the diagonal](https://www.treklightgear.com/blogs/trek-life/hammock-angle) in a gathered-ends hammock, and my legs stick out when at an angle
-      * I don't want to buy a underquilt (double-layer bottom makes a sleeve for an air pad!)
-      * I don't care about weight or needing poles or the increased hanging distance
-* Similar to [Eureka Solitaire](https://eurekacamping.johnsonoutdoors.com/tents/backpacking/solitaire-al?id=21436), with hoop ends and able to pitch on the ground
-* Start with a [kit](https://ripstopbytheroll.com/collections/diy-hammock-kits/products/pre-cut-bridge-hammock-kit?variant=7685978554416) hammock, add no-seeum netting
-* Rain flap [like this](https://wingmanoftheroad.com/products/goose-1)
-* Lots of [these](https://www.amazon.com/ETROL-Mosquito-Lightweight-Portable-Hammocks/dp/B07M5SPH2Z/ref=sr_1_8?keywords=bridge%2Bhammock&qid=1650855264&sr=8-8&th=1) on Amazon these days but they all look cheap and short
-* [Daisy chain](https://hammockgear.com/ultralight-daisy-chain-per-foot/) for easy hanging
+* Chameleon Tent: Hammock - Bivy - all purpose tent
+  * [Bridge hammock](https://www.eurekatentscanada.com/products/view/494?s=section_4) (as opposed to gathered-ends hammock) because:
+    * I can't seem how to figure out [how to sleep comfortably on the diagonal](https://www.treklightgear.com/blogs/trek-life/hammock-angle) in a gathered-ends hammock, and my legs stick out when at an angle
+    * I don't want to buy a underquilt (double-layer bottom makes a sleeve for an air pad!)
+    * I don't care about weight or needing poles or the increased hanging distance
+  * Similar to [Eureka Solitaire](https://eurekacamping.johnsonoutdoors.com/tents/backpacking/solitaire-al?id=21436), with hoop ends and able to pitch on the ground
+  * Start with a [kit](https://ripstopbytheroll.com/collections/diy-hammock-kits/products/pre-cut-bridge-hammock-kit?variant=7685978554416) hammock, add no-seeum netting
+  * Rain flap [like this](https://wingmanoftheroad.com/products/goose-1)
+  * Lots of [these](https://www.amazon.com/ETROL-Mosquito-Lightweight-Portable-Hammocks/dp/B07M5SPH2Z/ref=sr_1_8?keywords=bridge%2Bhammock&qid=1650855264&sr=8-8&th=1) on Amazon these days but they all look cheap and short
+  * [Daisy chain](https://hammockgear.com/ultralight-daisy-chain-per-foot/) for easy hanging
+  * In the end I bought a [wind anchor tent](https://thecatal.net/)
 * Fold-up wood burning grill with blower
-* Like [this](https://www.amazon.com/dp/B012NHG1CS/?coliid=I32YFIHZ75Y1T&colid=LXYPR4UA5ISY&psc=1&ref_=lv_ov_lig_dp_it) but with the option of attaching a blower
-    * stamp or cut myself and add disk vents and CPU fan?
-    * Wide enough on top to use a wok
-* Pressure cooker, to use less energy and time to cook light-weight foods like dried veggies and mushrooms, beans and rice, etc
-
+  * Like [this](https://www.amazon.com/dp/B012NHG1CS/?coliid=I32YFIHZ75Y1T&colid=LXYPR4UA5ISY&psc=1&ref_=lv_ov_lig_dp_it) but with the option of attaching a blower
+  * Stamp or cut myself and add disk vents and CPU fan?
+  * Wide enough on top to use a wok
+* Car Camping chuck wagon:
+  * Butane-fired burner
+  * Cast iron pot with hanger, and reversible lid for coals for baking
+  * Cast iron griddle
+  * Small pot nesting pot set with lid, strainer
+  * French press
+  * Pressure cooker, to use less energy and time to cook light-weight foods like dried veggies and mushrooms, beans and rice, etc
+  * Camping utensils set in a go bag
+  * Flexible plastic cutting boards
+  * Mobile schwenker grill
+  * Fire bricks for tiny oven?
 
 ##  Wishing Well Grill 
 - Historical Design: [Schwenker](https://en.wikipedia.org/wiki/Schwenker)
@@ -52,7 +62,6 @@
   * Filled 50% with sand (for luao) or gravel
   * Air-tight door
   * Winch
-* [Mobile version](https://www.schwenktheworld.com/schwenker)
 
 
 ##  Birdhouse Cam 
@@ -73,11 +82,9 @@
   * Marcy field cots
   * Oil lamps
   * Cube mini woodstove
-  * Mobile schwenker grill
   * [Air head](https://airheadtoilet.com/product/air-head-composting-toilet-complete-unit/)
   * Knockdown ADK chairs
   * Inflatable hot tub
-  * Dry-laid masonry oven
 * Propane appliances
   * Fridge
   * Hot water heater
