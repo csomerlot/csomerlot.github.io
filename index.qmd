@@ -1,5 +1,48 @@
 # All My Ideas
 ## Shoved onto the internet
-Because, where else...
+### To make room
+#### In my head
 
-**See the TOC to browse.**
+
+# Digital
+
+Its an amazing time to be creative and build digital things.
+
+[You could build things on or with computers](ComputerProjects.html)
+
+[You could build things with mini-computers](IoTProjects.html)
+
+[You could build things that take computers places](RoboticsProjects.html)
+
+[Or you could build things to fight the computers](ShootingProjects.html)
+
+# Nomad
+
+While there are many ways to escape a physical location, projects are an escape of their own. But if the goal is to live while being elsewhere, 
+it seems like these days we call it Glamping; but we used to call these nomads Gypsies and Travellers and even offshore fishermen.
+
+[You could escape to a cottage in the woods](./NorthWoodsCottage.html)
+
+[You could escape on a boat](./BoatProjects.html)
+
+[You could escape while still working](./TemporaryRetirement.html)
+
+[You could escape in a hurry](./EmergencyPlans.html)
+
+[Or you could escape in the regular way](CampingProjects.html)
+
+# The RoboticsProjects
+
+Digital/Nomad things take a lot of time and money, so here's the regular things
+
+[Woodworking](Woodworking.html)
+
+[Farming](ThistleRidgeFarmProjects.html)
+
+[Apiary](Apiary.html)
+
+[Community](HappyHippieLifestyleProjects.html)
+
+[Business](BusinessIdeas.html)
+
+**See the TOC to browse everything.**
