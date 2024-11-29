@@ -4,26 +4,22 @@ I have a Howa 1500 in 308 that I like a lot, would love a CVA Scout or Tikka T3x
 
 ##  F-class 1000+yarder 
 1. Action: Bighorn TL3 (multi-caliber!)
-1. barrel
+1. Barrel
     1. rebarrel from Hart (includes the action work)
     1. 308 Winchester or 300 WinMag
     1. Long and heavy: 30" to develop max velocity?
     1. Contour to make barrel same diameter as muzzle brake, but keep heavy
-1. optics
-    1. Osprey International or Arken, 10-40x50 or so, I like mil dot illuminated
+1. Optics
+    1. Osprey Global or Arken, 10-40x50 or so, I like mil dot illuminated
     1. anti-cant level
     1. Picatinny 20 MOA scope mount
-1. muzzle brake?
+1. Muzzle brake?
 1. Make a custom laminate stock: mostly, for fun
-    1. Rem700 footprint
-    1. free float / aluminum pillars
-    1. glass bed the action
     1. Build up from laser cut ply, laminate with epoxy and carve
-    1. Pachmayr Decelerator recoil pad on large butt plate
-1. new trigger
-    1. pull ~ 2#
-    1. Timney
-1. bipod
+    1. [Pachmayr Decelerator](https://www.lymanproducts.com/brands/pachmayr/recoil-pads) slip-on recoil pad on large butt plate
+    1. Free float the barrel, use aluminum pillars, and glass bed the action
+1. Timney trigger
+1. Bipod
 
 ##  Inline Muzzleloader 
 Best hunting option for range, lethality, legality, season? Thompson Center makes a good entry one. 50 caliber ballistics very [similar to .300BLK](https://www.snipercountry.com/300-blackout-vs-308/)

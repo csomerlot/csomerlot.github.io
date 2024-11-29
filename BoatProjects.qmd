@@ -1,27 +1,26 @@
 # Boat Projects
 
 ##  Building a Whitehall 
-My first project in building a sailboat, for the someday I dream of... years ago I received [this book](https://books.google.com/books?id=6RKdTOWGYjoC&printsec=frontcover&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false) on building a [whitehall](https://en.wikipedia.org/wiki/Whitehall_rowboat), and it is perhaps the most perfect representation of a boat that I can find.
+These very straight-forward but beatuiful, fast rowing sailboats, seem like an ideal first project. 
+Years ago I received [this book](https://books.google.com/books?id=6RKdTOWGYjoC&printsec=frontcover&source=gbs_ge_summary_r&cad=0#v=onepage&q&f=false) 
+on building a [whitehall](https://en.wikipedia.org/wiki/Whitehall_rowboat), and it is perhaps the most perfect representation of a boat that I can find.
 
-Cool options to consider:
+### ool options to consider:
 
 1. [Removable thwart, like in Chesapeake Light Crafts version](https://www.clcboats.com/modules/catalog/boat.php?category_qn=rowboats&code=chester-yawl-row-boat-kit&print=1)
 1. [A tent like Roger Barnes' dinghy tent](https://youtu.be/iDSEbhyIzX0)
 1. Dolly with bike wheels for beach launching
   
 
-##  Skin-on-frame Kayak 
+##  Skin-on-frame kayak or canoe
+These seem like the ideal confluence of utility, DIY, beauty, and highly refined design. I have invested in some Cape Falcon plans 
+and am on the hunt for good wood.
 
-1. greenland style
-1. use traditional measurement system
-    1. 3 fathom plus 1 cubit is length, etc
-1. standard european paddle
-1. Materials
-    1. canvas as skin (for first one, at least)
-    1. wood choices
-            1. Black locust
-            1. Douglas fir
-            1. Ash
+1. Greenland style
+1. wood choices
+        1. Black locust: no problem sourcing, but heavy?
+        1. Douglas fir: hard to source green
+        1. Ash: going, going... gone?
 
 ![ Skin on frame kayak.](Boats/SOFkayak.png)
 
@@ -32,54 +31,29 @@ Cool options to consider:
 Should a first project be something more cookie cutter? It would certainly simplify (speed up) a build, and 
 you can't get anything more simplified than a kit dinghy, like the [PT11](http://www.ptwatercraft.com/ptwatercraft/PT11Home.html)
 
-
 ###  Specs 
-1. Length: 11' 0"
-1. Hull Weight: 90 lbs.
-1. Beam: 50 in.
-1. Max Payload: 518 lbs.
-1. Rowing Draft: 4"
-1. Sailing Draft: 24"
-1. Sail Area: 54 sq ft.
+* Length: 11' 0"
+* Hull Weight: 90 lbs.
+* Beam: 50 in.
+* Max Payload: 518 lbs.
+* Rowing Draft: 4"
+* Sailing Draft: 24"
+* Sail Area: 54 sq ft.
 
 
-##  Cruising Catamaran for Lake Ontario 
-1. A trailerable 25'-ish open deck multihull
-1. Ample sail plan for light wind
-    1. Sloop rigged with Jennnaker (no pole needed)
-    1. Pirate-red sails!
-1. Electric motors in each hull with regen props, backup generator
-1. Each hull self-serving for 1 couple with double berth
-    1. Breeze-way hatches
-    1. Head
-        1. Composting toilets
-        1. Foot-pump operated sinks, small water tank below
-1. Stow-away galley and nav/lounge table on deck
-1. Deep-V hulls so no daggerboards
-1. Plywood stitch and glue home construction
-1. Carry 3 or 4 kayaks up on trampoline
-1. We'll call her the Glorious Anne-Marie (because there are 2 hulls! get it?)
-1. Study Plans:
-1. <http://www.sailingcatamarans.com/strider.htm>
-1. <https://www.duckworksmagazine.com/r/plansindex/multihullsail.htm>
+##  Ultralight Trimaran 
+These multihulls have come so far in comfort and performance recently. I am fascinated... and researching. Previous thoughts were for a simple layout with a
+stitch-and-glue main hull, and skin on frame amas. 
 
-
-##  Skin on Frame Ultralight Trimaran 
-1. Can be built in field with minimum of tools, in emergency
-1. Baidrka-style kayaks as pontoons (amas)
-    1. Inflatable bouancy bags for rigidity
-1. Dual skegs for very shallow draft
-1. Minimize gear, ground tackle, and trimming to keep ultralight to maximize speed
-1. Simplest field-buildable sail rig with most power:
-    1. lateen?
 
 
 ---
 
-##  Catamaran Daysailor 
+##  Catamaran Hobby boat 
 Jon and I inherited one from his childhood.
 
 ###  Cal Cat 
+
 1. Specs:
   1. LOA:
   1. LWL:
@@ -91,6 +65,7 @@ Jon and I inherited one from his childhood.
 1. [Paper tiger](http://www.papertigercatamaran.org/)
 
 ###  Repair Work 
+
 1. Hulls
     1. Powerwash
     1. Spot epoxy repair, fiberglass repair under aft starboard support junction
@@ -125,20 +100,20 @@ Jon and I inherited one from his childhood.
   1. Float missing (but forums say do without)
   1. Spray-foam ends to seal
 
-![ Transom.](Boats/transom.jpg)
+![ Transom.](Boats/transom.jpg){width=300}{fig-align="left"}
 
-![ Mainsheet hardware.](Boats/mainsheet.jpg)
+![ Mainsheet hardware.](Boats/mainsheet.jpg){width=300}{fig-align="left"}
 
-![ Replacement Mast step.](Boats/MastStep)
+![ Replacement Mast step.](Boats/MastStep){width=300}{fig-align="left"}
 
-![ Where the mast step goes.](Boats/calcat3.jpg)
+![ Where the mast step goes.](Boats/calcat3.jpg){width=300}{fig-align="left"}
 
 
 ###  Pictures 
 
-![ The Cal Cat in all its glory.](Boats/Cat.jpg)
+![ The Cal Cat in all its glory.](Boats/Cat.jpg){width=300}{fig-align="left"}
 
-![ The Cal Cat in all its glory.](Boats/calcat2.jpg)
+![ The Cal Cat in all its glory.](Boats/calcat2.jpg){width=300}{fig-align="left"}
 
 
 ---
