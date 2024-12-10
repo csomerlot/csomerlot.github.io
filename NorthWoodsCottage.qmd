@@ -31,11 +31,9 @@
 1. screen doors downstairs and in loft for ventilation
 1. suspend gear (canoes, bikes, etc) from rafters
 1. Mechanicals should be off-grid, minimalistic (see off-grid mechanicals vault below)
-    1. heat
-        1. [masonry wood stove](https://www.youtube.com/watch?v=HJNRXpHnxag)
-    1. light
-        1. battery and/or oil, candles
-1. kitchen
+    1. Heat: [masonry wood stove](https://www.youtube.com/watch?v=HJNRXpHnxag)
+    1. Light: battery and/or oil, candles
+1. Kitchen
     1. small propane fridge and cooking stove
     1. grilling in summer
     1. wood stove in winter
@@ -52,12 +50,11 @@
 Same basic ideas and mechanicals as the HayBaleHome, but:
 
 * Smaller; sleeps only 4 but far easier to site
-* Simpler construction:
-    * Minimal footprint: No foundation, just 4 or 5 concrete tube pilings
+* Simpler construction: no foundation, just 4 or 5 concrete tube pilings
 * [SIP](https://www.sips.org/about/what-are-sips)
 * [high insulation](http://www.coloradoenergy.org/procorner/stuff/r-values.htm)
-        * modular construction
-        * no beams
+    * modular construction
+    * no beams
 
 ![ [A Frame plans](./HappyHippieLifestyle/A Frame Half Loft.png).](./HappyHippieLifestyle/AFrameHalfLoft.png)
 
@@ -76,26 +73,25 @@ is also a great spot for emergency supplies. Avoid storage of any type of fuel t
     1. Accessible and visible top (so no one runs it over) yet protected from the elements and vandalism. Could also site structure on top of it, and size it for lock-box usage as well.
     1. insulated and dehumidified/heated for consistent temp and low humidity
 1. Mechanicals
-1. Well: some people [do this](https://www.drillyourownwell.com/) but a lot depends on siting for soil type and depth to water table
+    1. Well: some people [do this](https://www.drillyourownwell.com/) but a lot depends on siting for soil type and depth to water table
     1. Pump:  
         1. 12v
         1. positive dispacement for high pressure, low volume, no priming
-        1. replaceable
         1. can be multiplied in series or parallel for flow or pressure
-1. COTS [automotive fuel pump](https://www.amazon.com/OSIAS-Universal-Replacement-VOLKSWAGEN-0580464070/dp/B073TY5VBV/ref=asc_df_B073TY5VBV/)
-    1. Storage:
-        1. Gravity option: Bulk storage ie IBC tote tank
-        1. Pressure Tank: this shouldn't be large, as a portable water tower should be used for increased capacity
-        1. Manual (from external) and power-actuated ball valves
-        1. Overflow
-    1. Potable treatment:
-        1. Filter: 50 micron fiber followed by 5 micron charcoal to remove sediment, chemicals, and protozoa AND
-        1. UV to remove bacteria and viruses OR
-1. [RO unit](https://www.amazon.com/Alberts-Filter-Membrane-Replacement-Connector/dp/B07H2ZCFFR/ref=sr_1_17_sspa)
-    1. Power:
-        1. 12v for safety and convenience
-        1. Battery bank
-        1. Charger that can handle solar, alternator, generator or line inputs
+        1. replaceable off-the-shelf parts [automotive fuel pump](https://www.amazon.com/OSIAS-Universal-Replacement-VOLKSWAGEN-0580464070/dp/B073TY5VBV/ref=asc_df_B073TY5VBV/)
+1. Storage:
+    1. Gravity option: Bulk storage ie IBC tote tank
+    1. Pressure Tank: this shouldn't be large, as a portable water tower should be used for increased capacity
+    1. Manual (from external) and power-actuated ball valves
+    1. Overflow
+1. Potable treatment:
+    1. Filter: 50 micron fiber followed by 5 micron charcoal to remove sediment, chemicals, and protozoa AND
+    1. UV to remove bacteria and viruses OR
+    1. [RO unit](https://www.amazon.com/Alberts-Filter-Membrane-Replacement-Connector/dp/B07H2ZCFFR/ref=sr_1_17_sspa)
+1. Power:
+    1. 12v for safety and convenience
+    1. Battery bank
+    1. Charger that can handle solar, alternator, generator or line inputs
 1. Monitoring:
     1. pressure between all components
     1. storage level and overflow
