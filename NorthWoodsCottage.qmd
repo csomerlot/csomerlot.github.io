@@ -30,48 +30,16 @@
 1. single-pane windows with inner and outer shutters for security, cost, strength, and warmth
 1. screen doors downstairs and in loft for ventilation
 1. suspend gear (canoes, bikes, etc) from rafters
-1. Mechanicals should be off-grid, minimalistic (see below)
+1. Mechanicals should be off-grid, minimalistic (see off-grid mechanicals vault below)
     1. heat
-        1. masonry wood stove
+        1. [masonry wood stove](https://www.youtube.com/watch?v=HJNRXpHnxag)
     1. light
         1. battery and/or oil, candles
-    1. water
-        1. overhead tank for pressure
-            1. 30" pipe in roof apex will hold 1000 gallons (but weigh 4 tons)
-        1. low-power electric pump operated by solar panel
-        1. hand pump in kitchen sink (also backs up electric pump)
-        1. hand-augered well
-        1. low-flow shower head
-    1. waste
-        1. composting toilets
-        1. kitchen and shower grey-water system
-    1. hot water
-1. [propane on-demand](https://www.amazon.com/dp/B002JLSH5S/?coliid=I3NOBK27OJ5OOF&colid=LXYPR4UA5ISY&psc=1&ref_=lv_ov_lig_dp_it)
-        1. a 20lb tank will give 8hrs of shower hot water (overhead tank is already room temp!)
-    1. electricity
-        1. use a deep cycle battery and inverter, charged from solar cell
-        1. really should just be used for lights, charging devices, using speakers, etc.
 1. kitchen
     1. small propane fridge and cooking stove
     1. grilling in summer
     1. wood stove in winter
 1. wine cave built into the side of a hill somewhere nearby (they can burn the house but they cain't have the booze! Keep guns and a chainsaw and some cans of food in there too)
-1. Construction phasing
-    1. find and acquire property and site building
-    1. construct yurt, hand pumped well, and outhouse for temporary housing
-    1. build foundation and slab
-    1. build walls, roof ridgepole with temp roofing
-    1. put mechanicals in place
-    1. roof
-    1. furnish
-1. materials estimates (we have to carry everything in by canoe!)
-    - concrete: 10 yds (~400 80lb bags)
-    - rebar: 2 ton
-    - straw: ?
-    - stone: ?
-    - gravel: ?
-1. References
-    1. Jon's natural construction book
 
 ![ [Hay Bale House](https://raw.githubusercontent.com/csomerlot/csomerlot.github.io/master/HappyHippieLifestyle/cottage.png).](./HappyHippieLifestyle/cottage)
 
@@ -80,8 +48,6 @@
 {{< video https://youtu.be/_KIqC9HkQ_0 width=700 height=400 >}}
 
 ###  A-Frame Tiny House 
-
-
 
 Same basic ideas and mechanicals as the HayBaleHome, but:
 
