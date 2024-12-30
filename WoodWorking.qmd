@@ -42,9 +42,9 @@
 * Sewing machine case with [collapsible project table](https://www.instructables.com/id/How-to-Make-a-Custom-Sewing-Machine-Case/)
 * For outdoors:
     * [Camping yurt](https://www.campingyurts.com/) (done)
-        *{{< video https://www.youtube.com/watch?v=0BQT9I4qAYk width=600 height=400 >}}
-    * [Adirondack Chairs](https://raw.githubusercontent.com/csomerlot/csomerlot.github.io/master/HappyHippieLifestyle/ADK_chairs.pdf) (done)
-        *{{< video https://www.youtube.com/watch?v=WmO74zjw3k8 width=400 height=300 >}}
+        * {{< video https://www.youtube.com/watch?v=0BQT9I4qAYk width=600 height=400 >}}
+    * [Adirondack Chairs](./HappyHippieLifestyle/ADK_chair.pdf) (done)
+        * {{< video https://www.youtube.com/watch?v=WmO74zjw3k8 width=400 height=300 >}}
     * [Marcy field cot](https://www.google.com/url?sa=t&source=web&rct=j&url=http://ajhamler.com/yahoo_site_admin/assets/docs/Field_Cot_from_CWW-II.21112127.pdf&ved=2ahUKEwiKhveYtovmAhWxiOAKHfxXCnIQFjAKegQIAhAB&usg=AOvVaw2yUrp_O4La2HmkB5D521xg)
     * Buckets
     * Rosin bird whistle
