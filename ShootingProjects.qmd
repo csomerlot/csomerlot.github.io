@@ -1,13 +1,12 @@
 
 # Shooting Projects
-I have a Howa 1500 in 308 that I like a lot, would love a CVA Scout or Tikka T3x (or a Sako90 if I was rich) in 300 WinMag maybe.
 
 ##  Custom Competition Bolt-action
 1. For events like F-class or PRS  
 1. Action: [Zermatt TL3](https://www.zermattarms.com/?page_id=3078) (multi-caliber!)
 1. Barrel
     1. Rebarrel from [Hart](https://hartbarrels.com/) with the action work (right here in LaFayette!)
-    1. 308 Winchester or 300 WinMag
+    1. Caliber: 300 WinMag or one of the [6.5mm](https://ammo.com/comparison/6.5x55-vs-65-creedmoor)
     1. Long and heavy: 30" to develop max velocity?
     1. Contour to make barrel same diameter as muzzle brake, but keep heavy
 1. Optics
@@ -26,6 +25,7 @@ I have a Howa 1500 in 308 that I like a lot, would love a CVA Scout or Tikka T3x
 ##  Inline Muzzleloader 
 Best hunting option for range, lethality, legality, season? [Thompson Center](https://muzzle-loaders.com/collections/thompson-center-muzzleloaders) 
 makes a good entry one. 50 caliber ballistics are very [similar to .300BLK](https://www.snipercountry.com/300-blackout-vs-308/)
+
 * High-performance [copper bullets](https://muzzle-loaders.com/products/powerbelt-copper-aerotip-bullets)
 * Smokeless [Pyrodex pellets](https://muzzle-loaders.com/products/hodgdon-pyrodex-50-50-pellets-black-powder-substitute-50-cal-50-grains)
 * Uses [shotshell primers](https://muzzle-loaders.com/collections/powder-primers/products/federal-209a-primers)
