@@ -6,7 +6,7 @@ Previous efforts for this documentation included doconce, Google Keep and docs, 
 ### Setup:
     - install VS Code, Quarto, and github Desktop
 ### Editing tools:
-    - Edit qmd quarto markdown files in VS ode or directly in github
+    - Edit qmd quarto markdown files in VS code or directly in github
     - Use GIMP for making the background of images transparent
 ### To publish:
     - run quarto render (possibly as pre-commit git hook)

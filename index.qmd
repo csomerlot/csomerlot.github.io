@@ -31,7 +31,7 @@ it seems like these days we call it Glamping; but we used to call these nomads G
 
 [Or you could escape in the regular way](CampingProjects.html)
 
-# The RoboticsProjects
+# The Normal Projects
 
 Digital/Nomad things take a lot of time and money, so here's the regular things
 

@@ -44,6 +44,7 @@
     * [Camping yurt](https://www.campingyurts.com/) (done)
         * {{< video https://www.youtube.com/watch?v=0BQT9I4qAYk width=600 height=400 >}}
     * [Adirondack Chairs](./HappyHippieLifestyle/ADK_chair.pdf) (done)
+        * Materials: 13 board ft of rough-cut one-by stock,a couple 3" hinges, one 15" hinge, and some 1/4" carriage bolts+washers+nuts
         * {{< video https://www.youtube.com/watch?v=WmO74zjw3k8 width=400 height=300 >}}
     * [Marcy field cot](https://www.google.com/url?sa=t&source=web&rct=j&url=http://ajhamler.com/yahoo_site_admin/assets/docs/Field_Cot_from_CWW-II.21112127.pdf&ved=2ahUKEwiKhveYtovmAhWxiOAKHfxXCnIQFjAKegQIAhAB&usg=AOvVaw2yUrp_O4La2HmkB5D521xg)
     * Buckets
@@ -61,16 +62,16 @@
 * Standing desk (done)
 * Bed (done)
 * Trestle table
-* Coat tree
+* Coat tree (done)
 * Night stand/TV tray
 * Adirondack chair (done)
 
 ###  Hand-made tools 
-* Scrub plane
+* Scrub plane (done)
 * Shooting board
 * Router plane
 * Frame saw
-* Shaving Horse
+* Shaving Horse (done)
 * Gauge
 * Toolbox
 * Spoke shave

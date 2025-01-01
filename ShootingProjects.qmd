@@ -2,27 +2,33 @@
 # Shooting Projects
 I have a Howa 1500 in 308 that I like a lot, would love a CVA Scout or Tikka T3x (or a Sako90 if I was rich) in 300 WinMag maybe.
 
-##  F-class 1000+yarder 
-1. Action: Bighorn TL3 (multi-caliber!)
+##  Custom Competition Bolt-action
+1. For events like F-class or PRS  
+1. Action: [Zermatt TL3](https://www.zermattarms.com/?page_id=3078) (multi-caliber!)
 1. Barrel
-    1. rebarrel from Hart (includes the action work)
+    1. Rebarrel from [Hart](https://hartbarrels.com/) with the action work (right here in LaFayette!)
     1. 308 Winchester or 300 WinMag
     1. Long and heavy: 30" to develop max velocity?
     1. Contour to make barrel same diameter as muzzle brake, but keep heavy
 1. Optics
-    1. Osprey Global or Arken, 10-40x50 or so, I like mil dot illuminated
-    1. anti-cant level
-    1. Picatinny 20 MOA scope mount
+    1. Start with Osprey Global or Arken, 10-40x50 or so, I like mil dot illuminated
+    1. Anti-cant level
+    1. Picatinny 20-30 MOA scope mount
 1. Muzzle brake?
 1. Make a custom laminate stock: mostly, for fun
-    1. Build up from laser cut ply, laminate with epoxy and carve
-    1. [Pachmayr Decelerator](https://www.lymanproducts.com/brands/pachmayr/recoil-pads) slip-on recoil pad on large butt plate
+    1. Build up from laser cut wood veneer, laminate with epoxy and CNC mill
+    1. [Backstop Recoil Pad](https://backfireshop.com/products/backstop-recoil-pad) custom built for a specific gun and load
     1. Free float the barrel, use aluminum pillars, and glass bed the action
+    1. Custom built-in weight adjustment
 1. Timney trigger
 1. Bipod
 
 ##  Inline Muzzleloader 
-Best hunting option for range, lethality, legality, season? Thompson Center makes a good entry one. 50 caliber ballistics very [similar to .300BLK](https://www.snipercountry.com/300-blackout-vs-308/)
+Best hunting option for range, lethality, legality, season? [Thompson Center](https://muzzle-loaders.com/collections/thompson-center-muzzleloaders) 
+makes a good entry one. 50 caliber ballistics are very [similar to .300BLK](https://www.snipercountry.com/300-blackout-vs-308/)
+* High-performance [copper bullets](https://muzzle-loaders.com/products/powerbelt-copper-aerotip-bullets)
+* Smokeless [Pyrodex pellets](https://muzzle-loaders.com/products/hodgdon-pyrodex-50-50-pellets-black-powder-substitute-50-cal-50-grains)
+* Uses [shotshell primers](https://muzzle-loaders.com/collections/powder-primers/products/federal-209a-primers)
 
 ##  Handmade Recurve Bow 
 1. Specs
@@ -34,10 +40,11 @@ Best hunting option for range, lethality, legality, season? Thompson Center make
         1. The Traditional Bowyer's Bible, Volume 2
         1. Traditional Bowyers of America
         
-##  [Ballistic](https://www.tektoknives.com/blogs/news/the-most-illegal-knife-in-the-united-states) Sgian Dubh: Spetznatz meets the Highlander
-1. paired set with armpit sheaths
-1. forged from solid one piece spring steel
-1. reciever and hilt turned on a metal lathe
-1. black blade and hilt finish
-1. 50# compression coil spring
-1. Hole in tang to make into a Kunai
+##  [Ballistic](https://www.tektoknives.com/blogs/news/the-most-illegal-knife-in-the-united-states) Sgian Dubh: Spetznatz meets Highlander
+1. A 6" drop point blade style, with a short section of the back sharpened to make the tip double-sided
+1. Paired set with armpit sheaths
+1. Cut and ground from O1 spring steel blank
+1. Reciever and tang turned on a metal lathe
+1. Black/blued blade and handle finish
+1. Removable 50# compression coil spring
+1. Hole in tang to make into a kunai

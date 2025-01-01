@@ -1,7 +1,7 @@
 
 ##  North Woods Cottage 
-1. idea came from discussions during New Year's get togethers (JoAnna calls it a commune)
-1. we want a place of our own that is in a remote location (no motor access), on the water, that will give us access to the (state) woods for
+1. This idea came from discussions during New Year's get togethers (JoAnna calls it a commune)
+1. We want a place of our own that is in a remote location (no motor access), on the water, that will give us access to the (state) woods for
     1. New Year's hangout
     1. skiiing
     1. canoeing
@@ -70,7 +70,8 @@ is also a great spot for emergency supplies. Avoid storage of any type of fuel t
 1. Structure:
     1. Constructability: Modular size cube built from ICF
     1. 95% buried for thermal efficiency, low noise, and security
-    1. Accessible and visible top (so no one runs it over) yet protected from the elements and vandalism. Could also site structure on top of it, and size it for lock-box usage as well.
+    1. Accessible and visible top (so no one runs it over) yet protected from the elements and vandalism. Could also site structure on top of it, and size it 
+    for lock-box usage as well.
     1. insulated and dehumidified/heated for consistent temp and low humidity
 1. Mechanicals
     1. Well: some people [do this](https://www.drillyourownwell.com/) but a lot depends on siting for soil type and depth to water table

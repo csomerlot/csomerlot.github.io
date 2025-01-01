@@ -260,6 +260,8 @@ cumbersome. Viewing the shot with a spotting scope is difficult. Waiting to go d
 makes for a lot of wasted time. Unknown weather, distance, and load variables wastes a lot of ammo. Can a 
 bespoke computing platform simplify it all and make it more enjoyable, efficient, and cheap?
 
+#### References:
+1. [Hornady Shooting App](https://www.hornady.com/4dofapp)
 
 #### Feature Set:
 1. Computes and then measures ballistics
