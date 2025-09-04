@@ -3,7 +3,9 @@
 
 ##  Custom Competition Bolt-action
 1. For events like F-class or PRS  
-1. Action: [Zermatt TL3](https://www.zermattarms.com/?page_id=3078) (multi-caliber!)
+1. Action: 
+    1. [Zermatt TL3](https://www.zermattarms.com/?page_id=3078)
+    1. [Bat Machine Igniter] ( https://www.batmachine.com/actions/igniter-la/)
 1. Barrel
     1. Rebarrel from [Hart](https://hartbarrels.com/) with the action work (right here in LaFayette!)
     1. Caliber: 300 WinMag or one of the [6.5mm](https://ammo.com/comparison/6.5x55-vs-65-creedmoor)
