@@ -1,41 +1,21 @@
 
 # Shooting Projects
 
-##  Custom Competition Bolt-action
-1. For events like F-class or PRS  
-1. Action: 
-    1. [Zermatt TL3](https://www.zermattarms.com/?page_id=3078)
-    1. [Bat Machine Igniter] ( https://www.batmachine.com/actions/igniter-la/)
-1. Barrel
-    1. Rebarrel from [Hart](https://hartbarrels.com/) with the action work (right here in LaFayette!)
-    1. Caliber: 300 WinMag or one of the [6.5mm](https://ammo.com/comparison/6.5x55-vs-65-creedmoor)
-    1. Long and heavy: 30" to develop max velocity?
-    1. Contour to make barrel same diameter as muzzle brake, but keep heavy
-1. Optics
-    1. Start with Osprey Global or Arken, 10-40x50 or so, I like mil dot illuminated
-    1. Anti-cant level
-    1. Picatinny 20-30 MOA scope mount
-1. Muzzle brake?
+##  Smokeless Muzzleloader
+1. Concept: A 750yd, .50-cal tack driver that is legal to hunt extended seasons with and capable of any big game, but cheap to shoot and fun  
+1. Rem700-style custom action: 
+    1. [Mack bros EVO II](https://macbros.com/product/evo-ii-muzzleloader-action/)
+    1. [Defiance Outcast](https://defiancemachine.com/actions/outcast/)
+    1. Savage 110
+1. [Arrowhead Breech plug](https://www.rokslide.com/arrowhead-breech-plug-for-remington-muzzleloader-review/)
+1. Barrel from [Hart](https://hartbarrels.com/) with the breech plug work (right here in LaFayette!)
+1. Optics: Something entry-level like Osprey Global or Arken, 10-40x50 or so, I like mil dot illuminated
+1. Muzzle brake it, because why not, you can have any features you want on a muzzleloader!
 1. Make a custom laminate stock: mostly, for fun
     1. Build up from laser cut wood veneer, laminate with epoxy and CNC mill
-    1. [Backstop Recoil Pad](https://backfireshop.com/products/backstop-recoil-pad) custom built for a specific gun and load
-    1. Free float the barrel, use aluminum pillars, and glass bed the action
-    1. Custom built-in weight adjustment
-1. Timney trigger
-1. Bipod
-
-##  Inline Muzzleloader 
-Best hunting option for range, lethality, legality, season? [Thompson Center](https://muzzle-loaders.com/collections/thompson-center-muzzleloaders) 
-makes a good entry one. 50 caliber ballistics are very [similar to .300BLK](https://www.snipercountry.com/300-blackout-vs-308/)
-
-* High-performance [copper bullets](https://muzzle-loaders.com/products/powerbelt-copper-aerotip-bullets)
-* Smokeless [Pyrodex pellets](https://muzzle-loaders.com/products/hodgdon-pyrodex-50-50-pellets-black-powder-substitute-50-cal-50-grains)
-* Uses [shotshell primers](https://muzzle-loaders.com/collections/powder-primers/products/federal-209a-primers)
-
-## Custom PCC as an M21
-* I love the 45 acp round for its power, cost, and historical aspect
-* Would be aweome to have a rifle that shared ammo with a 1911, but lever actions don't come in 45 acp
-* Id love an actual M21, and they do make PCCs in 45 acp, so maybe with some custom furniture and a low power scope, its at least looks similar? And for far less cost?
+    1. Floated barrel and bedded action
+    1. Built-in weight adjustment
+1. [Examples](https://www.blueprintedfirearms.com/smokeless-muzzleloaders)
 
 ##  Handmade Recurve Bow 
 1. Specs

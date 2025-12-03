@@ -447,6 +447,7 @@ The world is still a big place and to explore certain parts in safety, we need a
 1. Ruggedize by potting in epoxy with heat sinks?
 1. Cheap and small enough to carry spares
 1. Yagi antenna to use as a directional beacon?
+1. [Iridium satellite](https://learn.adafruit.com/using-the-rockblock-iridium-modem?view=all) capable
 
 #### Notes: Reference devices:
 * [Tiny tracker](https://www.byonics.com/tinytrak4)

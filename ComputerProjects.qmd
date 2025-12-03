@@ -185,7 +185,7 @@ Also, I like to keep my phone in my jacket pocket so there are no dangling wires
 #### Feature Set:
 1. Custom radio integration
     1. GMRS appears to offer best license-free cost-vs-performance, with usable range of a couple miles and cross-compatibility with FRS
-1. [Custom-built HAM radio?](http://projects.somerlot.net/._RoboticsProjects016.html#___sec15)
+1. [Custom-built HAM radio?](https://csomerlot.github.io/IoTProjects.html#the-best-damn-radio-system)
     1. Mesh wifi?
 1. App-based mixer for phone for multi-audio stream management (GPS, music, and comms at once!)
 1. Custom handlebar control to only activate mic during push-to-talk, or switch it to VOX for regular hands-free, or turn off music
