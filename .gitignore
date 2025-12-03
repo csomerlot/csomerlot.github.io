@@ -21,3 +21,5 @@ Trash
 watcher.pbix
 keys*.h
 /.quarto/
+
+**/*.quarto_ipynb
