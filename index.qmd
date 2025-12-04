@@ -21,13 +21,13 @@ Its an amazing time to be creative and build digital things.
 While there are many ways to escape a physical location, projects are an escape of their own. But if the goal is to live while being elsewhere, 
 it seems like these days we call it Glamping; but we used to call these nomads Gypsies and Travellers and even offshore fishermen.
 
-[You could escape to a cottage in the woods](./NorthWoodsCottage.html)
+[You could escape to a cottage in the woods](NorthWoodsCottage.html)
 
-[You could escape on a boat](./BoatProjects.html)
+[You could escape on a boat](BoatProjects.html)
 
-[You could escape while still working](./TemporaryRetirement.html)
+[You could escape while still working](TemporaryRetirement.html)
 
-[You could escape in a hurry](./EmergencyPlans.html)
+[You could escape in a hurry](EmergencyPlans.html)
 
 [Or you could escape in the regular way](CampingProjects.html)
 
@@ -35,7 +35,7 @@ it seems like these days we call it Glamping; but we used to call these nomads G
 
 Digital/Nomad things take a lot of time and money, so here's the regular things
 
-[Woodworking](Woodworking.html)
+[Woodworking](WoodWorking.html)
 
 [Farming](ThistleRidgeFarmProjects.html)
 
