@@ -1,6 +1,9 @@
 
 # Shooting Projects
 
+## ELR Custom build
+1. Zeus Terminus QC action for a multi-caliber build
+
 ##  Smokeless Muzzleloader
 1. Concept: A 750yd, .50-cal tack driver that is legal to hunt extended seasons with and capable of any big game, but cheap to shoot and fun  
 1. Rem700-style custom action: 
