@@ -2,7 +2,7 @@
 # Shooting Projects
 
 ## ELR Custom build
-1. Zeus Terminus QC action for a multi-caliber build
+1. ARC Coup de Grace action for a multi-caliber build in 300AAC, 308WIN, and 300 Norma Mag
 
 ##  Smokeless Muzzleloader
 1. Concept: A 750yd, .50-cal tack driver that is legal to hunt extended seasons with and capable of any big game, but cheap to shoot and fun  
