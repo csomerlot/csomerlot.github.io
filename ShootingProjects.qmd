@@ -2,7 +2,7 @@
 # Shooting Projects
 
 ## ELR Custom build
-1. ARC Coup de Grace action for a multi-caliber build in 300AAC, 308WIN, and 300 Norma Mag
+ARC Coup de Grace action for a multi-caliber build in 300AAC, 308WIN, and 300 Norma Mag
 
 ##  Smokeless Muzzleloader
 1. Concept: A 750yd, .50-cal tack driver that is legal to hunt extended seasons with and capable of any big game, but cheap to shoot and fun  
@@ -11,7 +11,7 @@
     1. [Defiance Outcast](https://defiancemachine.com/actions/outcast/)
     1. Savage 110
 1. [Arrowhead Breech plug](https://www.rokslide.com/arrowhead-breech-plug-for-remington-muzzleloader-review/)
-1. High-twist for [monolithic copper(https://cuttingedgebullets.com/products/44cal-210gr-mzl-maximus-12ct) 
+1. High-twist for [monolithic copper](https://cuttingedgebullets.com/products/44cal-210gr-mzl-maximus-12ct) 
 1. Barrel from [Hart](https://hartbarrels.com/) with the breech plug work (right here in LaFayette!)
 1. Muzzle brake it, because why not, you can have any features you want on a muzzleloader!
 1. Make a custom laminate stock: mostly, for fun
